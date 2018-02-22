@@ -9,3 +9,6 @@ c:\users\quan.luu\documents\visual studio 2015\Projects\Chuong_Trinh_Quan_Ly_San
 c:\users\quan.luu\documents\visual studio 2015\Projects\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
 c:\users\quan.luu\documents\visual studio 2015\Projects\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.FrmDanhMuc.resources
 C:\Users\quan.luu\Documents\Visual Studio 2015\Projects\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.FrmChiThiSX.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.exe.config
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.exe
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
