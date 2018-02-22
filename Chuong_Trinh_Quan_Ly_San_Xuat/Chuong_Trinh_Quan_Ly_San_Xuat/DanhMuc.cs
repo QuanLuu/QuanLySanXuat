@@ -93,7 +93,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDelete.Enabled = true;
                 btnSave.Enabled = false;
                 btnCancel.Enabled = false;
-                panelNL.Enabled = false;
+                panelNL.Visible = false;
             }
             else
             {
@@ -102,7 +102,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDelete.Enabled = false;
                 btnSave.Enabled = true;
                 btnCancel.Enabled = true;
-                panelNL.Enabled = true;
+                panelNL.Visible = true;
             }
 
         }
@@ -116,7 +116,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteDM.Enabled = true;
                 btnSaveDM.Enabled = false;
                 btnCancelDM.Enabled = false;
-                panelDM.Enabled = false;
+                panelDM.Visible = false;
             }
             else
             {
@@ -125,7 +125,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteDM.Enabled = false;
                 btnSaveDM.Enabled = true;
                 btnCancelDM.Enabled = true;
-                panelDM.Enabled = true;
+                panelDM.Visible = true;
             }
 
         }
@@ -138,7 +138,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteKH.Enabled = true;
                 btnSaveKH.Enabled = false;
                 btnCancelKH.Enabled = false;
-                panelKH.Enabled = false;
+                panelKH.Visible = false;
             }
             else
             {
@@ -147,7 +147,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteKH.Enabled = false;
                 btnSaveKH.Enabled = true;
                 btnCancelKH.Enabled = true;
-                panelKH.Enabled = true;
+                panelKH.Visible = true;
             }
 
         }
@@ -160,7 +160,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteSP.Enabled = true;
                 btnSaveSP.Enabled = false;
                 btnCancelSP.Enabled = false;
-                panelSP.Enabled = false;
+                panelSP.Visible = false;
             }
             else
             {
@@ -169,7 +169,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnDeleteSP.Enabled = false;
                 btnSaveSP.Enabled = true;
                 btnCancelSP.Enabled = true;
-                panelSP.Enabled = true;
+                panelSP.Visible = true;
             }
 
         }
@@ -384,5 +384,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             actionKH = 0;
             enablecontrolKH();
         }
+
+        private void btnNewDM_Click(object sender, EventArgs e)
+        {
+            actionDM = 1;
+            cbMaSPDM.Text = "";
+            numDinhMuc.Value = 0;
+            dtpDateFrom.Value = DateTime.Now;
+            dtpDateTo.Value = DateTime.Now.AddYears(1);
+            enablecontrolDM();
+        }
+
     }
 }

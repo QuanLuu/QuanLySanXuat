@@ -18,6 +18,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgChiThiSX.Dock = DockStyle.Fill;
         }
 
-
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            panelQLSX.Visible = true;
+        }
     }
 }
