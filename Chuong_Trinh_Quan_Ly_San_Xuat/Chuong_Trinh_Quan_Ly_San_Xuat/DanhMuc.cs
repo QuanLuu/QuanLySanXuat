@@ -19,11 +19,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionDM = 0;
         int actionCD = 0;
         int actionMM = 0;
+        int actionSPCD = 0;
         public FrmDanhMuc()
         {
             InitializeComponent();
             dtgNL.Dock = DockStyle.Fill;
             dtgSP.Dock = DockStyle.Fill;
+            dtgSPCD.Dock = DockStyle.Fill;
             dtgKH.Dock = DockStyle.Fill;
             dtgDM.Dock = DockStyle.Fill;
             dtgCongDoan.Dock = DockStyle.Fill;
@@ -33,6 +35,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetNguyenLieu();
             enablecontrolNL();
             enablecontrolSP();
+            enablecontrolSPCD();
             GetSanPham();
             GetKhachHang();
             enablecontrolKH();
@@ -42,6 +45,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolMM();
             getcongdoan();
             getmaymoc();
+            getSPCD();
         }
         void GetNguyenLieu()
         {
@@ -57,6 +61,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgSP.DataSource = data;
             cbMaSPDM.DataSource = data;
             cbMaSPDM.DisplayMember = "MA_SP";
+            cbMaSPCD.BindingContext = new BindingContext();
+            cbMaSPCD.DataSource = data;
+            cbMaSPCD.DisplayMember = "MA_SP";
         }
 
         void GetKhachHang()
@@ -74,10 +81,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgDM.DataSource = data;
         }
 
+        void getSPCD()
+        {
+            DataTable spcd = Import_Manager.Instance.getSPCongDoan(tbSPCD.Text);
+            dtgSPCD.DataSource = spcd;
+        }
+
         void getcongdoan()
         {
             DataTable congdoan = Import_Manager.Instance.GetCongDoan();
             dtgCongDoan.DataSource = congdoan;
+            cbTenCDSP.DataSource = congdoan;
+            cbTenCDSP.DisplayMember = "TEN_CONG_DOAN";
         }
 
         void getmaymoc()
@@ -237,6 +252,28 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnSaveSP.Enabled = true;
                 btnCancelSP.Enabled = true;
                 panelSP.Visible = true;
+            }
+
+        }
+        void enablecontrolSPCD()
+        {
+            if (actionSPCD == 0)
+            {
+                btnNewSPCD.Enabled = true;
+                btnEditSPCD.Enabled = true;
+                btnDeleteSPCD.Enabled = true;
+                btnSaveSPCD.Enabled = false;
+                btnCancelSPCD.Enabled = false;
+                panelSPCD.Visible = false;
+            }
+            else
+            {
+                btnNewSPCD.Enabled = false;
+                btnEditSPCD.Enabled = false;
+                btnDeleteSPCD.Enabled = false;
+                btnSaveSPCD.Enabled = true;
+                btnCancelSPCD.Enabled = true;
+                panelSPCD.Visible = true;
             }
 
         }
@@ -502,7 +539,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnNewCD_Click(object sender, EventArgs e)
         {
             actionCD = 1;
-            tbMaCD.Text = "";
             tbTenCD.Text = "";
             enablecontrolCD();
         }
@@ -530,7 +566,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 { currow = dtgCongDoan.Rows.Count - 1; }
                 else
                 { currow = 0; }
-                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
+                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbTenCD.Text);
                 getcongdoan();
                 dtgCongDoan.CurrentCell = dtgCongDoan.Rows[currow].Cells[0];
         }
@@ -571,7 +607,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
+                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbTenCD.Text);
             }
             catch (Exception ex)
             {
@@ -584,7 +620,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtgCongDoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbMaCD.Text = dtgCongDoan.CurrentRow.Cells[1].Value.ToString();
             tbTenCD.Text  = dtgCongDoan.CurrentRow.Cells[2].Value.ToString();
         }
 
@@ -643,6 +678,85 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbfilterMaSPDM_TextChanged(object sender, EventArgs e)
         {
             GetDinhMuc();
+        }
+
+        private void btnNewSPCD_Click(object sender, EventArgs e)
+        {
+            actionSPCD = 1;
+            enablecontrolSPCD();
+            cbMaSPCD.Text = "";
+            cbTenCDSP.Text = "";
+        }
+
+        private void btnEditSPCD_Click(object sender, EventArgs e)
+        {
+            actionSPCD = 2;
+            enablecontrolSPCD();
+        }
+
+        private void btnCancelSPCD_Click(object sender, EventArgs e)
+        {
+            actionSPCD = 0;
+            enablecontrolSPCD();
+        }
+
+        private void tbSPCD_TextChanged(object sender, EventArgs e)
+        {
+            getSPCD();
+        }
+
+        private void btnSaveSPCD_Click(object sender, EventArgs e)
+        {
+            int currow = 0;
+            try
+            {
+                if (actionSPCD == 2)
+                { currow = dtgSPCD.CurrentRow.Index; }
+                else if (actionSPCD == 1)
+                { currow = dtgSPCD.Rows.Count - 1; }
+                else
+                { currow = 0; }
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, cbMaSPCD.Text, cbTenCDSP.Text);
+                getSPCD();
+                dtgSPCD.CurrentCell = dtgSPCD.Rows[currow].Cells[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionSPCD = 0;
+            enablecontrolSPCD();
+        }
+
+        private void btnDeleteSPCD_Click(object sender, EventArgs e)
+        {
+            actionSPCD = 3;
+            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+            try
+            {
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, cbMaSPCD.Text, cbTenCDSP.Text );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionSPCD = 0;
+            enablecontrolSPCD();
+            getSPCD();
+        }
+
+        private void dtgSPCD_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dtgSPCD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "" && actionSPCD != 1)
+            {
+                cbMaSPCD.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString();
+                cbTenCDSP.Text = dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+            }
         }
     }
 }

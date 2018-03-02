@@ -69,7 +69,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dtpNgaySX = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbsomay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,11 +105,13 @@
             this.cbCongDoan = new System.Windows.Forms.ComboBox();
             this.cbCongDoanSau = new System.Windows.Forms.ComboBox();
             this.cbTenMay = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.label29 = new System.Windows.Forms.Label();
+            this.CbSomay = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
@@ -136,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numtgSX)).BeginInit();
             this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panelTitleCTSX.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -149,8 +151,8 @@
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.cbMaSPFilter);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 626);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(891, 31);
             this.panel1.TabIndex = 0;
@@ -181,9 +183,9 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.Controls.Add(this.dtgChiThiSX);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 67);
+            this.panel2.Location = new System.Drawing.Point(0, 305);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 348);
+            this.panel2.Size = new System.Drawing.Size(891, 321);
             this.panel2.TabIndex = 1;
             // 
             // dtgChiThiSX
@@ -224,10 +226,10 @@
             this.panelQLSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelQLSX.Controls.Add(this.groupBox4);
             this.panelQLSX.Controls.Add(this.groupBox3);
-            this.panelQLSX.Controls.Add(this.groupBox2);
             this.panelQLSX.Controls.Add(this.groupBox1);
-            this.panelQLSX.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelQLSX.Location = new System.Drawing.Point(0, 442);
+            this.panelQLSX.Controls.Add(this.groupBox2);
+            this.panelQLSX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelQLSX.Location = new System.Drawing.Point(0, 90);
             this.panelQLSX.Name = "panelQLSX";
             this.panelQLSX.Size = new System.Drawing.Size(891, 215);
             this.panelQLSX.TabIndex = 2;
@@ -235,8 +237,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.tbGhiChu);
             this.groupBox4.Controls.Add(this.cbNVXN);
             this.groupBox4.Controls.Add(this.cbNVKT);
@@ -329,7 +331,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.numBaoLuu);
             this.groupBox3.Controls.Add(this.label26);
@@ -448,8 +451,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.CbSomay);
             this.groupBox2.Controls.Add(this.cbTenMay);
             this.groupBox2.Controls.Add(this.cbCongDoanSau);
             this.groupBox2.Controls.Add(this.cbCongDoan);
@@ -462,7 +467,6 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.dtpNgaySX);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.tbsomay);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
@@ -549,13 +553,6 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Ngày SX";
             // 
-            // tbsomay
-            // 
-            this.tbsomay.Location = new System.Drawing.Point(196, 118);
-            this.tbsomay.Name = "tbsomay";
-            this.tbsomay.Size = new System.Drawing.Size(77, 20);
-            this.tbsomay.TabIndex = 23;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -601,10 +598,12 @@
             this.cbMaSP.Name = "cbMaSP";
             this.cbMaSP.Size = new System.Drawing.Size(209, 21);
             this.cbMaSP.TabIndex = 16;
+            this.cbMaSP.SelectedIndexChanged += new System.EventHandler(this.cbMaSP_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.numtgChoKhuon);
             this.groupBox1.Controls.Add(this.numtgDaoTao);
@@ -730,8 +729,8 @@
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.BtnEdit);
             this.panel4.Controls.Add(this.btnNew);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 415);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 63);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(891, 27);
             this.panel4.TabIndex = 3;
@@ -902,14 +901,15 @@
             this.cbTenMay.Size = new System.Drawing.Size(98, 21);
             this.cbTenMay.TabIndex = 36;
             // 
-            // panel3
+            // panelTitleCTSX
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Info;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 28);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 8);
-            this.panel3.TabIndex = 5;
+            this.panelTitleCTSX.BackColor = System.Drawing.SystemColors.Info;
+            this.panelTitleCTSX.Controls.Add(this.label29);
+            this.panelTitleCTSX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleCTSX.Location = new System.Drawing.Point(0, 28);
+            this.panelTitleCTSX.Name = "panelTitleCTSX";
+            this.panelTitleCTSX.Size = new System.Drawing.Size(891, 35);
+            this.panelTitleCTSX.TabIndex = 5;
             // 
             // label27
             // 
@@ -947,16 +947,39 @@
             this.dtpDenNgay.TabIndex = 24;
             this.dtpDenNgay.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
+            // label29
+            // 
+            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Blue;
+            this.label29.Location = new System.Drawing.Point(0, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(891, 35);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Chỉ Thị Sản Xuất";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CbSomay
+            // 
+            this.CbSomay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.CbSomay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CbSomay.FormattingEnabled = true;
+            this.CbSomay.Location = new System.Drawing.Point(196, 115);
+            this.CbSomay.Name = "CbSomay";
+            this.CbSomay.Size = new System.Drawing.Size(77, 21);
+            this.CbSomay.TabIndex = 37;
+            // 
             // FrmChiThiSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 657);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelQLSX);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelTitleCTSX);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmChiThiSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -992,6 +1015,7 @@
             this.panel4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelTitleCTSX.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1032,7 +1056,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpNgaySX;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbsomay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -1074,10 +1097,12 @@
         private System.Windows.Forms.ComboBox cbTenMay;
         private System.Windows.Forms.ComboBox cbCongDoanSau;
         private System.Windows.Forms.ComboBox cbCongDoan;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelTitleCTSX;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox CbSomay;
     }
 }

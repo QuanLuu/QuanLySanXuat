@@ -1,0 +1,9 @@
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Release\Chuong_Trinh_Quan_Ly_San_Xuat.exe.config
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Release\Chuong_Trinh_Quan_Ly_San_Xuat.exe
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Release\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.FrmChiThiSX.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.FrmDanhMuc.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Resources.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.csproj.GenerateResource.Cache
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.exe
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.pdb

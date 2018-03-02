@@ -16,7 +16,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmChiThiSX());
+            Application.Run(new DangNhap());
         }
     }
 }
