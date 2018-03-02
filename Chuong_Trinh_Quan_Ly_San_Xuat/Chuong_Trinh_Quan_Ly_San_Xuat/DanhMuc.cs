@@ -17,6 +17,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionSP = 0;
         int actionKH = 0;
         int actionDM = 0;
+        int actionCD = 0;
+        int actionMM = 0;
         public FrmDanhMuc()
         {
             InitializeComponent();
@@ -24,6 +26,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgSP.Dock = DockStyle.Fill;
             dtgKH.Dock = DockStyle.Fill;
             dtgDM.Dock = DockStyle.Fill;
+            dtgCongDoan.Dock = DockStyle.Fill;
+            dtgMayMoc.Dock = DockStyle.Fill;
+            //dtpDateFrom.CustomFormat = "yyyy-mm-dd";
+            //dtpDateTo.CustomFormat = "yyyy-mm-dd";
             GetNguyenLieu();
             enablecontrolNL();
             enablecontrolSP();
@@ -32,6 +38,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolKH();
             GetDinhMuc();
             enablecontrolDM();
+            enablecontrolCD();
+            enablecontrolMM();
+            getcongdoan();
+            getmaymoc();
         }
         void GetNguyenLieu()
         {
@@ -55,13 +65,25 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgKH.DataSource = data;
             cbMaKH.DataSource = data;
             cbMaKH.DisplayMember = "MA_KH";
-            cbMaSPDM.DataSource = data;
-            cbMaSPDM.DisplayMember = "MA_KH";
+            //cbMaSPDM.DataSource = data;
+            //cbMaSPDM.DisplayMember = "MA_KH";
         }
         void GetDinhMuc()
         {
             DataTable data = Import_Manager.Instance.LoadDM(tbfilterMaSPDM.Text);
             dtgDM.DataSource = data;
+        }
+
+        void getcongdoan()
+        {
+            DataTable congdoan = Import_Manager.Instance.GetCongDoan();
+            dtgCongDoan.DataSource = congdoan;
+        }
+
+        void getmaymoc()
+        {
+            DataTable maymoc = Import_Manager.Instance.GetTenMay();
+            dtgMayMoc.DataSource = maymoc;
         }
 
         private void tbFilterNL_TextChanged(object sender, EventArgs e)
@@ -107,6 +129,51 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         }
 
+        void enablecontrolMM()
+        {
+            if (actionMM == 0)
+            {
+                btnNewMM.Enabled = true;
+                btnEditMM.Enabled = true;
+                btnDeleteMM.Enabled = true;
+                btnSaveMM.Enabled = false;
+                btnCancelMM.Enabled = false;
+                panelMM.Visible = false;
+            }
+            else
+            {
+                btnNewMM.Enabled = false;
+                btnEditMM.Enabled = false;
+                btnDeleteMM.Enabled = false;
+                btnSaveMM.Enabled = true;
+                btnCancelMM.Enabled = true;
+                panelMM.Visible = true;
+            }
+
+        }
+
+        void enablecontrolCD()
+        {
+            if (actionCD == 0)
+            {
+                btnNewCD.Enabled = true;
+                btnEditCD.Enabled = true;
+                btnDeleteCD.Enabled = true;
+                btnSaveCD.Enabled = false;
+                btnCancelCD.Enabled = false;
+                panelCD.Visible = false;
+            }
+            else
+            {
+                btnNewCD.Enabled = false;
+                btnEditCD.Enabled = false;
+                btnDeleteCD.Enabled = false;
+                btnSaveCD.Enabled = true;
+                btnCancelCD.Enabled = true;
+                panelCD.Visible = true;
+            }
+
+        }
         void enablecontrolDM()
         {
             if (actionDM == 0)
@@ -395,5 +462,187 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolDM();
         }
 
+        private void btnNewMM_Click(object sender, EventArgs e)
+        {
+            actionMM = 1;
+            tbTenMay.Text = "";
+            tbSoMay.Text = "";
+            enablecontrolMM();
+        }
+
+        private void btnEditMM_Click(object sender, EventArgs e)
+        {
+            actionMM = 2;
+            enablecontrolMM();
+        }
+
+        private void btnDeleteMM_Click(object sender, EventArgs e)
+        {
+            actionMM = 3;
+            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+            try
+            {
+                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, Int32.Parse(tbSoMay.Text.ToString()));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionMM = 0;
+            enablecontrolMM();
+            getmaymoc();
+        }
+
+        private void btnCancelMM_Click(object sender, EventArgs e)
+        {
+            actionMM = 0;
+            enablecontrolMM();
+        }
+
+        private void btnNewCD_Click(object sender, EventArgs e)
+        {
+            actionCD = 1;
+            tbMaCD.Text = "";
+            tbTenCD.Text = "";
+            enablecontrolCD();
+        }
+
+        private void btnEditCD_Click(object sender, EventArgs e)
+        {
+            actionCD = 2;
+            enablecontrolCD();
+        }
+
+        private void btnCancelCD_Click(object sender, EventArgs e)
+        {
+            actionCD = 0;
+            enablecontrolCD();
+        }
+
+        private void btnSaveCD_Click(object sender, EventArgs e)
+        {
+            int currow = 0;
+            try
+            {
+                if (actionCD == 2)
+                { currow = dtgCongDoan.CurrentRow.Index; }
+                else if (actionCD == 1)
+                { currow = dtgCongDoan.Rows.Count - 1; }
+                else
+                { currow = 0; }
+                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
+                getcongdoan();
+                dtgCongDoan.CurrentCell = dtgCongDoan.Rows[currow].Cells[0];
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+    actionCD = 0;
+            enablecontrolCD();
+        }
+
+        private void btnSaveMM_Click(object sender, EventArgs e)
+        {
+            int currow = 0;
+            try
+            {
+                if (actionMM == 2)
+                { currow = dtgMayMoc.CurrentRow.Index; }
+                else if (actionMM == 1)
+                { currow = dtgMayMoc.Rows.Count - 1; }
+                else
+                { currow = 0; }
+                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, Int32.Parse(tbSoMay.Text.ToString()));
+                getmaymoc();
+                dtgMayMoc.CurrentCell = dtgMayMoc.Rows[currow].Cells[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionMM = 0;
+            enablecontrolMM();
+        }
+
+        private void btnDeleteCD_Click(object sender, EventArgs e)
+        {
+            actionCD = 3;
+            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+            try
+            {
+                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionCD = 0;
+            enablecontrolCD();
+            getcongdoan();
+        }
+
+        private void dtgCongDoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbMaCD.Text = dtgCongDoan.CurrentRow.Cells[1].Value.ToString();
+            tbTenCD.Text  = dtgCongDoan.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnEditDM_Click(object sender, EventArgs e)
+        {
+            actionDM = 2;
+            enablecontrolDM();
+        }
+
+        private void btnDeleteDM_Click(object sender, EventArgs e)
+        {
+            actionDM = 3;
+            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+            try
+            {
+                int results = Import_Manager.Instance.UpdateDinhMuc(actionDM, (int)dtgDM.CurrentRow.Cells[0].Value, dtpDateFrom.Value, dtpDateTo.Value, cbMaSPDM.Text, numDinhMuc.Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            actionDM = 0;
+            enablecontrolDM();
+            GetDinhMuc();
+        }
+
+        private void btnSaveDM_Click(object sender, EventArgs e)
+        {
+            int currow = 0;
+            try
+            {
+                if (actionDM == 2)
+                { currow = dtgDM.CurrentRow.Index; }
+                else if (actionDM == 1)
+                { currow = dtgDM.Rows.Count - 1; }
+                else
+                { currow = 0; }
+                int results = Import_Manager.Instance.UpdateDinhMuc(actionDM, (int)dtgDM.CurrentRow.Cells[0].Value, dtpDateFrom.Value.Date, dtpDateTo.Value.Date, cbMaSPDM.Text, numDinhMuc.Value);
+                GetDinhMuc();
+                dtgDM.CurrentCell = dtgDM.Rows[currow].Cells[0];
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+    actionDM = 0;
+            enablecontrolDM();
+        }
+
+        private void btnCancelDM_Click(object sender, EventArgs e)
+        {
+            actionDM = 0;
+            enablecontrolDM();
+        }
+
+        private void tbfilterMaSPDM_TextChanged(object sender, EventArgs e)
+        {
+            GetDinhMuc();
+        }
     }
 }
