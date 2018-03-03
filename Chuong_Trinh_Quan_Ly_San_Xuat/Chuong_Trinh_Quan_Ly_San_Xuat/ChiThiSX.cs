@@ -25,15 +25,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DateTime now = DateTime.Now;
             dtpDenNgay.Value = new DateTime(now.Year, now.Month, 1).AddMonths(1).AddDays(-1);
             dtpTuNgay.Value = new DateTime(now.Year, now.Month, 1);
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["DangNhap"];
-            phanquyen = ((DangNhap)f).quyensudung;
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            phanquyen = ((FrmMain)f).quyensudung;
             enablecontrolCTSX();
             LoadDSNhanVien();
             GetCongDoanSX();
             GetTenMay();
-            GetMaSanPham();
             GetChiThiSX();
-            cbMaSPFilter.Text = "";
+            GetMaSanPham();
+            cbMaSPFilter.SelectedIndex = -1;
+            //NewChiThiSX(this.panelFilterCTSX);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -73,10 +74,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (phanquyen == "Full")
             {
                 FrmDanhMuc f = new FrmDanhMuc();
-                //this.Visible = false;
-                f.ShowDialog();
+                this.Hide();
+                f.Show();
+                f.FormClosing += frm_Closing;
             }
             
+        }
+
+        private void frm_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Show();
         }
         void enablecontrolCTSX()
         {
@@ -179,10 +186,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.LoadDM_SP("");
             cbMaSPFilter.DataSource = data;
+            cbMaSPFilter.DisplayMember = "MA_SP";
             cbMaSP.BindingContext = new BindingContext();
             cbMaSP.DataSource = data;
             cbMaSP.DisplayMember = "MA_SP";
-            cbMaSPFilter.DisplayMember = "MA_SP";
+            
         }
         void GetCongDoanSX()
         {
@@ -264,6 +272,32 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void cbMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetCongDoanSX();
+        }
+
+        private void cbMaSP_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbMaSP.DroppedDown = true;
+        }
+
+        private void cbNVSX_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbNVSX.DroppedDown = true;
+        }
+
+        private void cbNVKT_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbNVKT.DroppedDown = true;
+        }
+
+        private void cbNVXN_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbNVXN.DroppedDown = true;
+        }
+
+        private void nhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNhanSu f = new Chuong_Trinh_Quan_Ly_San_Xuat.FrmNhanSu();
+            f.Show();
         }
     }
 }

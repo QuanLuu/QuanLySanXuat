@@ -61,6 +61,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT TEN_MAY FROM [MAY_MOC_SAN_XUAT]", new object[] { });
         }
 
+        public DataTable GetMayMoc()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT * FROM [MAY_MOC_SAN_XUAT]", new object[] { });
+        }
+
+
         public DataTable GetsOMay()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT SO_MAY FROM [MAY_MOC_SAN_XUAT]", new object[] { });

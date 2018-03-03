@@ -97,7 +97,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         void getmaymoc()
         {
-            DataTable maymoc = Import_Manager.Instance.GetTenMay();
+            DataTable maymoc = Import_Manager.Instance.GetMayMoc();
             dtgMayMoc.DataSource = maymoc;
         }
 
@@ -620,7 +620,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtgCongDoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbTenCD.Text  = dtgCongDoan.CurrentRow.Cells[2].Value.ToString();
+            if (actionCD != 1)
+            {
+                tbTenCD.Text = dtgCongDoan.CurrentRow.Cells[1].Value.ToString();
+            }
         }
 
         private void btnEditDM_Click(object sender, EventArgs e)
@@ -756,6 +759,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 cbMaSPCD.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString();
                 cbTenCDSP.Text = dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+            }
+        }
+
+        private void dtgMayMoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (actionMM != 1)
+            {
+                tbTenMay.Text = dtgMayMoc.CurrentRow.Cells[1].Value.ToString();
+                tbSoMay.Text = dtgMayMoc.CurrentRow.Cells[2].Value.ToString();
             }
         }
     }

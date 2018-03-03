@@ -1579,6 +1579,7 @@
             this.dtgMayMoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMayMoc.Size = new System.Drawing.Size(629, 275);
             this.dtgMayMoc.TabIndex = 1;
+            this.dtgMayMoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMayMoc_CellClick);
             // 
             // panel19
             // 

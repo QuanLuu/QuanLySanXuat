@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChiThiSX));
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelFilterCTSX = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.cbMaSPFilter = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgChiThiSX = new System.Windows.Forms.DataGridView();
             this.panelQLSX = new System.Windows.Forms.Panel();
@@ -93,15 +91,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhậpLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sổTayNLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhậtKýSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nguyênLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhânSựToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbCongDoan = new System.Windows.Forms.ComboBox();
             this.cbCongDoanSau = new System.Windows.Forms.ComboBox();
             this.cbTenMay = new System.Windows.Forms.ComboBox();
@@ -112,7 +101,8 @@
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.label29 = new System.Windows.Forms.Label();
             this.CbSomay = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
+            this.cbMaSPFilter = new System.Windows.Forms.ComboBox();
+            this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
             this.panelQLSX.SuspendLayout();
@@ -136,26 +126,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.numtgChuanBi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgSX)).BeginInit();
             this.panel4.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panelTitleCTSX.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelFilterCTSX
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dtpDenNgay);
-            this.panel1.Controls.Add(this.dtpTuNgay);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.cbMaSPFilter);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 626);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(891, 31);
-            this.panel1.TabIndex = 0;
+            this.panelFilterCTSX.AutoSize = true;
+            this.panelFilterCTSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelFilterCTSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFilterCTSX.Controls.Add(this.cbMaSPFilter);
+            this.panelFilterCTSX.Controls.Add(this.dtpDenNgay);
+            this.panelFilterCTSX.Controls.Add(this.dtpTuNgay);
+            this.panelFilterCTSX.Controls.Add(this.label28);
+            this.panelFilterCTSX.Controls.Add(this.label27);
+            this.panelFilterCTSX.Controls.Add(this.label24);
+            this.panelFilterCTSX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFilterCTSX.Location = new System.Drawing.Point(0, 35);
+            this.panelFilterCTSX.Name = "panelFilterCTSX";
+            this.panelFilterCTSX.Size = new System.Drawing.Size(891, 30);
+            this.panelFilterCTSX.TabIndex = 0;
             // 
             // label24
             // 
@@ -166,49 +155,38 @@
             this.label24.TabIndex = 19;
             this.label24.Text = "Mã SP";
             // 
-            // cbMaSPFilter
-            // 
-            this.cbMaSPFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbMaSPFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbMaSPFilter.FormattingEnabled = true;
-            this.cbMaSPFilter.Location = new System.Drawing.Point(389, 5);
-            this.cbMaSPFilter.Name = "cbMaSPFilter";
-            this.cbMaSPFilter.Size = new System.Drawing.Size(209, 21);
-            this.cbMaSPFilter.TabIndex = 18;
-            this.cbMaSPFilter.TextChanged += new System.EventHandler(this.cbMaSPFilter_TextChanged);
-            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.Controls.Add(this.dtgChiThiSX);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 305);
+            this.panel2.Location = new System.Drawing.Point(0, 307);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 321);
+            this.panel2.Size = new System.Drawing.Size(891, 350);
             this.panel2.TabIndex = 1;
             // 
             // dtgChiThiSX
             // 
             this.dtgChiThiSX.AllowUserToResizeRows = false;
             this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgChiThiSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgChiThiSX.Location = new System.Drawing.Point(11, 6);
             this.dtgChiThiSX.Name = "dtgChiThiSX";
             this.dtgChiThiSX.ReadOnly = true;
@@ -229,7 +207,7 @@
             this.panelQLSX.Controls.Add(this.groupBox1);
             this.panelQLSX.Controls.Add(this.groupBox2);
             this.panelQLSX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQLSX.Location = new System.Drawing.Point(0, 90);
+            this.panelQLSX.Location = new System.Drawing.Point(0, 92);
             this.panelQLSX.Name = "panelQLSX";
             this.panelQLSX.Size = new System.Drawing.Size(891, 215);
             this.panelQLSX.TabIndex = 2;
@@ -271,6 +249,7 @@
             this.cbNVXN.Name = "cbNVXN";
             this.cbNVXN.Size = new System.Drawing.Size(180, 21);
             this.cbNVXN.TabIndex = 31;
+            this.cbNVXN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbNVXN_MouseClick);
             // 
             // cbNVKT
             // 
@@ -281,6 +260,7 @@
             this.cbNVKT.Name = "cbNVKT";
             this.cbNVKT.Size = new System.Drawing.Size(180, 21);
             this.cbNVKT.TabIndex = 30;
+            this.cbNVKT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbNVKT_MouseClick);
             // 
             // cbNVSX
             // 
@@ -292,6 +272,7 @@
             this.cbNVSX.Name = "cbNVSX";
             this.cbNVSX.Size = new System.Drawing.Size(180, 21);
             this.cbNVSX.TabIndex = 29;
+            this.cbNVSX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbNVSX_MouseClick);
             // 
             // label20
             // 
@@ -356,6 +337,11 @@
             // numBaoLuu
             // 
             this.numBaoLuu.Location = new System.Drawing.Point(71, 177);
+            this.numBaoLuu.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numBaoLuu.Name = "numBaoLuu";
             this.numBaoLuu.Size = new System.Drawing.Size(66, 20);
             this.numBaoLuu.TabIndex = 33;
@@ -372,6 +358,11 @@
             // numhongKhac
             // 
             this.numhongKhac.Location = new System.Drawing.Point(71, 150);
+            this.numhongKhac.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numhongKhac.Name = "numhongKhac";
             this.numhongKhac.Size = new System.Drawing.Size(66, 20);
             this.numhongKhac.TabIndex = 31;
@@ -379,6 +370,11 @@
             // numBienDang
             // 
             this.numBienDang.Location = new System.Drawing.Point(71, 121);
+            this.numBienDang.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numBienDang.Name = "numBienDang";
             this.numBienDang.Size = new System.Drawing.Size(66, 20);
             this.numBienDang.TabIndex = 30;
@@ -386,6 +382,11 @@
             // numSet
             // 
             this.numSet.Location = new System.Drawing.Point(71, 92);
+            this.numSet.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numSet.Name = "numSet";
             this.numSet.Size = new System.Drawing.Size(66, 20);
             this.numSet.TabIndex = 29;
@@ -393,6 +394,11 @@
             // numMop
             // 
             this.numMop.Location = new System.Drawing.Point(71, 63);
+            this.numMop.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numMop.Name = "numMop";
             this.numMop.Size = new System.Drawing.Size(66, 20);
             this.numMop.TabIndex = 28;
@@ -400,6 +406,11 @@
             // numSuoc
             // 
             this.numSuoc.Location = new System.Drawing.Point(71, 34);
+            this.numSuoc.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numSuoc.Name = "numSuoc";
             this.numSuoc.Size = new System.Drawing.Size(66, 20);
             this.numSuoc.TabIndex = 27;
@@ -491,6 +502,11 @@
             // numSoLot
             // 
             this.numSoLot.Location = new System.Drawing.Point(196, 177);
+            this.numSoLot.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.numSoLot.Name = "numSoLot";
             this.numSoLot.Size = new System.Drawing.Size(77, 20);
             this.numSoLot.TabIndex = 31;
@@ -507,6 +523,11 @@
             // numSoLuong
             // 
             this.numSoLuong.Location = new System.Drawing.Point(64, 177);
+            this.numSoLuong.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(97, 20);
             this.numSoLuong.TabIndex = 29;
@@ -599,6 +620,7 @@
             this.cbMaSP.Size = new System.Drawing.Size(209, 21);
             this.cbMaSP.TabIndex = 16;
             this.cbMaSP.SelectedIndexChanged += new System.EventHandler(this.cbMaSP_SelectedIndexChanged);
+            this.cbMaSP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbMaSP_MouseClick);
             // 
             // groupBox1
             // 
@@ -627,6 +649,11 @@
             // numtgChoKhuon
             // 
             this.numtgChoKhuon.Location = new System.Drawing.Point(89, 179);
+            this.numtgChoKhuon.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgChoKhuon.Name = "numtgChoKhuon";
             this.numtgChoKhuon.Size = new System.Drawing.Size(66, 20);
             this.numtgChoKhuon.TabIndex = 27;
@@ -634,6 +661,11 @@
             // numtgDaoTao
             // 
             this.numtgDaoTao.Location = new System.Drawing.Point(89, 150);
+            this.numtgDaoTao.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgDaoTao.Name = "numtgDaoTao";
             this.numtgDaoTao.Size = new System.Drawing.Size(66, 20);
             this.numtgDaoTao.TabIndex = 26;
@@ -641,6 +673,11 @@
             // numtgChaoLe
             // 
             this.numtgChaoLe.Location = new System.Drawing.Point(89, 121);
+            this.numtgChaoLe.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgChaoLe.Name = "numtgChaoLe";
             this.numtgChaoLe.Size = new System.Drawing.Size(66, 20);
             this.numtgChaoLe.TabIndex = 25;
@@ -648,6 +685,11 @@
             // numtgSua
             // 
             this.numtgSua.Location = new System.Drawing.Point(89, 92);
+            this.numtgSua.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgSua.Name = "numtgSua";
             this.numtgSua.Size = new System.Drawing.Size(66, 20);
             this.numtgSua.TabIndex = 24;
@@ -655,6 +697,11 @@
             // numtgChuanBi
             // 
             this.numtgChuanBi.Location = new System.Drawing.Point(89, 63);
+            this.numtgChuanBi.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgChuanBi.Name = "numtgChuanBi";
             this.numtgChuanBi.Size = new System.Drawing.Size(66, 20);
             this.numtgChuanBi.TabIndex = 23;
@@ -662,6 +709,11 @@
             // numtgSX
             // 
             this.numtgSX.Location = new System.Drawing.Point(89, 31);
+            this.numtgSX.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.numtgSX.Name = "numtgSX";
             this.numtgSX.Size = new System.Drawing.Size(66, 20);
             this.numtgSX.TabIndex = 22;
@@ -730,7 +782,7 @@
             this.panel4.Controls.Add(this.BtnEdit);
             this.panel4.Controls.Add(this.btnNew);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 63);
+            this.panel4.Location = new System.Drawing.Point(0, 65);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(891, 27);
             this.panel4.TabIndex = 3;
@@ -788,89 +840,6 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))));
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhMụcToolStripMenuItem,
-            this.nhậpLiệuToolStripMenuItem,
-            this.báoCáoToolStripMenuItem,
-            this.nhânSựToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(891, 28);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // danhMụcToolStripMenuItem
-            // 
-            this.danhMụcToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
-            this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.danhMụcToolStripMenuItem.Text = "Danh Mục";
-            this.danhMụcToolStripMenuItem.Click += new System.EventHandler(this.danhMụcToolStripMenuItem_Click);
-            // 
-            // nhậpLiệuToolStripMenuItem
-            // 
-            this.nhậpLiệuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sổTayNLToolStripMenuItem,
-            this.nhậtKýSPToolStripMenuItem});
-            this.nhậpLiệuToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.nhậpLiệuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nhậpLiệuToolStripMenuItem.Image")));
-            this.nhậpLiệuToolStripMenuItem.Name = "nhậpLiệuToolStripMenuItem";
-            this.nhậpLiệuToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.nhậpLiệuToolStripMenuItem.Text = "Nhật Kí";
-            // 
-            // báoCáoToolStripMenuItem
-            // 
-            this.báoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nguyênLiệuToolStripMenuItem,
-            this.sảnPhẩmToolStripMenuItem});
-            this.báoCáoToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.báoCáoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("báoCáoToolStripMenuItem.Image")));
-            this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.báoCáoToolStripMenuItem.Text = "Báo Cáo";
-            // 
-            // sổTayNLToolStripMenuItem
-            // 
-            this.sổTayNLToolStripMenuItem.Name = "sổTayNLToolStripMenuItem";
-            this.sổTayNLToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.sổTayNLToolStripMenuItem.Text = "Nhật Ký NL";
-            // 
-            // nhậtKýSPToolStripMenuItem
-            // 
-            this.nhậtKýSPToolStripMenuItem.Name = "nhậtKýSPToolStripMenuItem";
-            this.nhậtKýSPToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.nhậtKýSPToolStripMenuItem.Text = "Nhật Ký SP";
-            // 
-            // nguyênLiệuToolStripMenuItem
-            // 
-            this.nguyênLiệuToolStripMenuItem.Name = "nguyênLiệuToolStripMenuItem";
-            this.nguyênLiệuToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.nguyênLiệuToolStripMenuItem.Text = "Nguyên Liệu";
-            // 
-            // sảnPhẩmToolStripMenuItem
-            // 
-            this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
-            // 
-            // nhânSựToolStripMenuItem
-            // 
-            this.nhânSựToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.nhânSựToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nhânSựToolStripMenuItem.Image")));
-            this.nhânSựToolStripMenuItem.Name = "nhânSựToolStripMenuItem";
-            this.nhânSựToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
-            this.nhânSựToolStripMenuItem.Text = "Nhân Sự";
-            // 
             // cbCongDoan
             // 
             this.cbCongDoan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
@@ -906,7 +875,7 @@
             this.panelTitleCTSX.BackColor = System.Drawing.SystemColors.Info;
             this.panelTitleCTSX.Controls.Add(this.label29);
             this.panelTitleCTSX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleCTSX.Location = new System.Drawing.Point(0, 28);
+            this.panelTitleCTSX.Location = new System.Drawing.Point(0, 0);
             this.panelTitleCTSX.Name = "panelTitleCTSX";
             this.panelTitleCTSX.Size = new System.Drawing.Size(891, 35);
             this.panelTitleCTSX.TabIndex = 5;
@@ -970,6 +939,17 @@
             this.CbSomay.Size = new System.Drawing.Size(77, 21);
             this.CbSomay.TabIndex = 37;
             // 
+            // cbMaSPFilter
+            // 
+            this.cbMaSPFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbMaSPFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbMaSPFilter.FormattingEnabled = true;
+            this.cbMaSPFilter.Location = new System.Drawing.Point(385, 4);
+            this.cbMaSPFilter.Name = "cbMaSPFilter";
+            this.cbMaSPFilter.Size = new System.Drawing.Size(209, 21);
+            this.cbMaSPFilter.TabIndex = 25;
+            this.cbMaSPFilter.TextChanged += new System.EventHandler(this.cbMaSPFilter_TextChanged);
+            // 
             // FrmChiThiSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -978,14 +958,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelQLSX);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelFilterCTSX);
             this.Controls.Add(this.panelTitleCTSX);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "FrmChiThiSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sản Xuất";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelFilterCTSX.ResumeLayout(false);
+            this.panelFilterCTSX.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).EndInit();
             this.panelQLSX.ResumeLayout(false);
@@ -1013,8 +992,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numtgChuanBi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgSX)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panelTitleCTSX.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1023,7 +1000,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelFilterCTSX;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dtgChiThiSX;
         private System.Windows.Forms.Panel panelQLSX;
@@ -1081,19 +1058,9 @@
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cbMaSPFilter;
         private System.Windows.Forms.NumericUpDown numBaoLuu;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhậpLiệuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sổTayNLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhậtKýSPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nguyênLiệuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhânSựToolStripMenuItem;
         private System.Windows.Forms.ComboBox cbTenMay;
         private System.Windows.Forms.ComboBox cbCongDoanSau;
         private System.Windows.Forms.ComboBox cbCongDoan;
@@ -1104,5 +1071,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox CbSomay;
+        private System.Windows.Forms.ComboBox cbMaSPFilter;
     }
 }
