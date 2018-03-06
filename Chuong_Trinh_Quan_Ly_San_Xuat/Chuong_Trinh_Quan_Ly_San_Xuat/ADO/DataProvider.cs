@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
@@ -29,16 +29,28 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 
         private DataProvider() { }
 
-        private string connectstring = "Data Source=LAPTOP318;Initial Catalog=DEMO;Integrated Security=True";//"Data Source=TRAN_TUAN\\SQLEXPRESS;Initial Catalog=QUAN_LY_SAN_XUAT;Integrated Security= true";//"Data Source=LAPTOP318;Initial Catalog=DEMO;Integrated Security=True"; //
+        //private string connectstring = "Data Source=10.0.0.144,1433;" +
+        //                                "Initial Catalog = QUAN_LY_SAN_XUAT;" +
+        //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //
 
+        private string connectstring = "Data Source=LAPTOP318;" +
+                                        "Initial Catalog = QUAN_LY_SAN_XUAT;" +
+                                        "User id=QuanLySanXuat;" +
+                                        "Password=123456;";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 
-                DataTable data = new DataTable();
+            DataTable data = new DataTable();
+            try
+            {
+               
                 using (SqlConnection connection = new SqlConnection(connectstring))
                 {
+
+               
                     connection.Open();
-                    SqlCommand command = new SqlCommand(query, connection);
+                
+                SqlCommand command = new SqlCommand(query, connection);
                     if (parameter != null)
                     {
                         string[] listParam = query.Split(' ');
@@ -56,8 +68,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
                     connection.Close();
-                }
-                return data;
+               
+                }   
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return data;
         }
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {

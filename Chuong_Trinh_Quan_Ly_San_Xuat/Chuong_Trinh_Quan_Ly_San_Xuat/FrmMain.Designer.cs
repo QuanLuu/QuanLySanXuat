@@ -112,6 +112,7 @@
             this.panelMain.Controls.Add(this.lbDanhMuc);
             this.panelMain.Controls.Add(this.pictureBox1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Enabled = false;
             this.panelMain.Location = new System.Drawing.Point(0, 59);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(568, 291);
@@ -170,6 +171,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 5;
+            this.label4.Tag = "Chỉ Thị SX";
             this.label4.Text = "Chỉ Thị SX";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -182,6 +184,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "Chỉ Thị SX";
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
 
@@ -17,7 +17,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionSP = 0;
         int actionKH = 0;
         int actionDM = 0;
-        int actionCD = 0;
         int actionMM = 0;
         int actionSPCD = 0;
         public FrmDanhMuc()
@@ -28,7 +27,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgSPCD.Dock = DockStyle.Fill;
             dtgKH.Dock = DockStyle.Fill;
             dtgDM.Dock = DockStyle.Fill;
-            dtgCongDoan.Dock = DockStyle.Fill;
             dtgMayMoc.Dock = DockStyle.Fill;
             //dtpDateFrom.CustomFormat = "yyyy-mm-dd";
             //dtpDateTo.CustomFormat = "yyyy-mm-dd";
@@ -40,10 +38,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetKhachHang();
             enablecontrolKH();
             GetDinhMuc();
-            enablecontrolDM();
-            enablecontrolCD();
+            enablecontrolDM();      
             enablecontrolMM();
-            getcongdoan();
             getmaymoc();
             getSPCD();
         }
@@ -61,9 +57,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgSP.DataSource = data;
             cbMaSPDM.DataSource = data;
             cbMaSPDM.DisplayMember = "MA_SP";
-            cbMaSPCD.BindingContext = new BindingContext();
-            cbMaSPCD.DataSource = data;
-            cbMaSPCD.DisplayMember = "MA_SP";
         }
 
         void GetKhachHang()
@@ -87,13 +80,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgSPCD.DataSource = spcd;
         }
 
-        void getcongdoan()
-        {
-            DataTable congdoan = Import_Manager.Instance.GetCongDoan();
-            dtgCongDoan.DataSource = congdoan;
-            cbTenCDSP.DataSource = congdoan;
-            cbTenCDSP.DisplayMember = "TEN_CONG_DOAN";
-        }
 
         void getmaymoc()
         {
@@ -167,28 +153,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         }
 
-        void enablecontrolCD()
-        {
-            if (actionCD == 0)
-            {
-                btnNewCD.Enabled = true;
-                btnEditCD.Enabled = true;
-                btnDeleteCD.Enabled = true;
-                btnSaveCD.Enabled = false;
-                btnCancelCD.Enabled = false;
-                panelCD.Visible = false;
-            }
-            else
-            {
-                btnNewCD.Enabled = false;
-                btnEditCD.Enabled = false;
-                btnDeleteCD.Enabled = false;
-                btnSaveCD.Enabled = true;
-                btnCancelCD.Enabled = true;
-                panelCD.Visible = true;
-            }
-
-        }
         void enablecontrolDM()
         {
             if (actionDM == 0)
@@ -536,48 +500,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolMM();
         }
 
-        private void btnNewCD_Click(object sender, EventArgs e)
-        {
-            actionCD = 1;
-            tbTenCD.Text = "";
-            enablecontrolCD();
-        }
-
-        private void btnEditCD_Click(object sender, EventArgs e)
-        {
-            actionCD = 2;
-            enablecontrolCD();
-        }
-
-        private void btnCancelCD_Click(object sender, EventArgs e)
-        {
-            actionCD = 0;
-            enablecontrolCD();
-        }
-
-        private void btnSaveCD_Click(object sender, EventArgs e)
-        {
-            int currow = 0;
-            try
-            {
-                if (actionCD == 2)
-                { currow = dtgCongDoan.CurrentRow.Index; }
-                else if (actionCD == 1)
-                { currow = dtgCongDoan.Rows.Count - 1; }
-                else
-                { currow = 0; }
-                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbTenCD.Text);
-                getcongdoan();
-                dtgCongDoan.CurrentCell = dtgCongDoan.Rows[currow].Cells[0];
-        }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-    actionCD = 0;
-            enablecontrolCD();
-        }
-
         private void btnSaveMM_Click(object sender, EventArgs e)
         {
             int currow = 0;
@@ -601,30 +523,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolMM();
         }
 
-        private void btnDeleteCD_Click(object sender, EventArgs e)
-        {
-            actionCD = 3;
-            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
-            try
-            {
-                int results = Import_Manager.Instance.UpdateCongDoan(actionCD, (int)dtgCongDoan.CurrentRow.Cells[0].Value, tbTenCD.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            actionCD = 0;
-            enablecontrolCD();
-            getcongdoan();
-        }
-
-        private void dtgCongDoan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (actionCD != 1)
-            {
-                tbTenCD.Text = dtgCongDoan.CurrentRow.Cells[1].Value.ToString();
-            }
-        }
 
         private void btnEditDM_Click(object sender, EventArgs e)
         {
@@ -687,8 +585,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             actionSPCD = 1;
             enablecontrolSPCD();
-            cbMaSPCD.Text = "";
-            cbTenCDSP.Text = "";
+            tbMaCD.Text = "";
+            tbTenCD.Text = "";
         }
 
         private void btnEditSPCD_Click(object sender, EventArgs e)
@@ -719,7 +617,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 { currow = dtgSPCD.Rows.Count - 1; }
                 else
                 { currow = 0; }
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, cbMaSPCD.Text, cbTenCDSP.Text);
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text);
                 getSPCD();
                 dtgSPCD.CurrentCell = dtgSPCD.Rows[currow].Cells[0];
             }
@@ -737,7 +635,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, cbMaSPCD.Text, cbTenCDSP.Text );
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
             }
             catch (Exception ex)
             {
@@ -757,8 +655,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "" && actionSPCD != 1)
             {
-                cbMaSPCD.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString();
-                cbTenCDSP.Text = dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+                tbMaCD.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString();
+                tbTenCD.Text = dtgSPCD.CurrentRow.Cells[2].Value.ToString();
             }
         }
 
@@ -769,6 +667,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbTenMay.Text = dtgMayMoc.CurrentRow.Cells[1].Value.ToString();
                 tbSoMay.Text = dtgMayMoc.CurrentRow.Cells[2].Value.ToString();
             }
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

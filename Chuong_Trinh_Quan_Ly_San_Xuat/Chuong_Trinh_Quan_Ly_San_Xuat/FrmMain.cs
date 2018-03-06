@@ -6,7 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
@@ -14,13 +14,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     public partial class FrmMain : Form
     {
         public string quyensudung;
-
+        double app_ver = 1.0;
         public FrmMain()
         {
             InitializeComponent();
             EventKhiLoadForm(this.panelMain);
             getusername();
             panelMain.Enabled = false;
+            this.Text = "Quản Lý Sản Xuất - Version " + app_ver.ToString();
         }
         void HieuUngChon(Control col)
         {
@@ -59,9 +60,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
            
         }
-        void enablecontrol()
+        void enablecontrol(string capquyen, Control col)
         {
-            panelMain.Enabled = true;
+            foreach (Control c in col.Controls)
+            {
+                if (c.Tag == null) { c.Enabled = false; }
+                else
+                {
+                    if (capquyen.Contains(c.Tag.ToString()))
+                    { c.Enabled = true; }
+                    else { c.Enabled = false; }
+                }
+            }
         }
         void getusername()
         {
@@ -132,8 +142,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 int kqcheck = data.Rows.Count;
                 if (kqcheck > 0)
                 {
-                    quyensudung = data.Rows[0][1].ToString();
-                    enablecontrol();
+                    panelMain.Enabled = true;
+                    string quyencap = data.Rows[0][2].ToString();
+                    quyensudung = data.Rows[0][3].ToString();
+                    if(quyencap != "Full") enablecontrol(quyencap, this.panelMain);
                     panelLogin.Visible = false;
                 }
                 else

@@ -7,3 +7,6 @@ C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\C
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.csproj.GenerateResource.Cache
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.exe
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.FrmMain.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.FrmNhanSu.resources
+C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Release\Chuong_Trinh_Quan_Ly_San_Xuat.csprojResolveAssemblyReference.cache
