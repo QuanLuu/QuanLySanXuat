@@ -14,6 +14,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     public partial class FrmMain : Form
     {
         public string quyensudung;
+        public string casx;
         double app_ver = 1.0;
         public FrmMain()
         {
@@ -75,11 +76,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getusername()
         {
-            DataTable tendn = Import_Manager.Instance.GetTenDangNhap();
-            for (int i = 0; i < tendn.Rows.Count; i++)
-            {
-                cbName.Items.Add(tendn.Rows[i][1].ToString());
-            }
+            //DataTable tendn = Import_Manager.Instance.GetTenDangNhap();
+            //for (int i = 0; i < tendn.Rows.Count; i++)
+            //{
+            //    cbName.Items.Add(tendn.Rows[i][1].ToString());
+            //}
 
         }
         void showdanhmuc()
@@ -87,6 +88,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             FrmDanhMuc danhmuc = new FrmDanhMuc();
             this.Hide();
             danhmuc.Show();
+            danhmuc.ShowInTaskbar = true;
             danhmuc.FormClosing += main_close;
 
         }
@@ -96,6 +98,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             FrmChiThiSX chithisx = new FrmChiThiSX();
             this.Hide();
             chithisx.Show();
+            chithisx.ShowInTaskbar = true;
             chithisx.FormClosing += main_close;
 
         }
@@ -136,16 +139,37 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dangnhap();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            shownhansu();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            shownhansu();
+        }
+
+        private void tbPass_Enter(object sender, EventArgs e)
+        {
+           
+        }
+        void dangnhap()
+        {
+            if (tbPass.Text == "") return;
             try
             {
-                DataTable data = Import_Manager.Instance.CheckLogin(cbName.Text, tbPass.Text);
+                DataTable data = Import_Manager.Instance.CheckLogin(tbTenDN.Text, tbPass.Text);
                 int kqcheck = data.Rows.Count;
                 if (kqcheck > 0)
                 {
                     panelMain.Enabled = true;
                     string quyencap = data.Rows[0][2].ToString();
                     quyensudung = data.Rows[0][3].ToString();
-                    if(quyencap != "Full") enablecontrol(quyencap, this.panelMain);
+                    casx = data.Rows[0][5].ToString();
+                    if (quyencap != "Full") enablecontrol(quyencap, this.panelMain);
                     panelLogin.Visible = false;
                 }
                 else
@@ -159,14 +183,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            shownhansu();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            shownhansu();
+            if (e.KeyChar == (char)Keys.Return) dangnhap();
         }
     }
 }

@@ -42,6 +42,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolMM();
             getmaymoc();
             getSPCD();
+            getmaymoccd();
+            loadcomboMSQL();
         }
         void GetNguyenLieu()
         {
@@ -86,7 +88,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable maymoc = Import_Manager.Instance.GetMayMoc();
             dtgMayMoc.DataSource = maymoc;
         }
-
+        void getmaymoccd()
+        {
+            DataTable data = Import_Manager.Instance.GetMayMocCDSP();
+            cbMayMocCD.ValueMember = "ID";
+            cbMayMocCD.DisplayMember = "MAY_MOC";
+            cbMayMocCD.DataSource = data;
+        }
+        void loadcomboMSQL()
+        {
+            DataTable data = Import_Manager.Instance.loadcomboMAQL();
+            cbMSQL.ValueMember = "ID";
+            cbMSQL.DisplayMember = "MSQL";
+            cbMSQL.DataSource = data;
+        }
         private void tbFilterNL_TextChanged(object sender, EventArgs e)
         {
             GetNguyenLieu();
@@ -333,7 +348,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 else
                 { currow = 0; }
 
-                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, cbMaKH.Text, numSP.Value);
+                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, cbMaKH.Text, numSP.Value);
                 GetSanPham();
                 dtgSP.CurrentCell = dtgSP.Rows[currow].Cells[0];
             }
@@ -352,11 +367,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtgSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbMaSP.Text = dtgSP.CurrentRow.Cells[1].Value.ToString();
-            tbTenSP.Text = dtgSP.CurrentRow.Cells[2].Value.ToString();
-            cbTenNL.Text = dtgSP.CurrentRow.Cells[3].Value.ToString();
-            cbMaKH.Text = dtgSP.CurrentRow.Cells[4].Value.ToString();
-            if (dtgSP.CurrentRow.Cells[5].Value.ToString() != "") numSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[5].Value.ToString());
+            tbMSQL.Text = dtgSP.CurrentRow.Cells[1].Value.ToString(); ;
+            tbMaSP.Text = dtgSP.CurrentRow.Cells[2].Value.ToString();
+            tbTenSP.Text = dtgSP.CurrentRow.Cells[3].Value.ToString();
+            cbTenNL.Text = dtgSP.CurrentRow.Cells[4].Value.ToString();
+            cbMaKH.Text = dtgSP.CurrentRow.Cells[5].Value.ToString();
+            if (dtgSP.CurrentRow.Cells[6].Value.ToString() != "") numSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[5].Value.ToString());
         }
 
         private void btnDeleteSP_Click(object sender, EventArgs e)
@@ -365,7 +381,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, cbMaKH.Text, numSP.Value);
+                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text,tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, cbMaKH.Text, numSP.Value);
             }
             catch (Exception ex)
             {
@@ -483,7 +499,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, Int32.Parse(tbSoMay.Text.ToString()));
+                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, tbSoMay.Text, tbMamay.Text);
             }
             catch (Exception ex)
             {
@@ -511,7 +527,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 { currow = dtgMayMoc.Rows.Count - 1; }
                 else
                 { currow = 0; }
-                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, Int32.Parse(tbSoMay.Text.ToString()));
+                int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, tbSoMay.Text, tbMamay.Text);
                 getmaymoc();
                 dtgMayMoc.CurrentCell = dtgMayMoc.Rows[currow].Cells[0];
             }
@@ -587,6 +603,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolSPCD();
             tbMaCD.Text = "";
             tbTenCD.Text = "";
+            tbMamay.Text = "";
         }
 
         private void btnEditSPCD_Click(object sender, EventArgs e)
@@ -609,6 +626,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnSaveSPCD_Click(object sender, EventArgs e)
         {
             int currow = 0;
+            int id_may = 39;
             try
             {
                 if (actionSPCD == 2)
@@ -617,16 +635,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 { currow = dtgSPCD.Rows.Count - 1; }
                 else
                 { currow = 0; }
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text);
+                if (cbMayMocCD.Text != "") id_may = Int32.Parse(cbMayMocCD.SelectedValue.ToString());
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()));
                 getSPCD();
                 dtgSPCD.CurrentCell = dtgSPCD.Rows[currow].Cells[0];
+                actionSPCD = 0;
+                enablecontrolSPCD();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionSPCD = 0;
-            enablecontrolSPCD();
+
         }
 
         private void btnDeleteSPCD_Click(object sender, EventArgs e)
@@ -635,7 +655,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text);
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, Int32.Parse(cbMayMocCD.SelectedValue.ToString()), Int32.Parse(cbMSQL.SelectedValue.ToString()));
             }
             catch (Exception ex)
             {
@@ -655,8 +675,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "" && actionSPCD != 1)
             {
-                tbMaCD.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString();
-                tbTenCD.Text = dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+                cbMSQL.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString() + " - " + dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+                tbMaCD.Text = dtgSPCD.CurrentRow.Cells[3].Value.ToString();
+                tbTenCD.Text = dtgSPCD.CurrentRow.Cells[4].Value.ToString();
+                //cbMayMocCD.Text = "";
+                cbMayMocCD.Text = "Tên:" + dtgSPCD.CurrentRow.Cells[5].Value.ToString() + " - Số:" + dtgSPCD.CurrentRow.Cells[6].Value.ToString() + " - Mã:" + dtgSPCD.CurrentRow.Cells[7].Value.ToString();
             }
         }
 
@@ -666,12 +689,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 tbTenMay.Text = dtgMayMoc.CurrentRow.Cells[1].Value.ToString();
                 tbSoMay.Text = dtgMayMoc.CurrentRow.Cells[2].Value.ToString();
+                tbMamay.Text = dtgMayMoc.CurrentRow.Cells[3].Value.ToString(); ;
             }
         }
 
-        private void label29_Click(object sender, EventArgs e)
+        private void cbMayMocCD_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

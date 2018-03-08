@@ -16,6 +16,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionSX =0;
         string phanquyen;
         bool selectByMouse = false;
+        string usernhap;
+        string casanxuat;
         public FrmChiThiSX()
         {
             InitializeComponent();
@@ -28,14 +30,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpTuNgay.Value = new DateTime(now.Year, now.Month, 1);
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             phanquyen = ((FrmMain)f).quyensudung;
+            usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
+            casanxuat = ((FrmMain)f).casx;
+            cbCaSX.SelectedIndex = 0;
+            if(casanxuat != "") cbCaSX.Text = casanxuat;
             enablecontrolCTSX();
-            LoadDSNhanVien();
-            GetCongDoanSX();
-            GetTenMay();
             GetChiThiSX();
-            cbMaCDFilter.SelectedIndex = -1;
             SetEventForNumerric(this.panelQLSX);
-            //NewChiThiSX(this.panelFilterCTSX);
+            NewChiThiSX(this.panelFilterCTSX);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 if (c.GetType().Name == "TextBox") c.Text = "";
                 if (c.GetType().Name == "ComboBox") c.Text = "";
-                if (c.GetType().Name == "NumericUpDown") c.Text = "";
+                if (c.GetType().Name == "NumericUpDown") c.Text = "0";
                 NewChiThiSX(c);
             }
         }
@@ -64,7 +66,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
                 if (c.GetType().Name == "ComboBox")
                 {
-                    if(c.Text == "" && c.Name != "cbTenMay" && c.Name != "CbSomay") MessageBox.Show("Bạn chưa nhâp thông tin cho " + c.Name);
+                    if(c.Text == "" && c.Name != "cbTenMay" && c.Name != "CbSomay" && c.Name != "cbmamay") MessageBox.Show("Bạn chưa nhâp thông tin cho " + c.Name);
                 }
                 CheckChiThiSX(c);
             }
@@ -132,6 +134,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
         }
 
+        void getmacdtheomsql()
+        {
+            DataTable data = Import_Manager.Instance.GetMayMocTheoCD(cbMaCongDoan.Text);
+            cbTenMay.DisplayMember = "TEN_MAY";
+            cbTenMay.DataSource = data;
+            CbSomay.DisplayMember = "SO_MAY";
+            CbSomay.DataSource = data;
+            cbmamay.DisplayMember = "MA_MAY";
+            cbmamay.DataSource = data;
+
+        }
+
         void enablecontrolCTSX()
         {
             if (actionSX == 0)
@@ -142,11 +156,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnSave.Enabled = false;
                 btnCancel.Enabled = false;
                 panelQLSX.Visible = false;
-                if (phanquyen != "Full")
-                {
-                    BtnEdit.Enabled = false;
-                    btnDelete.Enabled = false;
-                }
+                //if (phanquyen != "Full")
+                //{
+                //    BtnEdit.Enabled = false;
+                //    btnDelete.Enabled = false;
+                //}
             }
             else
             {
@@ -172,8 +186,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, (int)dtgChiThiSX.CurrentRow.Cells[24].Value, cbMaCongDoan.Text, cbTenMay.Text, CbSomay.Text.ToString(), dtpNgaySX.Value, (int)numCaSX.Value, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, cbNVSX.Text, cbNVKT.Text, cbNVXN.Text, tbGhiChu.Text);
+                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, (int)dtgChiThiSX.CurrentRow.Cells[0].Value, cbMaCongDoan.Text, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value, (int)numXiMa.Value, (int)numNhiet.Value
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, tbGhiChu.Text, usernhap);
 
             }
             catch (Exception ex)
@@ -194,69 +208,30 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnSave_Click(object sender, EventArgs e)
         {
             CheckChiThiSX(this.panelQLSX);
-            int currow = 0;
             int idCTSX = 0;
-            if (dtgChiThiSX.Rows.Count > 1 && dtgChiThiSX.CurrentRow.Cells[24].Value.ToString() != "") idCTSX = (int)dtgChiThiSX.CurrentRow.Cells[24].Value;
+            if (dtgChiThiSX.Rows.Count > 1 && dtgChiThiSX.CurrentRow.Cells[0].Value.ToString() != "") idCTSX = (int)dtgChiThiSX.CurrentRow.Cells[0].Value;
             try
             {
-                if (actionSX == 2)
-                { currow = dtgChiThiSX.CurrentRow.Index; }
-                else if (actionSX == 1)
-                { currow = dtgChiThiSX.Rows.Count - 1; }
-                else
-                { currow = 0; }
-                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, cbTenMay.Text, CbSomay.Text.ToString(), dtpNgaySX.Value, (int)numCaSX.Value, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, cbNVSX.Text, cbNVKT.Text, cbNVXN.Text, tbGhiChu.Text);
+                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value, (int)numXiMa.Value, (int)numNhiet.Value
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, tbGhiChu.Text, usernhap);
+
                 GetChiThiSX();
-                dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[currow].Cells[0];
+                dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
+                actionSX = 0;
+                enablecontrolCTSX();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionSX = 0;
-            enablecontrolCTSX();
+
         }
-        void LoadDSNhanVien()
-        {
-            DataTable nhanvien = Import_Manager.Instance.LoadNhanVien();
-            cbNVSX.DataSource = nhanvien;
-            cbNVKT.BindingContext = new BindingContext();
-            cbNVKT.DataSource = nhanvien;
-            cbNVXN.BindingContext = new BindingContext();
-            cbNVXN.DataSource = nhanvien;
-            cbNVSX.DisplayMember = "NV";
-            cbNVKT.DisplayMember = "NV";
-            cbNVXN.DisplayMember = "NV";
-        }
-        void GetCongDoanSX()
-        {
-            DataTable congdoan = Import_Manager.Instance.getSPCongDoan(cbMaCDFilter.Text);
-            cbMaCongDoan.DataSource = congdoan;
-            cbMaCongDoan.DisplayMember = "MA_CONG_DOAN";
-            
-        }
+        
         void GetChiThiSX()
         {
-            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, cbMaCDFilter.Text);
+            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, tbMSQLFilter.Text);
             dtgChiThiSX.DataSource = chithi;
         }
-        void GetTenMay()
-        {
-            DataTable maymoc = Import_Manager.Instance.GetTenMay();
-            cbTenMay.DataSource = maymoc;
-            cbTenMay.DisplayMember = "TEN_MAY";
-            DataTable somay = Import_Manager.Instance.GetsOMay();
-            CbSomay.DataSource = somay;
-            CbSomay.DisplayMember = "SO_MAY";
-        }
- 
-
-        private void cbMaSPFilter_TextChanged(object sender, EventArgs e)
-        {
-            GetChiThiSX();
-        }
-
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             GetChiThiSX();
@@ -266,29 +241,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (dtgChiThiSX.CurrentRow.Cells[0].Value.ToString() != "" && actionSX != 1)
             {
-                cbMaCongDoan.Text = dtgChiThiSX.CurrentRow.Cells[0].Value.ToString();
-                cbTenMay.Text = dtgChiThiSX.CurrentRow.Cells[1].Value.ToString();
-                CbSomay.Text = dtgChiThiSX.CurrentRow.Cells[2].Value.ToString();
-                dtpNgaySX.Value = Convert.ToDateTime(dtgChiThiSX.CurrentRow.Cells[3].Value.ToString());
-                numCaSX.Text = dtgChiThiSX.CurrentRow.Cells[4].Value.ToString();
-                numSoLuong.Text = dtgChiThiSX.CurrentRow.Cells[5].Value.ToString();
-                tbSoLot.Text = dtgChiThiSX.CurrentRow.Cells[6].Value.ToString();
-                numtgSX.Text = dtgChiThiSX.CurrentRow.Cells[7].Value.ToString();
-                numtgChuanBi.Text = dtgChiThiSX.CurrentRow.Cells[8].Value.ToString();
-                numtgSua.Text = dtgChiThiSX.CurrentRow.Cells[9].Value.ToString();
-                numtgChaoLe.Text = dtgChiThiSX.CurrentRow.Cells[10].Value.ToString();
-                numtgDaoTao.Text = dtgChiThiSX.CurrentRow.Cells[11].Value.ToString();
-                numtgChoKhuon.Text = dtgChiThiSX.CurrentRow.Cells[12].Value.ToString();
-                numSuoc.Text = dtgChiThiSX.CurrentRow.Cells[13].Value.ToString();
-                numMop.Text = dtgChiThiSX.CurrentRow.Cells[14].Value.ToString();
-                numSet.Text = dtgChiThiSX.CurrentRow.Cells[15].Value.ToString();
-                numBienDang.Text = dtgChiThiSX.CurrentRow.Cells[16].Value.ToString();
-                numhongKhac.Text = dtgChiThiSX.CurrentRow.Cells[17].Value.ToString();
-                numBaoLuu.Text = dtgChiThiSX.CurrentRow.Cells[18].Value.ToString();
-                cbNVSX.Text = dtgChiThiSX.CurrentRow.Cells[19].Value.ToString();
-                cbNVKT.Text = dtgChiThiSX.CurrentRow.Cells[20].Value.ToString();
-                cbNVXN.Text = dtgChiThiSX.CurrentRow.Cells[21].Value.ToString();
-                tbGhiChu.Text = dtgChiThiSX.CurrentRow.Cells[22].Value.ToString();
+                tbMSQL.Text = dtgChiThiSX.CurrentRow.Cells[1].Value.ToString(); ;
+                cbMaCongDoan.Text = dtgChiThiSX.CurrentRow.Cells[3].Value.ToString();
+                dtpNgaySX.Value = Convert.ToDateTime(dtgChiThiSX.CurrentRow.Cells[8].Value.ToString());
+                cbCaSX.Text = dtgChiThiSX.CurrentRow.Cells[9].Value.ToString();
+                numSoLuong.Text = dtgChiThiSX.CurrentRow.Cells[10].Value.ToString();
+                tbSoLot.Text = dtgChiThiSX.CurrentRow.Cells[11].Value.ToString();
+                numtgSX.Text = dtgChiThiSX.CurrentRow.Cells[12].Value.ToString();
+                numtgChuanBi.Text = dtgChiThiSX.CurrentRow.Cells[13].Value.ToString();
+                numtgSua.Text = dtgChiThiSX.CurrentRow.Cells[14].Value.ToString();
+                numtgChaoLe.Text = dtgChiThiSX.CurrentRow.Cells[15].Value.ToString();
+                numtgDaoTao.Text = dtgChiThiSX.CurrentRow.Cells[16].Value.ToString();
+                numtgChoKhuon.Text = dtgChiThiSX.CurrentRow.Cells[17].Value.ToString();
+                numSuoc.Text = dtgChiThiSX.CurrentRow.Cells[18].Value.ToString();
+                numMop.Text = dtgChiThiSX.CurrentRow.Cells[19].Value.ToString();
+                numSet.Text = dtgChiThiSX.CurrentRow.Cells[20].Value.ToString();
+                numBienDang.Text = dtgChiThiSX.CurrentRow.Cells[21].Value.ToString();
+                numhongKhac.Text = dtgChiThiSX.CurrentRow.Cells[22].Value.ToString();
+                numBaoLuu.Text = dtgChiThiSX.CurrentRow.Cells[23].Value.ToString();
+                numXiMa.Text = dtgChiThiSX.CurrentRow.Cells[24].Value.ToString();
+                numNhiet.Text = dtgChiThiSX.CurrentRow.Cells[25].Value.ToString();
+                tbGhiChu.Text = dtgChiThiSX.CurrentRow.Cells[26].Value.ToString();
             }
         }
 
@@ -308,25 +281,33 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbMaCongDoan.DroppedDown = true;
         }
 
-        private void cbNVSX_MouseClick(object sender, MouseEventArgs e)
-        {
-            cbNVSX.DroppedDown = true;
-        }
-
-        private void cbNVKT_MouseClick(object sender, MouseEventArgs e)
-        {
-            cbNVKT.DroppedDown = true;
-        }
-
-        private void cbNVXN_MouseClick(object sender, MouseEventArgs e)
-        {
-            cbNVXN.DroppedDown = true;
-        }
-
         private void nhânSựToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmNhanSu f = new Chuong_Trinh_Quan_Ly_San_Xuat.FrmNhanSu();
             f.Show();
+        }
+
+        private void cbMaCongDoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getmacdtheomsql();
+        }
+        void getmacongdoantheomsql()
+        {
+            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQL.Text);
+            cbMaCongDoan.DisplayMember = "MA_CONG_DOAN";
+            cbMaCongDoan.DataSource = data;
+            cbTenCongDoan.DisplayMember = "TEN_CONG_DOAN";
+            cbTenCongDoan.DataSource = data;
+        }
+
+        private void tbMSQL_TextChanged(object sender, EventArgs e)
+        {
+            getmacongdoantheomsql();
+        }
+
+        private void tbMSQLFilter_TextChanged(object sender, EventArgs e)
+        {
+            GetChiThiSX();
         }
     }
 }

@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnDN = new System.Windows.Forms.Button();
             this.tbPass = new System.Windows.Forms.TextBox();
-            this.cbName = new System.Windows.Forms.ComboBox();
+            this.tbTenDN = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -235,11 +235,11 @@
             // 
             this.panelLogin.AutoSize = true;
             this.panelLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelLogin.Controls.Add(this.tbTenDN);
             this.panelLogin.Controls.Add(this.label8);
             this.panelLogin.Controls.Add(this.label7);
             this.panelLogin.Controls.Add(this.btnDN);
             this.panelLogin.Controls.Add(this.tbPass);
-            this.panelLogin.Controls.Add(this.cbName);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelLogin.Location = new System.Drawing.Point(0, 350);
             this.panelLogin.Name = "panelLogin";
@@ -249,7 +249,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 11);
+            this.label8.Location = new System.Drawing.Point(359, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 4;
@@ -258,7 +258,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(119, 11);
+            this.label7.Location = new System.Drawing.Point(166, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 3;
@@ -270,27 +270,28 @@
             this.btnDN.Location = new System.Drawing.Point(490, 6);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(75, 22);
-            this.btnDN.TabIndex = 2;
+            this.btnDN.TabIndex = 3;
             this.btnDN.Text = "Đăng Nhập";
             this.btnDN.UseVisualStyleBackColor = true;
             this.btnDN.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(392, 7);
+            this.tbPass.Location = new System.Drawing.Point(412, 7);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
-            this.tbPass.Size = new System.Drawing.Size(92, 20);
-            this.tbPass.TabIndex = 1;
+            this.tbPass.Size = new System.Drawing.Size(72, 20);
+            this.tbPass.TabIndex = 2;
+            this.tbPass.Enter += new System.EventHandler(this.tbPass_Enter);
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
-            // cbName
+            // tbTenDN
             // 
-            this.cbName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbName.FormattingEnabled = true;
-            this.cbName.Location = new System.Drawing.Point(203, 7);
-            this.cbName.Name = "cbName";
-            this.cbName.Size = new System.Drawing.Size(130, 21);
-            this.cbName.TabIndex = 0;
+            this.tbTenDN.Location = new System.Drawing.Point(250, 8);
+            this.tbTenDN.Name = "tbTenDN";
+            this.tbTenDN.PasswordChar = '*';
+            this.tbTenDN.Size = new System.Drawing.Size(103, 20);
+            this.tbTenDN.TabIndex = 1;
             // 
             // FrmMain
             // 
@@ -339,6 +340,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDN;
         private System.Windows.Forms.TextBox tbPass;
-        private System.Windows.Forms.ComboBox cbName;
+        public System.Windows.Forms.TextBox tbTenDN;
     }
 }
