@@ -13,7 +13,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
     public partial class FrmChiThiSX : Form
     {
-        int actionSX =0;
+        int actionSX = 0;
         string phanquyen;
         bool selectByMouse = false;
         string usernhap;
@@ -33,11 +33,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
             casanxuat = ((FrmMain)f).casx;
             cbCaSX.SelectedIndex = 0;
-            if(casanxuat != "") cbCaSX.Text = casanxuat;
+            if (casanxuat != "") cbCaSX.Text = casanxuat;
             enablecontrolCTSX();
             GetChiThiSX();
             SetEventForNumerric(this.panelQLSX);
             NewChiThiSX(this.panelFilterCTSX);
+            loadmaymoc();
+            loadnhanvien();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -46,6 +48,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolCTSX();
             NewChiThiSX(this.panelQLSX);
             dtpNgaySX.Value = DateTime.Now;
+        }
+
+        void loadmaymoc()
+        {
+            DataTable data = Import_Manager.Instance.GetMayMoc();
+            cbTenMay.ValueMember = "ID";
+            cbTenMay.DisplayMember = "TEN_MAY";
+            cbTenMay.DataSource = data;
+            CbSomay.DisplayMember = "SO_MAY";
+            CbSomay.DataSource = data;
+            cbmamay.DisplayMember = "MA_MAY";
+            cbmamay.DataSource = data;
+        }
+
+        void loadnhanvien()
+        {
+            DataTable data = Import_Manager.Instance.LoadNhanVien();
+            cbGiaCong.DisplayMember = "NV";
+            cbGiaCong.ValueMember = "ID";
+            cbGiaCong.DataSource = data;
         }
 
         void NewChiThiSX(Control col)
@@ -86,6 +108,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     c.Enter += quickBoxs_Enter;
                     c.MouseDown += quickBoxs_MouseDown;
                     c.KeyDown += quickBoxs_KeyDown;
+                    c.TextChanged += quickBoxs_TextChanged;
                 }
                 if (c.GetType().Name == "TextBox")
                 {
@@ -94,6 +117,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 SetEventForNumerric(c);
             }
         }
+        void tinhtongtgSX()
+        {
+            int tongtgsx = 0;
+            foreach (Control c in this.groupBoxThoiGian.Controls)
+            {
+                if (c.GetType().Name == "NumericUpDown")
+                {
+                    if(c.Text != "") tongtgsx += Int32.Parse(c.Text);
+                }
+            }
+            labelTGSX.Text = "Tổng thời gian SX: " + tongtgsx.ToString();
+
+        }
+
+        private void quickBoxs_TextChanged(object sender, EventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            if (curBox.Parent.Name == "groupBoxThoiGian") tinhtongtgSX();
+        }
+
         private void tb_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox curBox = sender as TextBox;
@@ -137,13 +180,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void getmacdtheomsql()
         {
             DataTable data = Import_Manager.Instance.GetMayMocTheoCD(cbMaCongDoan.Text);
-            cbTenMay.DisplayMember = "TEN_MAY";
-            cbTenMay.DataSource = data;
-            CbSomay.DisplayMember = "SO_MAY";
-            CbSomay.DataSource = data;
-            cbmamay.DisplayMember = "MA_MAY";
-            cbmamay.DataSource = data;
-
+            cbTenMay.Text = data.Rows[0][1].ToString();
+            CbSomay.Text = data.Rows[0][2].ToString();
+            cbmamay.Text = data.Rows[0][3].ToString();
         }
 
         void enablecontrolCTSX()
@@ -186,8 +225,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, (int)dtgChiThiSX.CurrentRow.Cells[0].Value, cbMaCongDoan.Text, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value, (int)numXiMa.Value, (int)numNhiet.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, tbGhiChu.Text, usernhap);
+                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, (int)dtgChiThiSX.CurrentRow.Cells[0].Value, cbMaCongDoan.Text, (int)cbTenMay.SelectedValue, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, Int32.Parse(cbGiaCong.SelectedValue.ToString()), tbGhiChu.Text, usernhap);
 
             }
             catch (Exception ex)
@@ -212,11 +251,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (dtgChiThiSX.Rows.Count > 1 && dtgChiThiSX.CurrentRow.Cells[0].Value.ToString() != "") idCTSX = (int)dtgChiThiSX.CurrentRow.Cells[0].Value;
             try
             {
-                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value, (int)numXiMa.Value, (int)numNhiet.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, tbGhiChu.Text, usernhap);
+                int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, (int)cbTenMay.SelectedValue, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, (int)cbGiaCong.SelectedValue, tbGhiChu.Text, usernhap);
 
                 GetChiThiSX();
-                dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
+                if(dtgChiThiSX.Rows.Count >2) dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
                 actionSX = 0;
                 enablecontrolCTSX();
             }
@@ -243,6 +282,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 tbMSQL.Text = dtgChiThiSX.CurrentRow.Cells[1].Value.ToString(); ;
                 cbMaCongDoan.Text = dtgChiThiSX.CurrentRow.Cells[3].Value.ToString();
+                cbTenMay.SelectedValue = dtgChiThiSX.CurrentRow.Cells[29].Value; 
                 dtpNgaySX.Value = Convert.ToDateTime(dtgChiThiSX.CurrentRow.Cells[8].Value.ToString());
                 cbCaSX.Text = dtgChiThiSX.CurrentRow.Cells[9].Value.ToString();
                 numSoLuong.Text = dtgChiThiSX.CurrentRow.Cells[10].Value.ToString();
@@ -261,7 +301,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 numBaoLuu.Text = dtgChiThiSX.CurrentRow.Cells[23].Value.ToString();
                 numXiMa.Text = dtgChiThiSX.CurrentRow.Cells[24].Value.ToString();
                 numNhiet.Text = dtgChiThiSX.CurrentRow.Cells[25].Value.ToString();
-                tbGhiChu.Text = dtgChiThiSX.CurrentRow.Cells[26].Value.ToString();
+                cbGiaCong.Text = dtgChiThiSX.CurrentRow.Cells[26].Value.ToString();
+                tbGhiChu.Text = dtgChiThiSX.CurrentRow.Cells[27].Value.ToString();
             }
         }
 
@@ -309,5 +350,69 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             GetChiThiSX();
         }
+
+        private void mnutripXuatExcel_Click(object sender, EventArgs e)
+        {
+            // Creating a Excel object. 
+            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            
+            try
+            {
+
+
+                worksheet = (Microsoft.Office.Interop.Excel._Worksheet)workbook.ActiveSheet;
+                //worksheet.Name = "Exported";
+
+                int cellRowIndex = 1;
+                int cellColumnIndex = 1;
+
+                //Loop through each row and read value from each column. 
+                for (int i = 0; i < dtgChiThiSX.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < dtgChiThiSX.Columns.Count; j++)
+                    {
+                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check. 
+                        if (cellRowIndex == 1)
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgChiThiSX.Columns[j].HeaderText;
+                        }
+                        else
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgChiThiSX.Rows[i].Cells[j].Value.ToString();
+                        }
+                        cellColumnIndex++;
+                    }
+                    cellColumnIndex = 1;
+                    cellRowIndex++;
+                }
+
+                //Getting the location and file name of the excel to save from user. 
+                //SaveFileDialog saveDialog = new SaveFileDialog();
+                //saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                //saveDialog.FilterIndex = 2;
+
+                //if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                //{
+                //    workbook.SaveAs(saveDialog.FileName);
+                //    MessageBox.Show("Export Successful");
+                //}
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                excel.Visible = true;
+                //excel.Quit();
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
+
+        }
+
     }
 }

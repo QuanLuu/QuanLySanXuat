@@ -44,11 +44,11 @@
             this.lbDanhMuc = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.tbTenDN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDN = new System.Windows.Forms.Button();
             this.tbPass = new System.Windows.Forms.TextBox();
-            this.tbTenDN = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -197,6 +197,7 @@
             this.label2.Size = new System.Drawing.Size(95, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nhập - Xuất";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
             // 
@@ -207,6 +208,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lbDanhMuc
             // 
@@ -246,6 +248,14 @@
             this.panelLogin.Size = new System.Drawing.Size(568, 31);
             this.panelLogin.TabIndex = 3;
             // 
+            // tbTenDN
+            // 
+            this.tbTenDN.Location = new System.Drawing.Point(250, 8);
+            this.tbTenDN.Name = "tbTenDN";
+            this.tbTenDN.PasswordChar = '*';
+            this.tbTenDN.Size = new System.Drawing.Size(103, 20);
+            this.tbTenDN.TabIndex = 1;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -284,14 +294,6 @@
             this.tbPass.TabIndex = 2;
             this.tbPass.Enter += new System.EventHandler(this.tbPass_Enter);
             this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
-            // 
-            // tbTenDN
-            // 
-            this.tbTenDN.Location = new System.Drawing.Point(250, 8);
-            this.tbTenDN.Name = "tbTenDN";
-            this.tbTenDN.PasswordChar = '*';
-            this.tbTenDN.Size = new System.Drawing.Size(103, 20);
-            this.tbTenDN.TabIndex = 1;
             // 
             // FrmMain
             // 

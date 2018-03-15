@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFilterCTSX = new System.Windows.Forms.Panel();
             this.tbMSQLFilter = new System.Windows.Forms.TextBox();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
@@ -39,8 +40,14 @@
             this.label24 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgChiThiSX = new System.Windows.Forms.DataGridView();
+            this.contextmnuExporttoexcel = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnutripXuatExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.panelQLSX = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbGiaCong = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tbGhiChu = new System.Windows.Forms.TextBox();
             this.numNhiet = new System.Windows.Forms.NumericUpDown();
             this.label30 = new System.Windows.Forms.Label();
             this.numXiMa = new System.Windows.Forms.NumericUpDown();
@@ -57,7 +64,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxThoiGian = new System.Windows.Forms.GroupBox();
+            this.labelTGSX = new System.Windows.Forms.Label();
             this.numtgChoKhuon = new System.Windows.Forms.NumericUpDown();
             this.numtgDaoTao = new System.Windows.Forms.NumericUpDown();
             this.numtgChaoLe = new System.Windows.Forms.NumericUpDown();
@@ -71,6 +79,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cbTenCongDoan = new System.Windows.Forms.ComboBox();
             this.cbCaSX = new System.Windows.Forms.ComboBox();
             this.tbMSQL = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -97,13 +107,10 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.cbTenCongDoan = new System.Windows.Forms.ComboBox();
-            this.tbGhiChu = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
+            this.contextmnuExporttoexcel.SuspendLayout();
             this.panelQLSX.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNhiet)).BeginInit();
@@ -114,7 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSuoc)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxThoiGian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChoKhuon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgDaoTao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChaoLe)).BeginInit();
@@ -203,32 +210,33 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.Controls.Add(this.dtgChiThiSX);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 320);
+            this.panel2.Location = new System.Drawing.Point(0, 326);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 337);
+            this.panel2.Size = new System.Drawing.Size(891, 366);
             this.panel2.TabIndex = 1;
             // 
             // dtgChiThiSX
             // 
             this.dtgChiThiSX.AllowUserToResizeRows = false;
             this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgChiThiSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dtgChiThiSX.ContextMenuStrip = this.contextmnuExporttoexcel;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgChiThiSX.Location = new System.Drawing.Point(11, 6);
             this.dtgChiThiSX.Name = "dtgChiThiSX";
             this.dtgChiThiSX.ReadOnly = true;
@@ -239,24 +247,41 @@
             this.dtgChiThiSX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgChiThiSX_CellClick);
             this.dtgChiThiSX.SelectionChanged += new System.EventHandler(this.dtgChiThiSX_SelectionChanged);
             // 
+            // contextmnuExporttoexcel
+            // 
+            this.contextmnuExporttoexcel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnutripXuatExcel});
+            this.contextmnuExporttoexcel.Name = "contextmnuExporttoexcel";
+            this.contextmnuExporttoexcel.Size = new System.Drawing.Size(141, 26);
+            this.contextmnuExporttoexcel.Text = "Xuất dữ liệu ra Excel";
+            // 
+            // mnutripXuatExcel
+            // 
+            this.mnutripXuatExcel.Name = "mnutripXuatExcel";
+            this.mnutripXuatExcel.Size = new System.Drawing.Size(140, 22);
+            this.mnutripXuatExcel.Text = "Xuất ra Excel";
+            this.mnutripXuatExcel.Click += new System.EventHandler(this.mnutripXuatExcel_Click);
+            // 
             // panelQLSX
             // 
             this.panelQLSX.AutoSize = true;
             this.panelQLSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelQLSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelQLSX.Controls.Add(this.groupBox3);
-            this.panelQLSX.Controls.Add(this.groupBox1);
+            this.panelQLSX.Controls.Add(this.groupBoxThoiGian);
             this.panelQLSX.Controls.Add(this.groupBox2);
             this.panelQLSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQLSX.Location = new System.Drawing.Point(0, 92);
             this.panelQLSX.Name = "panelQLSX";
-            this.panelQLSX.Size = new System.Drawing.Size(891, 228);
+            this.panelQLSX.Size = new System.Drawing.Size(891, 234);
             this.panelQLSX.TabIndex = 2;
             this.panelQLSX.Visible = false;
             // 
             // groupBox3
             // 
             this.groupBox3.AutoSize = true;
+            this.groupBox3.Controls.Add(this.cbGiaCong);
+            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.tbGhiChu);
             this.groupBox3.Controls.Add(this.numNhiet);
@@ -277,10 +302,50 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Location = new System.Drawing.Point(467, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(323, 218);
+            this.groupBox3.Size = new System.Drawing.Size(323, 224);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hỏng (Cái)";
+            // 
+            // cbGiaCong
+            // 
+            this.cbGiaCong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbGiaCong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbGiaCong.FormattingEnabled = true;
+            this.cbGiaCong.Items.AddRange(new object[] {
+            "Ca A",
+            "Ca B",
+            "HC"});
+            this.cbGiaCong.Location = new System.Drawing.Point(71, 158);
+            this.cbGiaCong.Name = "cbGiaCong";
+            this.cbGiaCong.Size = new System.Drawing.Size(128, 21);
+            this.cbGiaCong.TabIndex = 38;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 162);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 13);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Gia Công";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 187);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 13);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "Ghi Chú";
+            // 
+            // tbGhiChu
+            // 
+            this.tbGhiChu.Location = new System.Drawing.Point(71, 182);
+            this.tbGhiChu.Multiline = true;
+            this.tbGhiChu.Name = "tbGhiChu";
+            this.tbGhiChu.Size = new System.Drawing.Size(246, 23);
+            this.tbGhiChu.TabIndex = 39;
             // 
             // numNhiet
             // 
@@ -450,30 +515,41 @@
             this.label18.TabIndex = 22;
             this.label18.Text = "Sét";
             // 
-            // groupBox1
+            // groupBoxThoiGian
             // 
-            this.groupBox1.Controls.Add(this.numtgChoKhuon);
-            this.groupBox1.Controls.Add(this.numtgDaoTao);
-            this.groupBox1.Controls.Add(this.numtgChaoLe);
-            this.groupBox1.Controls.Add(this.numtgSua);
-            this.groupBox1.Controls.Add(this.numtgChuanBi);
-            this.groupBox1.Controls.Add(this.numtgSX);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Location = new System.Drawing.Point(290, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 218);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thời gian (Phút)";
+            this.groupBoxThoiGian.Controls.Add(this.labelTGSX);
+            this.groupBoxThoiGian.Controls.Add(this.numtgChoKhuon);
+            this.groupBoxThoiGian.Controls.Add(this.numtgDaoTao);
+            this.groupBoxThoiGian.Controls.Add(this.numtgChaoLe);
+            this.groupBoxThoiGian.Controls.Add(this.numtgSua);
+            this.groupBoxThoiGian.Controls.Add(this.numtgChuanBi);
+            this.groupBoxThoiGian.Controls.Add(this.numtgSX);
+            this.groupBoxThoiGian.Controls.Add(this.label14);
+            this.groupBoxThoiGian.Controls.Add(this.label13);
+            this.groupBoxThoiGian.Controls.Add(this.label9);
+            this.groupBoxThoiGian.Controls.Add(this.label12);
+            this.groupBoxThoiGian.Controls.Add(this.label10);
+            this.groupBoxThoiGian.Controls.Add(this.label11);
+            this.groupBoxThoiGian.Location = new System.Drawing.Point(290, 5);
+            this.groupBoxThoiGian.Name = "groupBoxThoiGian";
+            this.groupBoxThoiGian.Size = new System.Drawing.Size(171, 224);
+            this.groupBoxThoiGian.TabIndex = 2;
+            this.groupBoxThoiGian.TabStop = false;
+            this.groupBoxThoiGian.Text = "Thời gian (Phút)";
+            // 
+            // labelTGSX
+            // 
+            this.labelTGSX.AutoSize = true;
+            this.labelTGSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTGSX.Location = new System.Drawing.Point(3, 202);
+            this.labelTGSX.Name = "labelTGSX";
+            this.labelTGSX.Size = new System.Drawing.Size(117, 13);
+            this.labelTGSX.TabIndex = 28;
+            this.labelTGSX.Text = "Tổng thời gian SX: ";
             // 
             // numtgChoKhuon
             // 
-            this.numtgChoKhuon.Location = new System.Drawing.Point(89, 179);
+            this.numtgChoKhuon.Location = new System.Drawing.Point(86, 171);
             this.numtgChoKhuon.Maximum = new decimal(new int[] {
             720,
             0,
@@ -485,7 +561,7 @@
             // 
             // numtgDaoTao
             // 
-            this.numtgDaoTao.Location = new System.Drawing.Point(89, 150);
+            this.numtgDaoTao.Location = new System.Drawing.Point(86, 142);
             this.numtgDaoTao.Maximum = new decimal(new int[] {
             720,
             0,
@@ -497,7 +573,7 @@
             // 
             // numtgChaoLe
             // 
-            this.numtgChaoLe.Location = new System.Drawing.Point(89, 121);
+            this.numtgChaoLe.Location = new System.Drawing.Point(86, 113);
             this.numtgChaoLe.Maximum = new decimal(new int[] {
             720,
             0,
@@ -509,7 +585,7 @@
             // 
             // numtgSua
             // 
-            this.numtgSua.Location = new System.Drawing.Point(89, 92);
+            this.numtgSua.Location = new System.Drawing.Point(86, 84);
             this.numtgSua.Maximum = new decimal(new int[] {
             720,
             0,
@@ -521,7 +597,7 @@
             // 
             // numtgChuanBi
             // 
-            this.numtgChuanBi.Location = new System.Drawing.Point(89, 63);
+            this.numtgChuanBi.Location = new System.Drawing.Point(86, 55);
             this.numtgChuanBi.Maximum = new decimal(new int[] {
             720,
             0,
@@ -533,7 +609,7 @@
             // 
             // numtgSX
             // 
-            this.numtgSX.Location = new System.Drawing.Point(89, 31);
+            this.numtgSX.Location = new System.Drawing.Point(86, 26);
             this.numtgSX.Maximum = new decimal(new int[] {
             720,
             0,
@@ -546,7 +622,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 183);
+            this.label14.Location = new System.Drawing.Point(3, 175);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 21;
@@ -555,7 +631,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 38);
+            this.label13.Location = new System.Drawing.Point(3, 30);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 13);
             this.label13.TabIndex = 16;
@@ -564,7 +640,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 154);
+            this.label9.Location = new System.Drawing.Point(3, 146);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 20;
@@ -573,7 +649,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 67);
+            this.label12.Location = new System.Drawing.Point(3, 59);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 17;
@@ -582,7 +658,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 125);
+            this.label10.Location = new System.Drawing.Point(3, 117);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 19;
@@ -591,7 +667,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 96);
+            this.label11.Location = new System.Drawing.Point(3, 88);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 18;
@@ -621,10 +697,30 @@
             this.groupBox2.Controls.Add(this.cbMaCongDoan);
             this.groupBox2.Location = new System.Drawing.Point(0, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(284, 218);
+            this.groupBox2.Size = new System.Drawing.Size(284, 224);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chung";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(2, 67);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(44, 13);
+            this.label32.TabIndex = 35;
+            this.label32.Text = "Tên CĐ";
+            // 
+            // cbTenCongDoan
+            // 
+            this.cbTenCongDoan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbTenCongDoan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTenCongDoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTenCongDoan.FormattingEnabled = true;
+            this.cbTenCongDoan.Location = new System.Drawing.Point(63, 63);
+            this.cbTenCongDoan.Name = "cbTenCongDoan";
+            this.cbTenCongDoan.Size = new System.Drawing.Size(209, 21);
+            this.cbTenCongDoan.TabIndex = 3;
             // 
             // cbCaSX
             // 
@@ -644,7 +740,7 @@
             // 
             // tbMSQL
             // 
-            this.tbMSQL.Location = new System.Drawing.Point(62, 16);
+            this.tbMSQL.Location = new System.Drawing.Point(63, 20);
             this.tbMSQL.Name = "tbMSQL";
             this.tbMSQL.Size = new System.Drawing.Size(74, 20);
             this.tbMSQL.TabIndex = 1;
@@ -653,7 +749,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(2, 20);
+            this.label25.Location = new System.Drawing.Point(2, 24);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(37, 13);
             this.label25.TabIndex = 33;
@@ -898,48 +994,11 @@
             this.label29.Text = "Chỉ Thị Sản Xuất";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(2, 67);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(44, 13);
-            this.label32.TabIndex = 35;
-            this.label32.Text = "Tên CĐ";
-            // 
-            // cbTenCongDoan
-            // 
-            this.cbTenCongDoan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbTenCongDoan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbTenCongDoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTenCongDoan.FormattingEnabled = true;
-            this.cbTenCongDoan.Location = new System.Drawing.Point(63, 63);
-            this.cbTenCongDoan.Name = "cbTenCongDoan";
-            this.cbTenCongDoan.Size = new System.Drawing.Size(209, 21);
-            this.cbTenCongDoan.TabIndex = 3;
-            // 
-            // tbGhiChu
-            // 
-            this.tbGhiChu.Location = new System.Drawing.Point(15, 176);
-            this.tbGhiChu.Multiline = true;
-            this.tbGhiChu.Name = "tbGhiChu";
-            this.tbGhiChu.Size = new System.Drawing.Size(302, 23);
-            this.tbGhiChu.TabIndex = 38;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(138, 154);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 13);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Ghi Chú";
-            // 
             // FrmChiThiSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 657);
+            this.ClientSize = new System.Drawing.Size(891, 692);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelQLSX);
             this.Controls.Add(this.panel4);
@@ -952,6 +1011,7 @@
             this.panelFilterCTSX.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).EndInit();
+            this.contextmnuExporttoexcel.ResumeLayout(false);
             this.panelQLSX.ResumeLayout(false);
             this.panelQLSX.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -964,8 +1024,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSuoc)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxThoiGian.ResumeLayout(false);
+            this.groupBoxThoiGian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChoKhuon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgDaoTao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChaoLe)).EndInit();
@@ -1010,7 +1070,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbMaCongDoan;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxThoiGian;
         private System.Windows.Forms.NumericUpDown numtgChoKhuon;
         private System.Windows.Forms.NumericUpDown numtgDaoTao;
         private System.Windows.Forms.NumericUpDown numtgChaoLe;
@@ -1055,5 +1115,10 @@
         private System.Windows.Forms.ComboBox cbTenCongDoan;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbGhiChu;
+        private System.Windows.Forms.ContextMenuStrip contextmnuExporttoexcel;
+        private System.Windows.Forms.ToolStripMenuItem mnutripXuatExcel;
+        private System.Windows.Forms.ComboBox cbGiaCong;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label labelTGSX;
     }
 }

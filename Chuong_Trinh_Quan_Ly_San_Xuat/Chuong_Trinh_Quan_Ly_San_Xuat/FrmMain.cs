@@ -112,6 +112,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         }
 
+        void shownhapxuat()
+        {
+            FrmNhapXuat frm = new FrmNhapXuat();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
+
+        }
+
         private void main_close(object sender, FormClosingEventArgs e)
         {
             this.Show();
@@ -186,6 +195,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return) dangnhap();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            shownhapxuat();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            shownhapxuat();
         }
     }
 }
