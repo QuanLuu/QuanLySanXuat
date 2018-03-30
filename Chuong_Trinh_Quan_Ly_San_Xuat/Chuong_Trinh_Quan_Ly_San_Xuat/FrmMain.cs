@@ -120,6 +120,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             frm.FormClosing += main_close;
 
         }
+        void showPOForecast()
+        {
+            FrmPO frm = new FrmPO();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
+
+        }
 
         private void main_close(object sender, FormClosingEventArgs e)
         {
@@ -205,6 +213,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void label2_Click(object sender, EventArgs e)
         {
             shownhapxuat();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            showPOForecast();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            showPOForecast();
         }
     }
 }

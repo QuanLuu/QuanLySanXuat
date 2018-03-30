@@ -79,6 +79,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbtenhang = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.cbTenCongDoan = new System.Windows.Forms.ComboBox();
             this.cbCaSX = new System.Windows.Forms.ComboBox();
@@ -107,6 +109,12 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
+            this.numVesinh6S = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.numMopbaoluu = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
+            this.numNgKiemTra = new System.Windows.Forms.NumericUpDown();
+            this.label34 = new System.Windows.Forms.Label();
             this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
@@ -132,6 +140,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.panel4.SuspendLayout();
             this.panelTitleCTSX.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFilterCTSX
@@ -280,6 +291,10 @@
             // groupBox3
             // 
             this.groupBox3.AutoSize = true;
+            this.groupBox3.Controls.Add(this.numNgKiemTra);
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.numMopbaoluu);
+            this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.cbGiaCong);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label20);
@@ -318,8 +333,8 @@
             "HC"});
             this.cbGiaCong.Location = new System.Drawing.Point(71, 158);
             this.cbGiaCong.Name = "cbGiaCong";
-            this.cbGiaCong.Size = new System.Drawing.Size(128, 21);
-            this.cbGiaCong.TabIndex = 38;
+            this.cbGiaCong.Size = new System.Drawing.Size(77, 21);
+            this.cbGiaCong.TabIndex = 40;
             // 
             // label21
             // 
@@ -345,7 +360,7 @@
             this.tbGhiChu.Multiline = true;
             this.tbGhiChu.Name = "tbGhiChu";
             this.tbGhiChu.Size = new System.Drawing.Size(246, 23);
-            this.tbGhiChu.TabIndex = 39;
+            this.tbGhiChu.TabIndex = 41;
             // 
             // numNhiet
             // 
@@ -517,6 +532,8 @@
             // 
             // groupBoxThoiGian
             // 
+            this.groupBoxThoiGian.Controls.Add(this.numVesinh6S);
+            this.groupBoxThoiGian.Controls.Add(this.label23);
             this.groupBoxThoiGian.Controls.Add(this.labelTGSX);
             this.groupBoxThoiGian.Controls.Add(this.numtgChoKhuon);
             this.groupBoxThoiGian.Controls.Add(this.numtgDaoTao);
@@ -541,7 +558,7 @@
             // 
             this.labelTGSX.AutoSize = true;
             this.labelTGSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTGSX.Location = new System.Drawing.Point(3, 202);
+            this.labelTGSX.Location = new System.Drawing.Point(0, 185);
             this.labelTGSX.Name = "labelTGSX";
             this.labelTGSX.Size = new System.Drawing.Size(117, 13);
             this.labelTGSX.TabIndex = 28;
@@ -549,7 +566,7 @@
             // 
             // numtgChoKhuon
             // 
-            this.numtgChoKhuon.Location = new System.Drawing.Point(86, 171);
+            this.numtgChoKhuon.Location = new System.Drawing.Point(86, 126);
             this.numtgChoKhuon.Maximum = new decimal(new int[] {
             720,
             0,
@@ -561,7 +578,7 @@
             // 
             // numtgDaoTao
             // 
-            this.numtgDaoTao.Location = new System.Drawing.Point(86, 142);
+            this.numtgDaoTao.Location = new System.Drawing.Point(86, 106);
             this.numtgDaoTao.Maximum = new decimal(new int[] {
             720,
             0,
@@ -573,7 +590,7 @@
             // 
             // numtgChaoLe
             // 
-            this.numtgChaoLe.Location = new System.Drawing.Point(86, 113);
+            this.numtgChaoLe.Location = new System.Drawing.Point(86, 86);
             this.numtgChaoLe.Maximum = new decimal(new int[] {
             720,
             0,
@@ -585,7 +602,7 @@
             // 
             // numtgSua
             // 
-            this.numtgSua.Location = new System.Drawing.Point(86, 84);
+            this.numtgSua.Location = new System.Drawing.Point(86, 66);
             this.numtgSua.Maximum = new decimal(new int[] {
             720,
             0,
@@ -597,7 +614,7 @@
             // 
             // numtgChuanBi
             // 
-            this.numtgChuanBi.Location = new System.Drawing.Point(86, 55);
+            this.numtgChuanBi.Location = new System.Drawing.Point(86, 46);
             this.numtgChuanBi.Maximum = new decimal(new int[] {
             720,
             0,
@@ -622,7 +639,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 175);
+            this.label14.Location = new System.Drawing.Point(3, 130);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 21;
@@ -640,7 +657,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 146);
+            this.label9.Location = new System.Drawing.Point(3, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 20;
@@ -649,7 +666,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 59);
+            this.label12.Location = new System.Drawing.Point(3, 50);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 17;
@@ -658,7 +675,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 117);
+            this.label10.Location = new System.Drawing.Point(3, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 19;
@@ -667,7 +684,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 88);
+            this.label11.Location = new System.Drawing.Point(3, 70);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 18;
@@ -675,6 +692,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbtenhang);
+            this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label32);
             this.groupBox2.Controls.Add(this.cbTenCongDoan);
             this.groupBox2.Controls.Add(this.cbCaSX);
@@ -701,6 +720,28 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chung";
+            // 
+            // cbtenhang
+            // 
+            this.cbtenhang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbtenhang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbtenhang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtenhang.FormattingEnabled = true;
+            this.cbtenhang.Location = new System.Drawing.Point(63, 84);
+            this.cbtenhang.Name = "cbtenhang";
+            this.cbtenhang.Size = new System.Drawing.Size(209, 21);
+            this.cbtenhang.TabIndex = 37;
+            this.cbtenhang.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(2, 88);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 13);
+            this.label22.TabIndex = 36;
+            this.label22.Text = "Tên hàng";
             // 
             // label32
             // 
@@ -732,7 +773,7 @@
             "Ca A",
             "Ca B",
             "HC"});
-            this.cbCaSX.Location = new System.Drawing.Point(198, 157);
+            this.cbCaSX.Location = new System.Drawing.Point(198, 179);
             this.cbCaSX.Name = "cbCaSX";
             this.cbCaSX.Size = new System.Drawing.Size(74, 21);
             this.cbCaSX.TabIndex = 8;
@@ -761,7 +802,7 @@
             this.cbmamay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbmamay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmamay.FormattingEnabled = true;
-            this.cbmamay.Location = new System.Drawing.Point(63, 132);
+            this.cbmamay.Location = new System.Drawing.Point(63, 152);
             this.cbmamay.Name = "cbmamay";
             this.cbmamay.Size = new System.Drawing.Size(209, 21);
             this.cbmamay.TabIndex = 6;
@@ -770,7 +811,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 138);
+            this.label2.Location = new System.Drawing.Point(2, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 32;
@@ -778,7 +819,7 @@
             // 
             // tbSoLot
             // 
-            this.tbSoLot.Location = new System.Drawing.Point(198, 178);
+            this.tbSoLot.Location = new System.Drawing.Point(198, 200);
             this.tbSoLot.Name = "tbSoLot";
             this.tbSoLot.Size = new System.Drawing.Size(74, 20);
             this.tbSoLot.TabIndex = 10;
@@ -789,7 +830,7 @@
             this.CbSomay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbSomay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbSomay.FormattingEnabled = true;
-            this.CbSomay.Location = new System.Drawing.Point(63, 111);
+            this.CbSomay.Location = new System.Drawing.Point(63, 131);
             this.CbSomay.Name = "CbSomay";
             this.CbSomay.Size = new System.Drawing.Size(209, 21);
             this.CbSomay.TabIndex = 5;
@@ -801,7 +842,7 @@
             this.cbTenMay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTenMay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTenMay.FormattingEnabled = true;
-            this.cbTenMay.Location = new System.Drawing.Point(63, 90);
+            this.cbTenMay.Location = new System.Drawing.Point(63, 110);
             this.cbTenMay.Name = "cbTenMay";
             this.cbTenMay.Size = new System.Drawing.Size(209, 21);
             this.cbTenMay.TabIndex = 4;
@@ -810,7 +851,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(170, 182);
+            this.label8.Location = new System.Drawing.Point(170, 204);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 13);
             this.label8.TabIndex = 30;
@@ -818,7 +859,7 @@
             // 
             // numSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(64, 178);
+            this.numSoLuong.Location = new System.Drawing.Point(64, 200);
             this.numSoLuong.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -831,7 +872,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 182);
+            this.label7.Location = new System.Drawing.Point(2, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 28;
@@ -840,7 +881,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 161);
+            this.label6.Location = new System.Drawing.Point(170, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 26;
@@ -849,7 +890,7 @@
             // dtpNgaySX
             // 
             this.dtpNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySX.Location = new System.Drawing.Point(64, 157);
+            this.dtpNgaySX.Location = new System.Drawing.Point(64, 179);
             this.dtpNgaySX.Name = "dtpNgaySX";
             this.dtpNgaySX.Size = new System.Drawing.Size(98, 20);
             this.dtpNgaySX.TabIndex = 7;
@@ -857,7 +898,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 161);
+            this.label5.Location = new System.Drawing.Point(2, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 24;
@@ -866,7 +907,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 117);
+            this.label4.Location = new System.Drawing.Point(2, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 22;
@@ -875,7 +916,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 96);
+            this.label3.Location = new System.Drawing.Point(2, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 20;
@@ -994,6 +1035,69 @@
             this.label29.Text = "Chỉ Thị Sản Xuất";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // numVesinh6S
+            // 
+            this.numVesinh6S.Location = new System.Drawing.Point(86, 146);
+            this.numVesinh6S.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
+            this.numVesinh6S.Name = "numVesinh6S";
+            this.numVesinh6S.Size = new System.Drawing.Size(66, 20);
+            this.numVesinh6S.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 150);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 13);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Vệ Sinh 6S";
+            // 
+            // numMopbaoluu
+            // 
+            this.numMopbaoluu.Location = new System.Drawing.Point(233, 160);
+            this.numMopbaoluu.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numMopbaoluu.Name = "numMopbaoluu";
+            this.numMopbaoluu.Size = new System.Drawing.Size(66, 20);
+            this.numMopbaoluu.TabIndex = 39;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(159, 164);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 13);
+            this.label33.TabIndex = 41;
+            this.label33.Text = "Móp Bảo Lưu";
+            // 
+            // numNgKiemTra
+            // 
+            this.numNgKiemTra.Location = new System.Drawing.Point(233, 139);
+            this.numNgKiemTra.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numNgKiemTra.Name = "numNgKiemTra";
+            this.numNgKiemTra.Size = new System.Drawing.Size(66, 20);
+            this.numNgKiemTra.TabIndex = 38;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(168, 143);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(68, 13);
+            this.label34.TabIndex = 43;
+            this.label34.Text = "NG Kiểm Tra";
+            // 
             // FrmChiThiSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1037,6 +1141,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panelTitleCTSX.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1120,5 +1227,13 @@
         private System.Windows.Forms.ComboBox cbGiaCong;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label labelTGSX;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox cbtenhang;
+        private System.Windows.Forms.NumericUpDown numMopbaoluu;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.NumericUpDown numVesinh6S;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown numNgKiemTra;
+        private System.Windows.Forms.Label label34;
     }
 }

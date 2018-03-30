@@ -29,7 +29,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 
         private DataProvider() { }
 
-        //private string connectstring = "Data Source=10.0.0.5,1433;" +
+        //private string connectstring = "Data Source=10.0.0.4,1433;" +
         //                                "Initial Catalog = QUAN_LY_SAN_XUAT;" +
         //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //
 
