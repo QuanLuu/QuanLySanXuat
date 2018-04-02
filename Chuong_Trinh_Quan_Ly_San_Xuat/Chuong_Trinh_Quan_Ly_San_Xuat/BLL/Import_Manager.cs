@@ -157,9 +157,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KH_MASP @MAKH", new object[] { makh });
         }
         //PP_UI_GET_LIST_TIME
-        public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql)
+        public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_SP_CONG_DOAN] @ACTION , @ID , @MA_CONG_DOAN , @TEN_CONG_DOAN , @ID_MAY , @ID_MSQL", new object[] { action, id, macd, tencd, idmay, idmsql});
+            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_SP_CONG_DOAN] @ACTION , @ID , @MA_CONG_DOAN , @TEN_CONG_DOAN , @ID_MAY , @ID_MSQL , @CD_SO", new object[] { action, id, macd, tencd, idmay, idmsql, congdoanso});
         }
 
         public int UpdateNL(int action, int id, string tenNL, string kichthuoc, decimal dauky)
@@ -222,6 +222,24 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         public int updatelisttime(int action, int id, string macongdoan, int listtime)
         {
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_LIST_TIME] @ACTION , @ID , @MA_CD , @LIST_TIMEY", new object[] { action, id, macongdoan, listtime });
+        }
+        public DataTable LoadDataTypeTable()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT * FROM IMPORT_DATATYPE", new object[] { });
+        }
+
+        public DataTable LoadDataTypeSheetTable(string datatype)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec PP_UI_GET_IMPORT_DATATYPE_SHEET @data_type", new object[] { datatype });
+        }
+
+        public int UpdateDataType(int action, int ignore, string name, int schedule, string kindfile, string delimiter, string sourcepath, string despath, string filter, int idtype)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("exec PP_UI_UPDATE_IMPORT_DATATYPE @ACTION , @IGNORE , @NAME , @SCHEDULE_TYPE , @KIND_FILE , @SPLIT_DELIMITER , @SOURCEPATH , @DESTINATION , @FILTER , @ID", new object[] { action, ignore, name, schedule, kindfile, delimiter, sourcepath, despath, filter, idtype });
+        }
+        public int UpdateDataTypeSheet(int ACTION, int ID_DATATYPE, int IGNORE, int PIVOT_TABLE, int MAX_COLUMN, String NAME, String DATATYPE_NAME, String BUFFER_TABLE, int ID)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("exec PP_UI_UPDATE_IMPORT_DATATYPE_SHEET @ACTION , @ID_DATATYPE , @IGNORE , @PIVOT_TABLE , @MAX_COLUMN , @NAME , @DATATYPE_NAME , @BUFFER_TABLE , @ID", new object[] { ACTION, ID_DATATYPE, IGNORE, PIVOT_TABLE, MAX_COLUMN, NAME, DATATYPE_NAME, BUFFER_TABLE, ID });
         }
     }
 }

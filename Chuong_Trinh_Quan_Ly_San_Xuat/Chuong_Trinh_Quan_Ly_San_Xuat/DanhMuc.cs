@@ -56,9 +56,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void GetSanPham()
         {
             DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text);
-            dtgSP.DataSource = data;
-            cbMaSPDM.DataSource = data;
+            dtgSP.DataSource = data;  
+        }
+        void getsanphamtheomsql()
+        {
+            DataTable data = Import_Manager.Instance.getmasptheomsql(tbMSQLDinhMuc.Text);
             cbMaSPDM.DisplayMember = "MA_SP";
+            cbMaSPDM.DataSource = data;
         }
 
         void GetKhachHang()
@@ -67,8 +71,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgKH.DataSource = data;
             cbMaKH.DataSource = data;
             cbMaKH.DisplayMember = "MA_KH";
-            //cbMaSPDM.DataSource = data;
-            //cbMaSPDM.DisplayMember = "MA_KH";
+          
         }
         void GetDinhMuc()
         {
@@ -636,7 +639,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 else
                 { currow = 0; }
                 if (cbMayMocCD.Text != "") id_may = Int32.Parse(cbMayMocCD.SelectedValue.ToString());
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()));
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()), (int)numCDso.Value);
                 getSPCD();
                 dtgSPCD.CurrentCell = dtgSPCD.Rows[currow].Cells[0];
                 actionSPCD = 0;
@@ -655,7 +658,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, Int32.Parse(cbMayMocCD.SelectedValue.ToString()), Int32.Parse(cbMSQL.SelectedValue.ToString()));
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, Int32.Parse(cbMayMocCD.SelectedValue.ToString()), Int32.Parse(cbMSQL.SelectedValue.ToString()),(int)numCDso.Value);
             }
             catch (Exception ex)
             {
@@ -680,6 +683,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbTenCD.Text = dtgSPCD.CurrentRow.Cells[4].Value.ToString();
                 //cbMayMocCD.Text = "";
                 cbMayMocCD.Text = "Tên:" + dtgSPCD.CurrentRow.Cells[5].Value.ToString() + " - Số:" + dtgSPCD.CurrentRow.Cells[6].Value.ToString() + " - Mã:" + dtgSPCD.CurrentRow.Cells[7].Value.ToString();
+                numCDso.Text = dtgSPCD.CurrentRow.Cells[8].Value.ToString();
             }
         }
 
@@ -696,6 +700,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void cbMayMocCD_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbMSQLDinhMuc_TextChanged(object sender, EventArgs e)
+        {
+            getsanphamtheomsql();
+        }
+
+        private void dtgDM_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgDM.CurrentRow.Cells[0].Value.ToString() != "" && actionDM != 1)
+            {
+                dtpDateFrom.Value = DateTime.Parse(dtgDM.CurrentRow.Cells[1].Value.ToString());
+                dtpDateTo.Value = DateTime.Parse(dtgDM.CurrentRow.Cells[2].Value.ToString());
+                tbMSQLDinhMuc.Text = dtgDM.CurrentRow.Cells[3].Value.ToString();
+                numDinhMuc.Text = dtgDM.CurrentRow.Cells[6].Value.ToString();
+            }
         }
     }
 }
