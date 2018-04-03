@@ -74,6 +74,22 @@
             this.tbBuffer = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPageUser = new System.Windows.Forms.TabPage();
+            this.dtgUsers = new System.Windows.Forms.DataGridView();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCancelUser = new System.Windows.Forms.Button();
+            this.btnSaveUser = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnEditUser = new System.Windows.Forms.Button();
+            this.btnNewUser = new System.Windows.Forms.Button();
+            this.tbTenUser = new System.Windows.Forms.TextBox();
+            this.tbmatkhau = new System.Windows.Forms.TextBox();
+            this.tbcaSX = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chListCapquyen = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControlAdmin.SuspendLayout();
             this.tabPageImportExcel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -85,6 +101,10 @@
             this.panel7.SuspendLayout();
             this.paneditdatatypesheet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).BeginInit();
+            this.tabPageUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
+            this.panelUser.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAdmin
@@ -567,12 +587,191 @@
             // 
             // tabPageUser
             // 
+            this.tabPageUser.Controls.Add(this.panel4);
+            this.tabPageUser.Controls.Add(this.panelUser);
+            this.tabPageUser.Controls.Add(this.dtgUsers);
             this.tabPageUser.Location = new System.Drawing.Point(4, 22);
             this.tabPageUser.Name = "tabPageUser";
             this.tabPageUser.Size = new System.Drawing.Size(853, 584);
             this.tabPageUser.TabIndex = 1;
             this.tabPageUser.Text = "Users";
             this.tabPageUser.UseVisualStyleBackColor = true;
+            // 
+            // dtgUsers
+            // 
+            this.dtgUsers.AllowUserToResizeRows = false;
+            this.dtgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgUsers.Location = new System.Drawing.Point(0, 0);
+            this.dtgUsers.Name = "dtgUsers";
+            this.dtgUsers.RowHeadersVisible = false;
+            this.dtgUsers.Size = new System.Drawing.Size(853, 584);
+            this.dtgUsers.TabIndex = 0;
+            this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
+            // 
+            // panelUser
+            // 
+            this.panelUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelUser.Controls.Add(this.label3);
+            this.panelUser.Controls.Add(this.chListCapquyen);
+            this.panelUser.Controls.Add(this.label4);
+            this.panelUser.Controls.Add(this.tbcaSX);
+            this.panelUser.Controls.Add(this.tbmatkhau);
+            this.panelUser.Controls.Add(this.tbTenUser);
+            this.panelUser.Controls.Add(this.label2);
+            this.panelUser.Controls.Add(this.label1);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelUser.Location = new System.Drawing.Point(0, 519);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(853, 65);
+            this.panelUser.TabIndex = 1;
+            this.panelUser.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên User";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mật khẩu";
+            // 
+            // panel4
+            // 
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Controls.Add(this.btnCancelUser);
+            this.panel4.Controls.Add(this.btnSaveUser);
+            this.panel4.Controls.Add(this.btnDeleteUser);
+            this.panel4.Controls.Add(this.btnEditUser);
+            this.panel4.Controls.Add(this.btnNewUser);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 491);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(853, 28);
+            this.panel4.TabIndex = 14;
+            // 
+            // btnCancelUser
+            // 
+            this.btnCancelUser.AutoSize = true;
+            this.btnCancelUser.Enabled = false;
+            this.btnCancelUser.Location = new System.Drawing.Point(168, 0);
+            this.btnCancelUser.Name = "btnCancelUser";
+            this.btnCancelUser.Size = new System.Drawing.Size(50, 26);
+            this.btnCancelUser.TabIndex = 17;
+            this.btnCancelUser.Text = "Cancel";
+            this.btnCancelUser.UseVisualStyleBackColor = true;
+            this.btnCancelUser.Click += new System.EventHandler(this.btnCancelUser_Click);
+            // 
+            // btnSaveUser
+            // 
+            this.btnSaveUser.AutoSize = true;
+            this.btnSaveUser.Enabled = false;
+            this.btnSaveUser.Location = new System.Drawing.Point(126, 0);
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.Size = new System.Drawing.Size(42, 26);
+            this.btnSaveUser.TabIndex = 16;
+            this.btnSaveUser.Text = "Save";
+            this.btnSaveUser.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.AutoSize = true;
+            this.btnDeleteUser.Location = new System.Drawing.Point(78, 0);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(48, 26);
+            this.btnDeleteUser.TabIndex = 15;
+            this.btnDeleteUser.Text = "Delete";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // btnEditUser
+            // 
+            this.btnEditUser.AutoSize = true;
+            this.btnEditUser.Location = new System.Drawing.Point(39, 0);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(39, 26);
+            this.btnEditUser.TabIndex = 14;
+            this.btnEditUser.Text = "Edit";
+            this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
+            // 
+            // btnNewUser
+            // 
+            this.btnNewUser.AutoSize = true;
+            this.btnNewUser.Location = new System.Drawing.Point(0, 0);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(39, 26);
+            this.btnNewUser.TabIndex = 13;
+            this.btnNewUser.Text = "New";
+            this.btnNewUser.UseVisualStyleBackColor = true;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
+            // 
+            // tbTenUser
+            // 
+            this.tbTenUser.Location = new System.Drawing.Point(59, 6);
+            this.tbTenUser.Name = "tbTenUser";
+            this.tbTenUser.Size = new System.Drawing.Size(100, 20);
+            this.tbTenUser.TabIndex = 3;
+            // 
+            // tbmatkhau
+            // 
+            this.tbmatkhau.Location = new System.Drawing.Point(59, 33);
+            this.tbmatkhau.Name = "tbmatkhau";
+            this.tbmatkhau.Size = new System.Drawing.Size(100, 20);
+            this.tbmatkhau.TabIndex = 4;
+            // 
+            // tbcaSX
+            // 
+            this.tbcaSX.Location = new System.Drawing.Point(275, 6);
+            this.tbcaSX.Name = "tbcaSX";
+            this.tbcaSX.Size = new System.Drawing.Size(100, 20);
+            this.tbcaSX.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(211, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Ca SX";
+            // 
+            // chListCapquyen
+            // 
+            this.chListCapquyen.CheckOnClick = true;
+            this.chListCapquyen.FormattingEnabled = true;
+            this.chListCapquyen.Items.AddRange(new object[] {
+            "Danh Mục",
+            "Nhập - Xuất",
+            "Chỉ Thị SX",
+            "Nhân Sự",
+            "Báo Cáo",
+            "PO"});
+            this.chListCapquyen.Location = new System.Drawing.Point(275, 26);
+            this.chListCapquyen.MultiColumn = true;
+            this.chListCapquyen.Name = "chListCapquyen";
+            this.chListCapquyen.Size = new System.Drawing.Size(462, 34);
+            this.chListCapquyen.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Cấp quyền";
             // 
             // FrmAdmin
             // 
@@ -581,6 +780,7 @@
             this.ClientSize = new System.Drawing.Size(861, 610);
             this.Controls.Add(this.tabControlAdmin);
             this.Name = "FrmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdmin";
             this.tabControlAdmin.ResumeLayout(false);
             this.tabPageImportExcel.ResumeLayout(false);
@@ -597,6 +797,12 @@
             this.paneditdatatypesheet.ResumeLayout(false);
             this.paneditdatatypesheet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).EndInit();
+            this.tabPageUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -649,5 +855,21 @@
         private System.Windows.Forms.DataGridView dtgDataType;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TabPage tabPageUser;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnCancelUser;
+        private System.Windows.Forms.Button btnSaveUser;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnEditUser;
+        private System.Windows.Forms.Button btnNewUser;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtgUsers;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbcaSX;
+        private System.Windows.Forms.TextBox tbmatkhau;
+        private System.Windows.Forms.TextBox tbTenUser;
+        private System.Windows.Forms.CheckedListBox chListCapquyen;
+        private System.Windows.Forms.Label label3;
     }
 }

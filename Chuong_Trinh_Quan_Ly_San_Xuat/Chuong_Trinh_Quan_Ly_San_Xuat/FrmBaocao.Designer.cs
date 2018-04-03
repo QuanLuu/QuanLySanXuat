@@ -35,6 +35,7 @@
             this.btninCTSX = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnUpdatedulieu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -66,19 +67,20 @@
             this.btnInpass.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnInpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInpass.ForeColor = System.Drawing.Color.Yellow;
-            this.btnInpass.Location = new System.Drawing.Point(310, 114);
+            this.btnInpass.Location = new System.Drawing.Point(313, 172);
             this.btnInpass.Name = "btnInpass";
             this.btnInpass.Size = new System.Drawing.Size(253, 35);
             this.btnInpass.TabIndex = 6;
             this.btnInpass.Text = "PASS";
             this.btnInpass.UseVisualStyleBackColor = false;
+            this.btnInpass.Click += new System.EventHandler(this.btnInpass_Click);
             // 
             // btninCTSX
             // 
             this.btninCTSX.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btninCTSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninCTSX.ForeColor = System.Drawing.Color.Yellow;
-            this.btninCTSX.Location = new System.Drawing.Point(310, 56);
+            this.btninCTSX.Location = new System.Drawing.Point(313, 114);
             this.btninCTSX.Name = "btninCTSX";
             this.btninCTSX.Size = new System.Drawing.Size(253, 35);
             this.btninCTSX.TabIndex = 5;
@@ -108,12 +110,26 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "In ấn";
             // 
+            // btnUpdatedulieu
+            // 
+            this.btnUpdatedulieu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdatedulieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatedulieu.ForeColor = System.Drawing.Color.Yellow;
+            this.btnUpdatedulieu.Location = new System.Drawing.Point(313, 56);
+            this.btnUpdatedulieu.Name = "btnUpdatedulieu";
+            this.btnUpdatedulieu.Size = new System.Drawing.Size(253, 35);
+            this.btnUpdatedulieu.TabIndex = 9;
+            this.btnUpdatedulieu.Text = "Update dữ liệu";
+            this.btnUpdatedulieu.UseVisualStyleBackColor = false;
+            this.btnUpdatedulieu.Click += new System.EventHandler(this.btnUpdatedulieu_Click);
+            // 
             // FrmBaocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(588, 349);
+            this.Controls.Add(this.btnUpdatedulieu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInpass);
@@ -138,5 +154,6 @@
         private System.Windows.Forms.Button btninCTSX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUpdatedulieu;
     }
 }

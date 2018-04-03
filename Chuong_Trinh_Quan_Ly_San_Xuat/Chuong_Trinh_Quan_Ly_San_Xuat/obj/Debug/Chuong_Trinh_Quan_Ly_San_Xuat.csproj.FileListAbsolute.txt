@@ -14,7 +14,6 @@ C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\C
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.exe
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.pdb
-C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.csprojResolveAssemblyReference.cache
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.FrmChiThiSX.resources
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.FrmDanhMuc.resources
 C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Resources.resources

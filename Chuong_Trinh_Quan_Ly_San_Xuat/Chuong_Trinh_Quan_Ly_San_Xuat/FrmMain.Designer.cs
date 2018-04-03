@@ -137,6 +137,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 17);
             this.label9.TabIndex = 11;
+            this.label9.Tag = "PO";
             this.label9.Text = "PO";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
@@ -149,6 +150,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "PO";
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label6
@@ -160,6 +162,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 17);
             this.label6.TabIndex = 9;
+            this.label6.Tag = "Báo Cáo";
             this.label6.Text = "Báo Cáo";
             // 
             // pictureBox5
@@ -171,6 +174,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "Báo Cáo";
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label3
@@ -182,6 +186,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 7;
+            this.label3.Tag = "Nhân Sự";
             this.label3.Text = "Nhân Sự";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -194,6 +199,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "Nhân Sự";
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label4
@@ -230,6 +236,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 17);
             this.label2.TabIndex = 3;
+            this.label2.Tag = "Nhập - Xuất";
             this.label2.Text = "Nhập - Xuất";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -242,6 +249,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "Nhập - Xuất";
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lbDanhMuc
@@ -253,6 +261,7 @@
             this.lbDanhMuc.Name = "lbDanhMuc";
             this.lbDanhMuc.Size = new System.Drawing.Size(80, 17);
             this.lbDanhMuc.TabIndex = 1;
+            this.lbDanhMuc.Tag = "Danh Mục";
             this.lbDanhMuc.Text = "Danh Mục";
             this.lbDanhMuc.Click += new System.EventHandler(this.lbDanhMuc_Click);
             // 
@@ -265,6 +274,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "Danh Mục";
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelLogin
@@ -338,6 +348,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 17);
             this.label10.TabIndex = 13;
+            this.label10.Tag = "Admin";
             this.label10.Text = "Admin";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -350,16 +361,20 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "Admin";
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(568, 381);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";

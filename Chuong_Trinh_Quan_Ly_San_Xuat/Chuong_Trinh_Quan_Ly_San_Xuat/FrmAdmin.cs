@@ -17,8 +17,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             InitializeComponent();
             LoadDataTypeTable();
+            loaduser();
             dtgDataType.Dock = DockStyle.Fill;
             dtgDataTypeSheet.Dock = DockStyle.Fill;
+        }
+        void loaduser()
+        {
+            DataTable data = Import_Manager.Instance.GetUser();
+            dtgUsers.DataSource = data;
         }
 
         private void btnNewDataType_Click(object sender, EventArgs e)
@@ -54,16 +60,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void BtnSaveDataType_Click(object sender, EventArgs e)
         {
-            int rowaffect;
-            int ignore = 0;
-            string text = "EXCEL";
-            if (chbignoreedit.Checked == true) ignore = 1; if (chbtextfile.Checked == true) text = "TEXT";
-            rowaffect = Import_Manager.Instance.UpdateDataType(Action, ignore, tbeditDataType.Text, Convert.ToInt32(tbEditSchedule.Text), text
-                                                            , tbdelimeter.Text, tbSourcepath.Text, tbDespath.Text, tbFilter.Text, (int)dtgDataType.CurrentRow.Cells[0].Value);
-            LoadDataTypeTable();
-            Action = 0;
-            Disablecontrol();
-        }
+            try
+            {
+                int rowaffect;
+                int ignore = 0;
+                string text = "EXCEL";
+                if (chbignoreedit.Checked == true) ignore = 1; if (chbtextfile.Checked == true) text = "TEXT";
+                rowaffect = Import_Manager.Instance.UpdateDataType(Action, ignore, tbeditDataType.Text, Convert.ToInt32(tbEditSchedule.Text), text
+                                                                , tbdelimeter.Text, tbSourcepath.Text, tbDespath.Text, tbFilter.Text, (int)dtgDataType.CurrentRow.Cells[0].Value);
+                LoadDataTypeTable();
+                Action = 0;
+                Disablecontrol();
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
 
         private void btnDeleteDataType_Click(object sender, EventArgs e)
         {
@@ -119,6 +132,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnCancelDataSheet.Enabled = true;
             }
         }
+        void DisableUser()
+        {
+            if (Action == 0)
+            {
+                panelUser.Visible = false;
+                btnNewUser.Enabled = true;
+                btnEditUser.Enabled = true;
+                btnDeleteUser.Enabled = true;
+                btnSaveUser.Enabled = false;
+                btnCancelUser.Enabled = false;
+            }
+            else
+            {
+                panelUser.Visible = true;
+                btnNewUser.Enabled = false;
+                btnEditUser.Enabled = false;
+                btnDeleteUser.Enabled = false;
+                btnSaveUser.Enabled = true;
+                btnCancelUser.Enabled = true;
+            }
+        }
         void LoadDataTypeSheetTable(string data_type)
         {
             DataTable data = Import_Manager.Instance.LoadDataTypeSheetTable(data_type);
@@ -155,15 +189,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveDataSheet_Click(object sender, EventArgs e)
         {
-            int row_affect;
-            int ignore = 0;
-            int pivottable = 0;
-            if (chbpivot.Checked) pivottable = 1;
-            if (chbDataSheetIgnore.Checked == true) ignore = 1;
-            row_affect = Import_Manager.Instance.UpdateDataTypeSheet(Action, (int)dtgDataType.CurrentRow.Cells[0].Value, ignore, pivottable, (int)numColumnPivot.Value, tbSheetName.Text, tbEditDataSheet.Text, tbBuffer.Text, (int)dtgDataTypeSheet.CurrentRow.Cells[0].Value);
-            LoadDataTypeSheetTable(dtgDataType.CurrentRow.Cells[2].Value.ToString());
-            Action = 0;
-            Disablecontroldatatypesheet();
+            try
+            { 
+                int row_affect;
+                int ignore = 0;
+                int pivottable = 0;
+                if (chbpivot.Checked) pivottable = 1;
+                if (chbDataSheetIgnore.Checked == true) ignore = 1;
+                row_affect = Import_Manager.Instance.UpdateDataTypeSheet(Action, (int)dtgDataType.CurrentRow.Cells[0].Value, ignore, pivottable, (int)numColumnPivot.Value, tbSheetName.Text, tbEditDataSheet.Text, tbBuffer.Text, (int)dtgDataTypeSheet.CurrentRow.Cells[0].Value);
+                LoadDataTypeSheetTable(dtgDataType.CurrentRow.Cells[2].Value.ToString());
+                Action = 0;
+                Disablecontroldatatypesheet();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnDeleteDataSheet_Click(object sender, EventArgs e)
@@ -221,6 +262,85 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 else
                 { chbtextfile.Checked = false; }
             }
+        }
+
+        private void btnSaveUser_Click(object sender, EventArgs e)
+        {
+            int currow = 0;
+            try
+            {
+                if (Action == 2)
+                { currow = dtgUsers.CurrentRow.Index; }
+                else if (Action == 1)
+                { currow = dtgUsers.Rows.Count - 1; }
+                else
+                { currow = 0; }
+                string capquyen = "";
+                for(int i = 0; i <chListCapquyen.Items.Count;i++)
+                {
+                    if(chListCapquyen.GetItemChecked(i)) capquyen += chListCapquyen.Items[i].ToString() + ";";
+                }
+               
+                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, capquyen, tbcaSX.Text);
+                loaduser();
+                dtgUsers.CurrentCell = dtgUsers.Rows[currow].Cells[0];
+                Action = 0;
+                DisableUser();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            Action = 3;
+            if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+            try
+            {
+                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, chListCapquyen.Text, tbcaSX.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Action = 0;
+            DisableUser();
+            loaduser();
+        }
+
+        private void dtgUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgUsers.CurrentRow.Cells[0].Value.ToString() != "" && Action != 1)
+            {
+                int rowselectd = dtgUsers.CurrentRow.Index;
+                tbTenUser.Text = dtgUsers[1, rowselectd].Value.ToString();
+                tbmatkhau.Text = dtgUsers[2, rowselectd].Value.ToString();
+                tbcaSX.Text = dtgUsers[4, rowselectd].Value.ToString();
+               
+            }
+        }
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+            Action = 1;
+            tbTenUser.Text = "";
+            tbmatkhau.Text = "";
+            tbcaSX.Text = "";
+            DisableUser();
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            Action = 2;
+            DisableUser();
+        }
+
+        private void btnCancelUser_Click(object sender, EventArgs e)
+        {
+            Action = 0;
+            DisableUser();
         }
     }
 }

@@ -580,13 +580,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 int results = Import_Manager.Instance.UpdateDinhMuc(actionDM, (int)dtgDM.CurrentRow.Cells[0].Value, dtpDateFrom.Value.Date, dtpDateTo.Value.Date, cbMaSPDM.Text, numDinhMuc.Value);
                 GetDinhMuc();
                 dtgDM.CurrentCell = dtgDM.Rows[currow].Cells[0];
-        }
+                actionDM = 0;
+                enablecontrolDM();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-    actionDM = 0;
-            enablecontrolDM();
+            } 
         }
 
         private void btnCancelDM_Click(object sender, EventArgs e)

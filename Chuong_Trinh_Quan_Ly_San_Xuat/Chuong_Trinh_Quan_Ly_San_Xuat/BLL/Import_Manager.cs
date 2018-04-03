@@ -156,7 +156,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KH_MASP @MAKH", new object[] { makh });
         }
-        //PP_UI_GET_LIST_TIME
+        public DataTable GetUser()
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_USERS", new object[] {});
+        }
+        //PP_UI_GET_USERS
         public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)
         {
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_SP_CONG_DOAN] @ACTION , @ID , @MA_CONG_DOAN , @TEN_CONG_DOAN , @ID_MAY , @ID_MSQL , @CD_SO", new object[] { action, id, macd, tencd, idmay, idmsql, congdoanso});
@@ -241,5 +245,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteNonQuery("exec PP_UI_UPDATE_IMPORT_DATATYPE_SHEET @ACTION , @ID_DATATYPE , @IGNORE , @PIVOT_TABLE , @MAX_COLUMN , @NAME , @DATATYPE_NAME , @BUFFER_TABLE , @ID", new object[] { ACTION, ID_DATATYPE, IGNORE, PIVOT_TABLE, MAX_COLUMN, NAME, DATATYPE_NAME, BUFFER_TABLE, ID });
         }
+        public int UpdateDuLieu()
+        {
+            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UPDATE_DU_LIEU", new object[] { });
+        }
+        public int UpdateUsers(int action, int id, string ten, string pas, string capquyen, string casx)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UI_UPDATE_USERS @ACTION , @ID , @TEN , @PAS , @CAP_QUYEN , @CA_SX", new object[] { action, id, ten, pas, capquyen, casx});
+        }
+        //PP_UI_UPDATE_USERS
     }
 }
