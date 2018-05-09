@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdatedulieu = new System.Windows.Forms.Button();
+            this.btnInvoice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -123,12 +124,26 @@
             this.btnUpdatedulieu.UseVisualStyleBackColor = false;
             this.btnUpdatedulieu.Click += new System.EventHandler(this.btnUpdatedulieu_Click);
             // 
+            // btnInvoice
+            // 
+            this.btnInvoice.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoice.ForeColor = System.Drawing.Color.Yellow;
+            this.btnInvoice.Location = new System.Drawing.Point(313, 228);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Size = new System.Drawing.Size(253, 35);
+            this.btnInvoice.TabIndex = 10;
+            this.btnInvoice.Text = "INVOICE";
+            this.btnInvoice.UseVisualStyleBackColor = false;
+            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            // 
             // FrmBaocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(588, 349);
+            this.Controls.Add(this.btnInvoice);
             this.Controls.Add(this.btnUpdatedulieu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -155,5 +170,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUpdatedulieu;
+        private System.Windows.Forms.Button btnInvoice;
     }
 }

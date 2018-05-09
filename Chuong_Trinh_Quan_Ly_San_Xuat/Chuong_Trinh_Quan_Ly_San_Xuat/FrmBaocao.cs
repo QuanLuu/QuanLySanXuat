@@ -39,5 +39,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             System.Diagnostics.Process.Start("http://tran_tuan/ReportServer/Pages/ReportViewer.aspx?%2fPO_Pass&rs:Command=Render");
         }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://tran_tuan/ReportServer/Pages/ReportViewer.aspx?%2fInvoice&rs:Command=Render");
+        }
     }
 }

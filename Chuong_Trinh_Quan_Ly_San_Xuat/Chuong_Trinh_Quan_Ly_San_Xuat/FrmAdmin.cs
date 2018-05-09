@@ -190,13 +190,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnSaveDataSheet_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 int row_affect;
                 int ignore = 0;
                 int pivottable = 0;
+                int id = 0; 
+                if (dtgDataTypeSheet.Rows.Count > 1) id = (int)dtgDataTypeSheet.CurrentRow.Cells[0].Value;
                 if (chbpivot.Checked) pivottable = 1;
                 if (chbDataSheetIgnore.Checked == true) ignore = 1;
-                row_affect = Import_Manager.Instance.UpdateDataTypeSheet(Action, (int)dtgDataType.CurrentRow.Cells[0].Value, ignore, pivottable, (int)numColumnPivot.Value, tbSheetName.Text, tbEditDataSheet.Text, tbBuffer.Text, (int)dtgDataTypeSheet.CurrentRow.Cells[0].Value);
+                row_affect = Import_Manager.Instance.UpdateDataTypeSheet(Action, (int)dtgDataType.CurrentRow.Cells[0].Value, ignore, pivottable, (int)numColumnPivot.Value, tbSheetName.Text, tbEditDataSheet.Text, tbBuffer.Text, id);
                 LoadDataTypeSheetTable(dtgDataType.CurrentRow.Cells[2].Value.ToString());
                 Action = 0;
                 Disablecontroldatatypesheet();

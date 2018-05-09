@@ -30,32 +30,7 @@
         {
             this.tabControlAdmin = new System.Windows.Forms.TabControl();
             this.tabPageImportExcel = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgDataType = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnCancelDataType = new System.Windows.Forms.Button();
-            this.BtnSaveDataType = new System.Windows.Forms.Button();
-            this.btnDeleteDataType = new System.Windows.Forms.Button();
-            this.btnEditDatatype = new System.Windows.Forms.Button();
-            this.btnNewDataType = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.paeditdatatype = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbEditSchedule = new System.Windows.Forms.TextBox();
-            this.chbignoreedit = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbFilter = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbdelimeter = new System.Windows.Forms.TextBox();
-            this.chbtextfile = new System.Windows.Forms.CheckBox();
-            this.tbDespath = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbSourcepath = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbeditDataType = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgDataTypeSheet = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCancelDataSheet = new System.Windows.Forms.Button();
             this.btnSaveDataSheet = new System.Windows.Forms.Button();
@@ -73,38 +48,63 @@
             this.chbpivot = new System.Windows.Forms.CheckBox();
             this.tbBuffer = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.dtgDataTypeSheet = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgDataType = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCancelDataType = new System.Windows.Forms.Button();
+            this.BtnSaveDataType = new System.Windows.Forms.Button();
+            this.btnDeleteDataType = new System.Windows.Forms.Button();
+            this.btnEditDatatype = new System.Windows.Forms.Button();
+            this.btnNewDataType = new System.Windows.Forms.Button();
+            this.paeditdatatype = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbEditSchedule = new System.Windows.Forms.TextBox();
+            this.chbignoreedit = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbFilter = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbdelimeter = new System.Windows.Forms.TextBox();
+            this.chbtextfile = new System.Windows.Forms.CheckBox();
+            this.tbDespath = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbSourcepath = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbeditDataType = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.tabPageUser = new System.Windows.Forms.TabPage();
-            this.dtgUsers = new System.Windows.Forms.DataGridView();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancelUser = new System.Windows.Forms.Button();
             this.btnSaveUser = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnNewUser = new System.Windows.Forms.Button();
-            this.tbTenUser = new System.Windows.Forms.TextBox();
-            this.tbmatkhau = new System.Windows.Forms.TextBox();
-            this.tbcaSX = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chListCapquyen = new System.Windows.Forms.CheckedListBox();
+            this.panelUser = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.chListCapquyen = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbcaSX = new System.Windows.Forms.TextBox();
+            this.tbmatkhau = new System.Windows.Forms.TextBox();
+            this.tbTenUser = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtgUsers = new System.Windows.Forms.DataGridView();
             this.tabControlAdmin.SuspendLayout();
             this.tabPageImportExcel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.paneditdatatypesheet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDataTypeSheet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDataType)).BeginInit();
             this.panel6.SuspendLayout();
             this.paeditdatatype.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDataTypeSheet)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.paneditdatatypesheet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).BeginInit();
             this.tabPageUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
-            this.panelUser.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdmin
@@ -130,254 +130,6 @@
             this.tabPageImportExcel.Text = "Import Excel-Text";
             this.tabPageImportExcel.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.dtgDataType);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.paeditdatatype);
-            this.panel1.Controls.Add(this.splitter1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(847, 334);
-            this.panel1.TabIndex = 3;
-            // 
-            // dtgDataType
-            // 
-            this.dtgDataType.AllowUserToResizeRows = false;
-            this.dtgDataType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgDataType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDataType.Location = new System.Drawing.Point(3, 3);
-            this.dtgDataType.Name = "dtgDataType";
-            this.dtgDataType.ReadOnly = true;
-            this.dtgDataType.RowHeadersVisible = false;
-            this.dtgDataType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDataType.Size = new System.Drawing.Size(506, 167);
-            this.dtgDataType.TabIndex = 14;
-            this.dtgDataType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDataType_CellClick);
-            this.dtgDataType.SelectionChanged += new System.EventHandler(this.dtgDataType_SelectionChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel6.Controls.Add(this.btnCancelDataType);
-            this.panel6.Controls.Add(this.BtnSaveDataType);
-            this.panel6.Controls.Add(this.btnDeleteDataType);
-            this.panel6.Controls.Add(this.btnEditDatatype);
-            this.panel6.Controls.Add(this.btnNewDataType);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(3, 237);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(844, 28);
-            this.panel6.TabIndex = 13;
-            // 
-            // btnCancelDataType
-            // 
-            this.btnCancelDataType.AutoSize = true;
-            this.btnCancelDataType.Enabled = false;
-            this.btnCancelDataType.Location = new System.Drawing.Point(168, 0);
-            this.btnCancelDataType.Name = "btnCancelDataType";
-            this.btnCancelDataType.Size = new System.Drawing.Size(50, 26);
-            this.btnCancelDataType.TabIndex = 17;
-            this.btnCancelDataType.Text = "Cancel";
-            this.btnCancelDataType.UseVisualStyleBackColor = true;
-            this.btnCancelDataType.Click += new System.EventHandler(this.btnCancelDataType_Click);
-            // 
-            // BtnSaveDataType
-            // 
-            this.BtnSaveDataType.AutoSize = true;
-            this.BtnSaveDataType.Enabled = false;
-            this.BtnSaveDataType.Location = new System.Drawing.Point(126, 0);
-            this.BtnSaveDataType.Name = "BtnSaveDataType";
-            this.BtnSaveDataType.Size = new System.Drawing.Size(42, 26);
-            this.BtnSaveDataType.TabIndex = 16;
-            this.BtnSaveDataType.Text = "Save";
-            this.BtnSaveDataType.UseVisualStyleBackColor = true;
-            this.BtnSaveDataType.Click += new System.EventHandler(this.BtnSaveDataType_Click);
-            // 
-            // btnDeleteDataType
-            // 
-            this.btnDeleteDataType.AutoSize = true;
-            this.btnDeleteDataType.Location = new System.Drawing.Point(78, 0);
-            this.btnDeleteDataType.Name = "btnDeleteDataType";
-            this.btnDeleteDataType.Size = new System.Drawing.Size(48, 26);
-            this.btnDeleteDataType.TabIndex = 15;
-            this.btnDeleteDataType.Text = "Delete";
-            this.btnDeleteDataType.UseVisualStyleBackColor = true;
-            this.btnDeleteDataType.Click += new System.EventHandler(this.btnDeleteDataType_Click);
-            // 
-            // btnEditDatatype
-            // 
-            this.btnEditDatatype.AutoSize = true;
-            this.btnEditDatatype.Location = new System.Drawing.Point(39, 0);
-            this.btnEditDatatype.Name = "btnEditDatatype";
-            this.btnEditDatatype.Size = new System.Drawing.Size(39, 26);
-            this.btnEditDatatype.TabIndex = 14;
-            this.btnEditDatatype.Text = "Edit";
-            this.btnEditDatatype.UseVisualStyleBackColor = true;
-            this.btnEditDatatype.Click += new System.EventHandler(this.btnEditDatatype_Click);
-            // 
-            // btnNewDataType
-            // 
-            this.btnNewDataType.AutoSize = true;
-            this.btnNewDataType.Location = new System.Drawing.Point(0, 0);
-            this.btnNewDataType.Name = "btnNewDataType";
-            this.btnNewDataType.Size = new System.Drawing.Size(39, 26);
-            this.btnNewDataType.TabIndex = 13;
-            this.btnNewDataType.Text = "New";
-            this.btnNewDataType.UseVisualStyleBackColor = true;
-            this.btnNewDataType.Click += new System.EventHandler(this.btnNewDataType_Click);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 334);
-            this.splitter1.TabIndex = 7;
-            this.splitter1.TabStop = false;
-            // 
-            // paeditdatatype
-            // 
-            this.paeditdatatype.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.paeditdatatype.Controls.Add(this.label12);
-            this.paeditdatatype.Controls.Add(this.tbEditSchedule);
-            this.paeditdatatype.Controls.Add(this.chbignoreedit);
-            this.paeditdatatype.Controls.Add(this.label11);
-            this.paeditdatatype.Controls.Add(this.tbFilter);
-            this.paeditdatatype.Controls.Add(this.label10);
-            this.paeditdatatype.Controls.Add(this.tbdelimeter);
-            this.paeditdatatype.Controls.Add(this.chbtextfile);
-            this.paeditdatatype.Controls.Add(this.tbDespath);
-            this.paeditdatatype.Controls.Add(this.label9);
-            this.paeditdatatype.Controls.Add(this.tbSourcepath);
-            this.paeditdatatype.Controls.Add(this.label8);
-            this.paeditdatatype.Controls.Add(this.tbeditDataType);
-            this.paeditdatatype.Controls.Add(this.label7);
-            this.paeditdatatype.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.paeditdatatype.Location = new System.Drawing.Point(3, 265);
-            this.paeditdatatype.Name = "paeditdatatype";
-            this.paeditdatatype.Size = new System.Drawing.Size(844, 69);
-            this.paeditdatatype.TabIndex = 15;
-            this.paeditdatatype.TabStop = true;
-            this.paeditdatatype.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(354, 42);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Schedule";
-            // 
-            // tbEditSchedule
-            // 
-            this.tbEditSchedule.Location = new System.Drawing.Point(407, 38);
-            this.tbEditSchedule.Name = "tbEditSchedule";
-            this.tbEditSchedule.Size = new System.Drawing.Size(46, 20);
-            this.tbEditSchedule.TabIndex = 18;
-            // 
-            // chbignoreedit
-            // 
-            this.chbignoreedit.AutoSize = true;
-            this.chbignoreedit.Location = new System.Drawing.Point(296, 41);
-            this.chbignoreedit.Name = "chbignoreedit";
-            this.chbignoreedit.Size = new System.Drawing.Size(56, 17);
-            this.chbignoreedit.TabIndex = 17;
-            this.chbignoreedit.Text = "Ignore";
-            this.chbignoreedit.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Filter";
-            // 
-            // tbFilter
-            // 
-            this.tbFilter.Location = new System.Drawing.Point(66, 39);
-            this.tbFilter.Name = "tbFilter";
-            this.tbFilter.Size = new System.Drawing.Size(218, 20);
-            this.tbFilter.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(354, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Delimiter";
-            // 
-            // tbdelimeter
-            // 
-            this.tbdelimeter.Location = new System.Drawing.Point(407, 6);
-            this.tbdelimeter.Name = "tbdelimeter";
-            this.tbdelimeter.Size = new System.Drawing.Size(46, 20);
-            this.tbdelimeter.TabIndex = 13;
-            // 
-            // chbtextfile
-            // 
-            this.chbtextfile.AutoSize = true;
-            this.chbtextfile.Location = new System.Drawing.Point(296, 8);
-            this.chbtextfile.Name = "chbtextfile";
-            this.chbtextfile.Size = new System.Drawing.Size(47, 17);
-            this.chbtextfile.TabIndex = 12;
-            this.chbtextfile.Text = "Text";
-            this.chbtextfile.UseVisualStyleBackColor = true;
-            // 
-            // tbDespath
-            // 
-            this.tbDespath.Location = new System.Drawing.Point(532, 39);
-            this.tbDespath.Name = "tbDespath";
-            this.tbDespath.Size = new System.Drawing.Size(307, 20);
-            this.tbDespath.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(469, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Destination";
-            // 
-            // tbSourcepath
-            // 
-            this.tbSourcepath.Location = new System.Drawing.Point(532, 6);
-            this.tbSourcepath.Name = "tbSourcepath";
-            this.tbSourcepath.Size = new System.Drawing.Size(307, 20);
-            this.tbSourcepath.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(469, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Source Path";
-            // 
-            // tbeditDataType
-            // 
-            this.tbeditDataType.Location = new System.Drawing.Point(66, 6);
-            this.tbeditDataType.Name = "tbeditDataType";
-            this.tbeditDataType.Size = new System.Drawing.Size(218, 20);
-            this.tbeditDataType.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Data Type";
-            // 
             // panel2
             // 
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -389,20 +141,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(847, 245);
             this.panel2.TabIndex = 4;
-            // 
-            // dtgDataTypeSheet
-            // 
-            this.dtgDataTypeSheet.AllowUserToResizeRows = false;
-            this.dtgDataTypeSheet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgDataTypeSheet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDataTypeSheet.Location = new System.Drawing.Point(78, 48);
-            this.dtgDataTypeSheet.Name = "dtgDataTypeSheet";
-            this.dtgDataTypeSheet.ReadOnly = true;
-            this.dtgDataTypeSheet.RowHeadersVisible = false;
-            this.dtgDataTypeSheet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDataTypeSheet.Size = new System.Drawing.Size(122, 87);
-            this.dtgDataTypeSheet.TabIndex = 16;
-            this.dtgDataTypeSheet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDataTypeSheet_CellClick);
             // 
             // panel7
             // 
@@ -515,7 +253,7 @@
             0});
             this.numColumnPivot.Name = "numColumnPivot";
             this.numColumnPivot.Size = new System.Drawing.Size(63, 20);
-            this.numColumnPivot.TabIndex = 18;
+            this.numColumnPivot.TabIndex = 5;
             // 
             // chbDataSheetIgnore
             // 
@@ -523,7 +261,7 @@
             this.chbDataSheetIgnore.Location = new System.Drawing.Point(606, 51);
             this.chbDataSheetIgnore.Name = "chbDataSheetIgnore";
             this.chbDataSheetIgnore.Size = new System.Drawing.Size(56, 17);
-            this.chbDataSheetIgnore.TabIndex = 17;
+            this.chbDataSheetIgnore.TabIndex = 6;
             this.chbDataSheetIgnore.Text = "Ignore";
             this.chbDataSheetIgnore.UseVisualStyleBackColor = true;
             // 
@@ -541,7 +279,7 @@
             this.tbEditDataSheet.Location = new System.Drawing.Point(97, 49);
             this.tbEditDataSheet.Name = "tbEditDataSheet";
             this.tbEditDataSheet.Size = new System.Drawing.Size(251, 20);
-            this.tbEditDataSheet.TabIndex = 15;
+            this.tbEditDataSheet.TabIndex = 2;
             // 
             // label15
             // 
@@ -557,7 +295,7 @@
             this.tbSheetName.Location = new System.Drawing.Point(469, 16);
             this.tbSheetName.Name = "tbSheetName";
             this.tbSheetName.Size = new System.Drawing.Size(193, 20);
-            this.tbSheetName.TabIndex = 13;
+            this.tbSheetName.TabIndex = 3;
             // 
             // chbpivot
             // 
@@ -565,7 +303,7 @@
             this.chbpivot.Location = new System.Drawing.Point(400, 51);
             this.chbpivot.Name = "chbpivot";
             this.chbpivot.Size = new System.Drawing.Size(56, 17);
-            this.chbpivot.TabIndex = 12;
+            this.chbpivot.TabIndex = 4;
             this.chbpivot.Text = "Pivot?";
             this.chbpivot.UseVisualStyleBackColor = true;
             // 
@@ -585,6 +323,268 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "Data Type Sheet";
             // 
+            // dtgDataTypeSheet
+            // 
+            this.dtgDataTypeSheet.AllowUserToResizeRows = false;
+            this.dtgDataTypeSheet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgDataTypeSheet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDataTypeSheet.Location = new System.Drawing.Point(78, 48);
+            this.dtgDataTypeSheet.Name = "dtgDataTypeSheet";
+            this.dtgDataTypeSheet.ReadOnly = true;
+            this.dtgDataTypeSheet.RowHeadersVisible = false;
+            this.dtgDataTypeSheet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgDataTypeSheet.Size = new System.Drawing.Size(122, 87);
+            this.dtgDataTypeSheet.TabIndex = 16;
+            this.dtgDataTypeSheet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDataTypeSheet_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.dtgDataType);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.paeditdatatype);
+            this.panel1.Controls.Add(this.splitter1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(847, 334);
+            this.panel1.TabIndex = 3;
+            // 
+            // dtgDataType
+            // 
+            this.dtgDataType.AllowUserToResizeRows = false;
+            this.dtgDataType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgDataType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDataType.Location = new System.Drawing.Point(3, 3);
+            this.dtgDataType.Name = "dtgDataType";
+            this.dtgDataType.ReadOnly = true;
+            this.dtgDataType.RowHeadersVisible = false;
+            this.dtgDataType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgDataType.Size = new System.Drawing.Size(506, 167);
+            this.dtgDataType.TabIndex = 14;
+            this.dtgDataType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDataType_CellClick);
+            this.dtgDataType.SelectionChanged += new System.EventHandler(this.dtgDataType_SelectionChanged);
+            // 
+            // panel6
+            // 
+            this.panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel6.Controls.Add(this.btnCancelDataType);
+            this.panel6.Controls.Add(this.BtnSaveDataType);
+            this.panel6.Controls.Add(this.btnDeleteDataType);
+            this.panel6.Controls.Add(this.btnEditDatatype);
+            this.panel6.Controls.Add(this.btnNewDataType);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(3, 237);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(844, 28);
+            this.panel6.TabIndex = 13;
+            // 
+            // btnCancelDataType
+            // 
+            this.btnCancelDataType.AutoSize = true;
+            this.btnCancelDataType.Enabled = false;
+            this.btnCancelDataType.Location = new System.Drawing.Point(168, 0);
+            this.btnCancelDataType.Name = "btnCancelDataType";
+            this.btnCancelDataType.Size = new System.Drawing.Size(50, 26);
+            this.btnCancelDataType.TabIndex = 17;
+            this.btnCancelDataType.Text = "Cancel";
+            this.btnCancelDataType.UseVisualStyleBackColor = true;
+            this.btnCancelDataType.Click += new System.EventHandler(this.btnCancelDataType_Click);
+            // 
+            // BtnSaveDataType
+            // 
+            this.BtnSaveDataType.AutoSize = true;
+            this.BtnSaveDataType.Enabled = false;
+            this.BtnSaveDataType.Location = new System.Drawing.Point(126, 0);
+            this.BtnSaveDataType.Name = "BtnSaveDataType";
+            this.BtnSaveDataType.Size = new System.Drawing.Size(42, 26);
+            this.BtnSaveDataType.TabIndex = 16;
+            this.BtnSaveDataType.Text = "Save";
+            this.BtnSaveDataType.UseVisualStyleBackColor = true;
+            this.BtnSaveDataType.Click += new System.EventHandler(this.BtnSaveDataType_Click);
+            // 
+            // btnDeleteDataType
+            // 
+            this.btnDeleteDataType.AutoSize = true;
+            this.btnDeleteDataType.Location = new System.Drawing.Point(78, 0);
+            this.btnDeleteDataType.Name = "btnDeleteDataType";
+            this.btnDeleteDataType.Size = new System.Drawing.Size(48, 26);
+            this.btnDeleteDataType.TabIndex = 15;
+            this.btnDeleteDataType.Text = "Delete";
+            this.btnDeleteDataType.UseVisualStyleBackColor = true;
+            this.btnDeleteDataType.Click += new System.EventHandler(this.btnDeleteDataType_Click);
+            // 
+            // btnEditDatatype
+            // 
+            this.btnEditDatatype.AutoSize = true;
+            this.btnEditDatatype.Location = new System.Drawing.Point(39, 0);
+            this.btnEditDatatype.Name = "btnEditDatatype";
+            this.btnEditDatatype.Size = new System.Drawing.Size(39, 26);
+            this.btnEditDatatype.TabIndex = 14;
+            this.btnEditDatatype.Text = "Edit";
+            this.btnEditDatatype.UseVisualStyleBackColor = true;
+            this.btnEditDatatype.Click += new System.EventHandler(this.btnEditDatatype_Click);
+            // 
+            // btnNewDataType
+            // 
+            this.btnNewDataType.AutoSize = true;
+            this.btnNewDataType.Location = new System.Drawing.Point(0, 0);
+            this.btnNewDataType.Name = "btnNewDataType";
+            this.btnNewDataType.Size = new System.Drawing.Size(39, 26);
+            this.btnNewDataType.TabIndex = 13;
+            this.btnNewDataType.Text = "New";
+            this.btnNewDataType.UseVisualStyleBackColor = true;
+            this.btnNewDataType.Click += new System.EventHandler(this.btnNewDataType_Click);
+            // 
+            // paeditdatatype
+            // 
+            this.paeditdatatype.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.paeditdatatype.Controls.Add(this.label12);
+            this.paeditdatatype.Controls.Add(this.tbEditSchedule);
+            this.paeditdatatype.Controls.Add(this.chbignoreedit);
+            this.paeditdatatype.Controls.Add(this.label11);
+            this.paeditdatatype.Controls.Add(this.tbFilter);
+            this.paeditdatatype.Controls.Add(this.label10);
+            this.paeditdatatype.Controls.Add(this.tbdelimeter);
+            this.paeditdatatype.Controls.Add(this.chbtextfile);
+            this.paeditdatatype.Controls.Add(this.tbDespath);
+            this.paeditdatatype.Controls.Add(this.label9);
+            this.paeditdatatype.Controls.Add(this.tbSourcepath);
+            this.paeditdatatype.Controls.Add(this.label8);
+            this.paeditdatatype.Controls.Add(this.tbeditDataType);
+            this.paeditdatatype.Controls.Add(this.label7);
+            this.paeditdatatype.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paeditdatatype.Location = new System.Drawing.Point(3, 265);
+            this.paeditdatatype.Name = "paeditdatatype";
+            this.paeditdatatype.Size = new System.Drawing.Size(844, 69);
+            this.paeditdatatype.TabIndex = 15;
+            this.paeditdatatype.TabStop = true;
+            this.paeditdatatype.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(354, 42);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Schedule";
+            // 
+            // tbEditSchedule
+            // 
+            this.tbEditSchedule.Location = new System.Drawing.Point(407, 38);
+            this.tbEditSchedule.Name = "tbEditSchedule";
+            this.tbEditSchedule.Size = new System.Drawing.Size(46, 20);
+            this.tbEditSchedule.TabIndex = 7;
+            // 
+            // chbignoreedit
+            // 
+            this.chbignoreedit.AutoSize = true;
+            this.chbignoreedit.Location = new System.Drawing.Point(296, 41);
+            this.chbignoreedit.Name = "chbignoreedit";
+            this.chbignoreedit.Size = new System.Drawing.Size(56, 17);
+            this.chbignoreedit.TabIndex = 6;
+            this.chbignoreedit.Text = "Ignore";
+            this.chbignoreedit.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Filter";
+            // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(66, 39);
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(218, 20);
+            this.tbFilter.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(354, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Delimiter";
+            // 
+            // tbdelimeter
+            // 
+            this.tbdelimeter.Location = new System.Drawing.Point(407, 6);
+            this.tbdelimeter.Name = "tbdelimeter";
+            this.tbdelimeter.Size = new System.Drawing.Size(46, 20);
+            this.tbdelimeter.TabIndex = 3;
+            // 
+            // chbtextfile
+            // 
+            this.chbtextfile.AutoSize = true;
+            this.chbtextfile.Location = new System.Drawing.Point(296, 8);
+            this.chbtextfile.Name = "chbtextfile";
+            this.chbtextfile.Size = new System.Drawing.Size(47, 17);
+            this.chbtextfile.TabIndex = 2;
+            this.chbtextfile.Text = "Text";
+            this.chbtextfile.UseVisualStyleBackColor = true;
+            // 
+            // tbDespath
+            // 
+            this.tbDespath.Location = new System.Drawing.Point(532, 39);
+            this.tbDespath.Name = "tbDespath";
+            this.tbDespath.Size = new System.Drawing.Size(307, 20);
+            this.tbDespath.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(469, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Destination";
+            // 
+            // tbSourcepath
+            // 
+            this.tbSourcepath.Location = new System.Drawing.Point(532, 6);
+            this.tbSourcepath.Name = "tbSourcepath";
+            this.tbSourcepath.Size = new System.Drawing.Size(307, 20);
+            this.tbSourcepath.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(469, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Source Path";
+            // 
+            // tbeditDataType
+            // 
+            this.tbeditDataType.Location = new System.Drawing.Point(66, 6);
+            this.tbeditDataType.Name = "tbeditDataType";
+            this.tbeditDataType.Size = new System.Drawing.Size(218, 20);
+            this.tbeditDataType.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Data Type";
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 334);
+            this.splitter1.TabIndex = 7;
+            this.splitter1.TabStop = false;
+            // 
             // tabPageUser
             // 
             this.tabPageUser.Controls.Add(this.panel4);
@@ -596,55 +596,6 @@
             this.tabPageUser.TabIndex = 1;
             this.tabPageUser.Text = "Users";
             this.tabPageUser.UseVisualStyleBackColor = true;
-            // 
-            // dtgUsers
-            // 
-            this.dtgUsers.AllowUserToResizeRows = false;
-            this.dtgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgUsers.Location = new System.Drawing.Point(0, 0);
-            this.dtgUsers.Name = "dtgUsers";
-            this.dtgUsers.RowHeadersVisible = false;
-            this.dtgUsers.Size = new System.Drawing.Size(853, 584);
-            this.dtgUsers.TabIndex = 0;
-            this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
-            // 
-            // panelUser
-            // 
-            this.panelUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelUser.Controls.Add(this.label3);
-            this.panelUser.Controls.Add(this.chListCapquyen);
-            this.panelUser.Controls.Add(this.label4);
-            this.panelUser.Controls.Add(this.tbcaSX);
-            this.panelUser.Controls.Add(this.tbmatkhau);
-            this.panelUser.Controls.Add(this.tbTenUser);
-            this.panelUser.Controls.Add(this.label2);
-            this.panelUser.Controls.Add(this.label1);
-            this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUser.Location = new System.Drawing.Point(0, 519);
-            this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(853, 65);
-            this.panelUser.TabIndex = 1;
-            this.panelUser.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên User";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu";
             // 
             // panel4
             // 
@@ -717,35 +668,32 @@
             this.btnNewUser.UseVisualStyleBackColor = true;
             this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
-            // tbTenUser
+            // panelUser
             // 
-            this.tbTenUser.Location = new System.Drawing.Point(59, 6);
-            this.tbTenUser.Name = "tbTenUser";
-            this.tbTenUser.Size = new System.Drawing.Size(100, 20);
-            this.tbTenUser.TabIndex = 3;
+            this.panelUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelUser.Controls.Add(this.label3);
+            this.panelUser.Controls.Add(this.chListCapquyen);
+            this.panelUser.Controls.Add(this.label4);
+            this.panelUser.Controls.Add(this.tbcaSX);
+            this.panelUser.Controls.Add(this.tbmatkhau);
+            this.panelUser.Controls.Add(this.tbTenUser);
+            this.panelUser.Controls.Add(this.label2);
+            this.panelUser.Controls.Add(this.label1);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelUser.Location = new System.Drawing.Point(0, 519);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(853, 65);
+            this.panelUser.TabIndex = 1;
+            this.panelUser.Visible = false;
             // 
-            // tbmatkhau
+            // label3
             // 
-            this.tbmatkhau.Location = new System.Drawing.Point(59, 33);
-            this.tbmatkhau.Name = "tbmatkhau";
-            this.tbmatkhau.Size = new System.Drawing.Size(100, 20);
-            this.tbmatkhau.TabIndex = 4;
-            // 
-            // tbcaSX
-            // 
-            this.tbcaSX.Location = new System.Drawing.Point(275, 6);
-            this.tbcaSX.Name = "tbcaSX";
-            this.tbcaSX.Size = new System.Drawing.Size(100, 20);
-            this.tbcaSX.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(211, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ca SX";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Cấp quyền";
             // 
             // chListCapquyen
             // 
@@ -764,14 +712,66 @@
             this.chListCapquyen.Size = new System.Drawing.Size(462, 34);
             this.chListCapquyen.TabIndex = 8;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(211, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Cấp quyền";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(211, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Ca SX";
+            // 
+            // tbcaSX
+            // 
+            this.tbcaSX.Location = new System.Drawing.Point(275, 6);
+            this.tbcaSX.Name = "tbcaSX";
+            this.tbcaSX.Size = new System.Drawing.Size(100, 20);
+            this.tbcaSX.TabIndex = 5;
+            // 
+            // tbmatkhau
+            // 
+            this.tbmatkhau.Location = new System.Drawing.Point(59, 33);
+            this.tbmatkhau.Name = "tbmatkhau";
+            this.tbmatkhau.Size = new System.Drawing.Size(100, 20);
+            this.tbmatkhau.TabIndex = 4;
+            // 
+            // tbTenUser
+            // 
+            this.tbTenUser.Location = new System.Drawing.Point(59, 6);
+            this.tbTenUser.Name = "tbTenUser";
+            this.tbTenUser.Size = new System.Drawing.Size(100, 20);
+            this.tbTenUser.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mật khẩu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên User";
+            // 
+            // dtgUsers
+            // 
+            this.dtgUsers.AllowUserToResizeRows = false;
+            this.dtgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgUsers.Location = new System.Drawing.Point(0, 0);
+            this.dtgUsers.Name = "dtgUsers";
+            this.dtgUsers.RowHeadersVisible = false;
+            this.dtgUsers.Size = new System.Drawing.Size(853, 584);
+            this.dtgUsers.TabIndex = 0;
+            this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
             // 
             // FrmAdmin
             // 
@@ -784,25 +784,25 @@
             this.Text = "FrmAdmin";
             this.tabControlAdmin.ResumeLayout(false);
             this.tabPageImportExcel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.paneditdatatypesheet.ResumeLayout(false);
+            this.paneditdatatypesheet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDataTypeSheet)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDataType)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.paeditdatatype.ResumeLayout(false);
             this.paeditdatatype.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDataTypeSheet)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.paneditdatatypesheet.ResumeLayout(false);
-            this.paneditdatatypesheet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numColumnPivot)).EndInit();
             this.tabPageUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
-            this.panelUser.ResumeLayout(false);
-            this.panelUser.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
             this.ResumeLayout(false);
 
         }

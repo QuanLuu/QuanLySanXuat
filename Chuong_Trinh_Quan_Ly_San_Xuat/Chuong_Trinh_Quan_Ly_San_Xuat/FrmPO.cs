@@ -143,12 +143,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
                 if (tabPO.SelectedIndex == 0)
                 { 
-                    int results = Import_Manager.Instance.UpdatePO(action, (int)dtgPO.CurrentRow.Cells[0].Value, cbMaSPPO.Text, dtpNgayPO.Value, tbSoPO.Text, dtpETD.Value, dtpETA.Value, (int)numsoluongPO.Value, numdongiaPO.Value, tbghichupo.Text);
+                    int results = Import_Manager.Instance.UpdatePO(action, (int)dtgPO.CurrentRow.Cells[0].Value,cbMaKHPO.Text, cbMaSPPO.Text, dtpNgayPO.Value, tbSoPO.Text, dtpETD.Value, dtpETA.Value, (int)numsoluongPO.Value, numdongiaPO.Value, dtpNgayGiao.Value, tbghichupo.Text);
                     loadallPO();
                 }
                 if (tabPO.SelectedIndex == 1)
                 {
-                    int results = Import_Manager.Instance.Updateforecast(action, (int)dtgForecast.CurrentRow.Cells[0].Value, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text);
+                    int results = Import_Manager.Instance.Updateforecast(action, (int)dtgForecast.CurrentRow.Cells[0].Value, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text);
                     LoadForecast();
                 }
                 if (tabPO.SelectedIndex == 2)
@@ -200,7 +200,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     { currow = dtgPO.Rows.Count - 1; }
                     else
                     { currow = 0; }
-                    int results = Import_Manager.Instance.UpdatePO(action, id, cbMaSPPO.Text, dtpNgayPO.Value, tbSoPO.Text, dtpETD.Value, dtpETA.Value, (int)numsoluongPO.Value, numdongiaPO.Value,tbghichupo.Text);
+                    int results = Import_Manager.Instance.UpdatePO(action, id,cbMaKHPO.Text, cbMaSPPO.Text, dtpNgayPO.Value, tbSoPO.Text, dtpETD.Value, dtpETA.Value, (int)numsoluongPO.Value, numdongiaPO.Value,dtpNgayGiao.Value, tbghichupo.Text);
                     loadallPO();
                     dtgPO.CurrentCell = dtgPO.Rows[currow].Cells[0];
                 }
@@ -213,7 +213,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     { currow = dtgForecast.Rows.Count - 1; }
                     else
                     { currow = 0; }
-                    int results = Import_Manager.Instance.Updateforecast(action, id, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text);
+                    int results = Import_Manager.Instance.Updateforecast(action, id, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text);
                     LoadForecast(); 
                     dtgForecast.CurrentCell = dtgForecast.Rows[currow].Cells[0];
                 }
@@ -314,6 +314,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void cbmakhforecast_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadsanphmtheokh();
+        }
+
+        private void tabPO_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (action != 0)
+            {
+                MessageBox.Show("Bạn chưa lưu dữ liệu, vui lòng chọn Save hoặc Cancel");
+                e.Cancel = true;
+            }
         }
     }
 }
