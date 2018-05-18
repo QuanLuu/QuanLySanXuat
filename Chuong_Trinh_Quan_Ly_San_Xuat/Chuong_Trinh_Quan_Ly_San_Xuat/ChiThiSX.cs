@@ -74,11 +74,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             foreach (Control c in col.Controls)
             {
-                if (c.GetType().Name == "TextBox") c.Text = "";
-                if (c.GetType().Name == "ComboBox") c.Text = "";
+                //if (c.GetType().Name == "TextBox") c.Text = "";
+                //if (c.GetType().Name == "ComboBox") c.Text = "";
                 if (c.GetType().Name == "NumericUpDown") c.Text = "0";
                 NewChiThiSX(c);
             }
+           
         }
 
         void CheckChiThiSX(Control col)
@@ -265,7 +266,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     if ((int)numSoLuong.Value != soluongdatcdtrc)
                     {
                         MessageBox.Show("Số lượng không khớp với công đoạn trước");
-                        return;
+                        //return;
                      }
                 }
                 int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, (int)cbTenMay.SelectedValue, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
@@ -275,6 +276,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if(dtgChiThiSX.Rows.Count >2) dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
                 actionSX = 0;
                 enablecontrolCTSX();
+                btnNew_Click(btnNew, e);
             }
             catch (Exception ex)
             {
@@ -438,5 +440,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         }
 
+        private void cbGiaCong_Enter(object sender, EventArgs e)
+        {
+            cbGiaCong.DroppedDown = true;
+        }
     }
 }

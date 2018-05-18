@@ -44,6 +44,10 @@
             this.mnutripXuatExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.panelQLSX = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numNgKiemTra = new System.Windows.Forms.NumericUpDown();
+            this.label34 = new System.Windows.Forms.Label();
+            this.numMopbaoluu = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
             this.cbGiaCong = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -65,6 +69,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBoxThoiGian = new System.Windows.Forms.GroupBox();
+            this.numVesinh6S = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
             this.labelTGSX = new System.Windows.Forms.Label();
             this.numtgChoKhuon = new System.Windows.Forms.NumericUpDown();
             this.numtgDaoTao = new System.Windows.Forms.NumericUpDown();
@@ -109,18 +115,14 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.numVesinh6S = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.numMopbaoluu = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
-            this.numNgKiemTra = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
             this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
             this.contextmnuExporttoexcel.SuspendLayout();
             this.panelQLSX.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNhiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXiMa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaoLuu)).BeginInit();
@@ -130,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSuoc)).BeginInit();
             this.groupBoxThoiGian.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChoKhuon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgDaoTao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChaoLe)).BeginInit();
@@ -140,9 +143,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.panel4.SuspendLayout();
             this.panelTitleCTSX.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFilterCTSX
@@ -322,6 +322,48 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hỏng (Cái)";
             // 
+            // numNgKiemTra
+            // 
+            this.numNgKiemTra.Location = new System.Drawing.Point(233, 139);
+            this.numNgKiemTra.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numNgKiemTra.Name = "numNgKiemTra";
+            this.numNgKiemTra.Size = new System.Drawing.Size(66, 20);
+            this.numNgKiemTra.TabIndex = 38;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(168, 143);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(68, 13);
+            this.label34.TabIndex = 43;
+            this.label34.Text = "NG Kiểm Tra";
+            // 
+            // numMopbaoluu
+            // 
+            this.numMopbaoluu.Location = new System.Drawing.Point(233, 160);
+            this.numMopbaoluu.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numMopbaoluu.Name = "numMopbaoluu";
+            this.numMopbaoluu.Size = new System.Drawing.Size(66, 20);
+            this.numMopbaoluu.TabIndex = 39;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(159, 164);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(71, 13);
+            this.label33.TabIndex = 41;
+            this.label33.Text = "Móp Bảo Lưu";
+            // 
             // cbGiaCong
             // 
             this.cbGiaCong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
@@ -335,6 +377,7 @@
             this.cbGiaCong.Name = "cbGiaCong";
             this.cbGiaCong.Size = new System.Drawing.Size(77, 21);
             this.cbGiaCong.TabIndex = 40;
+            this.cbGiaCong.Enter += new System.EventHandler(this.cbGiaCong_Enter);
             // 
             // label21
             // 
@@ -553,6 +596,27 @@
             this.groupBoxThoiGian.TabIndex = 2;
             this.groupBoxThoiGian.TabStop = false;
             this.groupBoxThoiGian.Text = "Thời gian (Phút)";
+            // 
+            // numVesinh6S
+            // 
+            this.numVesinh6S.Location = new System.Drawing.Point(86, 146);
+            this.numVesinh6S.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
+            this.numVesinh6S.Name = "numVesinh6S";
+            this.numVesinh6S.Size = new System.Drawing.Size(66, 20);
+            this.numVesinh6S.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 150);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 13);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Vệ Sinh 6S";
             // 
             // labelTGSX
             // 
@@ -1035,69 +1099,6 @@
             this.label29.Text = "Chỉ Thị Sản Xuất";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numVesinh6S
-            // 
-            this.numVesinh6S.Location = new System.Drawing.Point(86, 146);
-            this.numVesinh6S.Maximum = new decimal(new int[] {
-            720,
-            0,
-            0,
-            0});
-            this.numVesinh6S.Name = "numVesinh6S";
-            this.numVesinh6S.Size = new System.Drawing.Size(66, 20);
-            this.numVesinh6S.TabIndex = 30;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 150);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 13);
-            this.label23.TabIndex = 29;
-            this.label23.Text = "Vệ Sinh 6S";
-            // 
-            // numMopbaoluu
-            // 
-            this.numMopbaoluu.Location = new System.Drawing.Point(233, 160);
-            this.numMopbaoluu.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numMopbaoluu.Name = "numMopbaoluu";
-            this.numMopbaoluu.Size = new System.Drawing.Size(66, 20);
-            this.numMopbaoluu.TabIndex = 39;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(159, 164);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(71, 13);
-            this.label33.TabIndex = 41;
-            this.label33.Text = "Móp Bảo Lưu";
-            // 
-            // numNgKiemTra
-            // 
-            this.numNgKiemTra.Location = new System.Drawing.Point(233, 139);
-            this.numNgKiemTra.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numNgKiemTra.Name = "numNgKiemTra";
-            this.numNgKiemTra.Size = new System.Drawing.Size(66, 20);
-            this.numNgKiemTra.TabIndex = 38;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(168, 143);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(68, 13);
-            this.label34.TabIndex = 43;
-            this.label34.Text = "NG Kiểm Tra";
-            // 
             // FrmChiThiSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1120,6 +1121,8 @@
             this.panelQLSX.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNhiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numXiMa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBaoLuu)).EndInit();
@@ -1130,6 +1133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSuoc)).EndInit();
             this.groupBoxThoiGian.ResumeLayout(false);
             this.groupBoxThoiGian.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChoKhuon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgDaoTao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgChaoLe)).EndInit();
@@ -1141,9 +1145,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panelTitleCTSX.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numVesinh6S)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMopbaoluu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numNgKiemTra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
