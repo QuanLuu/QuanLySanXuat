@@ -22,5 +22,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP318;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True" +
+            ";User ID=QuanLySanXuat;Password=123456")]
+        public string QUAN_LY_SAN_XUATConnectionString {
+            get {
+                return ((string)(this["QUAN_LY_SAN_XUATConnectionString"]));
+            }
+        }
     }
 }

@@ -53,8 +53,11 @@
     <ApplicationIcon>rss.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,12 +88,6 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBaocao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBaocao.Designer.cs">
-      <DependentUpon>FrmBaocao.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,19 +112,30 @@
     <Compile Include="FrmPO.Designer.cs">
       <DependentUpon>FrmPO.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportView.Designer.cs">
+      <DependentUpon>FrmReportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUAN_LY_SAN_XUATDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUAN_LY_SAN_XUATDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChiThiSX.resx">
       <DependentUpon>ChiThiSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTSX.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc.resx">
       <DependentUpon>DanhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBaocao.resx">
-      <DependentUpon>FrmBaocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -141,6 +149,9 @@
     <EmbeddedResource Include="FrmPO.resx">
       <DependentUpon>FrmPO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportView.resx">
+      <DependentUpon>FrmReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -151,6 +162,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PO.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,6 +174,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QUAN_LY_SAN_XUATDataSet.xsc">
+      <DependentUpon>QUAN_LY_SAN_XUATDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUAN_LY_SAN_XUATDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUAN_LY_SAN_XUATDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUAN_LY_SAN_XUATDataSet.xss">
+      <DependentUpon>QUAN_LY_SAN_XUATDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

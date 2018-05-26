@@ -131,7 +131,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         void showBaocaoinan()
         {
-            FrmBaocao frm = new FrmBaocao();
+            FrmReportView frm = new FrmReportView();
             this.Hide();
             frm.Show();
             frm.FormClosing += main_close;

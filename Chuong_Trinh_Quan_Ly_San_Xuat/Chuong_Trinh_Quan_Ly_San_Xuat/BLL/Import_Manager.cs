@@ -172,11 +172,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_SAN_PHAM_SNP @MSQL", new object[] { msql });
         }
+
+        public DataTable printPO(string kh, DateTime ngaypo, string msql, int ngaydukien)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_DS_PRINT_PO_MSQL @KH , @NGAY_PO , @MSQL , @NGAY_DU_KIEN", new object[] { kh, ngaypo, msql, ngaydukien });
+        }
         public DataTable Getloaithung()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT LOAI_THUNG FROM BOX_SAN_PHAM ", new object[] { });
         }
-        //PP_UI_GET_SAN_PHAM_SNP
+        public DataTable inCTSX(string msql, int year, int month)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_DS_IN_CHI_THI_SAN_XUAT @MSQL , @YEAR , @MONTH ", new object[] {msql, year, month });
+        }
+        //PP_DS_IN_CHI_THI_SAN_XUAT
         public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)
         {
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_SP_CONG_DOAN] @ACTION , @ID , @MA_CONG_DOAN , @TEN_CONG_DOAN , @ID_MAY , @ID_MSQL , @CD_SO", new object[] { action, id, macd, tencd, idmay, idmsql, congdoanso});
