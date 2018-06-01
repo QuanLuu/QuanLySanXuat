@@ -76,7 +76,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getsanphamSNP()
         {
-            DataTable data = Import_Manager.Instance.GetSPSNP(tbMSQLBoxSPFilter.Text);
+            DataTable data = Import_Manager.Instance.GetSPSNP(tbMSQLBoxSPFilter.Text, tbMaSPBoxFilter.Text);
             dtgBoxSP.DataSource = data;
         }
         void getboxbyboxtype()
@@ -96,7 +96,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void GetSanPham()
         {
-            DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text);
+            DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text, tbMaSPDMSP.Text);
             dtgSP.DataSource = data;  
         }
         void getsanphamtheomsql()
@@ -132,13 +132,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void GetDongia()
         {
-            DataTable data = Import_Manager.Instance.LoadDongia(tbMaSPDongiaFilter.Text);
+            DataTable data = Import_Manager.Instance.LoadDongia(tbMaSPDongiaFilter.Text, tbMSQLDonGiaFilter.Text);
             dtgDongia.DataSource = data;
         }
 
         void getSPCD()
         {
-            DataTable spcd = Import_Manager.Instance.getSPCongDoan(tbSPCD.Text);
+            DataTable spcd = Import_Manager.Instance.getSPCongDoan(tbSPCD.Text, tbMaSPSPCDFilter.Text);
             dtgSPCD.DataSource = spcd;
         }
 
@@ -1218,6 +1218,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             actionKHSP = 0;
             enablecontrolKHSP();
             getKHSP();
+        }
+
+        private void tbMSQLDonGiaFilter_TextChanged(object sender, EventArgs e)
+        {
+            GetDongia();
+        }
+
+        private void tbMaSPDMSP_TextChanged(object sender, EventArgs e)
+        {
+            GetSanPham();
+        }
+
+        private void tbMaSPSPCDFilter_TextChanged(object sender, EventArgs e)
+        {
+            getSPCD();
+        }
+
+        private void tbMaSPBoxFilter_TextChanged(object sender, EventArgs e)
+        {
+            getsanphamSNP();
         }
     }
 }

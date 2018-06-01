@@ -17,6 +17,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             InitializeComponent();
             hidepannelfilter();
+            tbYearCTSX.Text = DateTime.Now.Year.ToString();
+            tbmonthCTSX.Text = DateTime.Now.Month.ToString();
+            tbNamKHSX.Text = DateTime.Now.Year.ToString();
+            tbThangKHSX.Text = DateTime.Now.Month.ToString();
+            tbNamInvoice.Text = DateTime.Now.Year.ToString();
+            tbThangInvoice.Text = DateTime.Now.Month.ToString();
+            dtpNgayInvoice.Value = DateTime.Now;
+            reportViewer.Dock = DockStyle.Fill;
+            tbKHInvoice.Text = "NTZC";
         }
 
         private void btnReportPO_Click(object sender, EventArgs e)
@@ -39,8 +48,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnReportCTSX_Click(object sender, EventArgs e)
         {
-            DataTable dt = Import_Manager.Instance.inCTSX(tbMSQQLCTSX.Text, Int32.Parse(tbYearCTSX.Text), Int32.Parse(tbmonthCTSX.Text));
-            viewreport("CTSX.rdlc", "CTSX", dt);
+            if (tbYearCTSX.Text != "" && tbmonthCTSX.Text != "")
+            {
+                DataTable dt = Import_Manager.Instance.inCTSX(tbMSQQLCTSX.Text, tbMaSPInCTSX.Text , Int32.Parse(tbYearCTSX.Text), Int32.Parse(tbmonthCTSX.Text));
+                viewreport("CTSX.rdlc", "CTSX", dt);
+            }
         }
 
         private void pOPassToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,7 +90,35 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void nhậpXuấtTồnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            hidepannelfilter();
+            panelInvoice.Visible = true;
             System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fInvoice&rs:Command=Render");
+        }
+
+        private void kếHoạchSXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            panelKHSX.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tbNamKHSX.Text != "" && tbThangKHSX.Text != "")
+            {
+                DataTable dt = Import_Manager.Instance.inCTSX(tbMSQLKHSX.Text, tbMaSPKHSX.Text, Int32.Parse(tbNamKHSX.Text), Int32.Parse(tbThangKHSX.Text));
+                viewreport("KHSX.rdlc", "KHSX", dt);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (tbNamInvoice.Text != "" && tbThangInvoice.Text != "")
+            {
+                DataTable dt = Import_Manager.Instance.reportInvoice(tbKHInvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
+                viewreport("Invoice.rdlc", "Invoice", dt);
+            }
+           
         }
     }
 }

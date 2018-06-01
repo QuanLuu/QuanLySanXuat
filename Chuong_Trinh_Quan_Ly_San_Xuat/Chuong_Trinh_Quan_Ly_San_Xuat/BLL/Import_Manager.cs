@@ -38,9 +38,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_MASP_THEO_NL @TEN_NL", new object[] { TenNL });
         }
 
-        public DataTable LoadDM_SP(string TenSP)
+        public DataTable LoadDM_SP(string msql, string masp)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SAN_PHAM @TENSP", new object[] { TenSP });
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SAN_PHAM @MSQL , @MA_SP", new object[] { msql, masp });
         }
         public DataTable LoadKH(string TenKH)
         {
@@ -50,9 +50,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DINH_MUC @MA_SP", new object[] { masp });
         }
-        public DataTable LoadDongia(string masp)
+        public DataTable LoadDongia(string masp, string msql)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DON_GIA @MA_SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DON_GIA @MA_SP , @MSQL", new object[] { masp, msql });
         }
 
         public DataTable LoadMaSP()
@@ -106,9 +106,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_LOG_IN @USER_LOG_IN , @PASSWORD", new object[] { tendn, pas });
         }
-        public DataTable getSPCongDoan(string masp)
+        public DataTable getSPCongDoan(String msql , string masp)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SP_CONG_DOAN @MA_SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SP_CONG_DOAN @MSQL , @MA_SP", new object[] {msql, masp });
         }
 
         public DataTable loadcomboMAQL()
@@ -168,9 +168,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_BOX @BOX_TYPE", new object[] { boxtype });
         }
-        public DataTable GetSPSNP(string msql)
+        public DataTable GetSPSNP(string msql, String masp)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_SAN_PHAM_SNP @MSQL", new object[] { msql });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_SAN_PHAM_SNP @MSQL , @MASP", new object[] { msql, masp });
         }
 
         public DataTable printPO(string kh, DateTime ngaypo, string msql, int ngaydukien)
@@ -181,9 +181,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT LOAI_THUNG FROM BOX_SAN_PHAM ", new object[] { });
         }
-        public DataTable inCTSX(string msql, int year, int month)
+        public DataTable inCTSX(string msql, string masp, int year, int month)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_DS_IN_CHI_THI_SAN_XUAT @MSQL , @YEAR , @MONTH ", new object[] {msql, year, month });
+            return DataProvider.Instance.ExecuteQuery("PP_DS_IN_CHI_THI_SAN_XUAT @MSQL , @MASP , @YEAR , @MONTH ", new object[] {msql, masp, year, month });
+        }
+
+        public DataTable reportInvoice(string kh, int year, int month, string soinv, DateTime ngayinvoice)
+        {
+            return DataProvider.Instance.ExecuteQuery("[PP_DS_INVOICE] @KH , @YEAR , @MONTH , @INVOICE , @DATE_INVOICE", new object[] { kh, year, month, soinv, ngayinvoice });
         }
         //PP_DS_IN_CHI_THI_SAN_XUAT
         public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)

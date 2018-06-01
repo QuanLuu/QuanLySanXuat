@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
-            this.PP_DS_PRINT_PO_MSQLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PP_DS_PRINT_PO_MSQLTableAdapter = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters.PP_DS_PRINT_PO_MSQLTableAdapter();
             this.panelPO = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,54 +41,70 @@
             this.cbKH = new System.Windows.Forms.ComboBox();
             this.btnReportPO = new System.Windows.Forms.Button();
             this.panelCTSX = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbMSQQLCTSX = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbYearCTSX = new System.Windows.Forms.TextBox();
+            this.btnReportCTSX = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbmonthCTSX = new System.Windows.Forms.TextBox();
-            this.btnReportCTSX = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbYearCTSX = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbMSQQLCTSX = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhậpXuấtTồnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inẤnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOPassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếHoạchSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhậpXuấtTồnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbMaSPInCTSX = new System.Windows.Forms.TextBox();
+            this.panelKHSX = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbMaSPKHSX = new System.Windows.Forms.TextBox();
+            this.btnKHSX = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbThangKHSX = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbNamKHSX = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbMSQLKHSX = new System.Windows.Forms.TextBox();
+            this.panelInvoice = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbSoInvoice = new System.Windows.Forms.TextBox();
+            this.btnInvoice = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbThangInvoice = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbNamInvoice = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbKHInvoice = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpNgayInvoice = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.PP_DS_PRINT_PO_MSQLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
+            this.PP_DS_PRINT_PO_MSQLTableAdapter = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters.PP_DS_PRINT_PO_MSQLTableAdapter();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panelKHSX.SuspendLayout();
+            this.panelInvoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PP_DS_PRINT_PO_MSQLBindingSource
-            // 
-            this.PP_DS_PRINT_PO_MSQLBindingSource.DataMember = "PP_DS_PRINT_PO_MSQL";
-            this.PP_DS_PRINT_PO_MSQLBindingSource.DataSource = this.QUAN_LY_SAN_XUATDataSet;
-            // 
-            // QUAN_LY_SAN_XUATDataSet
-            // 
-            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
-            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer
             // 
-            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "IN_PO";
-            reportDataSource5.Value = this.PP_DS_PRINT_PO_MSQLBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "IN_PO";
+            reportDataSource1.Value = this.PP_DS_PRINT_PO_MSQLBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(0, 105);
+            this.reportViewer.Location = new System.Drawing.Point(0, 201);
             this.reportViewer.Name = "reportViewer";
-            this.reportViewer.Size = new System.Drawing.Size(757, 372);
+            this.reportViewer.Size = new System.Drawing.Size(757, 276);
             this.reportViewer.TabIndex = 0;
-            // 
-            // PP_DS_PRINT_PO_MSQLTableAdapter
-            // 
-            this.PP_DS_PRINT_PO_MSQLTableAdapter.ClearBeforeFill = true;
             // 
             // panelPO
             // 
@@ -173,6 +186,9 @@
             // panelCTSX
             // 
             this.panelCTSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelCTSX.Controls.Add(this.label15);
+            this.panelCTSX.Controls.Add(this.label6);
+            this.panelCTSX.Controls.Add(this.tbMaSPInCTSX);
             this.panelCTSX.Controls.Add(this.btnReportCTSX);
             this.panelCTSX.Controls.Add(this.label5);
             this.panelCTSX.Controls.Add(this.tbmonthCTSX);
@@ -185,6 +201,48 @@
             this.panelCTSX.Name = "panelCTSX";
             this.panelCTSX.Size = new System.Drawing.Size(757, 32);
             this.panelCTSX.TabIndex = 3;
+            // 
+            // btnReportCTSX
+            // 
+            this.btnReportCTSX.Location = new System.Drawing.Point(541, 4);
+            this.btnReportCTSX.Name = "btnReportCTSX";
+            this.btnReportCTSX.Size = new System.Drawing.Size(75, 23);
+            this.btnReportCTSX.TabIndex = 15;
+            this.btnReportCTSX.Text = "View Report";
+            this.btnReportCTSX.UseVisualStyleBackColor = true;
+            this.btnReportCTSX.Click += new System.EventHandler(this.btnReportCTSX_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(404, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Tháng";
+            // 
+            // tbmonthCTSX
+            // 
+            this.tbmonthCTSX.Location = new System.Drawing.Point(442, 5);
+            this.tbmonthCTSX.Name = "tbmonthCTSX";
+            this.tbmonthCTSX.Size = new System.Drawing.Size(66, 20);
+            this.tbmonthCTSX.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(280, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Năm";
+            // 
+            // tbYearCTSX
+            // 
+            this.tbYearCTSX.Location = new System.Drawing.Point(309, 5);
+            this.tbYearCTSX.Name = "tbYearCTSX";
+            this.tbYearCTSX.Size = new System.Drawing.Size(66, 20);
+            this.tbYearCTSX.TabIndex = 11;
             // 
             // label3
             // 
@@ -201,48 +259,6 @@
             this.tbMSQQLCTSX.Name = "tbMSQQLCTSX";
             this.tbMSQQLCTSX.Size = new System.Drawing.Size(66, 20);
             this.tbMSQQLCTSX.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Năm";
-            // 
-            // tbYearCTSX
-            // 
-            this.tbYearCTSX.Location = new System.Drawing.Point(158, 6);
-            this.tbYearCTSX.Name = "tbYearCTSX";
-            this.tbYearCTSX.Size = new System.Drawing.Size(66, 20);
-            this.tbYearCTSX.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(253, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Tháng";
-            // 
-            // tbmonthCTSX
-            // 
-            this.tbmonthCTSX.Location = new System.Drawing.Point(291, 6);
-            this.tbmonthCTSX.Name = "tbmonthCTSX";
-            this.tbmonthCTSX.Size = new System.Drawing.Size(66, 20);
-            this.tbmonthCTSX.TabIndex = 13;
-            // 
-            // btnReportCTSX
-            // 
-            this.btnReportCTSX.Location = new System.Drawing.Point(390, 5);
-            this.btnReportCTSX.Name = "btnReportCTSX";
-            this.btnReportCTSX.Size = new System.Drawing.Size(75, 23);
-            this.btnReportCTSX.TabIndex = 15;
-            this.btnReportCTSX.Text = "View Report";
-            this.btnReportCTSX.UseVisualStyleBackColor = true;
-            this.btnReportCTSX.Click += new System.EventHandler(this.btnReportCTSX_Click);
             // 
             // menuStrip1
             // 
@@ -267,8 +283,21 @@
             this.nhậpXuấtTồnToolStripMenuItem,
             this.invoiceToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(156, 25);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
             this.reportsToolStripMenuItem.Text = "Báo cáo tổng hợp";
+            // 
+            // nhậpXuấtTồnToolStripMenuItem
+            // 
+            this.nhậpXuấtTồnToolStripMenuItem.Name = "nhậpXuấtTồnToolStripMenuItem";
+            this.nhậpXuấtTồnToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.nhậpXuấtTồnToolStripMenuItem.Text = "Invoice";
+            this.nhậpXuấtTồnToolStripMenuItem.Click += new System.EventHandler(this.nhậpXuấtTồnToolStripMenuItem_Click);
+            // 
+            // invoiceToolStripMenuItem
+            // 
+            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.invoiceToolStripMenuItem.Text = "NXT";
             // 
             // inẤnToolStripMenuItem
             // 
@@ -283,29 +312,23 @@
             // pOPassToolStripMenuItem
             // 
             this.pOPassToolStripMenuItem.Name = "pOPassToolStripMenuItem";
-            this.pOPassToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.pOPassToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.pOPassToolStripMenuItem.Text = "PO-Pass";
             this.pOPassToolStripMenuItem.Click += new System.EventHandler(this.pOPassToolStripMenuItem_Click);
             // 
             // cTSXToolStripMenuItem
             // 
             this.cTSXToolStripMenuItem.Name = "cTSXToolStripMenuItem";
-            this.cTSXToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.cTSXToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.cTSXToolStripMenuItem.Text = "CTSX";
             this.cTSXToolStripMenuItem.Click += new System.EventHandler(this.cTSXToolStripMenuItem_Click);
             // 
             // kếHoạchSXToolStripMenuItem
             // 
             this.kếHoạchSXToolStripMenuItem.Name = "kếHoạchSXToolStripMenuItem";
-            this.kếHoạchSXToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.kếHoạchSXToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.kếHoạchSXToolStripMenuItem.Text = "Kế hoạch SX";
-            // 
-            // nhậpXuấtTồnToolStripMenuItem
-            // 
-            this.nhậpXuấtTồnToolStripMenuItem.Name = "nhậpXuấtTồnToolStripMenuItem";
-            this.nhậpXuấtTồnToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.nhậpXuấtTồnToolStripMenuItem.Text = "Invoice";
-            this.nhậpXuấtTồnToolStripMenuItem.Click += new System.EventHandler(this.nhậpXuấtTồnToolStripMenuItem_Click);
+            this.kếHoạchSXToolStripMenuItem.Click += new System.EventHandler(this.kếHoạchSXToolStripMenuItem_Click);
             // 
             // cậpNhậtDữLiệuToolStripMenuItem
             // 
@@ -315,11 +338,257 @@
             this.cậpNhậtDữLiệuToolStripMenuItem.Text = "Cập Nhật Dữ Liệu";
             this.cậpNhậtDữLiệuToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtDữLiệuToolStripMenuItem_Click);
             // 
-            // invoiceToolStripMenuItem
+            // label6
             // 
-            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.invoiceToolStripMenuItem.Text = "NXT";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(121, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Mã SP";
+            // 
+            // tbMaSPInCTSX
+            // 
+            this.tbMaSPInCTSX.Location = new System.Drawing.Point(160, 6);
+            this.tbMaSPInCTSX.Name = "tbMaSPInCTSX";
+            this.tbMaSPInCTSX.Size = new System.Drawing.Size(108, 20);
+            this.tbMaSPInCTSX.TabIndex = 16;
+            // 
+            // panelKHSX
+            // 
+            this.panelKHSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelKHSX.Controls.Add(this.label16);
+            this.panelKHSX.Controls.Add(this.label7);
+            this.panelKHSX.Controls.Add(this.tbMaSPKHSX);
+            this.panelKHSX.Controls.Add(this.btnKHSX);
+            this.panelKHSX.Controls.Add(this.label8);
+            this.panelKHSX.Controls.Add(this.tbThangKHSX);
+            this.panelKHSX.Controls.Add(this.label9);
+            this.panelKHSX.Controls.Add(this.tbNamKHSX);
+            this.panelKHSX.Controls.Add(this.label10);
+            this.panelKHSX.Controls.Add(this.tbMSQLKHSX);
+            this.panelKHSX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKHSX.Location = new System.Drawing.Point(0, 105);
+            this.panelKHSX.Name = "panelKHSX";
+            this.panelKHSX.Size = new System.Drawing.Size(757, 32);
+            this.panelKHSX.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(121, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Mã SP";
+            // 
+            // tbMaSPKHSX
+            // 
+            this.tbMaSPKHSX.Location = new System.Drawing.Point(160, 6);
+            this.tbMaSPKHSX.Name = "tbMaSPKHSX";
+            this.tbMaSPKHSX.Size = new System.Drawing.Size(108, 20);
+            this.tbMaSPKHSX.TabIndex = 16;
+            // 
+            // btnKHSX
+            // 
+            this.btnKHSX.Location = new System.Drawing.Point(541, 4);
+            this.btnKHSX.Name = "btnKHSX";
+            this.btnKHSX.Size = new System.Drawing.Size(75, 23);
+            this.btnKHSX.TabIndex = 15;
+            this.btnKHSX.Text = "View Report";
+            this.btnKHSX.UseVisualStyleBackColor = true;
+            this.btnKHSX.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(404, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Tháng";
+            // 
+            // tbThangKHSX
+            // 
+            this.tbThangKHSX.Location = new System.Drawing.Point(442, 5);
+            this.tbThangKHSX.Name = "tbThangKHSX";
+            this.tbThangKHSX.Size = new System.Drawing.Size(66, 20);
+            this.tbThangKHSX.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(280, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Năm";
+            // 
+            // tbNamKHSX
+            // 
+            this.tbNamKHSX.Location = new System.Drawing.Point(309, 5);
+            this.tbNamKHSX.Name = "tbNamKHSX";
+            this.tbNamKHSX.Size = new System.Drawing.Size(66, 20);
+            this.tbNamKHSX.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "MSQL";
+            // 
+            // tbMSQLKHSX
+            // 
+            this.tbMSQLKHSX.Location = new System.Drawing.Point(40, 6);
+            this.tbMSQLKHSX.Name = "tbMSQLKHSX";
+            this.tbMSQLKHSX.Size = new System.Drawing.Size(66, 20);
+            this.tbMSQLKHSX.TabIndex = 9;
+            // 
+            // panelInvoice
+            // 
+            this.panelInvoice.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelInvoice.Controls.Add(this.label17);
+            this.panelInvoice.Controls.Add(this.dtpNgayInvoice);
+            this.panelInvoice.Controls.Add(this.label11);
+            this.panelInvoice.Controls.Add(this.tbSoInvoice);
+            this.panelInvoice.Controls.Add(this.btnInvoice);
+            this.panelInvoice.Controls.Add(this.label12);
+            this.panelInvoice.Controls.Add(this.tbThangInvoice);
+            this.panelInvoice.Controls.Add(this.label13);
+            this.panelInvoice.Controls.Add(this.tbNamInvoice);
+            this.panelInvoice.Controls.Add(this.label14);
+            this.panelInvoice.Controls.Add(this.tbKHInvoice);
+            this.panelInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInvoice.Location = new System.Drawing.Point(0, 137);
+            this.panelInvoice.Name = "panelInvoice";
+            this.panelInvoice.Size = new System.Drawing.Size(757, 32);
+            this.panelInvoice.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(369, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Số Inv";
+            // 
+            // tbSoInvoice
+            // 
+            this.tbSoInvoice.Location = new System.Drawing.Point(408, 5);
+            this.tbSoInvoice.Name = "tbSoInvoice";
+            this.tbSoInvoice.Size = new System.Drawing.Size(108, 20);
+            this.tbSoInvoice.TabIndex = 16;
+            // 
+            // btnInvoice
+            // 
+            this.btnInvoice.Location = new System.Drawing.Point(679, 5);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Size = new System.Drawing.Size(75, 23);
+            this.btnInvoice.TabIndex = 15;
+            this.btnInvoice.Text = "View Report";
+            this.btnInvoice.UseVisualStyleBackColor = true;
+            this.btnInvoice.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(255, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Tháng";
+            // 
+            // tbThangInvoice
+            // 
+            this.tbThangInvoice.Location = new System.Drawing.Point(293, 5);
+            this.tbThangInvoice.Name = "tbThangInvoice";
+            this.tbThangInvoice.Size = new System.Drawing.Size(66, 20);
+            this.tbThangInvoice.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(131, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(29, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Năm";
+            // 
+            // tbNamInvoice
+            // 
+            this.tbNamInvoice.Location = new System.Drawing.Point(160, 5);
+            this.tbNamInvoice.Name = "tbNamInvoice";
+            this.tbNamInvoice.Size = new System.Drawing.Size(66, 20);
+            this.tbNamInvoice.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(22, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "KH";
+            // 
+            // tbKHInvoice
+            // 
+            this.tbKHInvoice.Location = new System.Drawing.Point(40, 6);
+            this.tbKHInvoice.Name = "tbKHInvoice";
+            this.tbKHInvoice.Size = new System.Drawing.Size(66, 20);
+            this.tbKHInvoice.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(655, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "CTSX";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(655, 8);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "KHSX";
+            // 
+            // dtpNgayInvoice
+            // 
+            this.dtpNgayInvoice.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayInvoice.Location = new System.Drawing.Point(569, 6);
+            this.dtpNgayInvoice.Name = "dtpNgayInvoice";
+            this.dtpNgayInvoice.Size = new System.Drawing.Size(104, 20);
+            this.dtpNgayInvoice.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(531, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Ngày";
+            // 
+            // PP_DS_PRINT_PO_MSQLBindingSource
+            // 
+            this.PP_DS_PRINT_PO_MSQLBindingSource.DataMember = "PP_DS_PRINT_PO_MSQL";
+            this.PP_DS_PRINT_PO_MSQLBindingSource.DataSource = this.QUAN_LY_SAN_XUATDataSet;
+            // 
+            // QUAN_LY_SAN_XUATDataSet
+            // 
+            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
+            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PP_DS_PRINT_PO_MSQLTableAdapter
+            // 
+            this.PP_DS_PRINT_PO_MSQLTableAdapter.ClearBeforeFill = true;
             // 
             // FrmReportView
             // 
@@ -327,6 +596,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 477);
             this.Controls.Add(this.reportViewer);
+            this.Controls.Add(this.panelInvoice);
+            this.Controls.Add(this.panelKHSX);
             this.Controls.Add(this.panelCTSX);
             this.Controls.Add(this.panelPO);
             this.Controls.Add(this.menuStrip1);
@@ -335,14 +606,18 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.panelPO.ResumeLayout(false);
             this.panelPO.PerformLayout();
             this.panelCTSX.ResumeLayout(false);
             this.panelCTSX.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelKHSX.ResumeLayout(false);
+            this.panelKHSX.PerformLayout();
+            this.panelInvoice.ResumeLayout(false);
+            this.panelInvoice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +654,31 @@
         private System.Windows.Forms.ToolStripMenuItem kếHoạchSXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtDữLiệuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbMaSPInCTSX;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panelKHSX;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbMaSPKHSX;
+        private System.Windows.Forms.Button btnKHSX;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbThangKHSX;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbNamKHSX;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbMSQLKHSX;
+        private System.Windows.Forms.Panel panelInvoice;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbSoInvoice;
+        private System.Windows.Forms.Button btnInvoice;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbThangInvoice;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbNamInvoice;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbKHInvoice;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DateTimePicker dtpNgayInvoice;
     }
 }

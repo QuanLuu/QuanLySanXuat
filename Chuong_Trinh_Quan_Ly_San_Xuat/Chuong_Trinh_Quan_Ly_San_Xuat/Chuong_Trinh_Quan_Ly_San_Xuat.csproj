@@ -152,6 +152,10 @@
     <EmbeddedResource Include="FrmReportView.resx">
       <DependentUpon>FrmReportView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHSX.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
