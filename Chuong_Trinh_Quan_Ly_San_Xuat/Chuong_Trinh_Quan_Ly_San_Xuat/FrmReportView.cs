@@ -72,7 +72,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             hidepannelfilter();
             panelCTSX.Visible = true;
-            System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fIn+CTSX&rs:Command=Render");
+            //System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fIn+CTSX&rs:Command=Render");
         }
 
         private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             hidepannelfilter();
             panelInvoice.Visible = true;
-            System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fInvoice&rs:Command=Render");
+            //System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fInvoice&rs:Command=Render");
         }
 
         private void kếHoạchSXToolStripMenuItem_Click(object sender, EventArgs e)

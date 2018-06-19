@@ -19,12 +19,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgNhapNVL.Dock = DockStyle.Fill;
             dtgXuatNL.Dock = DockStyle.Fill;
             dtgXuatSP.Dock = DockStyle.Fill;
+            dtgXuatgiacong.Dock = DockStyle.Fill;
+            dtgNhapgiacong.Dock = DockStyle.Fill;
             GetNguyenLieu();
             GetKhachHang();
             getnhatkynhapNL();
             getnhatkyxuatNL();
             getnhatkyxuatSP();
-            
+            getxuatgiacong();
+            getnhapgiacong();
+
+
         }
         void GetNguyenLieu()
         {
@@ -39,8 +44,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void GetKhachHang()
         {
             DataTable data = Import_Manager.Instance.LoadKH("");
-            cbNCC.DataSource = data;
             cbNCC.DisplayMember = "MA_KH";
+            cbNCC.DataSource = data;
+            cbctyxuatgiacong.DisplayMember = "MA_KH";
+            cbctyxuatgiacong.DataSource = data;
+
+            cbctynhapgc.DisplayMember = "MA_KH";
+            cbctynhapgc.DataSource = data;
             //cbMaSPDM.DataSource = data;
             //cbMaSPDM.DisplayMember = "MA_KH";
         }
@@ -50,11 +60,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgNhapNVL.DataSource = data;
         }
 
-        void loadmasptheomsql()
+        void loadmasptheomsql(string msql)
         {
-            DataTable data = Import_Manager.Instance.getmasptheomsql(tbmsql.Text);
+            DataTable data = Import_Manager.Instance.getmasptheomsql(msql);
             cbMaSP.DisplayMember = "MA_SP";
             cbMaSP.DataSource = data;
+            cbmaspxuatgiacong.DisplayMember = "MA_SP";
+            cbmaspxuatgiacong.DataSource = data;
+
+            cbmaspnhapgc.DisplayMember = "MA_SP";
+            cbmaspnhapgc.DataSource = data;
         }
         void getmasptheonl()
         {
@@ -72,7 +87,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable data = Import_Manager.Instance.getnhatkyxuatSP(tbMaSPFilter.Text);
             dtgXuatSP.DataSource = data;
         }
-       
+        void getxuatgiacong()
+        {
+            DataTable data = Import_Manager.Instance.getxuatgiacong(tbmaspxuatgiacongfilter.Text);
+            dtgXuatgiacong.DataSource = data;
+        }
+        void getnhapgiacong()
+        {
+            DataTable data = Import_Manager.Instance.getnhapgiacong(tbmaspnhapgcfilter.Text);
+            dtgNhapgiacong.DataSource = data;
+        }
+
         void enablecontrol()
         {
             if (action == 0)
@@ -85,6 +110,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if (tabNhapXuat.SelectedIndex == 0) panelNhapNL.Visible = false;
                 if (tabNhapXuat.SelectedIndex == 2) panelXuatSP.Visible = false;
                 if (tabNhapXuat.SelectedIndex == 1) panelXuatNL.Visible = false;
+                if (tabNhapXuat.SelectedIndex == 3) panelXuatGiaCong.Visible = false;
+                if (tabNhapXuat.SelectedIndex == 4) panelNhapGC.Visible = false;
 
             }
             else
@@ -97,6 +124,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if (tabNhapXuat.SelectedIndex == 0) panelNhapNL.Visible = true;
                 if (tabNhapXuat.SelectedIndex == 2) panelXuatSP.Visible = true;
                 if (tabNhapXuat.SelectedIndex == 1) panelXuatNL.Visible = true;
+                if (tabNhapXuat.SelectedIndex == 3) panelXuatGiaCong.Visible = true;
+                if (tabNhapXuat.SelectedIndex == 4) panelNhapGC.Visible = true;
             }
         }
 
@@ -111,6 +140,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
             if (tabNhapXuat.SelectedIndex == 1) nhapmoi(this.panelXuatNL);
             if (tabNhapXuat.SelectedIndex == 2) nhapmoi(this.panelXuatSP);
+            if (tabNhapXuat.SelectedIndex == 3)
+            {
+                nhapmoi(this.panelXuatGiaCong);
+                dtpXuatgiacong.Value = DateTime.Now;
+
+            }
+            if (tabNhapXuat.SelectedIndex == 4)
+            {
+                nhapmoi(this.panelNhapGC);
+                dtpnhapgc.Value = DateTime.Now;
+
+            }
             dtpNgayNhap.Value = DateTime.Now;
             dtpNgayxuat.Value = DateTime.Now;
             dtpXuatSP.Value = DateTime.Now;
@@ -121,6 +162,37 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             action = 2;
             enablecontrol();
+            if (tabNhapXuat.SelectedIndex == 3)
+            {
+                if (dtgXuatgiacong.CurrentRow != null)
+                {
+                    tbmsqlxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[1].Value.ToString();
+                    dtpXuatgiacong.Value = DateTime.Parse(dtgXuatgiacong.CurrentRow.Cells[4].Value.ToString());
+                    numslxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[5].Value.ToString();
+                    tbpalletxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[6].Value.ToString();
+                    tbsothungxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[7].Value.ToString();
+                    tbtokhiaxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[8].Value.ToString();
+                    tbhopdongxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[9].Value.ToString();
+                    cbctyxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[10].Value.ToString();
+                    tbghichuxuatgiacong.Text = dtgXuatgiacong.CurrentRow.Cells[11].Value.ToString(); ;
+                }
+            }
+
+            if (tabNhapXuat.SelectedIndex == 4)
+            {
+                if (dtgNhapgiacong.CurrentRow != null)
+                {
+                    tbmsqlnhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[1].Value.ToString();
+                    dtpnhapgc.Value = DateTime.Parse(dtgNhapgiacong.CurrentRow.Cells[4].Value.ToString());
+                    numslnhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[5].Value.ToString();
+                    numslNGnhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[6].Value.ToString();
+                    numslNGkiemtranhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[7].Value.ToString();
+                    tbsotokhainhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[8].Value.ToString();
+                    tbsohopdongnhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[9].Value.ToString();
+                    cbctynhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[10].Value.ToString();
+                    tbghichunhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[11].Value.ToString(); ;
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -147,6 +219,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 if (tabNhapXuat.SelectedIndex == 0)
                 {
+                    id = 0;
                     if (dtgNhapNVL.Rows.Count > 1 && dtgNhapNVL.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgNhapNVL.CurrentRow.Cells[0].Value;
                     if (action == 2)
                     { currow = dtgNhapNVL.CurrentRow.Index; }
@@ -160,6 +233,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 }
                 if (tabNhapXuat.SelectedIndex == 1)
                 {
+                    id = 0;
                     if (dtgXuatNL.Rows.Count > 1 && dtgXuatNL.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgXuatNL.CurrentRow.Cells[0].Value;
                     if (action == 2)
                     { currow = dtgXuatNL.CurrentRow.Index; }
@@ -174,6 +248,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
                 if (tabNhapXuat.SelectedIndex == 2)
                 {
+                    id = 0;
                     if (dtgXuatSP.Rows.Count > 1 && dtgXuatSP.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgXuatSP.CurrentRow.Cells[0].Value;
                     if (action == 2)
                     { currow = dtgXuatSP.CurrentRow.Index; }
@@ -184,6 +259,37 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     int results = Import_Manager.Instance.updatenhatkyxuatSP(action, id, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text);
                     getnhatkyxuatSP();
                     dtgXuatSP.CurrentCell = dtgXuatSP.Rows[currow].Cells[0];
+                }
+                if (tabNhapXuat.SelectedIndex == 3)
+                {
+
+                    id = 0;
+                    if (dtgXuatgiacong.Rows.Count > 1 && dtgXuatgiacong.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgXuatgiacong.CurrentRow.Cells[0].Value;
+                    if (action == 2)
+                        { currow = dtgXuatgiacong.CurrentRow.Index; }
+                    else if (action == 1)
+                        { currow = dtgXuatgiacong.Rows.Count - 1; }
+                    else
+                    { currow = 0; }
+                    int results = Import_Manager.Instance.UpdateXUATGIACONG(action, id, cbmaspxuatgiacong.Text, dtpXuatgiacong.Value, Int32.Parse(numslxuatgiacong.Value.ToString()), tbpalletxuatgiacong.Text, tbsothungxuatgiacong.Text, tbsothungxuatgiacong.Text, tbhopdongxuatgiacong.Text, cbctyxuatgiacong.Text, tbghichuxuatgiacong.Text);
+                    getxuatgiacong();
+                    dtgXuatgiacong.CurrentCell = dtgXuatgiacong.Rows[currow].Cells[0];
+                }
+
+                if (tabNhapXuat.SelectedIndex == 4)
+                {
+                    
+                    id = 0;
+                    if (dtgNhapgiacong.Rows.Count > 1 && dtgNhapgiacong.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgNhapgiacong.CurrentRow.Cells[0].Value;
+                    if (action == 2)
+                    { currow = dtgNhapgiacong.CurrentRow.Index; }
+                    else if (action == 1)
+                    { currow = dtgNhapgiacong.Rows.Count - 1; }
+                    else
+                    { currow = 0; }
+                    int results = Import_Manager.Instance.UpdateNHAPGIACONG(action, id, cbmaspnhapgc.Text, dtpnhapgc.Value, Int32.Parse(numslnhapgc.Value.ToString()), Int32.Parse(numslNGnhapgc.Value.ToString()), Int32.Parse(numslNGkiemtranhapgc.Value.ToString()), tbsotokhainhapgc.Text, tbsohopdongnhapgc.Text, cbctynhapgc.Text, tbghichunhapgc.Text);
+                    getnhapgiacong();
+                    dtgNhapgiacong.CurrentCell = dtgNhapgiacong.Rows[currow].Cells[0];
                 }
             }
             catch (Exception ex)
@@ -217,6 +323,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     int results = Import_Manager.Instance.updatenhatkyxuatSP(action, (int)dtgXuatSP.CurrentRow.Cells[0].Value, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text);
                     getnhatkyxuatSP();
                 }
+                if (tabNhapXuat.SelectedIndex == 3)
+                {
+
+                    int results = Import_Manager.Instance.UpdateXUATGIACONG(action, (int)dtgXuatgiacong.CurrentRow.Cells[0].Value, cbmaspxuatgiacong.Text, dtpXuatgiacong.Value, Int32.Parse(numslxuatgiacong.Value.ToString()), tbpalletxuatgiacong.Text, tbsothungxuatgiacong.Text, tbsothungxuatgiacong.Text, tbhopdongxuatgiacong.Text, cbctyxuatgiacong.Text, tbghichuxuatgiacong.Text);
+                    getxuatgiacong();
+                }
+                if (tabNhapXuat.SelectedIndex == 4)
+                {
+                    int results = Import_Manager.Instance.UpdateNHAPGIACONG(action, (int)dtgNhapgiacong.CurrentRow.Cells[0].Value, cbmaspnhapgc.Text, dtpnhapgc.Value, Int32.Parse(numslnhapgc.Value.ToString()), Int32.Parse(numslNGnhapgc.Value.ToString()), Int32.Parse(numslNGkiemtranhapgc.Value.ToString()), tbsotokhainhapgc.Text, tbsohopdongnhapgc.Text, cbctynhapgc.Text, tbghichunhapgc.Text);
+                    getnhapgiacong();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -319,7 +437,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbmsql_TextChanged(object sender, EventArgs e)
         {
-            loadmasptheomsql();
+            loadmasptheomsql(tbmsql.Text);
+        }
+
+        private void tbmsqlxuatgiacong_TextChanged(object sender, EventArgs e)
+        {
+            loadmasptheomsql(tbmsqlxuatgiacong.Text);
+        }
+
+        private void tbmaspxuatgiacongfilter_TextChanged(object sender, EventArgs e)
+        {
+            getxuatgiacong();
+        }
+
+        private void tbmaspnhapgcfilter_TextChanged(object sender, EventArgs e)
+        {
+            getnhapgiacong();
+        }
+
+        private void tbmsqlnhapgc_TextChanged(object sender, EventArgs e)
+        {
+            loadmasptheomsql(tbmsqlnhapgc.Text);
         }
     }
 }

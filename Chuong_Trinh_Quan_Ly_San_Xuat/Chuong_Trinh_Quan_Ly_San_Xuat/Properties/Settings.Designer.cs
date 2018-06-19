@@ -26,8 +26,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.0.0.4,1433;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=" +
-            "True;User ID=QuanLySanXuat;Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.0.0.64,14333;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Inf" +
+            "o=True;User ID=QuanLySanXuat;Password=123456")]
         public string QUAN_LY_SAN_XUATConnectionString {
             get {
                 return ((string)(this["QUAN_LY_SAN_XUATConnectionString"]));
