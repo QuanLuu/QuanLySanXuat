@@ -31,12 +31,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 
         //private string connectstring = "Data Source=10.0.0.64,1433;" +
         //                                "Initial Catalog = QUAN_LY_SAN_XUAT;" +
-        //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //
+        //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //SANYO_SERVER
 
         private string connectstring = "Data Source=LAPTOP318;" +
                                         "Initial Catalog = QUAN_LY_SAN_XUAT;" +
                                         "User id=QuanLySanXuat;" +
-                                        "Password=123456;";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //
+                                        "Password=123456;";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //10.0.0.64,1433;
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 

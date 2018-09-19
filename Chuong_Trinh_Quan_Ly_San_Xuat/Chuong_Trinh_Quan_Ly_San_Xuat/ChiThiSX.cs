@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -34,12 +36,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             casanxuat = ((FrmMain)f).casx;
             cbCaSX.SelectedIndex = 0;
             if (casanxuat != "") cbCaSX.Text = casanxuat;
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgChiThiSX, new object[] { true });
             enablecontrolCTSX();
             GetChiThiSX();
             SetEventForNumerric(this.panelQLSX);
             NewChiThiSX(this.panelFilterCTSX);
             loadmaymoc();
             loadnhanvien();
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -256,6 +262,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             CheckChiThiSX(this.panelQLSX);
             int idCTSX = 0;
+            int actioncur = actionSX;
             if (dtgChiThiSX.Rows.Count > 1 && dtgChiThiSX.CurrentRow.Cells[0].Value.ToString() != "") idCTSX = (int)dtgChiThiSX.CurrentRow.Cells[0].Value;
             try
             {
@@ -276,7 +283,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if(dtgChiThiSX.Rows.Count >2) dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
                 actionSX = 0;
                 enablecontrolCTSX();
-                btnNew_Click(btnNew, e);
+                if(actioncur ==1) btnNew_Click(btnNew, e);
             }
             catch (Exception ex)
             {
@@ -383,47 +390,46 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            
+
             try
             {
 
 
-                worksheet = (Microsoft.Office.Interop.Excel._Worksheet)workbook.ActiveSheet;
-                //worksheet.Name = "Exported";
+                //Getting the location and file name of the excel to save from user.
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveDialog.FilterIndex = 2;
 
-                int cellRowIndex = 1;
-                int cellColumnIndex = 1;
-
-                //Loop through each row and read value from each column. 
-                for (int i = 0; i < dtgChiThiSX.Rows.Count - 1; i++)
+                if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    for (int j = 0; j < dtgChiThiSX.Columns.Count; j++)
+                    worksheet = (Microsoft.Office.Interop.Excel._Worksheet)workbook.ActiveSheet;
+                    //worksheet.Name = "Exported";
+                    //lúc nào cũng có dòng trắng cuối cùng nên mảng luu bao gom có tieu de = row.cout + 1(tieu de) - 1 (dong trang cuo)
+                    object[,] arr = new object[dtgChiThiSX.Rows.Count, dtgChiThiSX.Columns.Count + 1];
+
+                    for (int c = 0; c < dtgChiThiSX.Columns.Count; c++)
                     {
-                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check. 
-                        if (cellRowIndex == 1)
-                        {
-                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgChiThiSX.Columns[j].HeaderText;
-                        }
-                        else
-                        {
-                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dtgChiThiSX.Rows[i].Cells[j].Value.ToString();
-                        }
-                        cellColumnIndex++;
+                        arr[0, c] = dtgChiThiSX.Columns[c].HeaderText;
                     }
-                    cellColumnIndex = 1;
-                    cellRowIndex++;
+                    int rowindex = 1;
+                    int colindex = 0;
+                    for (int r = 0; r < dtgChiThiSX.Rows.Count-1; r++)
+                    {
+                        for (int c = 0; c < dtgChiThiSX.Columns.Count; c++)
+                        {
+                            arr[rowindex, colindex] = dtgChiThiSX.Rows[r].Cells[c].Value.ToString();
+                            colindex++;
+                        }
+                        colindex = 0;
+                        rowindex++;
+                    }
+                    Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];
+                    Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtgChiThiSX.Rows.Count-1, dtgChiThiSX.Columns.Count + 1];
+                    Excel.Range range = worksheet.get_Range(c1, c2);
+                    range.Value = arr;
+                    workbook.SaveAs(saveDialog.FileName);
+                    excel.Visible = true;
                 }
-
-                //Getting the location and file name of the excel to save from user. 
-                //SaveFileDialog saveDialog = new SaveFileDialog();
-                //saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
-                //saveDialog.FilterIndex = 2;
-
-                //if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                //{
-                //    workbook.SaveAs(saveDialog.FileName);
-                //    MessageBox.Show("Export Successful");
-                //}
             }
             catch (System.Exception ex)
             {
@@ -431,7 +437,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
             finally
             {
-                excel.Visible = true;
+
                 //excel.Quit();
                 workbook = null;
                 excel = null;

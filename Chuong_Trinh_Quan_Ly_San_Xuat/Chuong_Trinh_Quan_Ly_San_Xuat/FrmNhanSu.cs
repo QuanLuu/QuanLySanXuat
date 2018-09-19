@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgDSNV.Dock = DockStyle.Fill;
             dtgNghiPhep.Dock = DockStyle.Fill;
             dtgHopDong.Dock = DockStyle.Fill;
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+           BindingFlags.Instance | BindingFlags.SetProperty, null,
+           dtgDSNV, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgHopDong, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgNghiPhep, new object[] { true });
+
             danhsachnhanvien();
             gethopdong();
             DataTable data = Import_Manager.Instance.getbophan();

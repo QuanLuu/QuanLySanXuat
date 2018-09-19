@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -19,6 +20,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgPO.Dock = DockStyle.Fill;
             dtgForecast.Dock = DockStyle.Fill;
             dtgListTime.Dock = DockStyle.Fill;
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+          BindingFlags.Instance | BindingFlags.SetProperty, null,
+          dtgForecast, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgPO, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgListTime, new object[] { true });
+
             dtpDateFromPOFilter.Value = DateTime.Now.AddDays(-30);
             dtpDateToPOFilter.Value = DateTime.Now;
             dtpfromforecastfilter.Value = DateTime.Now.AddDays(-30);
@@ -189,6 +203,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             int currow = 0;
             int id = 0;
+            int actioncur = action;
             try
             {
                 if (tabPO.SelectedIndex == 0)
@@ -231,13 +246,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     loadlistitme();
                     dtgListTime.CurrentCell = dtgListTime.Rows[currow].Cells[0];
                 }
+                action = 0;
+                enablecontrol();
+                if(actioncur ==1) btnNew_Click(btnNew, e);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            action = 0;
-            enablecontrol();
+           
         }
 
         private void cbMaKHPO_SelectedIndexChanged(object sender, EventArgs e)
@@ -269,8 +286,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 cbMaSPPO.Text = dtgPO.CurrentRow.Cells[3].Value.ToString();
                 dtpNgayPO.Value = Convert.ToDateTime(dtgPO.CurrentRow.Cells[4].Value.ToString());
                 tbSoPO.Text = dtgPO.CurrentRow.Cells[5].Value.ToString();
-                dtpETA.Value = Convert.ToDateTime(dtgPO.CurrentRow.Cells[6].Value.ToString());
-                dtpETD.Value = Convert.ToDateTime(dtgPO.CurrentRow.Cells[7].Value.ToString());
+                if(dtgPO.CurrentRow.Cells[6].Value.ToString() != "") dtpETA.Value = Convert.ToDateTime(dtgPO.CurrentRow.Cells[6].Value.ToString());
+                if(dtgPO.CurrentRow.Cells[7].Value.ToString() != "") dtpETD.Value = Convert.ToDateTime(dtgPO.CurrentRow.Cells[7].Value.ToString());
                 numsoluongPO.Text = dtgPO.CurrentRow.Cells[8].Value.ToString();
                 numdongiaPO.Text = dtgPO.CurrentRow.Cells[9].Value.ToString();
                 tbghichupo.Text = dtgPO.CurrentRow.Cells[10].Value.ToString();

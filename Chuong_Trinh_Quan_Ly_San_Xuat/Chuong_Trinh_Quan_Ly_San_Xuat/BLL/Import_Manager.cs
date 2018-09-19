@@ -121,23 +121,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_HOP_DONG @TENNV", new object[] { tennv });
         }
 
-        public DataTable getNhatKyNhapNL(string manl)
+        public DataTable getNhatKyNhapNL(string manl, DateTime from, DateTime to, string invoice)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC [PP_UI_GET_NHAT_KY_NHAP_NL] @MA_NL", new object[] { manl });
+            return DataProvider.Instance.ExecuteQuery("EXEC [PP_UI_GET_NHAT_KY_NHAP_NL] @MA_NL , @DATE_FROM , @DATE_TO , @INV", new object[] { manl, from, to, invoice });
         }
         public DataTable getbophan()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT TEN FROM BO_PHAN", new object[] { });
         }
 
-        public DataTable getnhatkyxuatNL(string tennl)
+        public DataTable getnhatkyxuatNL(string tennl, DateTime from, DateTime to)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_NL @TEN_NL", new object[] { tennl });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_NL @TEN_NL , @DATE_FROM , @DATE_TO", new object[] { tennl , from, to});
         }
 
-        public DataTable getnhatkyxuatSP(string masp)
+        public DataTable getnhatkyxuatSP(string masp, DateTime from, DateTime to, string invoice)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @MA_SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @MA_SP , @DATE_FROM , @DATE_TO , @INV", new object[] { masp, from, to, invoice });
         }
 
         public DataTable CheckSoluongcdsxtrc(int idcdsx)
@@ -191,13 +191,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("[PP_DS_INVOICE] @KH , @YEAR , @MONTH , @INVOICE , @DATE_INVOICE", new object[] { kh, year, month, soinv, ngayinvoice });
         }
 
-        public DataTable getxuatgiacong(string masp)
+        public DataTable getxuatgiacong(string masp, DateTime from, DateTime to, string cty)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_XUAT_GIA_CONG @SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_XUAT_GIA_CONG @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] { masp, from, to, cty });
         }
-        public DataTable getnhapgiacong(string masp)
+        public DataTable getnhapgiacong(string masp, DateTime from, DateTime to, string cty)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAP_GIA_CONG @SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAP_GIA_CONG @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] { masp, from, to, cty });
         }
         //PP_UI_GET_XUAT_GIA_CONG
         public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)

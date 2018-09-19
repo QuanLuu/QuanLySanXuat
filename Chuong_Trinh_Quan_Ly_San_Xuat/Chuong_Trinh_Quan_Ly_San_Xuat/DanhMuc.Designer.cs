@@ -62,6 +62,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.dtgSPCD = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.tbMaSPSPCDFilter = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.tbSPCD = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -233,6 +235,8 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.dtgBoxSP = new System.Windows.Forms.DataGridView();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.tbMaSPBoxFilter = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
             this.tbMSQLBoxSPFilter = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -273,10 +277,6 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.tbMaSPSPCDFilter = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.tbMaSPBoxFilter = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
             this.tabPageSPCD.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSPCD)).BeginInit();
@@ -423,6 +423,23 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(852, 34);
             this.panel14.TabIndex = 11;
+            // 
+            // tbMaSPSPCDFilter
+            // 
+            this.tbMaSPSPCDFilter.Location = new System.Drawing.Point(213, 9);
+            this.tbMaSPSPCDFilter.Name = "tbMaSPSPCDFilter";
+            this.tbMaSPSPCDFilter.Size = new System.Drawing.Size(230, 20);
+            this.tbMaSPSPCDFilter.TabIndex = 3;
+            this.tbMaSPSPCDFilter.TextChanged += new System.EventHandler(this.tbMaSPSPCDFilter_TextChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(174, 12);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(39, 13);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "Mã SP";
             // 
             // tbSPCD
             // 
@@ -2550,6 +2567,23 @@
             this.panel25.Size = new System.Drawing.Size(858, 34);
             this.panel25.TabIndex = 11;
             // 
+            // tbMaSPBoxFilter
+            // 
+            this.tbMaSPBoxFilter.Location = new System.Drawing.Point(186, 9);
+            this.tbMaSPBoxFilter.Name = "tbMaSPBoxFilter";
+            this.tbMaSPBoxFilter.Size = new System.Drawing.Size(230, 20);
+            this.tbMaSPBoxFilter.TabIndex = 5;
+            this.tbMaSPBoxFilter.TextChanged += new System.EventHandler(this.tbMaSPBoxFilter_TextChanged);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(147, 12);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(39, 13);
+            this.label55.TabIndex = 4;
+            this.label55.Text = "Mã SP";
+            // 
             // tbMSQLBoxSPFilter
             // 
             this.tbMSQLBoxSPFilter.Location = new System.Drawing.Point(46, 9);
@@ -3036,53 +3070,18 @@
             this.label54.TabIndex = 2;
             this.label54.Text = "MãSP";
             // 
-            // tbMaSPSPCDFilter
-            // 
-            this.tbMaSPSPCDFilter.Location = new System.Drawing.Point(213, 9);
-            this.tbMaSPSPCDFilter.Name = "tbMaSPSPCDFilter";
-            this.tbMaSPSPCDFilter.Size = new System.Drawing.Size(230, 20);
-            this.tbMaSPSPCDFilter.TabIndex = 3;
-            this.tbMaSPSPCDFilter.TextChanged += new System.EventHandler(this.tbMaSPSPCDFilter_TextChanged);
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(174, 12);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(39, 13);
-            this.label52.TabIndex = 2;
-            this.label52.Text = "Mã SP";
-            // 
-            // tbMaSPBoxFilter
-            // 
-            this.tbMaSPBoxFilter.Location = new System.Drawing.Point(186, 9);
-            this.tbMaSPBoxFilter.Name = "tbMaSPBoxFilter";
-            this.tbMaSPBoxFilter.Size = new System.Drawing.Size(230, 20);
-            this.tbMaSPBoxFilter.TabIndex = 5;
-            this.tbMaSPBoxFilter.TextChanged += new System.EventHandler(this.tbMaSPBoxFilter_TextChanged);
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(147, 12);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(39, 13);
-            this.label55.TabIndex = 4;
-            this.label55.Text = "Mã SP";
-            // 
             // FrmDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 516);
             this.Controls.Add(this.tabControlDanhMuc);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmDanhMuc";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabPageSPCD.ResumeLayout(false);
             this.tabPageSPCD.PerformLayout();
             this.panel6.ResumeLayout(false);

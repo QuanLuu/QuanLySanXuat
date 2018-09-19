@@ -8,6 +8,7 @@ using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
+using System.Reflection;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -32,6 +33,46 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgKH.Dock = DockStyle.Fill;
             dtgDM.Dock = DockStyle.Fill;
             dtgMayMoc.Dock = DockStyle.Fill;
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+           BindingFlags.Instance | BindingFlags.SetProperty, null,
+           dtgNL, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgSP, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgSPCD, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+           BindingFlags.Instance | BindingFlags.SetProperty, null,
+           dtgDM, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgDongia, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgBoxSP, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgBox, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgDM, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgKHSP, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgMayMoc, new object[] { true });
             //dtpDateFrom.CustomFormat = "yyyy-mm-dd";
             //dtpDateTo.CustomFormat = "yyyy-mm-dd";
             GetNguyenLieu();

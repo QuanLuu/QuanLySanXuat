@@ -229,7 +229,7 @@
             // dtgChiThiSX
             // 
             this.dtgChiThiSX.AllowUserToResizeRows = false;
-            this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1112,6 +1112,7 @@
             this.Name = "FrmChiThiSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sản Xuất";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelFilterCTSX.ResumeLayout(false);
             this.panelFilterCTSX.PerformLayout();
             this.panel2.ResumeLayout(false);
