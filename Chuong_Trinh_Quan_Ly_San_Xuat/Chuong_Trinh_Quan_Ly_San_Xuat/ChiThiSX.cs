@@ -47,7 +47,50 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             loadnhanvien();
 
         }
+        void xuatexceldtg(DataGridView dtg)
+        {
+            Excel._Application excel = new Excel.Application();
+            Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Excel._Worksheet worksheet = null;
 
+            try
+            {
+                worksheet = (Excel._Worksheet)workbook.ActiveSheet;
+                object[,] arr = new object[dtg.Rows.Count + 1, dtg.Columns.Count + 1];
+                for (int c = 0; c < dtg.Columns.Count; c++)
+                {
+                    arr[0, c] = dtg.Columns[c].HeaderText;
+                }
+                int rowindex = 1;
+                int colindex = 0;
+                for (int r = 0; r < dtg.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtg.Columns.Count; c++)
+                    {
+                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        colindex++;
+                    }
+                    colindex = 0;
+                    rowindex++;
+                }
+
+                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];
+                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];
+                Excel.Range range = worksheet.get_Range(c1, c2);
+                range.Value = arr;
+                excel.Visible = true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
+        }
         private void btnNew_Click(object sender, EventArgs e)
         {
             actionSX = 1;
@@ -449,6 +492,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void cbGiaCong_Enter(object sender, EventArgs e)
         {
             cbGiaCong.DroppedDown = true;
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgChiThiSX);
         }
     }
 }

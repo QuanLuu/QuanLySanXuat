@@ -8,6 +8,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -93,8 +95,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             cbctynhapgc.DisplayMember = "MA_KH";
             cbctynhapgc.DataSource = data;
-            //cbMaSPDM.DataSource = data;
-            //cbMaSPDM.DisplayMember = "MA_KH";
+            cbNCCXuatSP.DataSource = data;
+            cbNCCXuatSP.DisplayMember = "MA_KH";
+        }
+
+        void getnvlfromncc()
+        {
+            //cbMaNL.DataSource = "";
+            DataTable data = Import_Manager.Instance.GetNVL_From_NCC(cbNCC.Text);
+            cbMaNL.DisplayMember = "KC_NL";
+            cbMaNL.ValueMember = "TEN_NL";
+            cbMaNL.DataSource = data;
+            if (data.Rows.Count == 0) cbMaNL.Text = "";
+            
         }
         void getnhatkynhapNL()
         {
@@ -126,7 +139,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getnhatkyxuatSP()
         {
-            DataTable data = Import_Manager.Instance.getnhatkyxuatSP(tbMaSPFilter.Text, dtpXuatSPfrom.Value, dtpXuatSPto.Value, tbXuatSPInvfil.Text);
+            DataTable data = Import_Manager.Instance.getnhatkyxuatSP(tbMaSPFilter.Text, dtpXuatSPfrom.Value, dtpXuatSPto.Value, tbXuatSPInvfil.Text, tbKHXuatSP.Text);
             dtgXuatSP.DataSource = data;
         }
         void getxuatgiacong()
@@ -275,7 +288,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     dtgNhapNVL.CurrentCell = dtgNhapNVL.Rows[currow].Cells[0];
                    
                 }
-                if (tabNhapXuat.SelectedIndex == 1)
+                else if (tabNhapXuat.SelectedIndex == 1)
                 {
                     id = 0;
                     if (dtgXuatNL.Rows.Count > 1 && dtgXuatNL.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgXuatNL.CurrentRow.Cells[0].Value;
@@ -285,12 +298,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     { currow = dtgXuatNL.Rows.Count - 1; }
                     else
                     { currow = 0; }
-                    int results = Import_Manager.Instance.UpdatenhatkyxuatNL(action, id, cbNLXuat.SelectedValue.ToString(), cbMaspNLxuat.Text, dtpNgayxuat.Value, tbsolotxuat.Text, (int)numsocuonxuat.Value, numkhoiluongxuat.Value, tbghichuNlxuat.Text);
+                    int results = Import_Manager.Instance.UpdatenhatkyxuatNL(action, id, cbNLXuat.SelectedValue.ToString(), cbMaspNLxuat.Text, dtpNgayxuat.Value, tbsolotxuat.Text, (int)numsocuonxuat.Value, numkhoiluongxuat.Value, tbghichuNlxuat.Text, cbCaXuatNVL.Text);
                     getnhatkyxuatNL();
                     dtgXuatNL.CurrentCell = dtgXuatNL.Rows[currow].Cells[0];
                 }
 
-                if (tabNhapXuat.SelectedIndex == 2)
+                else if(tabNhapXuat.SelectedIndex == 2)
                 {
                     id = 0;
                     if (dtgXuatSP.Rows.Count > 1 && dtgXuatSP.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgXuatSP.CurrentRow.Cells[0].Value;
@@ -300,11 +313,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     { currow = dtgXuatSP.Rows.Count - 1; }
                     else
                     { currow = 0; }
-                    int results = Import_Manager.Instance.updatenhatkyxuatSP(action, id, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text);
+                    int results = Import_Manager.Instance.updatenhatkyxuatSP(action, id, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text, cbNCCXuatSP.Text);
                     getnhatkyxuatSP();
                     dtgXuatSP.CurrentCell = dtgXuatSP.Rows[currow].Cells[0];
                 }
-                if (tabNhapXuat.SelectedIndex == 3)
+                else if (tabNhapXuat.SelectedIndex == 3)
                 {
 
                     id = 0;
@@ -320,7 +333,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     dtgXuatgiacong.CurrentCell = dtgXuatgiacong.Rows[currow].Cells[0];
                 }
 
-                if (tabNhapXuat.SelectedIndex == 4)
+                else
                 {
                     
                     id = 0;
@@ -359,13 +372,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 }
                 if (tabNhapXuat.SelectedIndex == 1)
                 {
-                    int results = Import_Manager.Instance.UpdatenhatkyxuatNL(action, (int)dtgXuatNL.CurrentRow.Cells[0].Value, cbNLXuat.SelectedValue.ToString(), cbMaspNLxuat.Text, dtpNgayxuat.Value, tbsolotxuat.Text, (int)numsocuonxuat.Value, numkhoiluongxuat.Value, tbghichuNlxuat.Text);
+                    int results = Import_Manager.Instance.UpdatenhatkyxuatNL(action, (int)dtgXuatNL.CurrentRow.Cells[0].Value, cbNLXuat.SelectedValue.ToString(), cbMaspNLxuat.Text, dtpNgayxuat.Value, tbsolotxuat.Text, (int)numsocuonxuat.Value, numkhoiluongxuat.Value, tbghichuNlxuat.Text, cbCaXuatNVL.Text);
                     getnhatkyxuatNL();
                 }
                 if (tabNhapXuat.SelectedIndex == 2)
                 {
 
-                    int results = Import_Manager.Instance.updatenhatkyxuatSP(action, (int)dtgXuatSP.CurrentRow.Cells[0].Value, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text);
+                    int results = Import_Manager.Instance.updatenhatkyxuatSP(action, (int)dtgXuatSP.CurrentRow.Cells[0].Value, cbMaSP.Text, dtpXuatSP.Value, tbsolotxuatsp.Text, tbSoPOSP.Text, tbSoInvoiceSP.Text, tbsotokhai.Text, dtpngaytokhai.Value, (int)numsothung.Value, (int)numsoluong.Value, tbGhiChuxuatSP.Text, cbNCCXuatSP.Text);
                     getnhatkyxuatSP();
                 }
                 if (tabNhapXuat.SelectedIndex == 3)
@@ -437,13 +450,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (dtgXuatNL.CurrentRow.Cells[1].Value.ToString() != "" && action != 1)
             {
-                cbNLXuat.Text = dtgXuatNL.CurrentRow.Cells[9].Value.ToString();
-                //cbMaspNLxuat.Text = dtgXuatNL.CurrentRow.Cells[2].Value.ToString();
+                cbNLXuat.Text = dtgXuatNL.CurrentRow.Cells[10].Value.ToString();
+                cbCaXuatNVL.Text = dtgXuatNL.CurrentRow.Cells[4].Value.ToString();
                 dtpNgayxuat.Value = DateTime.Parse(dtgXuatNL.CurrentRow.Cells[3].Value.ToString());
-                tbsolotxuat.Text = dtgXuatNL.CurrentRow.Cells[4].Value.ToString();
-                numsocuonxuat.Value = (int)dtgXuatNL.CurrentRow.Cells[5].Value;
-                numkhoiluongxuat.Value = decimal.Parse(dtgXuatNL.CurrentRow.Cells[6].Value.ToString());
-                tbghichuNlxuat.Text = dtgXuatNL.CurrentRow.Cells[7].Value.ToString();
+                tbsolotxuat.Text = dtgXuatNL.CurrentRow.Cells[5].Value.ToString();
+                numsocuonxuat.Value = (int)dtgXuatNL.CurrentRow.Cells[6].Value;
+                numkhoiluongxuat.Value = decimal.Parse(dtgXuatNL.CurrentRow.Cells[7].Value.ToString());
+                tbghichuNlxuat.Text = dtgXuatNL.CurrentRow.Cells[8].Value.ToString();
             }
         }
 
@@ -451,17 +464,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (dtgXuatSP.CurrentRow.Cells[1].Value.ToString() != "" && action != 1)
             {
-                tbmsql.Text = dtgXuatSP.CurrentRow.Cells[1].Value.ToString();
+                cbNCCXuatSP.Text = dtgXuatSP.CurrentRow.Cells[1].Value.ToString();
+                cbmsqlxuatsp.Text = dtgXuatSP.CurrentRow.Cells[2].Value.ToString();
                 //cbMaSP.Text = dtgXuatSP.CurrentRow.Cells[2].Value.ToString();
-                dtpXuatSP.Value = DateTime.Parse(dtgXuatSP.CurrentRow.Cells[3].Value.ToString());
-                tbsolotxuatsp.Text = dtgXuatSP.CurrentRow.Cells[4].Value.ToString();
-                tbSoPOSP.Text  = dtgXuatSP.CurrentRow.Cells[5].Value.ToString();
-                tbSoInvoiceSP.Text = dtgXuatSP.CurrentRow.Cells[6].Value.ToString();
-                tbsotokhai.Text = dtgXuatSP.CurrentRow.Cells[7].Value.ToString();
-                dtpngaytokhai.Value = DateTime.Parse(dtgXuatSP.CurrentRow.Cells[8].Value.ToString());
-                numsothung.Value = (int)dtgXuatSP.CurrentRow.Cells[9].Value;
-                numsoluong.Value = (int)dtgXuatSP.CurrentRow.Cells[10].Value;
-                tbGhiChuxuatSP.Text = dtgXuatSP.CurrentRow.Cells[11].Value.ToString();
+                dtpXuatSP.Value = DateTime.Parse(dtgXuatSP.CurrentRow.Cells[4].Value.ToString());
+                tbsolotxuatsp.Text = dtgXuatSP.CurrentRow.Cells[5].Value.ToString();
+                tbSoPOSP.Text  = dtgXuatSP.CurrentRow.Cells[6].Value.ToString();
+                tbSoInvoiceSP.Text = dtgXuatSP.CurrentRow.Cells[7].Value.ToString();
+                tbsotokhai.Text = dtgXuatSP.CurrentRow.Cells[8].Value.ToString();
+                dtpngaytokhai.Value = DateTime.Parse(dtgXuatSP.CurrentRow.Cells[9].Value.ToString());
+                numsothung.Value = (int)dtgXuatSP.CurrentRow.Cells[10].Value;
+                numsoluong.Value = (int)dtgXuatSP.CurrentRow.Cells[11].Value;
+                tbGhiChuxuatSP.Text = dtgXuatSP.CurrentRow.Cells[12].Value.ToString();
             }
         }
 
@@ -482,7 +496,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbmsql_TextChanged(object sender, EventArgs e)
         {
-            loadmasptheomsql(tbmsql.Text);
+            loadmasptheomsql(cbmsqlxuatsp.Text);
         }
 
         private void tbmsqlxuatgiacong_TextChanged(object sender, EventArgs e)
@@ -563,6 +577,88 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbnhapgcctyfil_TextChanged(object sender, EventArgs e)
         {
             if (refreshflag) getnhapgiacong();
+        }
+
+        private void cbNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getnvlfromncc();
+        }
+        void getSPFromKH()
+        {
+            DataTable data = Import_Manager.Instance.LoadKHFromSP("", cbNCCXuatSP.Text);
+            cbMaSP.DisplayMember = "MA_SP";
+            cbMaSP.DataSource = data;
+            cbmsqlxuatsp.DisplayMember = "MSQL";
+            cbmsqlxuatsp.DataSource = data;
+            if(data.Rows.Count ==0)
+            {
+                cbMaSP.Text = "";
+                cbmsqlxuatsp.Text = "";
+            }
+        }
+
+        private void cbNCCXuatSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getSPFromKH();
+        }
+
+        void xuatexceldtg(DataGridView dtg)
+        {
+            Excel._Application excel = new Excel.Application();
+            Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Excel._Worksheet worksheet = null;
+
+            try
+            {
+                worksheet = (Excel._Worksheet)workbook.ActiveSheet;
+                object[,] arr = new object[dtg.Rows.Count + 1, dtg.Columns.Count + 1];
+                for (int c = 0; c < dtg.Columns.Count; c++)
+                {
+                    arr[0, c] = dtg.Columns[c].HeaderText;
+                }
+                int rowindex = 1;
+                int colindex = 0;
+                for (int r = 0; r < dtg.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtg.Columns.Count; c++)
+                    {
+                        if(dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        colindex++;
+                    }
+                    colindex = 0;
+                    rowindex++;
+                }
+          
+                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];           
+                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];             
+                Excel.Range range = worksheet.get_Range(c1, c2);
+                range.Value = arr; 
+                excel.Visible = true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            if (tabNhapXuat.SelectedIndex == 0)
+                xuatexceldtg(dtgNhapNVL);
+            else if (tabNhapXuat.SelectedIndex == 1)
+                xuatexceldtg(dtgXuatNL);
+            else if (tabNhapXuat.SelectedIndex == 2)
+                xuatexceldtg(dtgXuatSP);
+            else if (tabNhapXuat.SelectedIndex == 3)
+                xuatexceldtg(dtgNhapgiacong);
+            else
+                xuatexceldtg(dtgXuatgiacong);
         }
     }
 }

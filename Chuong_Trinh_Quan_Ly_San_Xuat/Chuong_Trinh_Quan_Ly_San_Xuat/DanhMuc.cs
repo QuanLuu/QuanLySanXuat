@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
 using System.Reflection;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -24,6 +25,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionBox = 0;
         int actionBoxSP = 0;
         int actionKHSP = 0;
+        int actionNVLNCC = 0;
         public FrmDanhMuc()
         {
             InitializeComponent();
@@ -73,8 +75,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgMayMoc, new object[] { true });
-            //dtpDateFrom.CustomFormat = "yyyy-mm-dd";
-            //dtpDateTo.CustomFormat = "yyyy-mm-dd";
+
             GetNguyenLieu();
             enablecontrolNL();
             enablecontrolSP();
@@ -87,7 +88,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             enablecontrolKHSP();
             GetDinhMuc();
             GetDongia();
-            enablecontrolDM();      
+            enablecontrolDM();
             enablecontrolMM();
             getmaymoc();
             getSPCD();
@@ -97,6 +98,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             getloaithung();
             getsanphamSNP();
             getKHSP();
+            loadnvl_ncc();
         }
         void GetNguyenLieu()
         {
@@ -104,11 +106,58 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgNL.DataSource = data;
             cbTenNL.DataSource = data;
             cbTenNL.DisplayMember = "TEN_NL";
+
+            cbTenNLNVLNCC.DataSource = data;
+            cbTenNLNVLNCC.DisplayMember = "TEN_NL";
         }
         void getKHSP()
         {
             DataTable data = Import_Manager.Instance.GetKhvamasp(tbMaKHKHSPFilter.Text);
             dtgKHSP.DataSource = data;
+        }
+        void xuatexceldtg(DataGridView dtg)
+        {
+            Excel._Application excel = new Excel.Application();
+            Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Excel._Worksheet worksheet = null;
+
+            try
+            {
+                worksheet = (Excel._Worksheet)workbook.ActiveSheet;
+                object[,] arr = new object[dtg.Rows.Count + 1, dtg.Columns.Count + 1];
+                for (int c = 0; c < dtg.Columns.Count; c++)
+                {
+                    arr[0, c] = dtg.Columns[c].HeaderText;
+                }
+                int rowindex = 1;
+                int colindex = 0;
+                for (int r = 0; r < dtg.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtg.Columns.Count; c++)
+                    {
+                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        colindex++;
+                    }
+                    colindex = 0;
+                    rowindex++;
+                }
+
+                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];
+                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];
+                Excel.Range range = worksheet.get_Range(c1, c2);
+                range.Value = arr;
+                excel.Visible = true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
         }
         void getbox()
         {
@@ -137,7 +186,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void GetSanPham()
         {
-            DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text, tbMaSPDMSP.Text);
+            DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text, tbMaSPDMSP.Text, tbNVLSP.Text);
             dtgSP.DataSource = data;  
         }
         void getsanphamtheomsql()
@@ -165,6 +214,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable KH = Import_Manager.Instance.LoadKH("");
             cbMaKHKHSP.DisplayMember = "MA_KH";
             cbMaKHKHSP.DataSource = KH;
+
+            cbNCCNVLNCC.DisplayMember = "MA_KH";
+            cbNCCNVLNCC.DataSource = KH;
+        }
+        void getKHFromSP()
+        {
+            DataTable data = Import_Manager.Instance.LoadKHFromSP(tbMSQLDongia.Text, "");
+            cbMaKHDonGia.DisplayMember = "MA_KH";
+            cbMaKHDonGia.DataSource = data;
         }
         void GetDinhMuc()
         {
@@ -335,6 +393,33 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
 
         }
+
+        void enablecontrol(int act, Panel pal, Panel palentry)
+        {
+
+            if (act == 0)
+            {
+                palentry.Visible = false;
+                foreach (Control c in pal.Controls)
+                {
+                    if (c.Name.Contains("New") || c.Name.Contains("Edit") || c.Name.Contains("Delete"))
+                        c.Enabled = true;
+                    else
+                        c.Enabled = false;
+                }
+                }
+             else
+             {
+                palentry.Visible = true;
+                foreach (Control c in pal.Controls)
+                {
+                    if (c.Name.Contains("New") || c.Name.Contains("Edit") || c.Name.Contains("Delete"))
+                        c.Enabled = false;
+                    else
+                        c.Enabled = true;
+                }
+            }
+        }
         void enablecontrolSP()
         {
             if (actionSP == 0)
@@ -457,25 +542,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionNL, dtgNL); ;
             try
             {
-                if (actionNL == 2)
-                { currow = dtgNL.CurrentRow.Index; }
-                else if (actionNL == 1)
-                { currow = dtgNL.Rows.Count - 1; }
-                else
-                { currow = 0; }
+
                 int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value);
                 GetNguyenLieu();
                 dtgNL.CurrentCell = dtgNL.Rows[currow].Cells[0];
+                actionNL = 0;
+                enablecontrolNL();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionNL = 0;
-            enablecontrolNL();
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -492,14 +573,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value);
+                actionNL = 0;
+                enablecontrolNL();
+                GetNguyenLieu();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionNL = 0;
-            enablecontrolNL();
-            GetNguyenLieu();
+            
         }
 
         private void btnNewSP_Click(object sender, EventArgs e)
@@ -528,26 +610,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveSP_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionSP, dtgSP); ;
             try
             {
-                if (actionSP == 2)
-                { currow = dtgSP.CurrentRow.Index; }
-                else if (actionSP == 1)
-                { currow = dtgSP.Rows.Count - 1; }
-                else
-                { currow = 0; }
-
                 int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value);
                 GetSanPham();
                 dtgSP.CurrentCell = dtgSP.Rows[currow].Cells[0];
+                actionSP = 0;
+                enablecontrolSP();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionSP = 0;
-            enablecontrolSP();
+           
         }
 
         private void tbFilterSP_TextChanged(object sender, EventArgs e)
@@ -571,14 +647,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text,tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value);
+                actionSP = 0;
+                enablecontrolSP();
+                GetSanPham();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionSP = 0;
-            enablecontrolSP();
-            GetSanPham();
+            
         }
 
         private void btnNewKH_Click(object sender, EventArgs e)
@@ -624,38 +701,33 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateKH(actionKH, (int)dtgKH.CurrentRow.Cells[0].Value, tbMaKH.Text, tbKH.Text, tbNguoiLienHe.Text, tbBoPhan.Text, tbSdt.Text, tbEmail.Text, tbDiaChi.Text);
+                actionKH = 0;
+                enablecontrolKH();
+                GetKhachHang();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionKH = 0;
-            enablecontrolKH();
-            GetKhachHang();
+           
         }
 
         private void btnSaveKH_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionKH, dtgKH);
             try
             {
-                if (actionKH == 2)
-                { currow = dtgKH.CurrentRow.Index; }
-                else if (actionKH == 1)
-                { currow = dtgKH.Rows.Count - 1; }
-                else
-                { currow = 0; }
-
                 int results = Import_Manager.Instance.UpdateKH(actionKH, (int)dtgKH.CurrentRow.Cells[0].Value, tbMaKH.Text, tbKH.Text, tbNguoiLienHe.Text, tbBoPhan.Text, tbSdt.Text, tbEmail.Text, tbDiaChi.Text);
                 GetKhachHang();
                 dtgKH.CurrentCell = dtgKH.Rows[currow].Cells[0];
+                actionKH = 0;
+                enablecontrolKH();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionKH = 0;
-            enablecontrolKH();
+            
         }
 
         private void btnNewDM_Click(object sender, EventArgs e)
@@ -688,14 +760,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, tbSoMay.Text, tbMamay.Text);
+                actionMM = 0;
+                enablecontrolMM();
+                getmaymoc();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionMM = 0;
-            enablecontrolMM();
-            getmaymoc();
+            
         }
 
         private void btnCancelMM_Click(object sender, EventArgs e)
@@ -706,25 +779,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveMM_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionMM, dtgMayMoc);
             try
             {
-                if (actionMM == 2)
-                { currow = dtgMayMoc.CurrentRow.Index; }
-                else if (actionMM == 1)
-                { currow = dtgMayMoc.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 int results = Import_Manager.Instance.UpdateMaymoc(actionMM, (int)dtgMayMoc.CurrentRow.Cells[0].Value, tbTenMay.Text, tbSoMay.Text, tbMamay.Text);
                 getmaymoc();
                 dtgMayMoc.CurrentCell = dtgMayMoc.Rows[currow].Cells[0];
+                actionMM = 0;
+                enablecontrolMM();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionMM = 0;
-            enablecontrolMM();
+            
         }
 
 
@@ -741,27 +809,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateDinhMuc(actionDM, (int)dtgDM.CurrentRow.Cells[0].Value, dtpDateFrom.Value, cbMaSPDM.Text, numDinhMuc.Value);
+                actionDM = 0;
+                enablecontrolDM();
+                GetDinhMuc();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionDM = 0;
-            enablecontrolDM();
-            GetDinhMuc();
+            
         }
 
         private void btnSaveDM_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionDM, dtgDM);
             try
             {
-                if (actionDM == 2)
-                { currow = dtgDM.CurrentRow.Index; }
-                else if (actionDM == 1)
-                { currow = dtgDM.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 int results = Import_Manager.Instance.UpdateDinhMuc(actionDM, (int)dtgDM.CurrentRow.Cells[0].Value, dtpDateFrom.Value.Date, cbMaSPDM.Text, numDinhMuc.Value);
                 GetDinhMuc();
                 dtgDM.CurrentCell = dtgDM.Rows[currow].Cells[0];
@@ -813,16 +876,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveSPCD_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionSPCD, dtgSPCD);
             int id_may = 39;
             try
             {
-                if (actionSPCD == 2)
-                { currow = dtgSPCD.CurrentRow.Index; }
-                else if (actionSPCD == 1)
-                { currow = dtgSPCD.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 if (cbMayMocCD.Text != "") id_may = Int32.Parse(cbMayMocCD.SelectedValue.ToString());
                 int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()), (int)numCDso.Value);
                 getSPCD();
@@ -844,21 +901,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, Int32.Parse(cbMayMocCD.SelectedValue.ToString()), Int32.Parse(cbMSQL.SelectedValue.ToString()),(int)numCDso.Value);
+                actionSPCD = 0;
+                enablecontrolSPCD();
+                getSPCD();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionSPCD = 0;
-            enablecontrolSPCD();
-            getSPCD();
-        }
-
-        private void dtgSPCD_SelectionChanged(object sender, EventArgs e)
-        {
             
         }
 
+       
         private void dtgSPCD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "" && actionSPCD != 1)
@@ -882,16 +936,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
         }
 
-        private void cbMayMocCD_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void tbMSQLDinhMuc_TextChanged(object sender, EventArgs e)
         {
             getsanphamtheomsql();
@@ -934,15 +979,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateDongia(actionDongia, (int)dtgDongia.CurrentRow.Cells[0].Value, dtpDongia.Value.Date, cbMaSPDongia.Text, numDongia.Value);
+                int results = Import_Manager.Instance.UpdateDongia(actionDongia, (int)dtgDongia.CurrentRow.Cells[0].Value, dtpDongia.Value.Date, cbMaSPDongia.Text, numDongia.Value, cbMaKHDonGia.Text);
+                actionDongia = 0;
+                enablecontrolDongia();
+                GetDongia();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionDongia = 0;
-            enablecontrolDongia();
-            GetDongia();
+            
         }
 
         private void tbMaSPDongiaFilter_TextChanged(object sender, EventArgs e)
@@ -952,19 +998,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveDongia_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionDongia, dtgDongia);
             int id = 0;
             
             try
             {
-                if (actionDongia == 2)
-                { currow = dtgDongia.CurrentRow.Index; }
-                else if (actionDongia == 1)
-                { currow = dtgDongia.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 if (dtgDongia.Rows.Count > 1 && dtgDongia.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgDongia.CurrentRow.Cells[0].Value;
-                int results = Import_Manager.Instance.UpdateDongia(actionDongia, id, dtpDongia.Value.Date, cbMaSPDongia.Text, numDongia.Value);
+                int results = Import_Manager.Instance.UpdateDongia(actionDongia, id, dtpDongia.Value.Date, cbMaSPDongia.Text, numDongia.Value, cbMaKHDonGia.Text);
                 GetDongia();
                 dtgDongia.CurrentCell = dtgDongia.Rows[currow].Cells[0];
                 actionDongia = 0;
@@ -989,6 +1029,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbMSQLDongia_TextChanged(object sender, EventArgs e)
         {
             getsanphamtheomsql();
+            getKHFromSP();
         }
 
         private void label44_Click(object sender, EventArgs e)
@@ -1069,17 +1110,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveBoxSP_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionBoxSP, dtgBoxSP);
             int id = 0;
 
             try
             {
-                if (actionBoxSP == 2)
-                { currow = dtgBoxSP.CurrentRow.Index; }
-                else if (actionBoxSP == 1)
-                { currow = dtgBoxSP.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 if (dtgBoxSP.Rows.Count > 1 && dtgBoxSP.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgBoxSP.CurrentRow.Cells[0].Value;
                 int results = Import_Manager.Instance.UpdateSanphamSNP(actionBoxSP, id,cbMaSpBoxSP.Text, (int)numSNP.Value,  cbloaithung.Text, cbkichthuoc.Text, cbcase.Text);
                 getsanphamSNP();
@@ -1095,17 +1130,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveBox_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionBox, dtgBox);
             int id = 0;
 
             try
             {
-                if (actionBox == 2)
-                { currow = dtgBox.CurrentRow.Index; }
-                else if (actionBox == 1)
-                { currow = dtgBox.Rows.Count - 1; }
-                else
-                { currow = 0; }
+
                 if (dtgBox.Rows.Count > 1 && dtgBox.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgBox.CurrentRow.Cells[0].Value;
                 int results = Import_Manager.Instance.UpdateBOX(actionBox, id, tbloaithung.Text, tbkichthuocbox.Text, tbcase.Text);
                 getbox();
@@ -1127,14 +1157,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateBOX(actionBox, (int)dtgBox.CurrentRow.Cells[0].Value, tbloaithung.Text, tbkichthuocbox.Text, tbcase.Text);
+                actionBox = 0;
+                enablecontrolBox();
+                getbox();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionBox = 0;
-            enablecontrolBox();
-            getbox();
+            
         }
 
         private void tbMSQLBoxSPFilter_TextChanged(object sender, EventArgs e)
@@ -1150,14 +1181,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateSanphamSNP(actionBoxSP, (int)dtgBoxSP.CurrentRow.Cells[0].Value, cbMaSpBoxSP.Text, (int)numSNP.Value, cbloaithung.Text, cbkichthuoc.Text, cbcase.Text);
+                actionBoxSP = 0;
+                enablecontrolBoxSP();
+                getsanphamSNP();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionBoxSP = 0;
-            enablecontrolBoxSP();
-            getsanphamSNP();
+            
         }
 
         private void tbMSQLBoxSP_TextChanged(object sender, EventArgs e)
@@ -1219,17 +1251,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveKHSP_Click(object sender, EventArgs e)
         {
-            int currow = 0;
+            int currow = current_row(actionKHSP, dtgKHSP);
             int id = 0;
 
             try
             {
-                if (actionKHSP == 2)
-                { currow = dtgKHSP.CurrentRow.Index; }
-                else if (actionKHSP == 1)
-                { currow = dtgKHSP.Rows.Count - 1; }
-                else
-                { currow = 0; }
                 if (dtgKHSP.Rows.Count > 1 && dtgKHSP.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgKHSP.CurrentRow.Cells[0].Value;
                 int results = Import_Manager.Instance.UpdateKHSP(actionKHSP, id, cbMaKHKHSP.Text, cbMaSPKHSP.Text);
                 getKHSP();
@@ -1251,14 +1277,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateKHSP(actionKHSP, (int)dtgKHSP.CurrentRow.Cells[0].Value, cbMaKHKHSP.Text, cbMaSPKHSP.Text);
+                actionKHSP = 0;
+                enablecontrolKHSP();
+                getKHSP();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            actionKHSP = 0;
-            enablecontrolKHSP();
-            getKHSP();
+            
         }
 
         private void tbMSQLDonGiaFilter_TextChanged(object sender, EventArgs e)
@@ -1279,6 +1306,152 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbMaSPBoxFilter_TextChanged(object sender, EventArgs e)
         {
             getsanphamSNP();
+        }
+
+        private void btnNewNVLNCC_Click(object sender, EventArgs e)
+        {
+            actionNVLNCC = 1;
+            enablecontrol(actionNVLNCC, panelnvlncc, panelNVLNCCEntry);
+            cbTenNLNVLNCC.Text = "";
+            cbNCCNVLNCC.Text = "";
+        }
+
+        private void btnEditNVLNCC_Click(object sender, EventArgs e)
+        {
+            actionNVLNCC = 2;
+            enablecontrol(actionNVLNCC, panelnvlncc, panelNVLNCCEntry);
+            if (dtgNVLNCC.CurrentRow != null)
+            {
+                cbTenNLNVLNCC.Text = dtgNVLNCC.CurrentRow.Cells[1].Value.ToString();
+                cbNCCNVLNCC.Text = dtgNVLNCC.CurrentRow.Cells[2].Value.ToString();
+            }
+        }
+
+        private void btnSaveNVLNCC_Click(object sender, EventArgs e)
+        {
+            int currow = current_row(actionNVLNCC, dtgNVLNCC);
+            int id = 0;
+            try
+            { 
+                if (dtgNVLNCC.Rows.Count > 1 && dtgNVLNCC.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgNVLNCC.CurrentRow.Cells[0].Value;
+                int result = Import_Manager.Instance.UpdateNVL_NCC(actionNVLNCC, id, cbTenNLNVLNCC.Text, cbNCCNVLNCC.Text);
+                actionNVLNCC = 0;
+                enablecontrol(actionNVLNCC, panelnvlncc, panelNVLNCCEntry);
+                loadnvl_ncc();
+                dtgNVLNCC.CurrentCell = dtgNVLNCC.Rows[currow].Cells[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        int current_row(int act, DataGridView dtg)
+        {
+            int currow = 0;
+            if (act == 2)
+                currow = dtg.CurrentRow.Index;
+            else if (act == 1)
+                currow = dtg.Rows.Count - 1;
+            else
+                currow = 0;
+            return currow;
+        }
+        void loadnvl_ncc()
+        {
+            DataTable data = Import_Manager.Instance.GetNVL_NCC(tbNVLNVLNCC.Text, tbNCCNVLNCC.Text);
+            dtgNVLNCC.DataSource = data;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            actionNVLNCC = 3;
+            try
+            {
+                int result = Import_Manager.Instance.UpdateNVL_NCC(actionNVLNCC, (int)dtgNVLNCC.CurrentRow.Cells[0].Value, cbTenNLNVLNCC.Text, cbNCCNVLNCC.Text);
+                actionNVLNCC = 0;
+                enablecontrol(actionNVLNCC, panelnvlncc, panelNVLNCCEntry);
+                loadnvl_ncc();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCancelNVLNCC_Click(object sender, EventArgs e)
+        {
+            actionNVLNCC = 0;
+            enablecontrol(actionNVLNCC, panelnvlncc, panelNVLNCCEntry);
+        }
+
+        private void tbNVLNVLNCC_TextChanged(object sender, EventArgs e)
+        {
+            loadnvl_ncc();
+        }
+
+        private void tbNCCNVLNCC_TextChanged(object sender, EventArgs e)
+        {
+            loadnvl_ncc();
+        }
+
+        private void tbNVLSP_TextChanged(object sender, EventArgs e)
+        {
+            GetSanPham();
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgNL);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgKH);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgSP);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgDM);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgMayMoc);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgSPCD);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgDongia);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgBox);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgBoxSP);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgKHSP);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgNVLNCC);
         }
     }
 }

@@ -30,6 +30,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
         
         private PP_DS_INVOICEDataTable tablePP_DS_INVOICE;
         
+        private PP_BAO_CAO_NXT_NVLDataTable tablePP_BAO_CAO_NXT_NVL;
+        
+        private PP_BAO_CAO_NXT_SPDataTable tablePP_BAO_CAO_NXT_SP;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +70,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                 }
                 if ((ds.Tables["PP_DS_INVOICE"] != null)) {
                     base.Tables.Add(new PP_DS_INVOICEDataTable(ds.Tables["PP_DS_INVOICE"]));
+                }
+                if ((ds.Tables["PP_BAO_CAO_NXT_NVL"] != null)) {
+                    base.Tables.Add(new PP_BAO_CAO_NXT_NVLDataTable(ds.Tables["PP_BAO_CAO_NXT_NVL"]));
+                }
+                if ((ds.Tables["PP_BAO_CAO_NXT_SP"] != null)) {
+                    base.Tables.Add(new PP_BAO_CAO_NXT_SPDataTable(ds.Tables["PP_BAO_CAO_NXT_SP"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +122,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
         public PP_DS_INVOICEDataTable PP_DS_INVOICE {
             get {
                 return this.tablePP_DS_INVOICE;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PP_BAO_CAO_NXT_NVLDataTable PP_BAO_CAO_NXT_NVL {
+            get {
+                return this.tablePP_BAO_CAO_NXT_NVL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PP_BAO_CAO_NXT_SPDataTable PP_BAO_CAO_NXT_SP {
+            get {
+                return this.tablePP_BAO_CAO_NXT_SP;
             }
         }
         
@@ -191,6 +221,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                 if ((ds.Tables["PP_DS_INVOICE"] != null)) {
                     base.Tables.Add(new PP_DS_INVOICEDataTable(ds.Tables["PP_DS_INVOICE"]));
                 }
+                if ((ds.Tables["PP_BAO_CAO_NXT_NVL"] != null)) {
+                    base.Tables.Add(new PP_BAO_CAO_NXT_NVLDataTable(ds.Tables["PP_BAO_CAO_NXT_NVL"]));
+                }
+                if ((ds.Tables["PP_BAO_CAO_NXT_SP"] != null)) {
+                    base.Tables.Add(new PP_BAO_CAO_NXT_SPDataTable(ds.Tables["PP_BAO_CAO_NXT_SP"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +278,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                     this.tablePP_DS_INVOICE.InitVars();
                 }
             }
+            this.tablePP_BAO_CAO_NXT_NVL = ((PP_BAO_CAO_NXT_NVLDataTable)(base.Tables["PP_BAO_CAO_NXT_NVL"]));
+            if ((initTable == true)) {
+                if ((this.tablePP_BAO_CAO_NXT_NVL != null)) {
+                    this.tablePP_BAO_CAO_NXT_NVL.InitVars();
+                }
+            }
+            this.tablePP_BAO_CAO_NXT_SP = ((PP_BAO_CAO_NXT_SPDataTable)(base.Tables["PP_BAO_CAO_NXT_SP"]));
+            if ((initTable == true)) {
+                if ((this.tablePP_BAO_CAO_NXT_SP != null)) {
+                    this.tablePP_BAO_CAO_NXT_SP.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +306,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             base.Tables.Add(this.tablePP_DS_IN_CHI_THI_SAN_XUAT);
             this.tablePP_DS_INVOICE = new PP_DS_INVOICEDataTable();
             base.Tables.Add(this.tablePP_DS_INVOICE);
+            this.tablePP_BAO_CAO_NXT_NVL = new PP_BAO_CAO_NXT_NVLDataTable();
+            base.Tables.Add(this.tablePP_BAO_CAO_NXT_NVL);
+            this.tablePP_BAO_CAO_NXT_SP = new PP_BAO_CAO_NXT_SPDataTable();
+            base.Tables.Add(this.tablePP_BAO_CAO_NXT_SP);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +327,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializePP_DS_INVOICE() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializePP_BAO_CAO_NXT_NVL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializePP_BAO_CAO_NXT_SP() {
             return false;
         }
         
@@ -341,6 +405,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void PP_DS_INVOICERowChangeEventHandler(object sender, PP_DS_INVOICERowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void PP_BAO_CAO_NXT_NVLRowChangeEventHandler(object sender, PP_BAO_CAO_NXT_NVLRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void PP_BAO_CAO_NXT_SPRowChangeEventHandler(object sender, PP_BAO_CAO_NXT_SPRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2026,6 +2096,652 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "PP_DS_INVOICEDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PP_BAO_CAO_NXT_NVLDataTable : global::System.Data.TypedTableBase<PP_BAO_CAO_NXT_NVLRow> {
+            
+            private global::System.Data.DataColumn columnTEN_NL;
+            
+            private global::System.Data.DataColumn columnKICH_CO;
+            
+            private global::System.Data.DataColumn columnTON_DAU_KY;
+            
+            private global::System.Data.DataColumn columnKHOI_LUONG_NHAP;
+            
+            private global::System.Data.DataColumn columnKHOI_LUONG_XUAT;
+            
+            private global::System.Data.DataColumn columnTON_CUOI_KY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLDataTable() {
+                this.TableName = "PP_BAO_CAO_NXT_NVL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal PP_BAO_CAO_NXT_NVLDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected PP_BAO_CAO_NXT_NVLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEN_NLColumn {
+                get {
+                    return this.columnTEN_NL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KICH_COColumn {
+                get {
+                    return this.columnKICH_CO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TON_DAU_KYColumn {
+                get {
+                    return this.columnTON_DAU_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KHOI_LUONG_NHAPColumn {
+                get {
+                    return this.columnKHOI_LUONG_NHAP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KHOI_LUONG_XUATColumn {
+                get {
+                    return this.columnKHOI_LUONG_XUAT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TON_CUOI_KYColumn {
+                get {
+                    return this.columnTON_CUOI_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLRow this[int index] {
+                get {
+                    return ((PP_BAO_CAO_NXT_NVLRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_NVLRowChangeEventHandler PP_BAO_CAO_NXT_NVLRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_NVLRowChangeEventHandler PP_BAO_CAO_NXT_NVLRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_NVLRowChangeEventHandler PP_BAO_CAO_NXT_NVLRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_NVLRowChangeEventHandler PP_BAO_CAO_NXT_NVLRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddPP_BAO_CAO_NXT_NVLRow(PP_BAO_CAO_NXT_NVLRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLRow AddPP_BAO_CAO_NXT_NVLRow(string TEN_NL, string KICH_CO, double TON_DAU_KY, double KHOI_LUONG_NHAP, double KHOI_LUONG_XUAT, double TON_CUOI_KY) {
+                PP_BAO_CAO_NXT_NVLRow rowPP_BAO_CAO_NXT_NVLRow = ((PP_BAO_CAO_NXT_NVLRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TEN_NL,
+                        KICH_CO,
+                        TON_DAU_KY,
+                        KHOI_LUONG_NHAP,
+                        KHOI_LUONG_XUAT,
+                        TON_CUOI_KY};
+                rowPP_BAO_CAO_NXT_NVLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPP_BAO_CAO_NXT_NVLRow);
+                return rowPP_BAO_CAO_NXT_NVLRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PP_BAO_CAO_NXT_NVLDataTable cln = ((PP_BAO_CAO_NXT_NVLDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PP_BAO_CAO_NXT_NVLDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTEN_NL = base.Columns["TEN_NL"];
+                this.columnKICH_CO = base.Columns["KICH_CO"];
+                this.columnTON_DAU_KY = base.Columns["TON_DAU_KY"];
+                this.columnKHOI_LUONG_NHAP = base.Columns["KHOI_LUONG_NHAP"];
+                this.columnKHOI_LUONG_XUAT = base.Columns["KHOI_LUONG_XUAT"];
+                this.columnTON_CUOI_KY = base.Columns["TON_CUOI_KY"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTEN_NL = new global::System.Data.DataColumn("TEN_NL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_NL);
+                this.columnKICH_CO = new global::System.Data.DataColumn("KICH_CO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKICH_CO);
+                this.columnTON_DAU_KY = new global::System.Data.DataColumn("TON_DAU_KY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTON_DAU_KY);
+                this.columnKHOI_LUONG_NHAP = new global::System.Data.DataColumn("KHOI_LUONG_NHAP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKHOI_LUONG_NHAP);
+                this.columnKHOI_LUONG_XUAT = new global::System.Data.DataColumn("KHOI_LUONG_XUAT", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKHOI_LUONG_XUAT);
+                this.columnTON_CUOI_KY = new global::System.Data.DataColumn("TON_CUOI_KY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTON_CUOI_KY);
+                this.columnTEN_NL.MaxLength = 100;
+                this.columnKICH_CO.MaxLength = 30;
+                this.columnTON_DAU_KY.ReadOnly = true;
+                this.columnKHOI_LUONG_NHAP.ReadOnly = true;
+                this.columnKHOI_LUONG_XUAT.ReadOnly = true;
+                this.columnTON_CUOI_KY.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLRow NewPP_BAO_CAO_NXT_NVLRow() {
+                return ((PP_BAO_CAO_NXT_NVLRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PP_BAO_CAO_NXT_NVLRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PP_BAO_CAO_NXT_NVLRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PP_BAO_CAO_NXT_NVLRowChanged != null)) {
+                    this.PP_BAO_CAO_NXT_NVLRowChanged(this, new PP_BAO_CAO_NXT_NVLRowChangeEvent(((PP_BAO_CAO_NXT_NVLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PP_BAO_CAO_NXT_NVLRowChanging != null)) {
+                    this.PP_BAO_CAO_NXT_NVLRowChanging(this, new PP_BAO_CAO_NXT_NVLRowChangeEvent(((PP_BAO_CAO_NXT_NVLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PP_BAO_CAO_NXT_NVLRowDeleted != null)) {
+                    this.PP_BAO_CAO_NXT_NVLRowDeleted(this, new PP_BAO_CAO_NXT_NVLRowChangeEvent(((PP_BAO_CAO_NXT_NVLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PP_BAO_CAO_NXT_NVLRowDeleting != null)) {
+                    this.PP_BAO_CAO_NXT_NVLRowDeleting(this, new PP_BAO_CAO_NXT_NVLRowChangeEvent(((PP_BAO_CAO_NXT_NVLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovePP_BAO_CAO_NXT_NVLRow(PP_BAO_CAO_NXT_NVLRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                QUAN_LY_SAN_XUATDataSet ds = new QUAN_LY_SAN_XUATDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PP_BAO_CAO_NXT_NVLDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PP_BAO_CAO_NXT_SPDataTable : global::System.Data.TypedTableBase<PP_BAO_CAO_NXT_SPRow> {
+            
+            private global::System.Data.DataColumn columnMA_SP;
+            
+            private global::System.Data.DataColumn columnTEN_SP;
+            
+            private global::System.Data.DataColumn columnTON_DAU_KY;
+            
+            private global::System.Data.DataColumn columnNHAP_TRONG_KY;
+            
+            private global::System.Data.DataColumn columnXUAT_TRONG_KY;
+            
+            private global::System.Data.DataColumn columnTON_CUOI_KY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPDataTable() {
+                this.TableName = "PP_BAO_CAO_NXT_SP";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal PP_BAO_CAO_NXT_SPDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected PP_BAO_CAO_NXT_SPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MA_SPColumn {
+                get {
+                    return this.columnMA_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEN_SPColumn {
+                get {
+                    return this.columnTEN_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TON_DAU_KYColumn {
+                get {
+                    return this.columnTON_DAU_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NHAP_TRONG_KYColumn {
+                get {
+                    return this.columnNHAP_TRONG_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn XUAT_TRONG_KYColumn {
+                get {
+                    return this.columnXUAT_TRONG_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TON_CUOI_KYColumn {
+                get {
+                    return this.columnTON_CUOI_KY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPRow this[int index] {
+                get {
+                    return ((PP_BAO_CAO_NXT_SPRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_SPRowChangeEventHandler PP_BAO_CAO_NXT_SPRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_SPRowChangeEventHandler PP_BAO_CAO_NXT_SPRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_SPRowChangeEventHandler PP_BAO_CAO_NXT_SPRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event PP_BAO_CAO_NXT_SPRowChangeEventHandler PP_BAO_CAO_NXT_SPRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddPP_BAO_CAO_NXT_SPRow(PP_BAO_CAO_NXT_SPRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPRow AddPP_BAO_CAO_NXT_SPRow(string MA_SP, string TEN_SP, double TON_DAU_KY, int NHAP_TRONG_KY, int XUAT_TRONG_KY, double TON_CUOI_KY) {
+                PP_BAO_CAO_NXT_SPRow rowPP_BAO_CAO_NXT_SPRow = ((PP_BAO_CAO_NXT_SPRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MA_SP,
+                        TEN_SP,
+                        TON_DAU_KY,
+                        NHAP_TRONG_KY,
+                        XUAT_TRONG_KY,
+                        TON_CUOI_KY};
+                rowPP_BAO_CAO_NXT_SPRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPP_BAO_CAO_NXT_SPRow);
+                return rowPP_BAO_CAO_NXT_SPRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PP_BAO_CAO_NXT_SPDataTable cln = ((PP_BAO_CAO_NXT_SPDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PP_BAO_CAO_NXT_SPDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnMA_SP = base.Columns["MA_SP"];
+                this.columnTEN_SP = base.Columns["TEN_SP"];
+                this.columnTON_DAU_KY = base.Columns["TON_DAU_KY"];
+                this.columnNHAP_TRONG_KY = base.Columns["NHAP_TRONG_KY"];
+                this.columnXUAT_TRONG_KY = base.Columns["XUAT_TRONG_KY"];
+                this.columnTON_CUOI_KY = base.Columns["TON_CUOI_KY"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnMA_SP = new global::System.Data.DataColumn("MA_SP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMA_SP);
+                this.columnTEN_SP = new global::System.Data.DataColumn("TEN_SP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_SP);
+                this.columnTON_DAU_KY = new global::System.Data.DataColumn("TON_DAU_KY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTON_DAU_KY);
+                this.columnNHAP_TRONG_KY = new global::System.Data.DataColumn("NHAP_TRONG_KY", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNHAP_TRONG_KY);
+                this.columnXUAT_TRONG_KY = new global::System.Data.DataColumn("XUAT_TRONG_KY", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnXUAT_TRONG_KY);
+                this.columnTON_CUOI_KY = new global::System.Data.DataColumn("TON_CUOI_KY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTON_CUOI_KY);
+                this.columnMA_SP.MaxLength = 50;
+                this.columnTEN_SP.MaxLength = 100;
+                this.columnTON_DAU_KY.ReadOnly = true;
+                this.columnNHAP_TRONG_KY.ReadOnly = true;
+                this.columnXUAT_TRONG_KY.ReadOnly = true;
+                this.columnTON_CUOI_KY.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPRow NewPP_BAO_CAO_NXT_SPRow() {
+                return ((PP_BAO_CAO_NXT_SPRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PP_BAO_CAO_NXT_SPRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PP_BAO_CAO_NXT_SPRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PP_BAO_CAO_NXT_SPRowChanged != null)) {
+                    this.PP_BAO_CAO_NXT_SPRowChanged(this, new PP_BAO_CAO_NXT_SPRowChangeEvent(((PP_BAO_CAO_NXT_SPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PP_BAO_CAO_NXT_SPRowChanging != null)) {
+                    this.PP_BAO_CAO_NXT_SPRowChanging(this, new PP_BAO_CAO_NXT_SPRowChangeEvent(((PP_BAO_CAO_NXT_SPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PP_BAO_CAO_NXT_SPRowDeleted != null)) {
+                    this.PP_BAO_CAO_NXT_SPRowDeleted(this, new PP_BAO_CAO_NXT_SPRowChangeEvent(((PP_BAO_CAO_NXT_SPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PP_BAO_CAO_NXT_SPRowDeleting != null)) {
+                    this.PP_BAO_CAO_NXT_SPRowDeleting(this, new PP_BAO_CAO_NXT_SPRowChangeEvent(((PP_BAO_CAO_NXT_SPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovePP_BAO_CAO_NXT_SPRow(PP_BAO_CAO_NXT_SPRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                QUAN_LY_SAN_XUATDataSet ds = new QUAN_LY_SAN_XUATDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PP_BAO_CAO_NXT_SPDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3917,6 +4633,372 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PP_BAO_CAO_NXT_NVLRow : global::System.Data.DataRow {
+            
+            private PP_BAO_CAO_NXT_NVLDataTable tablePP_BAO_CAO_NXT_NVL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal PP_BAO_CAO_NXT_NVLRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePP_BAO_CAO_NXT_NVL = ((PP_BAO_CAO_NXT_NVLDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEN_NL {
+                get {
+                    try {
+                        return ((string)(this[this.tablePP_BAO_CAO_NXT_NVL.TEN_NLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TEN_NL\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.TEN_NLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string KICH_CO {
+                get {
+                    try {
+                        return ((string)(this[this.tablePP_BAO_CAO_NXT_NVL.KICH_COColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KICH_CO\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.KICH_COColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TON_DAU_KY {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_NVL.TON_DAU_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TON_DAU_KY\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.TON_DAU_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KHOI_LUONG_NHAP {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_NHAPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KHOI_LUONG_NHAP\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_NHAPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double KHOI_LUONG_XUAT {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_XUATColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KHOI_LUONG_XUAT\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_XUATColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TON_CUOI_KY {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_NVL.TON_CUOI_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TON_CUOI_KY\' in table \'PP_BAO_CAO_NXT_NVL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_NVL.TON_CUOI_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEN_NLNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.TEN_NLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEN_NLNull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.TEN_NLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKICH_CONull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.KICH_COColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKICH_CONull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.KICH_COColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTON_DAU_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.TON_DAU_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTON_DAU_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.TON_DAU_KYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKHOI_LUONG_NHAPNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_NHAPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKHOI_LUONG_NHAPNull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_NHAPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKHOI_LUONG_XUATNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_XUATColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKHOI_LUONG_XUATNull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.KHOI_LUONG_XUATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTON_CUOI_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_NVL.TON_CUOI_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTON_CUOI_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_NVL.TON_CUOI_KYColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PP_BAO_CAO_NXT_SPRow : global::System.Data.DataRow {
+            
+            private PP_BAO_CAO_NXT_SPDataTable tablePP_BAO_CAO_NXT_SP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal PP_BAO_CAO_NXT_SPRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePP_BAO_CAO_NXT_SP = ((PP_BAO_CAO_NXT_SPDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MA_SP {
+                get {
+                    try {
+                        return ((string)(this[this.tablePP_BAO_CAO_NXT_SP.MA_SPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MA_SP\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.MA_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEN_SP {
+                get {
+                    try {
+                        return ((string)(this[this.tablePP_BAO_CAO_NXT_SP.TEN_SPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TEN_SP\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.TEN_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TON_DAU_KY {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_SP.TON_DAU_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TON_DAU_KY\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.TON_DAU_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NHAP_TRONG_KY {
+                get {
+                    try {
+                        return ((int)(this[this.tablePP_BAO_CAO_NXT_SP.NHAP_TRONG_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NHAP_TRONG_KY\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.NHAP_TRONG_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int XUAT_TRONG_KY {
+                get {
+                    try {
+                        return ((int)(this[this.tablePP_BAO_CAO_NXT_SP.XUAT_TRONG_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'XUAT_TRONG_KY\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.XUAT_TRONG_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TON_CUOI_KY {
+                get {
+                    try {
+                        return ((double)(this[this.tablePP_BAO_CAO_NXT_SP.TON_CUOI_KYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TON_CUOI_KY\' in table \'PP_BAO_CAO_NXT_SP\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_BAO_CAO_NXT_SP.TON_CUOI_KYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMA_SPNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.MA_SPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMA_SPNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.MA_SPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEN_SPNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.TEN_SPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEN_SPNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.TEN_SPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTON_DAU_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.TON_DAU_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTON_DAU_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.TON_DAU_KYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNHAP_TRONG_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.NHAP_TRONG_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNHAP_TRONG_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.NHAP_TRONG_KYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsXUAT_TRONG_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.XUAT_TRONG_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetXUAT_TRONG_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.XUAT_TRONG_KYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTON_CUOI_KYNull() {
+                return this.IsNull(this.tablePP_BAO_CAO_NXT_SP.TON_CUOI_KYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTON_CUOI_KYNull() {
+                this[this.tablePP_BAO_CAO_NXT_SP.TON_CUOI_KYColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4004,6 +5086,74 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PP_DS_INVOICERow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class PP_BAO_CAO_NXT_NVLRowChangeEvent : global::System.EventArgs {
+            
+            private PP_BAO_CAO_NXT_NVLRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLRowChangeEvent(PP_BAO_CAO_NXT_NVLRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_NVLRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class PP_BAO_CAO_NXT_SPRowChangeEvent : global::System.EventArgs {
+            
+            private PP_BAO_CAO_NXT_SPRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPRowChangeEvent(PP_BAO_CAO_NXT_SPRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PP_BAO_CAO_NXT_SPRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4739,6 +5889,404 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
                 this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             QUAN_LY_SAN_XUATDataSet.PP_DS_INVOICEDataTable dataTable = new QUAN_LY_SAN_XUATDataSet.PP_DS_INVOICEDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PP_BAO_CAO_NXT_NVLTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public PP_BAO_CAO_NXT_NVLTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PP_BAO_CAO_NXT_NVL";
+            tableMapping.ColumnMappings.Add("TEN_NL", "TEN_NL");
+            tableMapping.ColumnMappings.Add("KICH_CO", "KICH_CO");
+            tableMapping.ColumnMappings.Add("TON_DAU_KY", "TON_DAU_KY");
+            tableMapping.ColumnMappings.Add("KHOI_LUONG_NHAP", "KHOI_LUONG_NHAP");
+            tableMapping.ColumnMappings.Add("KHOI_LUONG_XUAT", "KHOI_LUONG_XUAT");
+            tableMapping.ColumnMappings.Add("TON_CUOI_KY", "TON_CUOI_KY");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.PP_BAO_CAO_NXT_NVL";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_NVLDataTable dataTable, global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FROM.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FROM.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TO.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(TO.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_NVLDataTable GetData(global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FROM.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FROM.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TO.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(TO.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_NVLDataTable dataTable = new QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_NVLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PP_BAO_CAO_NXT_SPTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public PP_BAO_CAO_NXT_SPTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PP_BAO_CAO_NXT_SP";
+            tableMapping.ColumnMappings.Add("MA_SP", "MA_SP");
+            tableMapping.ColumnMappings.Add("TEN_SP", "TEN_SP");
+            tableMapping.ColumnMappings.Add("TON_DAU_KY", "TON_DAU_KY");
+            tableMapping.ColumnMappings.Add("NHAP_TRONG_KY", "NHAP_TRONG_KY");
+            tableMapping.ColumnMappings.Add("XUAT_TRONG_KY", "XUAT_TRONG_KY");
+            tableMapping.ColumnMappings.Add("TON_CUOI_KY", "TON_CUOI_KY");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.PP_BAO_CAO_NXT_SP";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_SPDataTable dataTable, global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FROM.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FROM.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TO.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(TO.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_SPDataTable GetData(global::System.Nullable<global::System.DateTime> FROM, global::System.Nullable<global::System.DateTime> TO) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FROM.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FROM.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TO.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(TO.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_SPDataTable dataTable = new QUAN_LY_SAN_XUATDataSet.PP_BAO_CAO_NXT_SPDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

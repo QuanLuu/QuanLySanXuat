@@ -38,13 +38,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_MASP_THEO_NL @TEN_NL", new object[] { TenNL });
         }
 
-        public DataTable LoadDM_SP(string msql, string masp)
+        public DataTable LoadDM_SP(string msql, string masp, string nvl)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SAN_PHAM @MSQL , @MA_SP", new object[] { msql, masp });
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_SAN_PHAM @MSQL , @MA_SP , @NVL", new object[] { msql, masp, nvl });
         }
         public DataTable LoadKH(string TenKH)
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_KHACH_HANG @TENKH", new object[] { TenKH });
+        }
+        public DataTable LoadKHFromSP(string msql, string kh)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_KH_FROM_SP @MSQL , @KH", new object[] { msql, kh });
         }
         public DataTable LoadDM(string masp)
         {
@@ -135,9 +139,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_NL @TEN_NL , @DATE_FROM , @DATE_TO", new object[] { tennl , from, to});
         }
 
-        public DataTable getnhatkyxuatSP(string masp, DateTime from, DateTime to, string invoice)
+        public DataTable getnhatkyxuatSP(string masp, DateTime from, DateTime to, string invoice, String kh)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @MA_SP , @DATE_FROM , @DATE_TO , @INV", new object[] { masp, from, to, invoice });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @MA_SP , @DATE_FROM , @DATE_TO , @INV , @KH", new object[] { masp, from, to, invoice, kh });
         }
 
         public DataTable CheckSoluongcdsxtrc(int idcdsx)
@@ -181,6 +185,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT LOAI_THUNG FROM BOX_SAN_PHAM ", new object[] { });
         }
+
+        public DataTable GetNVL_NCC(string nvl, string ncc)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NGUYEN_LIEU_NCC @NVL , @NCC", new object[] { nvl, ncc});
+        }
+        public DataTable GetNVL_From_NCC(string ncc)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NVL_FROM_NCC @NCC", new object[] { ncc });
+        }
         public DataTable inCTSX(string msql, string masp, int year, int month)
         {
             return DataProvider.Instance.ExecuteQuery("PP_DS_IN_CHI_THI_SAN_XUAT @MSQL , @MASP , @YEAR , @MONTH ", new object[] {msql, masp, year, month });
@@ -199,6 +212,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAP_GIA_CONG @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] { masp, from, to, cty });
         }
+
+        public DataTable getnxtnvl( DateTime from, DateTime to)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_BAO_CAO_NXT_NVL @DATE_FROM , @DATE_TO", new object[] {from, to });
+        }
+
+        public DataTable getnxtsp(DateTime from, DateTime to)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_BAO_CAO_NXT_SP @DATE_FROM , @DATE_TO", new object[] { from, to });
+        }
+
         //PP_UI_GET_XUAT_GIA_CONG
         public int UpdateSPCongDoan(int action, int id, string macd, string tencd, int idmay, int idmsql, int congdoanso)
         {
@@ -225,9 +249,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_DINH_MUC] @ACTION , @ID , @DATE_FROM , @MA_SP , @DINH_MUC", new object[] { action, id, datefrom, masp, dinhmuc  });
         }
 
-        public int UpdateDongia(int action, int id, DateTime datefrom, string masp, decimal DONGIA)
+        public int UpdateDongia(int action, int id, DateTime datefrom, string masp, decimal DONGIA, string kh)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_DON_GIA] @ACTION , @ID , @DATE_FROM , @MA_SP , @DON_GIA", new object[] { action, id, datefrom, masp, DONGIA });
+            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_DON_GIA] @ACTION , @ID , @DATE_FROM , @MA_SP , @DON_GIA , @KH", new object[] { action, id, datefrom, masp, DONGIA, kh });
         }
         public int UpdateChiThiSX(int action, int id, string macd, int idmaymoc, DateTime ngaysx, string casx, int soluong, string solot, int tgsx, int tgchuabi, int tgsua, int tgchaole, int tgdaotao, int tgchokhuon, int suoc, int mop, int set, int biendang, int hongkhac, int baoluu, int xima, int nhiet,  int idhopdong, string ghichu, string userinsert, int vs6s, int mopbaoluu, int ngkiemtra)
         {
@@ -249,14 +273,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_NHAP_NL] @ACTION , @ID , @MA_NL , @NGAY_NHAP , @NCC , @SO_LOT , @SO_PO , @SO_INVOICE , @NGAY_INVOICE , @SO_CO , @NGAY_CO , @SO_CUON , @KHOI_LUONG , @GHI_CHU", new object[] { ACTION, ID, MA_NL, NGAY_NHAP, NCC, SO_LOT, SO_PO, SO_INVOICE, NGAY_INVOICE, SO_CO, NGAY_CO, SO_CUON, KHOI_LUONG, GHI_CHU});
         }
 
-        public int UpdatenhatkyxuatNL(int ACTION, int ID, string TEN_NL,string masp, DateTime NGAY_XUAT,string SO_LOT,int SO_CUON,decimal KHOI_LUONG,string GHI_CHU)
+        public int UpdatenhatkyxuatNL(int ACTION, int ID, string TEN_NL,string masp, DateTime NGAY_XUAT,string SO_LOT,int SO_CUON,decimal KHOI_LUONG,string GHI_CHU, string ca)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_XUAT_NL] @ACTION , @ID , @TEN_NL , @MA_SP , @NGAY_XUAT , @SO_LOT , @SO_CUON , @KHOI_LUONG , @GHI_CHU", new object[] { ACTION, ID, TEN_NL, masp, NGAY_XUAT, SO_LOT, SO_CUON, KHOI_LUONG, GHI_CHU });
+            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_XUAT_NL] @ACTION , @ID , @TEN_NL , @MA_SP , @NGAY_XUAT , @SO_LOT , @SO_CUON , @KHOI_LUONG , @GHI_CHU , @CA", new object[] { ACTION, ID, TEN_NL, masp, NGAY_XUAT, SO_LOT, SO_CUON, KHOI_LUONG, GHI_CHU, ca });
         }
 
-        public int updatenhatkyxuatSP(int ACTION, int ID, string masp, DateTime NGAY_XUAT, string SO_LOT, string sopo, string soinvoice, string sotokhai, DateTime ngaytokhai, int sothung, int soluong, string GHI_CHU)
+        public int updatenhatkyxuatSP(int ACTION, int ID, string masp, DateTime NGAY_XUAT, string SO_LOT, string sopo, string soinvoice, string sotokhai, DateTime ngaytokhai, int sothung, int soluong, string GHI_CHU, string kh)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_XUAT_SP] @ACTION , @ID , @MA_SP , @NGAY_XUAT , @SO_LOT , @SO_PO , @SO_INVOICE , @SO_TO_KHAI , @NGAY_TO_KHAI , @SO_THUNG , @SO_LUONG , @GHI_CHU", new object[] { ACTION, ID, masp, NGAY_XUAT, SO_LOT, sopo, soinvoice,sotokhai, ngaytokhai, sothung, soluong, GHI_CHU });
+            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_XUAT_SP] @ACTION , @ID , @MA_SP , @NGAY_XUAT , @SO_LOT , @SO_PO , @SO_INVOICE , @SO_TO_KHAI , @NGAY_TO_KHAI , @SO_THUNG , @SO_LUONG , @GHI_CHU , @KH", new object[] { ACTION, ID, masp, NGAY_XUAT, SO_LOT, sopo, soinvoice,sotokhai, ngaytokhai, sothung, soluong, GHI_CHU, kh });
         }
 
         public int UpdatePO(int ACTION, int ID,string MaKH, string masp, DateTime ngaypo, string sopo, DateTime etd, DateTime eta, int soluong, decimal dongia, DateTime ngaygiao, string GHI_CHU)
@@ -317,6 +341,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         public int UpdateNHAPGIACONG(int ACTION, int ID, string MASP, DateTime NGAY, int SL, int slng, int slngkt, string TOKHAI, string SO_HD, string KH, String GHI_CHU)
         {
             return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UI_UPDATE_NHAP_GIA_CONG @ACTION , @ID , @MASP , @NGAY , @SL , @SL_NG , @SL_NG_KT , @TOKHAI , @SO_HD , @KH , @GHI_CHU", new object[] { ACTION, ID, MASP, NGAY, SL, slng, slngkt, TOKHAI, SO_HD, KH, GHI_CHU });
+        }
+
+        public int UpdateNVL_NCC(int ACTION, int ID, string nvl, string ncc)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UI_UPDATE_NVL_NCC @ACTION , @ID , @NVL , @NCC", new object[] { ACTION, ID, nvl, ncc});
         }
         //PP_UI_UPDATE_XUAT_GIA_CONG
     }

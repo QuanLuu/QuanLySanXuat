@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -13,6 +15,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
     public partial class FrmReportView : Form
     {
+        string nxt = "";
         public FrmReportView()
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             tbNamInvoice.Text = DateTime.Now.Year.ToString();
             tbThangInvoice.Text = DateTime.Now.Month.ToString();
             dtpNgayInvoice.Value = DateTime.Now;
+            dtptonxtnvl.Value = DateTime.Now;
+            dtpfromnxtnvl.Value = DateTime.Now.AddDays(-30);
             reportViewer.Dock = DockStyle.Fill;
             tbKHInvoice.Text = "NTZC";
         }
@@ -72,7 +77,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             hidepannelfilter();
             panelCTSX.Visible = true;
-            //System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fIn+CTSX&rs:Command=Render");
         }
 
         private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +96,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             hidepannelfilter();
             panelInvoice.Visible = true;
-            //System.Diagnostics.Process.Start("http://sanyo_server/ReportServer/Pages/ReportViewer.aspx?%2fInvoice&rs:Command=Render");
         }
 
         private void kếHoạchSXToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,13 +115,88 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             if (tbNamInvoice.Text != "" && tbThangInvoice.Text != "")
             {
                 DataTable dt = Import_Manager.Instance.reportInvoice(tbKHInvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
                 viewreport("Invoice.rdlc", "Invoice", dt);
             }
-           
+        }
+
+        private void nVLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            panelNXTNVL.Visible = true;
+            nxt = "nvl";
+        }
+
+        private void btnNXTNVL_Click(object sender, EventArgs e)
+        {
+            if (nxt == "nvl")
+            {
+                DataTable dt = Import_Manager.Instance.getnxtnvl(dtpfromnxtnvl.Value, dtptonxtnvl.Value);
+                viewreport("NXT.rdlc", "NXT_NVL", dt);
+            }
+            else
+            {
+                DataTable dt = Import_Manager.Instance.getnxtsp(dtpfromnxtnvl.Value, dtptonxtnvl.Value);
+                viewreport("NXT_SP.rdlc", "NXTSanPham", dt);
+            }  
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            panelNXTNVL.Visible = true;
+            nxt = "sp";
+        }
+        public DataTable ReadExcel(string fileName, string fileExt, string query)
+        {
+            string conn = string.Empty;
+            DataTable dtexcel = new DataTable();
+            if (fileExt.CompareTo(".xls") == 0)
+                conn = @"provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileName + ";Extended Properties='Excel 8.0;HRD=Yes;IMEX=1';"; //for below excel 2007  
+            else
+                conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties='Excel 12.0;HDR=NO';"; //for above excel 2007  
+            using (OleDbConnection con = new OleDbConnection(conn))
+            {
+                try
+                {
+                    OleDbDataAdapter oleAdpt = new OleDbDataAdapter(query, con); //here we read data from sheet1  
+                    oleAdpt.Fill(dtexcel); //fill excel data into dataTable  
+                }
+                catch { }
+            }
+            return dtexcel;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string filePath = string.Empty;
+            string fileExt = string.Empty;
+            OpenFileDialog file = new OpenFileDialog(); //open dialog to choose file  
+            if (file.ShowDialog() == System.Windows.Forms.DialogResult.OK) //if there is a file choosen by the user  
+            {
+                filePath = file.FileName; //get the path of the file  
+                fileExt = Path.GetExtension(filePath); //get the file extension  
+                if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
+                {
+                    try
+                    {
+                        DataTable dtExcel = new DataTable();
+                        dtExcel = ReadExcel(filePath, fileExt, tbquery.Text); //read excel file  
+                        dtgexcel.Visible = true;
+                        dtgexcel.DataSource = dtExcel;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error  
+                }
+            }
         }
     }
 }

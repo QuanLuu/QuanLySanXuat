@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
+            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panelPO = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +41,9 @@
             this.cbKH = new System.Windows.Forms.ComboBox();
             this.btnReportPO = new System.Windows.Forms.Button();
             this.panelCTSX = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbMaSPInCTSX = new System.Windows.Forms.TextBox();
             this.btnReportCTSX = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbmonthCTSX = new System.Windows.Forms.TextBox();
@@ -52,14 +55,15 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpXuấtTồnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nVLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inẤnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOPassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếHoạchSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbMaSPInCTSX = new System.Windows.Forms.TextBox();
             this.panelKHSX = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbMaSPKHSX = new System.Windows.Forms.TextBox();
             this.btnKHSX = new System.Windows.Forms.Button();
@@ -70,6 +74,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tbMSQLKHSX = new System.Windows.Forms.TextBox();
             this.panelInvoice = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dtpNgayInvoice = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.tbSoInvoice = new System.Windows.Forms.TextBox();
             this.btnInvoice = new System.Windows.Forms.Button();
@@ -79,31 +85,39 @@
             this.tbNamInvoice = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tbKHInvoice = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dtpNgayInvoice = new System.Windows.Forms.DateTimePicker();
-            this.label17 = new System.Windows.Forms.Label();
-            this.PP_DS_PRINT_PO_MSQLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
-            this.PP_DS_PRINT_PO_MSQLTableAdapter = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters.PP_DS_PRINT_PO_MSQLTableAdapter();
+            this.panelNXTNVL = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtptonxtnvl = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dtpfromnxtnvl = new System.Windows.Forms.DateTimePicker();
+            this.btnNXTNVL = new System.Windows.Forms.Button();
+            this.dtgexcel = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbquery = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelKHSX.SuspendLayout();
             this.panelInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
+            this.panelNXTNVL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgexcel)).BeginInit();
             this.SuspendLayout();
+            // 
+            // QUAN_LY_SAN_XUATDataSet
+            // 
+            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
+            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer
             // 
-            reportDataSource1.Name = "IN_PO";
-            reportDataSource1.Value = this.PP_DS_PRINT_PO_MSQLBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "IN_PO";
+            reportDataSource2.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(0, 201);
+            this.reportViewer.Location = new System.Drawing.Point(0, 393);
             this.reportViewer.Name = "reportViewer";
-            this.reportViewer.Size = new System.Drawing.Size(757, 276);
+            this.reportViewer.Size = new System.Drawing.Size(757, 168);
             this.reportViewer.TabIndex = 0;
             // 
             // panelPO
@@ -202,6 +216,31 @@
             this.panelCTSX.Size = new System.Drawing.Size(757, 32);
             this.panelCTSX.TabIndex = 3;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(655, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "CTSX";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(121, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Mã SP";
+            // 
+            // tbMaSPInCTSX
+            // 
+            this.tbMaSPInCTSX.Location = new System.Drawing.Point(160, 6);
+            this.tbMaSPInCTSX.Name = "tbMaSPInCTSX";
+            this.tbMaSPInCTSX.Size = new System.Drawing.Size(108, 20);
+            this.tbMaSPInCTSX.TabIndex = 16;
+            // 
             // btnReportCTSX
             // 
             this.btnReportCTSX.Location = new System.Drawing.Point(541, 4);
@@ -283,8 +322,8 @@
             this.nhậpXuấtTồnToolStripMenuItem,
             this.invoiceToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
-            this.reportsToolStripMenuItem.Text = "Báo cáo tổng hợp";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.reportsToolStripMenuItem.Text = "Báo Cáo";
             // 
             // nhậpXuấtTồnToolStripMenuItem
             // 
@@ -295,9 +334,26 @@
             // 
             // invoiceToolStripMenuItem
             // 
+            this.invoiceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nVLToolStripMenuItem,
+            this.sảnPhẩmToolStripMenuItem});
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
             this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.invoiceToolStripMenuItem.Text = "NXT";
+            // 
+            // nVLToolStripMenuItem
+            // 
+            this.nVLToolStripMenuItem.Name = "nVLToolStripMenuItem";
+            this.nVLToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.nVLToolStripMenuItem.Text = "NVL";
+            this.nVLToolStripMenuItem.Click += new System.EventHandler(this.nVLToolStripMenuItem_Click);
+            // 
+            // sảnPhẩmToolStripMenuItem
+            // 
+            this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
+            this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
             // inẤnToolStripMenuItem
             // 
@@ -338,22 +394,6 @@
             this.cậpNhậtDữLiệuToolStripMenuItem.Text = "Cập Nhật Dữ Liệu";
             this.cậpNhậtDữLiệuToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtDữLiệuToolStripMenuItem_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Mã SP";
-            // 
-            // tbMaSPInCTSX
-            // 
-            this.tbMaSPInCTSX.Location = new System.Drawing.Point(160, 6);
-            this.tbMaSPInCTSX.Name = "tbMaSPInCTSX";
-            this.tbMaSPInCTSX.Size = new System.Drawing.Size(108, 20);
-            this.tbMaSPInCTSX.TabIndex = 16;
-            // 
             // panelKHSX
             // 
             this.panelKHSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -372,6 +412,15 @@
             this.panelKHSX.Name = "panelKHSX";
             this.panelKHSX.Size = new System.Drawing.Size(757, 32);
             this.panelKHSX.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(655, 8);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "KHSX";
             // 
             // label7
             // 
@@ -467,6 +516,23 @@
             this.panelInvoice.Size = new System.Drawing.Size(757, 32);
             this.panelInvoice.TabIndex = 6;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(531, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Ngày";
+            // 
+            // dtpNgayInvoice
+            // 
+            this.dtpNgayInvoice.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayInvoice.Location = new System.Drawing.Point(569, 6);
+            this.dtpNgayInvoice.Name = "dtpNgayInvoice";
+            this.dtpNgayInvoice.Size = new System.Drawing.Size(104, 20);
+            this.dtpNgayInvoice.TabIndex = 18;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -541,61 +607,100 @@
             this.tbKHInvoice.Size = new System.Drawing.Size(66, 20);
             this.tbKHInvoice.TabIndex = 9;
             // 
-            // label15
+            // panelNXTNVL
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(655, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "CTSX";
+            this.panelNXTNVL.Controls.Add(this.tbquery);
+            this.panelNXTNVL.Controls.Add(this.button1);
+            this.panelNXTNVL.Controls.Add(this.label19);
+            this.panelNXTNVL.Controls.Add(this.dtptonxtnvl);
+            this.panelNXTNVL.Controls.Add(this.label18);
+            this.panelNXTNVL.Controls.Add(this.dtpfromnxtnvl);
+            this.panelNXTNVL.Controls.Add(this.btnNXTNVL);
+            this.panelNXTNVL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNXTNVL.Location = new System.Drawing.Point(0, 169);
+            this.panelNXTNVL.Name = "panelNXTNVL";
+            this.panelNXTNVL.Size = new System.Drawing.Size(757, 33);
+            this.panelNXTNVL.TabIndex = 7;
             // 
-            // label16
+            // label19
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(655, 8);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 13);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "KHSX";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(166, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 13);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Đến ngày";
             // 
-            // dtpNgayInvoice
+            // dtptonxtnvl
             // 
-            this.dtpNgayInvoice.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayInvoice.Location = new System.Drawing.Point(569, 6);
-            this.dtpNgayInvoice.Name = "dtpNgayInvoice";
-            this.dtpNgayInvoice.Size = new System.Drawing.Size(104, 20);
-            this.dtpNgayInvoice.TabIndex = 18;
+            this.dtptonxtnvl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtptonxtnvl.Location = new System.Drawing.Point(219, 6);
+            this.dtptonxtnvl.Name = "dtptonxtnvl";
+            this.dtptonxtnvl.Size = new System.Drawing.Size(104, 20);
+            this.dtptonxtnvl.TabIndex = 23;
             // 
-            // label17
+            // label18
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(531, 10);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 13);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Ngày";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Từ ngày";
             // 
-            // PP_DS_PRINT_PO_MSQLBindingSource
+            // dtpfromnxtnvl
             // 
-            this.PP_DS_PRINT_PO_MSQLBindingSource.DataMember = "PP_DS_PRINT_PO_MSQL";
-            this.PP_DS_PRINT_PO_MSQLBindingSource.DataSource = this.QUAN_LY_SAN_XUATDataSet;
+            this.dtpfromnxtnvl.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfromnxtnvl.Location = new System.Drawing.Point(49, 7);
+            this.dtpfromnxtnvl.Name = "dtpfromnxtnvl";
+            this.dtpfromnxtnvl.Size = new System.Drawing.Size(104, 20);
+            this.dtpfromnxtnvl.TabIndex = 21;
             // 
-            // QUAN_LY_SAN_XUATDataSet
+            // btnNXTNVL
             // 
-            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
-            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnNXTNVL.Location = new System.Drawing.Point(344, 4);
+            this.btnNXTNVL.Name = "btnNXTNVL";
+            this.btnNXTNVL.Size = new System.Drawing.Size(75, 23);
+            this.btnNXTNVL.TabIndex = 20;
+            this.btnNXTNVL.Text = "View Report";
+            this.btnNXTNVL.UseVisualStyleBackColor = true;
+            this.btnNXTNVL.Click += new System.EventHandler(this.btnNXTNVL_Click);
             // 
-            // PP_DS_PRINT_PO_MSQLTableAdapter
+            // dtgexcel
             // 
-            this.PP_DS_PRINT_PO_MSQLTableAdapter.ClearBeforeFill = true;
+            this.dtgexcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgexcel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtgexcel.Location = new System.Drawing.Point(0, 202);
+            this.dtgexcel.Name = "dtgexcel";
+            this.dtgexcel.Size = new System.Drawing.Size(757, 165);
+            this.dtgexcel.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(433, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // tbquery
+            // 
+            this.tbquery.Location = new System.Drawing.Point(514, 6);
+            this.tbquery.Name = "tbquery";
+            this.tbquery.Size = new System.Drawing.Size(231, 20);
+            this.tbquery.TabIndex = 26;
+            this.tbquery.Text = "select cats(f1 as int), f2  from [Sheet1$A2:B]";
             // 
             // FrmReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 477);
+            this.ClientSize = new System.Drawing.Size(757, 582);
+            this.Controls.Add(this.dtgexcel);
             this.Controls.Add(this.reportViewer);
+            this.Controls.Add(this.panelNXTNVL);
             this.Controls.Add(this.panelInvoice);
             this.Controls.Add(this.panelKHSX);
             this.Controls.Add(this.panelCTSX);
@@ -606,6 +711,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.panelPO.ResumeLayout(false);
             this.panelPO.PerformLayout();
             this.panelCTSX.ResumeLayout(false);
@@ -616,8 +722,9 @@
             this.panelKHSX.PerformLayout();
             this.panelInvoice.ResumeLayout(false);
             this.panelInvoice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PP_DS_PRINT_PO_MSQLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
+            this.panelNXTNVL.ResumeLayout(false);
+            this.panelNXTNVL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgexcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,9 +733,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
-        private System.Windows.Forms.BindingSource PP_DS_PRINT_PO_MSQLBindingSource;
         private QUAN_LY_SAN_XUATDataSet QUAN_LY_SAN_XUATDataSet;
-        private QUAN_LY_SAN_XUATDataSetTableAdapters.PP_DS_PRINT_PO_MSQLTableAdapter PP_DS_PRINT_PO_MSQLTableAdapter;
         private System.Windows.Forms.Panel panelPO;
         private System.Windows.Forms.Button btnReportPO;
         private System.Windows.Forms.Label label2;
@@ -680,5 +785,16 @@
         private System.Windows.Forms.TextBox tbKHInvoice;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dtpNgayInvoice;
+        private System.Windows.Forms.Panel panelNXTNVL;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dtptonxtnvl;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dtpfromnxtnvl;
+        private System.Windows.Forms.Button btnNXTNVL;
+        private System.Windows.Forms.ToolStripMenuItem nVLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dtgexcel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbquery;
     }
 }
