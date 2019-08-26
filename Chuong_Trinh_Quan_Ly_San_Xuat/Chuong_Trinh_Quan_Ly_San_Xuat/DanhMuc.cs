@@ -266,13 +266,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetNguyenLieu();
         }
 
-        private void dtgNL_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tbTenNL.Text = dtgNL.CurrentRow.Cells[1].Value.ToString();
-            tbKichCo.Text = dtgNL.CurrentRow.Cells[2].Value.ToString();
-            if(dtgNL.CurrentRow.Cells[3].Value.ToString() != "") numNL.Value = Convert.ToDecimal(dtgNL.CurrentRow.Cells[3].Value.ToString());
-        }
-
+ 
         private void btnNew_Click(object sender, EventArgs e)
         {
             tbTenNL.Text = "";
@@ -535,8 +529,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-
             actionNL = 2;
+            if (dtgNL.CurrentRow != null)
+            {
+                tbTenNL.Text = dtgNL.CurrentRow.Cells[1].Value.ToString();
+                tbKichCo.Text = dtgNL.CurrentRow.Cells[2].Value.ToString();
+                if (dtgNL.CurrentRow.Cells[3].Value.ToString() != "") numNL.Value = Convert.ToDecimal(dtgNL.CurrentRow.Cells[3].Value.ToString());
+            }
             enablecontrolNL();
         }
 
@@ -598,6 +597,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
 
             actionSP = 2;
+            if (dtgSP.CurrentRow != null)
+            {
+                tbMSQL.Text = dtgSP.CurrentRow.Cells[1].Value.ToString(); ;
+                tbMaSP.Text = dtgSP.CurrentRow.Cells[2].Value.ToString();
+                tbTenSP.Text = dtgSP.CurrentRow.Cells[3].Value.ToString();
+                cbTenNL.Text = dtgSP.CurrentRow.Cells[4].Value.ToString();
+                if (dtgSP.CurrentRow.Cells[5].Value.ToString() != "") numSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[5].Value.ToString());
+            }
             enablecontrolSP();
         }
 
@@ -631,14 +638,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetSanPham();
         }
 
-        private void dtgSP_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tbMSQL.Text = dtgSP.CurrentRow.Cells[1].Value.ToString(); ;
-            tbMaSP.Text = dtgSP.CurrentRow.Cells[2].Value.ToString();
-            tbTenSP.Text = dtgSP.CurrentRow.Cells[3].Value.ToString();
-            cbTenNL.Text = dtgSP.CurrentRow.Cells[4].Value.ToString();
-            if (dtgSP.CurrentRow.Cells[5].Value.ToString() != "") numSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[5].Value.ToString());
-        }
 
         private void btnDeleteSP_Click(object sender, EventArgs e)
         {
@@ -671,20 +670,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             tbSdt.Text = ""; 
         }
 
-        private void dtgKH_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tbMaKH.Text = dtgKH.CurrentRow.Cells[1].Value.ToString();
-            tbKH.Text = dtgKH.CurrentRow.Cells[2].Value.ToString();
-            tbNguoiLienHe.Text = dtgKH.CurrentRow.Cells[3].Value.ToString();
-            tbBoPhan.Text = dtgKH.CurrentRow.Cells[4].Value.ToString();
-            tbDiaChi.Text = dtgKH.CurrentRow.Cells[7].Value.ToString();
-            tbEmail.Text = dtgKH.CurrentRow.Cells[6].Value.ToString();
-            tbSdt.Text = dtgKH.CurrentRow.Cells[5].Value.ToString();
-        }
+
 
         private void btnEditKH_Click(object sender, EventArgs e)
         {
             actionKH = 2;
+            if (dtgKH.CurrentRow != null)
+            {
+                tbMaKH.Text = dtgKH.CurrentRow.Cells[1].Value.ToString();
+                tbKH.Text = dtgKH.CurrentRow.Cells[2].Value.ToString();
+                tbNguoiLienHe.Text = dtgKH.CurrentRow.Cells[3].Value.ToString();
+                tbBoPhan.Text = dtgKH.CurrentRow.Cells[4].Value.ToString();
+                tbDiaChi.Text = dtgKH.CurrentRow.Cells[7].Value.ToString();
+                tbEmail.Text = dtgKH.CurrentRow.Cells[6].Value.ToString();
+                tbSdt.Text = dtgKH.CurrentRow.Cells[5].Value.ToString();
+            }
             enablecontrolKH();
         }
 
@@ -750,6 +750,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditMM_Click(object sender, EventArgs e)
         {
             actionMM = 2;
+            if (dtgMayMoc.CurrentRow != null)
+            {
+                tbTenMay.Text = dtgMayMoc.CurrentRow.Cells[1].Value.ToString();
+                tbSoMay.Text = dtgMayMoc.CurrentRow.Cells[2].Value.ToString();
+                tbMamay.Text = dtgMayMoc.CurrentRow.Cells[3].Value.ToString(); ;
+            }
             enablecontrolMM();
         }
 
@@ -799,6 +805,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditDM_Click(object sender, EventArgs e)
         {
             actionDM = 2;
+            if (dtgDM.CurrentRow.Cells[0].Value.ToString() != "")
+            {
+                dtpDateFrom.Value = DateTime.Parse(dtgDM.CurrentRow.Cells[1].Value.ToString());
+                tbMSQLDinhMuc.Text = dtgDM.CurrentRow.Cells[2].Value.ToString();
+                numDinhMuc.Text = dtgDM.CurrentRow.Cells[5].Value.ToString();
+            }
             enablecontrolDM();
         }
 
@@ -860,6 +872,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditSPCD_Click(object sender, EventArgs e)
         {
             actionSPCD = 2;
+            if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "")
+            {
+                cbMSQL.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString() + " - " + dtgSPCD.CurrentRow.Cells[2].Value.ToString();
+                tbMaCD.Text = dtgSPCD.CurrentRow.Cells[3].Value.ToString();
+                tbTenCD.Text = dtgSPCD.CurrentRow.Cells[4].Value.ToString();
+                //cbMayMocCD.Text = "";
+                cbMayMocCD.Text = "Tên:" + dtgSPCD.CurrentRow.Cells[5].Value.ToString() + " - Số:" + dtgSPCD.CurrentRow.Cells[6].Value.ToString() + " - Mã:" + dtgSPCD.CurrentRow.Cells[7].Value.ToString();
+                numCDso.Text = dtgSPCD.CurrentRow.Cells[8].Value.ToString();
+            }
             enablecontrolSPCD();
         }
 
@@ -900,7 +921,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, Int32.Parse(cbMayMocCD.SelectedValue.ToString()), Int32.Parse(cbMSQL.SelectedValue.ToString()),(int)numCDso.Value);
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, 0, 0,0);
                 actionSPCD = 0;
                 enablecontrolSPCD();
                 getSPCD();
@@ -912,44 +933,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             
         }
 
-       
-        private void dtgSPCD_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgSPCD.CurrentRow.Cells[0].Value.ToString() != "" && actionSPCD != 1)
-            {
-                cbMSQL.Text = dtgSPCD.CurrentRow.Cells[1].Value.ToString() + " - " + dtgSPCD.CurrentRow.Cells[2].Value.ToString();
-                tbMaCD.Text = dtgSPCD.CurrentRow.Cells[3].Value.ToString();
-                tbTenCD.Text = dtgSPCD.CurrentRow.Cells[4].Value.ToString();
-                //cbMayMocCD.Text = "";
-                cbMayMocCD.Text = "Tên:" + dtgSPCD.CurrentRow.Cells[5].Value.ToString() + " - Số:" + dtgSPCD.CurrentRow.Cells[6].Value.ToString() + " - Mã:" + dtgSPCD.CurrentRow.Cells[7].Value.ToString();
-                numCDso.Text = dtgSPCD.CurrentRow.Cells[8].Value.ToString();
-            }
-        }
 
-        private void dtgMayMoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (actionMM != 1)
-            {
-                tbTenMay.Text = dtgMayMoc.CurrentRow.Cells[1].Value.ToString();
-                tbSoMay.Text = dtgMayMoc.CurrentRow.Cells[2].Value.ToString();
-                tbMamay.Text = dtgMayMoc.CurrentRow.Cells[3].Value.ToString(); ;
-            }
-        }
-
-       
         private void tbMSQLDinhMuc_TextChanged(object sender, EventArgs e)
         {
             getsanphamtheomsql();
-        }
-
-        private void dtgDM_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgDM.CurrentRow.Cells[0].Value.ToString() != "" && actionDM != 1)
-            {
-                dtpDateFrom.Value = DateTime.Parse(dtgDM.CurrentRow.Cells[1].Value.ToString());
-                tbMSQLDinhMuc.Text = dtgDM.CurrentRow.Cells[2].Value.ToString();
-                numDinhMuc.Text = dtgDM.CurrentRow.Cells[5].Value.ToString();
-            }
         }
 
         private void btnNewDongia_Click(object sender, EventArgs e)
@@ -963,6 +950,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditDongia_Click(object sender, EventArgs e)
         {
             actionDongia = 2;
+            if (dtgDongia.CurrentRow.Cells[0].Value.ToString() != "")
+            {
+                dtpDongia.Value = DateTime.Parse(dtgDongia.CurrentRow.Cells[1].Value.ToString());
+                tbMSQLDongia.Text = dtgDongia.CurrentRow.Cells[2].Value.ToString();
+                numDongia.Text = dtgDongia.CurrentRow.Cells[5].Value.ToString();
+            }
             enablecontrolDongia();
         }
 
@@ -1016,16 +1009,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
         }
 
-        private void dtgDongia_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgDongia.CurrentRow.Cells[0].Value.ToString() != "" && actionDongia != 1)
-            {
-                dtpDongia.Value = DateTime.Parse(dtgDongia.CurrentRow.Cells[1].Value.ToString());
-                tbMSQLDongia.Text = dtgDongia.CurrentRow.Cells[2].Value.ToString();
-                numDongia.Text = dtgDongia.CurrentRow.Cells[5].Value.ToString();
-            }
-        }
-
         private void tbMSQLDongia_TextChanged(object sender, EventArgs e)
         {
             getsanphamtheomsql();
@@ -1062,12 +1045,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditBoxSP_Click(object sender, EventArgs e)
         {
             actionBoxSP = 2;
+            if (dtgBoxSP.CurrentRow != null)
+            {
+                tbMSQLBoxSP.Text = dtgBoxSP.CurrentRow.Cells[1].Value.ToString();
+                numSNP.Text = dtgBoxSP.CurrentRow.Cells[4].Value.ToString();
+                cbloaithung.Text = dtgBoxSP.CurrentRow.Cells[5].Value.ToString();
+                cbkichthuoc.Text = dtgBoxSP.CurrentRow.Cells[6].Value.ToString();
+                cbcase.Text = dtgBoxSP.CurrentRow.Cells[7].Value.ToString();
+            }
             enablecontrolBoxSP();
         }
 
         private void btnEditBox_Click(object sender, EventArgs e)
         {
             actionBox = 2;
+            if (dtgBox.CurrentRow != null)
+            {
+                tbloaithung.Text = dtgBox.CurrentRow.Cells[1].Value.ToString();
+                tbkichthuocbox.Text = dtgBox.CurrentRow.Cells[2].Value.ToString();
+                tbcase.Text = dtgBox.CurrentRow.Cells[3].Value.ToString();
+            }
             enablecontrolBox();
         }
 
@@ -1081,16 +1078,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             actionBox = 0;
             enablecontrolBox();
-        }
-
-        private void dtgBox_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgBox.CurrentRow.Cells[0].Value.ToString() != "" && actionBox != 1)
-            {
-                tbloaithung.Text = dtgBox.CurrentRow.Cells[1].Value.ToString();
-                tbkichthuocbox.Text = dtgBox.CurrentRow.Cells[2].Value.ToString();
-                tbcase.Text = dtgBox.CurrentRow.Cells[3].Value.ToString();
-            }
         }
 
         private void cbloaithung_SelectedIndexChanged(object sender, EventArgs e)
@@ -1197,18 +1184,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             getsanphamtheomsql();
         }
 
-        private void dtgBoxSP_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgBoxSP.CurrentRow.Cells[0].Value.ToString() != "" && actionBoxSP != 1)
-            {
-                tbMSQLBoxSP.Text = dtgBoxSP.CurrentRow.Cells[1].Value.ToString();
-                numSNP.Text = dtgBoxSP.CurrentRow.Cells[4].Value.ToString();
-                cbloaithung.Text = dtgBoxSP.CurrentRow.Cells[5].Value.ToString();
-                cbkichthuoc.Text = dtgBoxSP.CurrentRow.Cells[6].Value.ToString();
-                cbcase.Text = dtgBoxSP.CurrentRow.Cells[7].Value.ToString();
-            }
-        }
-
         private void tbMaKHKHSPFilter_TextChanged(object sender, EventArgs e)
         {
             getKHSP();
@@ -1230,6 +1205,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditKHSP_Click(object sender, EventArgs e)
         {
             actionKHSP = 2;
+            if (dtgKHSP.CurrentRow != null)
+            {
+                cbMaKHKHSP.Text = dtgKHSP.CurrentRow.Cells[1].Value.ToString();
+                tbMSQLKHSP.Text = dtgKHSP.CurrentRow.Cells[2].Value.ToString();
+
+            }
             enablecontrolKHSP();
         }
 
@@ -1238,17 +1219,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             actionKHSP = 0;
             enablecontrolKHSP();
         }
-
-        private void dtgKHSP_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgKHSP.CurrentRow.Cells[0].Value.ToString() != "" && actionKHSP != 1)
-            {
-                cbMaKHKHSP.Text = dtgKHSP.CurrentRow.Cells[1].Value.ToString();
-                tbMSQLKHSP.Text = dtgKHSP.CurrentRow.Cells[2].Value.ToString();
-               
-            }
-        }
-
         private void btnSaveKHSP_Click(object sender, EventArgs e)
         {
             int currow = current_row(actionKHSP, dtgKHSP);

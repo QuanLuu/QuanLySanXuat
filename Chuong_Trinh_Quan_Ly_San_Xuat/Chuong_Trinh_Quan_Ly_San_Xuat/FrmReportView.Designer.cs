@@ -86,14 +86,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbKHInvoice = new System.Windows.Forms.TextBox();
             this.panelNXTNVL = new System.Windows.Forms.Panel();
+            this.tbquery = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.dtptonxtnvl = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
             this.dtpfromnxtnvl = new System.Windows.Forms.DateTimePicker();
             this.btnNXTNVL = new System.Windows.Forms.Button();
             this.dtgexcel = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbquery = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
@@ -622,6 +622,26 @@
             this.panelNXTNVL.Size = new System.Drawing.Size(757, 33);
             this.panelNXTNVL.TabIndex = 7;
             // 
+            // tbquery
+            // 
+            this.tbquery.Location = new System.Drawing.Point(514, 6);
+            this.tbquery.Name = "tbquery";
+            this.tbquery.Size = new System.Drawing.Size(231, 20);
+            this.tbquery.TabIndex = 26;
+            this.tbquery.Text = "select cats(f1 as int), f2  from [Sheet1$A2:B]";
+            this.tbquery.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(433, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -674,24 +694,7 @@
             this.dtgexcel.Name = "dtgexcel";
             this.dtgexcel.Size = new System.Drawing.Size(757, 165);
             this.dtgexcel.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(433, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // tbquery
-            // 
-            this.tbquery.Location = new System.Drawing.Point(514, 6);
-            this.tbquery.Name = "tbquery";
-            this.tbquery.Size = new System.Drawing.Size(231, 20);
-            this.tbquery.TabIndex = 26;
-            this.tbquery.Text = "select cats(f1 as int), f2  from [Sheet1$A2:B]";
+            this.dtgexcel.Visible = false;
             // 
             // FrmReportView
             // 

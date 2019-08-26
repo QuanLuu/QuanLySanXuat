@@ -47,6 +47,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             GetNguyenLieu();
             GetKhachHang();
+            getnvlfromncc();
             //getnhatkynhapNL();
             //getnhatkyxuatNL();
             //getnhatkyxuatSP();
@@ -72,7 +73,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpXuatSPfrom.Value = DateTime.Now.AddDays(-7);
             dtpXuatGiacongfrom.Value = DateTime.Now.AddDays(-7);
             dtpnhapgcfrom.Value = DateTime.Now.AddDays(-7);
-
+            cbNCC.Text = "SSJP";
 
         }
         void GetNguyenLieu()
@@ -88,8 +89,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void GetKhachHang()
         {
             DataTable data = Import_Manager.Instance.LoadKH("");
-            cbNCC.DisplayMember = "MA_KH";
-            cbNCC.DataSource = data;
+            //cbNCC.DisplayMember = "MA_KH";
+            //cbNCC.DataSource = data;
             cbctyxuatgiacong.DisplayMember = "MA_KH";
             cbctyxuatgiacong.DataSource = data;
 
