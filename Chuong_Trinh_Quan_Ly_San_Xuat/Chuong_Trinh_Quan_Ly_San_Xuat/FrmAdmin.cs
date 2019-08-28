@@ -18,6 +18,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             InitializeComponent();
             LoadDataTypeTable();
             loaduser();
+            loadbophan();
             dtgDataType.Dock = DockStyle.Fill;
             dtgDataTypeSheet.Dock = DockStyle.Fill;
         }
@@ -283,7 +284,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     if(chListCapquyen.GetItemChecked(i)) capquyen += chListCapquyen.Items[i].ToString() + ";";
                 }
                
-                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, capquyen, tbcaSX.Text);
+                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, capquyen, tbcaSX.Text, cbbophan.Text);
                 loaduser();
                 dtgUsers.CurrentCell = dtgUsers.Rows[currow].Cells[0];
                 Action = 0;
@@ -301,7 +302,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, chListCapquyen.Text, tbcaSX.Text);
+                int results = Import_Manager.Instance.UpdateUsers(Action, (int)dtgUsers.CurrentRow.Cells[0].Value, tbTenUser.Text, tbmatkhau.Text, chListCapquyen.Text, tbcaSX.Text, "");
             }
             catch (Exception ex)
             {
@@ -312,18 +313,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             loaduser();
         }
 
-        private void dtgUsers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgUsers.CurrentRow.Cells[0].Value.ToString() != "" && Action != 1)
-            {
-                int rowselectd = dtgUsers.CurrentRow.Index;
-                tbTenUser.Text = dtgUsers[1, rowselectd].Value.ToString();
-                tbmatkhau.Text = dtgUsers[2, rowselectd].Value.ToString();
-                tbcaSX.Text = dtgUsers[4, rowselectd].Value.ToString();
-               
-            }
-        }
-
+     
         private void btnNewUser_Click(object sender, EventArgs e)
         {
             Action = 1;
@@ -336,6 +326,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void btnEditUser_Click(object sender, EventArgs e)
         {
             Action = 2;
+            if (dtgUsers.CurrentRow != null)
+            {
+                int rowselectd = dtgUsers.CurrentRow.Index;
+                tbTenUser.Text = dtgUsers[1, rowselectd].Value.ToString();
+                tbmatkhau.Text = dtgUsers[2, rowselectd].Value.ToString();
+                tbcaSX.Text = dtgUsers[4, rowselectd].Value.ToString();
+                cbbophan.Text = dtgUsers[5, rowselectd].Value.ToString();
+
+            }
             DisableUser();
         }
 
@@ -343,6 +342,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             Action = 0;
             DisableUser();
+        }
+        void loadbophan()
+        {
+            DataTable data = Import_Manager.Instance.getbophan();
+            cbbophan.DataSource = data;
+            cbbophan.DisplayMember = "TEN";
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

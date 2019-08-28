@@ -81,6 +81,8 @@
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnNewUser = new System.Windows.Forms.Button();
             this.panelUser = new System.Windows.Forms.Panel();
+            this.cbbophan = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chListCapquyen = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -671,6 +673,8 @@
             // panelUser
             // 
             this.panelUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelUser.Controls.Add(this.cbbophan);
+            this.panelUser.Controls.Add(this.label5);
             this.panelUser.Controls.Add(this.label3);
             this.panelUser.Controls.Add(this.chListCapquyen);
             this.panelUser.Controls.Add(this.label4);
@@ -685,6 +689,23 @@
             this.panelUser.Size = new System.Drawing.Size(853, 65);
             this.panelUser.TabIndex = 1;
             this.panelUser.Visible = false;
+            // 
+            // cbbophan
+            // 
+            this.cbbophan.FormattingEnabled = true;
+            this.cbbophan.Location = new System.Drawing.Point(460, 7);
+            this.cbbophan.Name = "cbbophan";
+            this.cbbophan.Size = new System.Drawing.Size(191, 21);
+            this.cbbophan.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(405, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Bộ Phận";
             // 
             // label3
             // 
@@ -763,7 +784,6 @@
             // dtgUsers
             // 
             this.dtgUsers.AllowUserToResizeRows = false;
-            this.dtgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgUsers.Location = new System.Drawing.Point(0, 0);
@@ -771,7 +791,6 @@
             this.dtgUsers.RowHeadersVisible = false;
             this.dtgUsers.Size = new System.Drawing.Size(853, 584);
             this.dtgUsers.TabIndex = 0;
-            this.dtgUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellClick);
             // 
             // FrmAdmin
             // 
@@ -872,5 +891,7 @@
         private System.Windows.Forms.TextBox tbTenUser;
         private System.Windows.Forms.CheckedListBox chListCapquyen;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbophan;
     }
 }

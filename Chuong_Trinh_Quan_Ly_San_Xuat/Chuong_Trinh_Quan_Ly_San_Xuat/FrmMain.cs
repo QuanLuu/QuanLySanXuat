@@ -128,6 +128,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             frm.FormClosing += main_close;
 
         }
+        void showKiemKho()
+        {
+            FrmKiemKho frm = new FrmKiemKho();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
+
+        }
 
         void showBaocaoinan()
         {
@@ -255,6 +263,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void label10_Click(object sender, EventArgs e)
         {
             showformAdmin();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            showKiemKho();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            showKiemKho();
         }
     }
 }

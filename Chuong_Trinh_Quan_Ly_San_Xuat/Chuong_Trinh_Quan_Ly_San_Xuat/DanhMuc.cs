@@ -524,7 +524,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnCancelBoxSP.Enabled = true;
                 panelBoxSP.Visible = true;
             }
-
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -535,6 +534,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbTenNL.Text = dtgNL.CurrentRow.Cells[1].Value.ToString();
                 tbKichCo.Text = dtgNL.CurrentRow.Cells[2].Value.ToString();
                 if (dtgNL.CurrentRow.Cells[3].Value.ToString() != "") numNL.Value = Convert.ToDecimal(dtgNL.CurrentRow.Cells[3].Value.ToString());
+                if (dtgNL.CurrentRow.Cells[4].Value.ToString() != "") numtonantoanNL.Value = Convert.ToDecimal(dtgNL.CurrentRow.Cells[4].Value.ToString());
             }
             enablecontrolNL();
         }
@@ -545,7 +545,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
 
-                int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value);
+                int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value, numtonantoanNL.Value);
                 GetNguyenLieu();
                 dtgNL.CurrentCell = dtgNL.Rows[currow].Cells[0];
                 actionNL = 0;
@@ -571,7 +571,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value);
+                int results = Import_Manager.Instance.UpdateNL(actionNL, (int)dtgNL.CurrentRow.Cells[0].Value, tbTenNL.Text, tbKichCo.Text, numNL.Value, 0);
                 actionNL = 0;
                 enablecontrolNL();
                 GetNguyenLieu();
@@ -604,6 +604,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbTenSP.Text = dtgSP.CurrentRow.Cells[3].Value.ToString();
                 cbTenNL.Text = dtgSP.CurrentRow.Cells[4].Value.ToString();
                 if (dtgSP.CurrentRow.Cells[5].Value.ToString() != "") numSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[5].Value.ToString());
+                if (dtgSP.CurrentRow.Cells[6].Value.ToString() != "") numtonantoanSP.Value = Convert.ToDecimal(dtgSP.CurrentRow.Cells[6].Value.ToString());
             }
             enablecontrolSP();
         }
@@ -620,7 +621,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             int currow = current_row(actionSP, dtgSP); ;
             try
             {
-                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value);
+                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value, numtonantoanSP.Value);
                 GetSanPham();
                 dtgSP.CurrentCell = dtgSP.Rows[currow].Cells[0];
                 actionSP = 0;
@@ -645,7 +646,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text,tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value);
+                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text,tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value,0);
                 actionSP = 0;
                 enablecontrolSP();
                 GetSanPham();
