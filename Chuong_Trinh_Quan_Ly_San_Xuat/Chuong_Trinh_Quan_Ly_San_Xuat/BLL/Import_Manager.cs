@@ -139,9 +139,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_NL @TEN_NL , @DATE_FROM , @DATE_TO", new object[] { tennl , from, to});
         }
 
-        public DataTable getkiemkhotp(string msql, DateTime ngaykiem)
+        public DataTable getkiemkhotp(string congdoan, string msql, DateTime ngaykiem)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_TP @MSQL , @NGAY_KIEM", new object[] { msql, ngaykiem });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_TP @CD , @MSQL , @NGAY_KIEM", new object[] {congdoan, msql, ngaykiem });
         }
         public DataTable getkiemkhonl(string manl, DateTime ngaykiem)
         {
@@ -238,9 +238,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_SP_CONG_DOAN] @ACTION , @ID , @MA_CONG_DOAN , @TEN_CONG_DOAN , @ID_MAY , @ID_MSQL , @CD_SO", new object[] { action, id, macd, tencd, idmay, idmsql, congdoanso});
         }
         //
-        public int UpdateKiemKhoTP(int ACTION ,int ID ,string MSQL ,string LOT ,string THUNG ,DateTime NGAY_GIA_CONG ,float TON ,DateTime NGAY_KIEM ,string NGUOI_KIEM ,string GHICHU)
+        public int UpdateKiemKhoTP(int ACTION ,int ID ,string MSQL ,string LOT ,string THUNG ,DateTime NGAY_GIA_CONG ,float TON ,DateTime NGAY_KIEM ,string NGUOI_KIEM ,string GHICHU, String CONGDOAN)
         {
-            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_KIEM_KHO_TP] @ACTION , @ID , @MSQL , @LOT , @THUNG , @NGAY_GIA_CONG , @TON , @NGAY_KIEM , @NGUOI_KIEM , @GHICHU", new object[] { ACTION, ID, MSQL, LOT, THUNG, NGAY_GIA_CONG, TON, NGAY_KIEM, NGUOI_KIEM, GHICHU });
+            return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_KIEM_KHO_TP] @ACTION , @ID , @MSQL , @LOT , @THUNG , @NGAY_GIA_CONG , @TON , @NGAY_KIEM , @NGUOI_KIEM , @GHICHU , @CD", new object[] { ACTION, ID, MSQL, LOT, THUNG, NGAY_GIA_CONG, TON, NGAY_KIEM, NGUOI_KIEM, GHICHU, CONGDOAN });
         }
 
         public int UpdateKiemKhoNL(int ACTION ,int ID ,string MANL ,string LOT ,string CUON ,string CUONME ,decimal TON ,DateTime NGAY_KIEM ,string NGUOI_KIEM ,string GHICHU)

@@ -33,7 +33,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
         //                                "Initial Catalog = QUAN_LY_SAN_XUAT;" +
         //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //SANYO_SERVER
 
-        private string connectstring = "Data Source=SANYO_SERVER;" +
+        private string connectstring = "Data Source=DESKTOP-9F5APHK\\QUANLUU;" +
                                         "Initial Catalog = QUAN_LY_SAN_XUAT;" +
                                         "User id=QuanLySanXuat;" +
                                         "Password=123456;";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //10.0.0.64,1433; //DESKTOP-9F5APHK\\QUANLUU
