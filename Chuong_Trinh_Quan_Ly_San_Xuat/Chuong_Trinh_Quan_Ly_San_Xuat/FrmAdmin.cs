@@ -333,6 +333,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbmatkhau.Text = dtgUsers[2, rowselectd].Value.ToString();
                 tbcaSX.Text = dtgUsers[4, rowselectd].Value.ToString();
                 cbbophan.Text = dtgUsers[5, rowselectd].Value.ToString();
+                string quyenhan = dtgUsers[3, rowselectd].Value.ToString();
+                for (int i = 0; i < chListCapquyen.Items.Count; i++)
+                {
+                    chListCapquyen.SetItemChecked(i, false);
+                    if (quyenhan.Contains(chListCapquyen.Items[i].ToString())) chListCapquyen.SetItemChecked(i, true);
+                }
 
             }
             DisableUser();
@@ -350,6 +356,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbbophan.DisplayMember = "TEN";
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

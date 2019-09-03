@@ -69,7 +69,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_SHORT_NHAN_VIEN", new object[] {});
         }
 
-
+        public DataTable checkmanl(string manl)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_CHECK_MA_NL @NL", new object[] {manl });
+        }
+        public DataTable checkmasp(string masp)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_CHECK_MA_SP @SP", new object[] {masp});
+        }
         public DataTable GetMayMocTheoCD(string macd)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_MAY_MOC_THEO_CONG_DOAN @MA_CD", new object[] {macd });
@@ -78,6 +85,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         public DataTable Loadcongdoantheomsql(string msql)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_MA_CONG_DOAN_THEO_MSQL @MSQL", new object[] { msql });
+        }
+
+        public DataTable getcongdoantheomsqlvatencd(string msql, string tencd)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_MA_CONG_DOAN_THEO_MSQL_TEN_CD @MSQL , @TENCD", new object[] { msql , tencd});
         }
         public DataTable getmasptheomsql(string msql)
         {
@@ -147,9 +159,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_NL @manl , @NGAY_KIEM", new object[] { manl, ngaykiem });
         }
-        public DataTable getnhatkyxuatSP(string masp, DateTime from, DateTime to, string invoice, String kh)
+        public DataTable getnhatkyxuatSP(string msql, string masp, DateTime from, DateTime to, string invoice, String kh)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @MA_SP , @DATE_FROM , @DATE_TO , @INV , @KH", new object[] { masp, from, to, invoice, kh });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_SP @msql , @MA_SP , @DATE_FROM , @DATE_TO , @INV , @KH", new object[] {msql, masp, from, to, invoice, kh });
         }
 
         public DataTable CheckSoluongcdsxtrc(int idcdsx)
@@ -195,6 +207,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("SELECT DISTINCT LOAI_THUNG FROM BOX_SAN_PHAM ", new object[] { });
         }
 
+        public DataTable getuserinfor(string username)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_USER_INFOR @USER ", new object[] { username});
+        }
         public DataTable GetNVL_NCC(string nvl, string ncc)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NGUYEN_LIEU_NCC @NVL , @NCC", new object[] { nvl, ncc});
@@ -213,13 +229,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("[PP_DS_INVOICE] @KH , @YEAR , @MONTH , @INVOICE , @DATE_INVOICE", new object[] { kh, year, month, soinv, ngayinvoice });
         }
 
-        public DataTable getxuatgiacong(string masp, DateTime from, DateTime to, string cty)
+        public DataTable getxuatgiacong(string msql, string masp, DateTime from, DateTime to, string cty)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_XUAT_GIA_CONG @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] { masp, from, to, cty });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_XUAT_GIA_CONG @MSQL , @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] {msql, masp, from, to, cty });
         }
-        public DataTable getnhapgiacong(string masp, DateTime from, DateTime to, string cty)
+        public DataTable getnhapgiacong(string msql,string masp, DateTime from, DateTime to, string cty)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAP_GIA_CONG @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] { masp, from, to, cty });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAP_GIA_CONG @MSQL , @SP , @DATE_FROM , @DATE_TO , @CTY", new object[] {msql, masp, from, to, cty });
         }
 
         public DataTable getnxtnvl( DateTime from, DateTime to)

@@ -140,17 +140,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getnhatkyxuatSP()
         {
-            DataTable data = Import_Manager.Instance.getnhatkyxuatSP(tbMaSPFilter.Text, dtpXuatSPfrom.Value, dtpXuatSPto.Value, tbXuatSPInvfil.Text, tbKHXuatSP.Text);
+            DataTable data = Import_Manager.Instance.getnhatkyxuatSP(tbmsqlxuatsp.Text, tbMaSPFilter.Text, dtpXuatSPfrom.Value, dtpXuatSPto.Value, tbXuatSPInvfil.Text, tbKHXuatSP.Text);
             dtgXuatSP.DataSource = data;
         }
         void getxuatgiacong()
         {
-            DataTable data = Import_Manager.Instance.getxuatgiacong(tbmaspxuatgiacongfilter.Text, dtpXuatGiacongfrom.Value, dtpXuatGiacongto.Value, tbxuatgiacongctyfil.Text);
+            DataTable data = Import_Manager.Instance.getxuatgiacong(tbmsqlxuatgc.Text ,tbmaspxuatgiacongfilter.Text, dtpXuatGiacongfrom.Value, dtpXuatGiacongto.Value, tbxuatgiacongctyfil.Text);
             dtgXuatgiacong.DataSource = data;
         }
         void getnhapgiacong()
         {
-            DataTable data = Import_Manager.Instance.getnhapgiacong(tbmaspnhapgcfilter.Text, dtpnhapgcfrom.Value, dtpnhapgcto.Value, tbnhapgcctyfil.Text);
+            DataTable data = Import_Manager.Instance.getnhapgiacong(tbmsqlnhapgiacong.Text, tbmaspnhapgcfilter.Text, dtpnhapgcfrom.Value, dtpnhapgcto.Value, tbnhapgcctyfil.Text);
             dtgNhapgiacong.DataSource = data;
         }
 
@@ -660,6 +660,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 xuatexceldtg(dtgNhapgiacong);
             else
                 xuatexceldtg(dtgXuatgiacong);
+        }
+
+        private void tbKHXuatSP_TextChanged(object sender, EventArgs e)
+        {
+            getnhatkyxuatSP();
+        }
+
+        private void tbmsqlxuatsp_TextChanged(object sender, EventArgs e)
+        {
+            getnhatkyxuatSP();
+        }
+
+        private void tbmsqlnhapgiacong_TextChanged(object sender, EventArgs e)
+        {
+            if (refreshflag) getnhapgiacong();
+        }
+
+        private void tbmsqlxuatgc_TextChanged(object sender, EventArgs e)
+        {
+            if (refreshflag) getxuatgiacong();
         }
     }
 }

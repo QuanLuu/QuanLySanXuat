@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -26,6 +27,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgbanTP.Dock = DockStyle.Fill;
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
+            bophan = bophankiemke(usernhap);
             getthanhpham();
             getkiemkhonl();
             GetNguyenLieu();
@@ -37,28 +39,39 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpngaykiemNLFilter.Value = DateTime.Now;
             dtpngaykiembantp.Value = DateTime.Now;
             dtpngaykiembantpfil.Value = DateTime.Now;
+            loadnhanvien();
         }
         void getthanhpham()
         {
             DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value);
             dtgKKTP.DataSource = data;
         }
-
+        string bophankiemke(string username)
+        {
+            DataTable data = Import_Manager.Instance.getuserinfor(username);
+            if (data.Rows.Count > 0)
+                return data.Rows[0][5].ToString();
+            else
+                return "";
+        }
         void getbanthanhpham()
         {
             if (bophan == "Sản Xuất")
             {
-                DataTable data = Import_Manager.Instance.getkiemkhotp("BAN CONG DOAN", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
+                congdoan = "BAN CONG DOAN";
+                DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
                 dtgbanTP.DataSource = data;
             }
             
             else if(bophan == "Chất Lượng")
             {
+                congdoan = "TRUOC KIEM";
                 DataTable data = Import_Manager.Instance.getkiemkhotp("TRUOC KIEM", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
                 dtgbanTP.DataSource = data;
             }
             else
             {
+                congdoan = "";
                 DataTable data = Import_Manager.Instance.getkiemkhotp("", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
                 dtgbanTP.DataSource = data;
             }
@@ -69,6 +82,50 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable data = Import_Manager.Instance.getkiemkhonl(tbFilterNL.Text, dtpngaykiemNLFilter.Value);
             dtgNL.DataSource = data;
         }
+        void xuatexceldtg(DataGridView dtg)
+        {
+            Microsoft.Office.Interop.Excel._Application excel = new Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Excel._Worksheet worksheet = null;
+
+            try
+            {
+                worksheet = (Excel._Worksheet)workbook.ActiveSheet;
+                object[,] arr = new object[dtg.Rows.Count + 1, dtg.Columns.Count + 1];
+                for (int c = 0; c < dtg.Columns.Count; c++)
+                {
+                    arr[0, c] = dtg.Columns[c].HeaderText;
+                }
+                int rowindex = 1;
+                int colindex = 0;
+                for (int r = 0; r < dtg.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtg.Columns.Count; c++)
+                    {
+                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        colindex++;
+                    }
+                    colindex = 0;
+                    rowindex++;
+                }
+
+                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];
+                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];
+                Excel.Range range = worksheet.get_Range(c1, c2);
+                range.Value = arr;
+                excel.Visible = true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
+        }
         void GetNguyenLieu()
         {
             DataTable data = Import_Manager.Instance.LoadDM_NL(tbFilterNL.Text);
@@ -76,6 +133,28 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbMaNL.DataSource = data;
             cbMaNL.DisplayMember = "TEN_NL"; 
         }
+        void getmacongdoantheomsql()
+        {
+            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQLTP.Text);
+            cbMaTP.DisplayMember = "MA_CONG_DOAN";
+            cbMaTP.DataSource = data;
+
+            DataTable bantp = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqlbantp.Text);
+            cbmaspbantp.DisplayMember = "MA_CONG_DOAN";
+            cbmaspbantp.DataSource = bantp;
+        }
+
+        void getmacongdoantheomsqlvatencd()
+        {
+            DataTable data = Import_Manager.Instance.getcongdoantheomsqlvatencd(tbMSQLTP.Text, "THANH PHAM");
+            cbMaTP.DisplayMember = "MA_CONG_DOAN";
+            cbMaTP.DataSource = data;
+
+            DataTable bantp = Import_Manager.Instance.getcongdoantheomsqlvatencd(tbmsqlbantp.Text, congdoan);
+            cbmaspbantp.DisplayMember = "MA_CONG_DOAN";
+            cbmaspbantp.DataSource = bantp;
+        }
+        //getcongdoantheomsqlvatencd
         void getsanphamtheomsql()
         {
             DataTable data = Import_Manager.Instance.getmasptheomsql(tbMSQLTP.Text);
@@ -86,6 +165,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable bantp = Import_Manager.Instance.getmasptheomsql(tbmsqlbantp.Text);
             cbmaspbantp.DisplayMember = "MA_SP";
             cbmaspbantp.DataSource = bantp;
+        }
+        int checkmanl(string manl)
+        {
+            DataTable data = Import_Manager.Instance.checkmanl(manl);
+            if (data.Rows.Count > 0)
+                return Int32.Parse(data.Rows[0][0].ToString());
+            else
+                return 0;
+        }
+        int checkmasp(string masp)
+        {
+            DataTable data = Import_Manager.Instance.checkmasp(masp);
+            if (data.Rows.Count > 0)
+                return Int32.Parse(data.Rows[0][0].ToString());
+            else
+                return 0;
         }
         void enablecontrol(int action, Panel pan, Panel panentry)
         {
@@ -138,13 +233,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (dtgKKTP.CurrentRow != null)
             {
                 tbMSQLTP.Text = dtgKKTP.CurrentRow.Cells[0].Value.ToString();
-                cbMaTP.Text = dtgKKTP.CurrentRow.Cells[1].Value.ToString();
+                cbMaTP.Text = dtgKKTP.CurrentRow.Cells[2].Value.ToString();
                 tbsolotTP.Text = dtgKKTP.CurrentRow.Cells[4].Value.ToString();
                 tbsothungTP.Text = dtgKKTP.CurrentRow.Cells[5].Value.ToString();
                 dtpGiacongTP.Value = DateTime.Parse(dtgKKTP.CurrentRow.Cells[6].Value.ToString());
                 numTonTP.Text = dtgKKTP.CurrentRow.Cells[7].Value.ToString();
                 dtpKiemTP.Value = DateTime.Parse(dtgKKTP.CurrentRow.Cells[8].Value.ToString());
-                tbnguoikiemTP.Text = dtgKKTP.CurrentRow.Cells[9].Value.ToString();
+                cbnguoikiemtp.Text = dtgKKTP.CurrentRow.Cells[9].Value.ToString();
                 tbghichuTP.Text = dtgKKTP.CurrentRow.Cells[10].Value.ToString();
 
             }
@@ -170,9 +265,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             int id = 0;
             if (actionKKTP != 1) id = (int)dtgKKTP.CurrentRow.Cells[11].Value;
             try
-            {
-
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, id, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, float.Parse(numTonTP.Value.ToString()), dtpKiemTP.Value, tbnguoikiemTP.Text, tbghichuTP.Text, "THANH PHAM");
+            {               
+                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, id, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, float.Parse(numTonTP.Value.ToString()), dtpKiemTP.Value, cbnguoikiemtp.Text, tbghichuTP.Text, "THANH PHAM");
                 getthanhpham();
                 dtgKKTP.CurrentCell = dtgKKTP.Rows[currow].Cells[0];
                 actionKKTP = 0;
@@ -190,7 +284,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, (int)dtgKKTP.CurrentRow.Cells[11].Value, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, 0, dtpKiemTP.Value, tbnguoikiemTP.Text, tbghichuTP.Text,"");
+                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, (int)dtgKKTP.CurrentRow.Cells[11].Value, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, 0, dtpKiemTP.Value, "", tbghichuTP.Text,"");
                 actionKKTP = 0;
                 enablecontrol(actionKKTP, panTP, panelTP);
                 getthanhpham();
@@ -245,7 +339,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 tbcuonme.Text = dtgNL.CurrentRow.Cells[5].Value.ToString();
                 numtonNL.Text = dtgNL.CurrentRow.Cells[6].Value.ToString();
                 dtpngaykiemNL.Value = DateTime.Parse(dtgNL.CurrentRow.Cells[7].Value.ToString());
-                tbnguoikiemNL.Text = dtgNL.CurrentRow.Cells[8].Value.ToString();
+                cbnguoikiemnl.Text = dtgNL.CurrentRow.Cells[8].Value.ToString();
                 tbghichuNL.Text = dtgNL.CurrentRow.Cells[9].Value.ToString();
             }
             enablecontrol(actionKKNL, panNL, panelNL);
@@ -253,17 +347,25 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             int currow = current_row(actionKKNL, dtgNL);
             int id = 0;
             if (actionKKNL != 1) id = (int)dtgNL.CurrentRow.Cells[0].Value;
             try
             {
-
-                int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, id, cbMaNL.Text, tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, tbnguoikiemNL.Text, tbghichuNL.Text);
-                getkiemkhonl();
-                dtgNL.CurrentCell = dtgNL.Rows[currow].Cells[0];
-                actionKKNL = 0;
-                enablecontrol(actionKKNL, panNL, panelNL);
+                int checkmnl = checkmanl(cbMaNL.Text);
+                if (checkmnl > 0)
+                {
+                    int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, id, cbMaNL.Text, tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, cbnguoikiemnl.Text, tbghichuNL.Text);
+                    getkiemkhonl();
+                    dtgNL.CurrentCell = dtgNL.Rows[currow].Cells[0];
+                    actionKKNL = 0;
+                    enablecontrol(actionKKNL, panNL, panelNL);
+                }
+                else
+                {
+                    MessageBox.Show("Please check Ma NL");
+                }
             }
             catch (Exception ex)
             {
@@ -277,7 +379,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, (int)dtgNL.CurrentRow.Cells[0].Value, cbMaNL.Text, tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, tbnguoikiemNL.Text, tbghichuNL.Text);
+                int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, (int)dtgNL.CurrentRow.Cells[0].Value, cbMaNL.Text, tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, "", tbghichuNL.Text);
                 actionKKNL = 0;
                 enablecontrol(actionKKNL, panNL, panelNL);
                 getkiemkhonl();
@@ -290,7 +392,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbMSQLTP_TextChanged(object sender, EventArgs e)
         {
-            getsanphamtheomsql();
+            getmacongdoantheomsqlvatencd();
         }
 
         private void btnNewDM_Click(object sender, EventArgs e)
@@ -306,13 +408,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (dtgbanTP.CurrentRow != null)
             {
                 tbmsqlbantp.Text = dtgbanTP.CurrentRow.Cells[0].Value.ToString();
-                cbmaspbantp.Text = dtgbanTP.CurrentRow.Cells[1].Value.ToString();
+                cbmaspbantp.Text = dtgbanTP.CurrentRow.Cells[2].Value.ToString();
                 tbsolotbantp.Text = dtgbanTP.CurrentRow.Cells[4].Value.ToString();
                 tbsothungbantp.Text = dtgbanTP.CurrentRow.Cells[5].Value.ToString();
                 dtpngaygiacongbantp.Value = DateTime.Parse(dtgbanTP.CurrentRow.Cells[6].Value.ToString());
                 numtonbantp.Text = dtgbanTP.CurrentRow.Cells[7].Value.ToString();
                 dtpngaykiembantp.Value = DateTime.Parse(dtgbanTP.CurrentRow.Cells[8].Value.ToString());
-                tbngkiembantp.Text = dtgbanTP.CurrentRow.Cells[9].Value.ToString();
+                cbnguoikiembantp.Text = dtgbanTP.CurrentRow.Cells[9].Value.ToString();
                 tbghichubantp.Text = dtgbanTP.CurrentRow.Cells[10].Value.ToString();
             }
             enablecontrol(actionKKBanTP, panbanTP, panelBanTP);
@@ -334,6 +436,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 MessageBox.Show(ex.Message);
             }
         }
+        void loadnhanvien()
+        {
+            DataTable data = Import_Manager.Instance.LoadNhanVien();
+            cbnguoikiembantp.DisplayMember = "NV";
+            //cbGiaCong.ValueMember = "ID";
+            cbnguoikiembantp.DataSource = data;
+
+            cbnguoikiemtp.DisplayMember = "NV";
+            cbnguoikiemtp.DataSource = data;
+
+            cbnguoikiemnl.DisplayMember = "NV";
+            cbnguoikiemnl.DataSource = data;
+        }
 
         private void btnSaveDM_Click(object sender, EventArgs e)
         {
@@ -342,7 +457,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;
             try
             {
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, tbngkiembantp.Text, tbghichubantp.Text, congdoan);
+                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, congdoan);
                 getbanthanhpham();
                 dtgbanTP.CurrentCell = dtgbanTP.Rows[currow].Cells[0];
                 actionKKBanTP = 0;
@@ -372,7 +487,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbmsqlbantp_TextChanged(object sender, EventArgs e)
         {
-            getsanphamtheomsql();
+            getmacongdoantheomsqlvatencd();
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgNL);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgKKTP);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgbanTP);
         }
     }
 }

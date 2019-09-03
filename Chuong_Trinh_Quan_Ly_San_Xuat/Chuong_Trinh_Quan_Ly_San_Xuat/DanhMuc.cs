@@ -592,7 +592,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             actionSP = 1;
             enablecontrolSP();
         }
-
+        int checkmanl(string manl)
+        {
+            DataTable data = Import_Manager.Instance.checkmanl(manl);
+            if (data.Rows.Count > 0)
+                return Int32.Parse(data.Rows[0][0].ToString());
+            else
+                return 0;
+        }
+        int checkmasp(string masp)
+        {
+            DataTable data = Import_Manager.Instance.checkmasp(masp);
+            if (data.Rows.Count > 0)
+                return Int32.Parse(data.Rows[0][0].ToString());
+            else
+                return 0;
+        }
         private void btnEditSP_Click(object sender, EventArgs e)
         {
 
@@ -621,11 +636,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             int currow = current_row(actionSP, dtgSP); ;
             try
             {
-                int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value, numtonantoanSP.Value);
-                GetSanPham();
-                dtgSP.CurrentCell = dtgSP.Rows[currow].Cells[0];
-                actionSP = 0;
-                enablecontrolSP();
+                int check_manl = checkmanl(cbTenNL.Text);
+                if (check_manl > 0)
+                {
+                    int results = Import_Manager.Instance.UpdateSP(actionSP, (int)dtgSP.CurrentRow.Cells[0].Value, tbMSQL.Text, tbMaSP.Text, tbTenSP.Text, cbTenNL.Text, numSP.Value, numtonantoanSP.Value);
+                    GetSanPham();
+                    dtgSP.CurrentCell = dtgSP.Rows[currow].Cells[0];
+                    actionSP = 0;
+                    enablecontrolSP();
+                }
+                else
+                    MessageBox.Show("Please check Ten NL");
             }
             catch (Exception ex)
             {

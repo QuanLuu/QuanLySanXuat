@@ -608,7 +608,7 @@
             this.panel4.Controls.Add(this.btnEditUser);
             this.panel4.Controls.Add(this.btnNewUser);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 491);
+            this.panel4.Location = new System.Drawing.Point(0, 442);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(853, 28);
             this.panel4.TabIndex = 14;
@@ -684,24 +684,25 @@
             this.panelUser.Controls.Add(this.label2);
             this.panelUser.Controls.Add(this.label1);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUser.Location = new System.Drawing.Point(0, 519);
+            this.panelUser.Location = new System.Drawing.Point(0, 470);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(853, 65);
+            this.panelUser.Size = new System.Drawing.Size(853, 114);
             this.panelUser.TabIndex = 1;
             this.panelUser.Visible = false;
             // 
             // cbbophan
             // 
+            this.cbbophan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbophan.FormattingEnabled = true;
-            this.cbbophan.Location = new System.Drawing.Point(460, 7);
+            this.cbbophan.Location = new System.Drawing.Point(59, 85);
             this.cbbophan.Name = "cbbophan";
-            this.cbbophan.Size = new System.Drawing.Size(191, 21);
-            this.cbbophan.TabIndex = 12;
+            this.cbbophan.Size = new System.Drawing.Size(159, 21);
+            this.cbbophan.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 10);
+            this.label5.Location = new System.Drawing.Point(4, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 11;
@@ -710,7 +711,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(211, 37);
+            this.label3.Location = new System.Drawing.Point(282, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 9;
@@ -721,47 +722,50 @@
             this.chListCapquyen.CheckOnClick = true;
             this.chListCapquyen.FormattingEnabled = true;
             this.chListCapquyen.Items.AddRange(new object[] {
+            "Full",
             "Danh Mục",
             "Nhập - Xuất",
             "Chỉ Thị SX",
             "Nhân Sự",
             "Báo Cáo",
-            "PO"});
-            this.chListCapquyen.Location = new System.Drawing.Point(275, 26);
+            "PO",
+            "Kiểm Kê"});
+            this.chListCapquyen.Location = new System.Drawing.Point(285, 24);
             this.chListCapquyen.MultiColumn = true;
             this.chListCapquyen.Name = "chListCapquyen";
-            this.chListCapquyen.Size = new System.Drawing.Size(462, 34);
-            this.chListCapquyen.TabIndex = 8;
+            this.chListCapquyen.Size = new System.Drawing.Size(462, 79);
+            this.chListCapquyen.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(211, 10);
+            this.label4.Location = new System.Drawing.Point(5, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ca SX";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbcaSX
             // 
-            this.tbcaSX.Location = new System.Drawing.Point(275, 6);
+            this.tbcaSX.Location = new System.Drawing.Point(59, 59);
             this.tbcaSX.Name = "tbcaSX";
-            this.tbcaSX.Size = new System.Drawing.Size(100, 20);
-            this.tbcaSX.TabIndex = 5;
+            this.tbcaSX.Size = new System.Drawing.Size(128, 20);
+            this.tbcaSX.TabIndex = 1;
             // 
             // tbmatkhau
             // 
             this.tbmatkhau.Location = new System.Drawing.Point(59, 33);
             this.tbmatkhau.Name = "tbmatkhau";
-            this.tbmatkhau.Size = new System.Drawing.Size(100, 20);
-            this.tbmatkhau.TabIndex = 4;
+            this.tbmatkhau.Size = new System.Drawing.Size(128, 20);
+            this.tbmatkhau.TabIndex = 1;
             // 
             // tbTenUser
             // 
             this.tbTenUser.Location = new System.Drawing.Point(59, 6);
             this.tbTenUser.Name = "tbTenUser";
-            this.tbTenUser.Size = new System.Drawing.Size(100, 20);
-            this.tbTenUser.TabIndex = 3;
+            this.tbTenUser.Size = new System.Drawing.Size(128, 20);
+            this.tbTenUser.TabIndex = 1;
             // 
             // label2
             // 
@@ -789,6 +793,7 @@
             this.dtgUsers.Location = new System.Drawing.Point(0, 0);
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.RowHeadersVisible = false;
+            this.dtgUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsers.Size = new System.Drawing.Size(853, 584);
             this.dtgUsers.TabIndex = 0;
             // 

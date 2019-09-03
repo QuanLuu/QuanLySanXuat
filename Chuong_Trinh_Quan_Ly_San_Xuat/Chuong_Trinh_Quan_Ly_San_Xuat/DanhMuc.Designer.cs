@@ -114,6 +114,8 @@
             this.btnEditSP = new System.Windows.Forms.Button();
             this.btnNewSP = new System.Windows.Forms.Button();
             this.panelSP = new System.Windows.Forms.Panel();
+            this.numtonantoanSP = new System.Windows.Forms.NumericUpDown();
+            this.label63 = new System.Windows.Forms.Label();
             this.tbMSQL = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cbTenNL = new System.Windows.Forms.ComboBox();
@@ -163,6 +165,8 @@
             this.BtnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.panelNL = new System.Windows.Forms.Panel();
+            this.numtonantoanNL = new System.Windows.Forms.NumericUpDown();
+            this.label62 = new System.Windows.Forms.Label();
             this.numNL = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.tbKichCo = new System.Windows.Forms.TextBox();
@@ -283,10 +287,6 @@
             this.cbTenNLNVLNCC = new System.Windows.Forms.ComboBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.numtonantoanNL = new System.Windows.Forms.NumericUpDown();
-            this.label62 = new System.Windows.Forms.Label();
-            this.numtonantoanSP = new System.Windows.Forms.NumericUpDown();
-            this.label63 = new System.Windows.Forms.Label();
             this.tabPageSPCD.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSPCD)).BeginInit();
@@ -312,6 +312,7 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelSP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSP)).BeginInit();
             this.tabPKH.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -324,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgNL)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelNL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanNL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNL)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabControlDanhMuc.SuspendLayout();
@@ -357,8 +359,6 @@
             this.panel29.SuspendLayout();
             this.panelnvlncc.SuspendLayout();
             this.panelNVLNCCEntry.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanNL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanSP)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageSPCD
@@ -370,7 +370,7 @@
             this.tabPageSPCD.Location = new System.Drawing.Point(4, 22);
             this.tabPageSPCD.Name = "tabPageSPCD";
             this.tabPageSPCD.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSPCD.Size = new System.Drawing.Size(938, 490);
+            this.tabPageSPCD.Size = new System.Drawing.Size(1004, 490);
             this.tabPageSPCD.TabIndex = 6;
             this.tabPageSPCD.Text = "Sản Phẩm - Công Đoạn";
             this.tabPageSPCD.UseVisualStyleBackColor = true;
@@ -384,13 +384,12 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 37);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(932, 377);
+            this.panel6.Size = new System.Drawing.Size(998, 377);
             this.panel6.TabIndex = 8;
             // 
             // dtgSPCD
             // 
             this.dtgSPCD.AllowUserToResizeRows = false;
-            this.dtgSPCD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgSPCD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSPCD.Location = new System.Drawing.Point(112, 45);
             this.dtgSPCD.Name = "dtgSPCD";
@@ -412,7 +411,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(932, 34);
+            this.panel14.Size = new System.Drawing.Size(998, 34);
             this.panel14.TabIndex = 11;
             // 
             // tbMaSPSPCDFilter
@@ -463,7 +462,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel18.Location = new System.Drawing.Point(3, 414);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(932, 39);
+            this.panel18.Size = new System.Drawing.Size(998, 39);
             this.panel18.TabIndex = 9;
             // 
             // button5
@@ -471,7 +470,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button5.Dock = System.Windows.Forms.DockStyle.Right;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(852, 0);
+            this.button5.Location = new System.Drawing.Point(918, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(78, 37);
             this.button5.TabIndex = 16;
@@ -560,7 +559,7 @@
             this.panelSPCD.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelSPCD.Location = new System.Drawing.Point(3, 453);
             this.panelSPCD.Name = "panelSPCD";
-            this.panelSPCD.Size = new System.Drawing.Size(932, 34);
+            this.panelSPCD.Size = new System.Drawing.Size(998, 34);
             this.panelSPCD.TabIndex = 10;
             // 
             // numCDso
@@ -656,7 +655,7 @@
             this.tabMayMoc.Location = new System.Drawing.Point(4, 22);
             this.tabMayMoc.Name = "tabMayMoc";
             this.tabMayMoc.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMayMoc.Size = new System.Drawing.Size(938, 490);
+            this.tabMayMoc.Size = new System.Drawing.Size(1004, 490);
             this.tabMayMoc.TabIndex = 5;
             this.tabMayMoc.Text = "Máy Móc";
             this.tabMayMoc.UseVisualStyleBackColor = true;
@@ -670,13 +669,12 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(3, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(932, 410);
+            this.panel17.Size = new System.Drawing.Size(998, 410);
             this.panel17.TabIndex = 8;
             // 
             // dtgMayMoc
             // 
             this.dtgMayMoc.AllowUserToResizeRows = false;
-            this.dtgMayMoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgMayMoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMayMoc.Location = new System.Drawing.Point(112, 45);
             this.dtgMayMoc.Name = "dtgMayMoc";
@@ -700,7 +698,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Location = new System.Drawing.Point(3, 413);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(932, 39);
+            this.panel19.Size = new System.Drawing.Size(998, 39);
             this.panel19.TabIndex = 9;
             // 
             // button4
@@ -708,7 +706,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(852, 0);
+            this.button4.Location = new System.Drawing.Point(918, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(78, 37);
             this.button4.TabIndex = 16;
@@ -793,7 +791,7 @@
             this.panelMM.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMM.Location = new System.Drawing.Point(3, 452);
             this.panelMM.Name = "panelMM";
-            this.panelMM.Size = new System.Drawing.Size(932, 35);
+            this.panelMM.Size = new System.Drawing.Size(998, 35);
             this.panelMM.TabIndex = 10;
             // 
             // tbMamay
@@ -852,7 +850,7 @@
             this.tabPDM.Controls.Add(this.panelDM);
             this.tabPDM.Location = new System.Drawing.Point(4, 22);
             this.tabPDM.Name = "tabPDM";
-            this.tabPDM.Size = new System.Drawing.Size(938, 490);
+            this.tabPDM.Size = new System.Drawing.Size(1004, 490);
             this.tabPDM.TabIndex = 3;
             this.tabPDM.Text = "Định Mức";
             this.tabPDM.UseVisualStyleBackColor = true;
@@ -866,13 +864,12 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 34);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(938, 380);
+            this.panel16.Size = new System.Drawing.Size(1004, 380);
             this.panel16.TabIndex = 4;
             // 
             // dtgDM
             // 
             this.dtgDM.AllowUserToResizeRows = false;
-            this.dtgDM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgDM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDM.Location = new System.Drawing.Point(112, 45);
             this.dtgDM.Name = "dtgDM";
@@ -892,7 +889,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(938, 34);
+            this.panel13.Size = new System.Drawing.Size(1004, 34);
             this.panel13.TabIndex = 7;
             // 
             // tbfilterMaSPDM
@@ -926,7 +923,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel15.Location = new System.Drawing.Point(0, 414);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(938, 39);
+            this.panel15.Size = new System.Drawing.Size(1004, 39);
             this.panel15.TabIndex = 5;
             // 
             // button3
@@ -934,7 +931,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(858, 0);
+            this.button3.Location = new System.Drawing.Point(924, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 37);
             this.button3.TabIndex = 16;
@@ -1021,7 +1018,7 @@
             this.panelDM.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDM.Location = new System.Drawing.Point(0, 453);
             this.panelDM.Name = "panelDM";
-            this.panelDM.Size = new System.Drawing.Size(938, 37);
+            this.panelDM.Size = new System.Drawing.Size(1004, 37);
             this.panelDM.TabIndex = 6;
             // 
             // tbMSQLDinhMuc
@@ -1346,6 +1343,28 @@
             this.panelSP.Size = new System.Drawing.Size(998, 31);
             this.panelSP.TabIndex = 6;
             // 
+            // numtonantoanSP
+            // 
+            this.numtonantoanSP.DecimalPlaces = 3;
+            this.numtonantoanSP.Location = new System.Drawing.Point(933, 5);
+            this.numtonantoanSP.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numtonantoanSP.Name = "numtonantoanSP";
+            this.numtonantoanSP.Size = new System.Drawing.Size(60, 20);
+            this.numtonantoanSP.TabIndex = 15;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(871, 8);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(65, 13);
+            this.label63.TabIndex = 14;
+            this.label63.Text = "Tồn an toàn";
+            // 
             // tbMSQL
             // 
             this.tbMSQL.Location = new System.Drawing.Point(37, 5);
@@ -1443,7 +1462,7 @@
             this.tabPKH.Controls.Add(this.panelKH);
             this.tabPKH.Location = new System.Drawing.Point(4, 22);
             this.tabPKH.Name = "tabPKH";
-            this.tabPKH.Size = new System.Drawing.Size(938, 490);
+            this.tabPKH.Size = new System.Drawing.Size(1004, 490);
             this.tabPKH.TabIndex = 2;
             this.tabPKH.Text = "Khách Hàng";
             this.tabPKH.UseVisualStyleBackColor = true;
@@ -1455,13 +1474,12 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 34);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(938, 338);
+            this.panel12.Size = new System.Drawing.Size(1004, 338);
             this.panel12.TabIndex = 8;
             // 
             // dtgKH
             // 
             this.dtgKH.AllowUserToResizeRows = false;
-            this.dtgKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgKH.Location = new System.Drawing.Point(112, 20);
             this.dtgKH.Name = "dtgKH";
@@ -1481,7 +1499,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(938, 34);
+            this.panel9.Size = new System.Drawing.Size(1004, 34);
             this.panel9.TabIndex = 11;
             // 
             // tbFilterKH
@@ -1514,7 +1532,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 372);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(938, 39);
+            this.panel11.Size = new System.Drawing.Size(1004, 39);
             this.panel11.TabIndex = 9;
             // 
             // button1
@@ -1522,7 +1540,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(858, 0);
+            this.button1.Location = new System.Drawing.Point(924, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 37);
             this.button1.TabIndex = 16;
@@ -1615,7 +1633,7 @@
             this.panelKH.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelKH.Location = new System.Drawing.Point(0, 411);
             this.panelKH.Name = "panelKH";
-            this.panelKH.Size = new System.Drawing.Size(938, 79);
+            this.panelKH.Size = new System.Drawing.Size(1004, 79);
             this.panelKH.TabIndex = 10;
             // 
             // label16
@@ -1740,7 +1758,7 @@
             this.tabPNL.Location = new System.Drawing.Point(4, 22);
             this.tabPNL.Name = "tabPNL";
             this.tabPNL.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPNL.Size = new System.Drawing.Size(938, 490);
+            this.tabPNL.Size = new System.Drawing.Size(1004, 490);
             this.tabPNL.TabIndex = 0;
             this.tabPNL.Text = "Nguyên Liệu";
             this.tabPNL.UseVisualStyleBackColor = true;
@@ -1754,13 +1772,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(932, 381);
+            this.panel1.Size = new System.Drawing.Size(998, 381);
             this.panel1.TabIndex = 1;
             // 
             // dtgNL
             // 
             this.dtgNL.AllowUserToResizeRows = false;
-            this.dtgNL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgNL.Location = new System.Drawing.Point(111, 87);
             this.dtgNL.Name = "dtgNL";
@@ -1784,7 +1801,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 418);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 39);
+            this.panel2.Size = new System.Drawing.Size(998, 39);
             this.panel2.TabIndex = 2;
             // 
             // btnXuatExcel
@@ -1792,7 +1809,7 @@
             this.btnXuatExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnXuatExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.Location = new System.Drawing.Point(852, 0);
+            this.btnXuatExcel.Location = new System.Drawing.Point(918, 0);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(78, 37);
             this.btnXuatExcel.TabIndex = 16;
@@ -1879,8 +1896,30 @@
             this.panelNL.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelNL.Location = new System.Drawing.Point(3, 457);
             this.panelNL.Name = "panelNL";
-            this.panelNL.Size = new System.Drawing.Size(932, 30);
+            this.panelNL.Size = new System.Drawing.Size(998, 30);
             this.panelNL.TabIndex = 3;
+            // 
+            // numtonantoanNL
+            // 
+            this.numtonantoanNL.DecimalPlaces = 3;
+            this.numtonantoanNL.Location = new System.Drawing.Point(841, 4);
+            this.numtonantoanNL.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numtonantoanNL.Name = "numtonantoanNL";
+            this.numtonantoanNL.Size = new System.Drawing.Size(85, 20);
+            this.numtonantoanNL.TabIndex = 9;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(749, 8);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(86, 13);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Tồn kho an toàn";
             // 
             // numNL
             // 
@@ -1946,7 +1985,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(932, 34);
+            this.panel4.Size = new System.Drawing.Size(998, 34);
             this.panel4.TabIndex = 0;
             // 
             // tbFilterNL
@@ -1996,7 +2035,7 @@
             this.tabPageDonGia.Location = new System.Drawing.Point(4, 22);
             this.tabPageDonGia.Name = "tabPageDonGia";
             this.tabPageDonGia.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDonGia.Size = new System.Drawing.Size(938, 490);
+            this.tabPageDonGia.Size = new System.Drawing.Size(1004, 490);
             this.tabPageDonGia.TabIndex = 7;
             this.tabPageDonGia.Text = "Đơn giá";
             this.tabPageDonGia.UseVisualStyleBackColor = true;
@@ -2010,13 +2049,12 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 34);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(932, 382);
+            this.panel3.Size = new System.Drawing.Size(998, 382);
             this.panel3.TabIndex = 8;
             // 
             // dtgDongia
             // 
             this.dtgDongia.AllowUserToResizeRows = false;
-            this.dtgDongia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgDongia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDongia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDongia.Location = new System.Drawing.Point(0, 0);
@@ -2024,7 +2062,7 @@
             this.dtgDongia.ReadOnly = true;
             this.dtgDongia.RowHeadersVisible = false;
             this.dtgDongia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDongia.Size = new System.Drawing.Size(930, 380);
+            this.dtgDongia.Size = new System.Drawing.Size(996, 380);
             this.dtgDongia.TabIndex = 1;
             // 
             // panel10
@@ -2039,7 +2077,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(932, 31);
+            this.panel10.Size = new System.Drawing.Size(998, 31);
             this.panel10.TabIndex = 11;
             // 
             // tbMSQLDonGiaFilter
@@ -2090,7 +2128,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel20.Location = new System.Drawing.Point(3, 416);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(932, 39);
+            this.panel20.Size = new System.Drawing.Size(998, 39);
             this.panel20.TabIndex = 9;
             // 
             // button6
@@ -2098,7 +2136,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(852, 0);
+            this.button6.Location = new System.Drawing.Point(918, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(78, 37);
             this.button6.TabIndex = 16;
@@ -2187,7 +2225,7 @@
             this.panelDongia.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDongia.Location = new System.Drawing.Point(3, 455);
             this.panelDongia.Name = "panelDongia";
-            this.panelDongia.Size = new System.Drawing.Size(932, 32);
+            this.panelDongia.Size = new System.Drawing.Size(998, 32);
             this.panelDongia.TabIndex = 10;
             this.panelDongia.Visible = false;
             // 
@@ -2293,7 +2331,7 @@
             this.tabPageBox.Location = new System.Drawing.Point(4, 22);
             this.tabPageBox.Name = "tabPageBox";
             this.tabPageBox.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBox.Size = new System.Drawing.Size(938, 490);
+            this.tabPageBox.Size = new System.Drawing.Size(1004, 490);
             this.tabPageBox.TabIndex = 8;
             this.tabPageBox.Text = "Box";
             this.tabPageBox.UseVisualStyleBackColor = true;
@@ -2307,13 +2345,12 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(3, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(932, 410);
+            this.panel21.Size = new System.Drawing.Size(998, 410);
             this.panel21.TabIndex = 11;
             // 
             // dtgBox
             // 
             this.dtgBox.AllowUserToResizeRows = false;
-            this.dtgBox.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgBox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgBox.Location = new System.Drawing.Point(0, 0);
@@ -2321,7 +2358,7 @@
             this.dtgBox.ReadOnly = true;
             this.dtgBox.RowHeadersVisible = false;
             this.dtgBox.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgBox.Size = new System.Drawing.Size(930, 408);
+            this.dtgBox.Size = new System.Drawing.Size(996, 408);
             this.dtgBox.TabIndex = 1;
             // 
             // panel22
@@ -2338,7 +2375,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel22.Location = new System.Drawing.Point(3, 413);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(932, 39);
+            this.panel22.Size = new System.Drawing.Size(998, 39);
             this.panel22.TabIndex = 12;
             // 
             // button7
@@ -2346,7 +2383,7 @@
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(852, 0);
+            this.button7.Location = new System.Drawing.Point(918, 0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(78, 37);
             this.button7.TabIndex = 16;
@@ -2431,7 +2468,7 @@
             this.panelBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBox.Location = new System.Drawing.Point(3, 452);
             this.panelBox.Name = "panelBox";
-            this.panelBox.Size = new System.Drawing.Size(932, 35);
+            this.panelBox.Size = new System.Drawing.Size(998, 35);
             this.panelBox.TabIndex = 13;
             this.panelBox.Visible = false;
             // 
@@ -2491,7 +2528,7 @@
             this.tabPageSPBox.Controls.Add(this.panelBoxSP);
             this.tabPageSPBox.Location = new System.Drawing.Point(4, 22);
             this.tabPageSPBox.Name = "tabPageSPBox";
-            this.tabPageSPBox.Size = new System.Drawing.Size(938, 490);
+            this.tabPageSPBox.Size = new System.Drawing.Size(1004, 490);
             this.tabPageSPBox.TabIndex = 9;
             this.tabPageSPBox.Text = "Sản Phẩm _ Box";
             this.tabPageSPBox.UseVisualStyleBackColor = true;
@@ -2505,13 +2542,12 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(0, 34);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(938, 385);
+            this.panel24.Size = new System.Drawing.Size(1004, 385);
             this.panel24.TabIndex = 8;
             // 
             // dtgBoxSP
             // 
             this.dtgBoxSP.AllowUserToResizeRows = false;
-            this.dtgBoxSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgBoxSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgBoxSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgBoxSP.Location = new System.Drawing.Point(0, 0);
@@ -2519,7 +2555,7 @@
             this.dtgBoxSP.ReadOnly = true;
             this.dtgBoxSP.RowHeadersVisible = false;
             this.dtgBoxSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgBoxSP.Size = new System.Drawing.Size(936, 383);
+            this.dtgBoxSP.Size = new System.Drawing.Size(1002, 383);
             this.dtgBoxSP.TabIndex = 1;
             // 
             // panel25
@@ -2534,7 +2570,7 @@
             this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(938, 34);
+            this.panel25.Size = new System.Drawing.Size(1004, 34);
             this.panel25.TabIndex = 11;
             // 
             // tbMaSPBoxFilter
@@ -2585,7 +2621,7 @@
             this.panel26.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel26.Location = new System.Drawing.Point(0, 419);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(938, 39);
+            this.panel26.Size = new System.Drawing.Size(1004, 39);
             this.panel26.TabIndex = 9;
             // 
             // button8
@@ -2593,7 +2629,7 @@
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button8.Dock = System.Windows.Forms.DockStyle.Right;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(858, 0);
+            this.button8.Location = new System.Drawing.Point(924, 0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(78, 37);
             this.button8.TabIndex = 16;
@@ -2684,7 +2720,7 @@
             this.panelBoxSP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBoxSP.Location = new System.Drawing.Point(0, 458);
             this.panelBoxSP.Name = "panelBoxSP";
-            this.panelBoxSP.Size = new System.Drawing.Size(938, 32);
+            this.panelBoxSP.Size = new System.Drawing.Size(1004, 32);
             this.panelBoxSP.TabIndex = 10;
             this.panelBoxSP.Visible = false;
             // 
@@ -2816,7 +2852,7 @@
             this.tabPageKHSP.Location = new System.Drawing.Point(4, 22);
             this.tabPageKHSP.Name = "tabPageKHSP";
             this.tabPageKHSP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageKHSP.Size = new System.Drawing.Size(938, 490);
+            this.tabPageKHSP.Size = new System.Drawing.Size(1004, 490);
             this.tabPageKHSP.TabIndex = 10;
             this.tabPageKHSP.Text = "KH_SP";
             this.tabPageKHSP.UseVisualStyleBackColor = true;
@@ -2830,13 +2866,12 @@
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(3, 37);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(932, 379);
+            this.panel23.Size = new System.Drawing.Size(998, 379);
             this.panel23.TabIndex = 12;
             // 
             // dtgKHSP
             // 
             this.dtgKHSP.AllowUserToResizeRows = false;
-            this.dtgKHSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgKHSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgKHSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgKHSP.Location = new System.Drawing.Point(0, 0);
@@ -2844,7 +2879,7 @@
             this.dtgKHSP.ReadOnly = true;
             this.dtgKHSP.RowHeadersVisible = false;
             this.dtgKHSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgKHSP.Size = new System.Drawing.Size(930, 377);
+            this.dtgKHSP.Size = new System.Drawing.Size(996, 377);
             this.dtgKHSP.TabIndex = 1;
             // 
             // panel27
@@ -2857,7 +2892,7 @@
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel27.Location = new System.Drawing.Point(3, 3);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(932, 34);
+            this.panel27.Size = new System.Drawing.Size(998, 34);
             this.panel27.TabIndex = 15;
             // 
             // tbMaKHKHSPFilter
@@ -2891,7 +2926,7 @@
             this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel28.Location = new System.Drawing.Point(3, 416);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(932, 39);
+            this.panel28.Size = new System.Drawing.Size(998, 39);
             this.panel28.TabIndex = 13;
             // 
             // button9
@@ -2899,7 +2934,7 @@
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button9.Dock = System.Windows.Forms.DockStyle.Right;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(852, 0);
+            this.button9.Location = new System.Drawing.Point(918, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(78, 37);
             this.button9.TabIndex = 16;
@@ -2984,7 +3019,7 @@
             this.panelKHSP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelKHSP.Location = new System.Drawing.Point(3, 455);
             this.panelKHSP.Name = "panelKHSP";
-            this.panelKHSP.Size = new System.Drawing.Size(932, 32);
+            this.panelKHSP.Size = new System.Drawing.Size(998, 32);
             this.panelKHSP.TabIndex = 14;
             this.panelKHSP.Visible = false;
             // 
@@ -3052,7 +3087,7 @@
             this.tabPageNVLNCC.Location = new System.Drawing.Point(4, 22);
             this.tabPageNVLNCC.Name = "tabPageNVLNCC";
             this.tabPageNVLNCC.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNVLNCC.Size = new System.Drawing.Size(938, 490);
+            this.tabPageNVLNCC.Size = new System.Drawing.Size(1004, 490);
             this.tabPageNVLNCC.TabIndex = 11;
             this.tabPageNVLNCC.Text = "NVL_NCC";
             this.tabPageNVLNCC.UseVisualStyleBackColor = true;
@@ -3060,7 +3095,6 @@
             // dtgNVLNCC
             // 
             this.dtgNVLNCC.AllowUserToResizeRows = false;
-            this.dtgNVLNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgNVLNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgNVLNCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgNVLNCC.Location = new System.Drawing.Point(3, 36);
@@ -3068,7 +3102,7 @@
             this.dtgNVLNCC.ReadOnly = true;
             this.dtgNVLNCC.RowHeadersVisible = false;
             this.dtgNVLNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgNVLNCC.Size = new System.Drawing.Size(932, 380);
+            this.dtgNVLNCC.Size = new System.Drawing.Size(998, 380);
             this.dtgNVLNCC.TabIndex = 16;
             // 
             // panel29
@@ -3083,7 +3117,7 @@
             this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel29.Location = new System.Drawing.Point(3, 3);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(932, 33);
+            this.panel29.Size = new System.Drawing.Size(998, 33);
             this.panel29.TabIndex = 19;
             // 
             // tbNCCNVLNCC
@@ -3134,7 +3168,7 @@
             this.panelnvlncc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelnvlncc.Location = new System.Drawing.Point(3, 416);
             this.panelnvlncc.Name = "panelnvlncc";
-            this.panelnvlncc.Size = new System.Drawing.Size(932, 39);
+            this.panelnvlncc.Size = new System.Drawing.Size(998, 39);
             this.panelnvlncc.TabIndex = 17;
             // 
             // button10
@@ -3142,7 +3176,7 @@
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button10.Dock = System.Windows.Forms.DockStyle.Right;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(852, 0);
+            this.button10.Location = new System.Drawing.Point(918, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(78, 37);
             this.button10.TabIndex = 16;
@@ -3225,7 +3259,7 @@
             this.panelNVLNCCEntry.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelNVLNCCEntry.Location = new System.Drawing.Point(3, 455);
             this.panelNVLNCCEntry.Name = "panelNVLNCCEntry";
-            this.panelNVLNCCEntry.Size = new System.Drawing.Size(932, 32);
+            this.panelNVLNCCEntry.Size = new System.Drawing.Size(998, 32);
             this.panelNVLNCCEntry.TabIndex = 18;
             this.panelNVLNCCEntry.Visible = false;
             // 
@@ -3266,50 +3300,6 @@
             this.label59.Size = new System.Drawing.Size(47, 13);
             this.label59.TabIndex = 2;
             this.label59.Text = "Mã NCC";
-            // 
-            // numtonantoanNL
-            // 
-            this.numtonantoanNL.DecimalPlaces = 3;
-            this.numtonantoanNL.Location = new System.Drawing.Point(841, 4);
-            this.numtonantoanNL.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numtonantoanNL.Name = "numtonantoanNL";
-            this.numtonantoanNL.Size = new System.Drawing.Size(85, 20);
-            this.numtonantoanNL.TabIndex = 9;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(749, 8);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(86, 13);
-            this.label62.TabIndex = 8;
-            this.label62.Text = "Tồn kho an toàn";
-            // 
-            // numtonantoanSP
-            // 
-            this.numtonantoanSP.DecimalPlaces = 3;
-            this.numtonantoanSP.Location = new System.Drawing.Point(933, 5);
-            this.numtonantoanSP.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numtonantoanSP.Name = "numtonantoanSP";
-            this.numtonantoanSP.Size = new System.Drawing.Size(60, 20);
-            this.numtonantoanSP.TabIndex = 15;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(871, 8);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(65, 13);
-            this.label63.TabIndex = 14;
-            this.label63.Text = "Tồn an toàn";
             // 
             // FrmDanhMuc
             // 
@@ -3359,6 +3349,7 @@
             this.panel7.ResumeLayout(false);
             this.panelSP.ResumeLayout(false);
             this.panelSP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSP)).EndInit();
             this.tabPKH.ResumeLayout(false);
             this.tabPKH.PerformLayout();
@@ -3376,6 +3367,7 @@
             this.panel2.ResumeLayout(false);
             this.panelNL.ResumeLayout(false);
             this.panelNL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanNL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNL)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -3424,8 +3416,6 @@
             this.panelnvlncc.ResumeLayout(false);
             this.panelNVLNCCEntry.ResumeLayout(false);
             this.panelNVLNCCEntry.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanNL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numtonantoanSP)).EndInit();
             this.ResumeLayout(false);
 
         }
