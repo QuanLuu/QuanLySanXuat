@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFilterCTSX = new System.Windows.Forms.Panel();
             this.tbMSQLFilter = new System.Windows.Forms.TextBox();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
@@ -108,6 +108,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbMaCongDoan = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -115,7 +116,6 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.btnXuatExcel = new System.Windows.Forms.Button();
             this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
@@ -231,24 +231,24 @@
             // 
             this.dtgChiThiSX.AllowUserToResizeRows = false;
             this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgChiThiSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgChiThiSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgChiThiSX.ContextMenuStrip = this.contextmnuExporttoexcel;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgChiThiSX.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgChiThiSX.Location = new System.Drawing.Point(11, 6);
             this.dtgChiThiSX.Name = "dtgChiThiSX";
             this.dtgChiThiSX.ReadOnly = true;
@@ -693,7 +693,7 @@
             // 
             this.numtgSX.Location = new System.Drawing.Point(86, 26);
             this.numtgSX.Maximum = new decimal(new int[] {
-            720,
+            10000,
             0,
             0,
             0});
@@ -1025,6 +1025,19 @@
             this.panel4.Size = new System.Drawing.Size(891, 27);
             this.panel4.TabIndex = 3;
             // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnXuatExcel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.Location = new System.Drawing.Point(813, 0);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(78, 27);
+            this.btnXuatExcel.TabIndex = 15;
+            this.btnXuatExcel.Text = "Xuất Excel";
+            this.btnXuatExcel.UseVisualStyleBackColor = false;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
@@ -1100,19 +1113,6 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Chỉ Thị Sản Xuất";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnXuatExcel
-            // 
-            this.btnXuatExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnXuatExcel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.Location = new System.Drawing.Point(813, 0);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.Size = new System.Drawing.Size(78, 27);
-            this.btnXuatExcel.TabIndex = 15;
-            this.btnXuatExcel.Text = "Xuất Excel";
-            this.btnXuatExcel.UseVisualStyleBackColor = false;
-            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // FrmChiThiSX
             // 

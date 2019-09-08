@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
-            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panelPO = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,6 +73,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tbMSQLKHSX = new System.Windows.Forms.TextBox();
             this.panelInvoice = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cbKHinvoice = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dtpNgayInvoice = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
@@ -84,7 +85,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tbNamInvoice = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.tbKHInvoice = new System.Windows.Forms.TextBox();
             this.panelNXTNVL = new System.Windows.Forms.Panel();
             this.tbquery = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -94,7 +94,7 @@
             this.dtpfromnxtnvl = new System.Windows.Forms.DateTimePicker();
             this.btnNXTNVL = new System.Windows.Forms.Button();
             this.dtgexcel = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
+            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -102,18 +102,14 @@
             this.panelInvoice.SuspendLayout();
             this.panelNXTNVL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgexcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // QUAN_LY_SAN_XUATDataSet
-            // 
-            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
-            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer
             // 
-            reportDataSource2.Name = "IN_PO";
-            reportDataSource2.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "IN_PO";
+            reportDataSource1.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 393);
             this.reportViewer.Name = "reportViewer";
@@ -133,7 +129,7 @@
             this.panelPO.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPO.Location = new System.Drawing.Point(0, 35);
             this.panelPO.Name = "panelPO";
-            this.panelPO.Size = new System.Drawing.Size(757, 38);
+            this.panelPO.Size = new System.Drawing.Size(872, 38);
             this.panelPO.TabIndex = 2;
             // 
             // label2
@@ -213,15 +209,17 @@
             this.panelCTSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCTSX.Location = new System.Drawing.Point(0, 73);
             this.panelCTSX.Name = "panelCTSX";
-            this.panelCTSX.Size = new System.Drawing.Size(757, 32);
+            this.panelCTSX.Size = new System.Drawing.Size(872, 32);
             this.panelCTSX.TabIndex = 3;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(655, 10);
+            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(833, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.Size = new System.Drawing.Size(39, 13);
             this.label15.TabIndex = 18;
             this.label15.Text = "CTSX";
             // 
@@ -298,12 +296,14 @@
             this.tbMSQQLCTSX.Name = "tbMSQQLCTSX";
             this.tbMSQQLCTSX.Size = new System.Drawing.Size(66, 20);
             this.tbMSQQLCTSX.TabIndex = 9;
+            this.tbMSQQLCTSX.TextChanged += new System.EventHandler(this.tbMSQQLCTSX_TextChanged);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reportsToolStripMenuItem,
@@ -312,7 +312,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(757, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 35);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -390,7 +390,7 @@
             // 
             this.cậpNhậtDữLiệuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cậpNhậtDữLiệuToolStripMenuItem.Image")));
             this.cậpNhậtDữLiệuToolStripMenuItem.Name = "cậpNhậtDữLiệuToolStripMenuItem";
-            this.cậpNhậtDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(169, 25);
+            this.cậpNhậtDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(173, 25);
             this.cậpNhậtDữLiệuToolStripMenuItem.Text = "Cập Nhật Dữ Liệu";
             this.cậpNhậtDữLiệuToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtDữLiệuToolStripMenuItem_Click);
             // 
@@ -410,15 +410,17 @@
             this.panelKHSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelKHSX.Location = new System.Drawing.Point(0, 105);
             this.panelKHSX.Name = "panelKHSX";
-            this.panelKHSX.Size = new System.Drawing.Size(757, 32);
+            this.panelKHSX.Size = new System.Drawing.Size(872, 32);
             this.panelKHSX.TabIndex = 5;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(655, 8);
+            this.label16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(832, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 19;
             this.label16.Text = "KHSX";
             // 
@@ -495,10 +497,13 @@
             this.tbMSQLKHSX.Name = "tbMSQLKHSX";
             this.tbMSQLKHSX.Size = new System.Drawing.Size(66, 20);
             this.tbMSQLKHSX.TabIndex = 9;
+            this.tbMSQLKHSX.TextChanged += new System.EventHandler(this.tbMSQLKHSX_TextChanged);
             // 
             // panelInvoice
             // 
             this.panelInvoice.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelInvoice.Controls.Add(this.label20);
+            this.panelInvoice.Controls.Add(this.cbKHinvoice);
             this.panelInvoice.Controls.Add(this.label17);
             this.panelInvoice.Controls.Add(this.dtpNgayInvoice);
             this.panelInvoice.Controls.Add(this.label11);
@@ -509,12 +514,30 @@
             this.panelInvoice.Controls.Add(this.label13);
             this.panelInvoice.Controls.Add(this.tbNamInvoice);
             this.panelInvoice.Controls.Add(this.label14);
-            this.panelInvoice.Controls.Add(this.tbKHInvoice);
             this.panelInvoice.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInvoice.Location = new System.Drawing.Point(0, 137);
             this.panelInvoice.Name = "panelInvoice";
-            this.panelInvoice.Size = new System.Drawing.Size(757, 32);
+            this.panelInvoice.Size = new System.Drawing.Size(872, 32);
             this.panelInvoice.TabIndex = 6;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(823, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(49, 13);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Invoice";
+            // 
+            // cbKHinvoice
+            // 
+            this.cbKHinvoice.FormattingEnabled = true;
+            this.cbKHinvoice.Location = new System.Drawing.Point(38, 5);
+            this.cbKHinvoice.Name = "cbKHinvoice";
+            this.cbKHinvoice.Size = new System.Drawing.Size(100, 21);
+            this.cbKHinvoice.TabIndex = 20;
             // 
             // label17
             // 
@@ -578,7 +601,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(131, 9);
+            this.label13.Location = new System.Drawing.Point(148, 10);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 12;
@@ -586,7 +609,7 @@
             // 
             // tbNamInvoice
             // 
-            this.tbNamInvoice.Location = new System.Drawing.Point(160, 5);
+            this.tbNamInvoice.Location = new System.Drawing.Point(177, 6);
             this.tbNamInvoice.Name = "tbNamInvoice";
             this.tbNamInvoice.Size = new System.Drawing.Size(66, 20);
             this.tbNamInvoice.TabIndex = 11;
@@ -600,13 +623,6 @@
             this.label14.TabIndex = 10;
             this.label14.Text = "KH";
             // 
-            // tbKHInvoice
-            // 
-            this.tbKHInvoice.Location = new System.Drawing.Point(40, 6);
-            this.tbKHInvoice.Name = "tbKHInvoice";
-            this.tbKHInvoice.Size = new System.Drawing.Size(66, 20);
-            this.tbKHInvoice.TabIndex = 9;
-            // 
             // panelNXTNVL
             // 
             this.panelNXTNVL.Controls.Add(this.tbquery);
@@ -619,7 +635,7 @@
             this.panelNXTNVL.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNXTNVL.Location = new System.Drawing.Point(0, 169);
             this.panelNXTNVL.Name = "panelNXTNVL";
-            this.panelNXTNVL.Size = new System.Drawing.Size(757, 33);
+            this.panelNXTNVL.Size = new System.Drawing.Size(872, 33);
             this.panelNXTNVL.TabIndex = 7;
             // 
             // tbquery
@@ -692,15 +708,20 @@
             this.dtgexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtgexcel.Location = new System.Drawing.Point(0, 202);
             this.dtgexcel.Name = "dtgexcel";
-            this.dtgexcel.Size = new System.Drawing.Size(757, 165);
+            this.dtgexcel.Size = new System.Drawing.Size(872, 165);
             this.dtgexcel.TabIndex = 8;
             this.dtgexcel.Visible = false;
+            // 
+            // QUAN_LY_SAN_XUATDataSet
+            // 
+            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
+            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // FrmReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 582);
+            this.ClientSize = new System.Drawing.Size(872, 582);
             this.Controls.Add(this.dtgexcel);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.panelNXTNVL);
@@ -714,7 +735,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.panelPO.ResumeLayout(false);
             this.panelPO.PerformLayout();
             this.panelCTSX.ResumeLayout(false);
@@ -728,6 +748,7 @@
             this.panelNXTNVL.ResumeLayout(false);
             this.panelNXTNVL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgexcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,7 +806,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbNamInvoice;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tbKHInvoice;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dtpNgayInvoice;
         private System.Windows.Forms.Panel panelNXTNVL;
@@ -799,5 +819,7 @@
         private System.Windows.Forms.DataGridView dtgexcel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbquery;
+        private System.Windows.Forms.ComboBox cbKHinvoice;
+        private System.Windows.Forms.Label label20;
     }
 }

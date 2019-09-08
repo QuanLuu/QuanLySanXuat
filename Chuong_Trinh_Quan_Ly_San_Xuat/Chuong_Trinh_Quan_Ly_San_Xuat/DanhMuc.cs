@@ -112,7 +112,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getKHSP()
         {
-            DataTable data = Import_Manager.Instance.GetKhvamasp(tbMaKHKHSPFilter.Text);
+            DataTable data = Import_Manager.Instance.GetKhvamasp(tbMaKHKHSPFilter.Text, tbmsqlkhspfil.Text);
             dtgKHSP.DataSource = data;
         }
         void xuatexceldtg(DataGridView dtg)
@@ -226,7 +226,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void GetDinhMuc()
         {
-            DataTable data = Import_Manager.Instance.LoadDM(tbfilterMaSPDM.Text);
+            DataTable data = Import_Manager.Instance.LoadDM(tbmsqldinhmucfil.Text, tbfilterMaSPDM.Text);
             dtgDM.DataSource = data;
         }
         void GetDongia()
@@ -1444,6 +1444,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void button10_Click(object sender, EventArgs e)
         {
             xuatexceldtg(dtgNVLNCC);
+        }
+
+        private void tbmsqlkhspfil_TextChanged(object sender, EventArgs e)
+        {
+            getKHSP();
+        }
+
+        private void tbmsqldinhmucfil_TextChanged(object sender, EventArgs e)
+        {
+            GetDinhMuc();
         }
     }
 }

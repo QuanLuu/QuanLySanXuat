@@ -50,9 +50,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_KH_FROM_SP @MSQL , @KH", new object[] { msql, kh });
         }
-        public DataTable LoadDM(string masp)
+        public DataTable LoadDM(string msql, string masp)
         {
-            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DINH_MUC @MA_SP", new object[] { masp });
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DINH_MUC @MSQL , @MA_SP", new object[] {msql, masp });
         }
         public DataTable LoadDongia(string masp, string msql)
         {
@@ -151,13 +151,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NHAT_KY_XUAT_NL @TEN_NL , @DATE_FROM , @DATE_TO", new object[] { tennl , from, to});
         }
 
-        public DataTable getkiemkhotp(string congdoan, string msql, DateTime ngaykiem)
+        public DataTable getkiemkhotp(string congdoan, string msql, DateTime ngaykiem, DateTime ngaykiemto)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_TP @CD , @MSQL , @NGAY_KIEM", new object[] {congdoan, msql, ngaykiem });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_TP @CD , @MSQL , @NGAY_KIEM , @NGAY_KIEM_TO", new object[] {congdoan, msql, ngaykiem , ngaykiemto});
         }
-        public DataTable getkiemkhonl(string manl, DateTime ngaykiem)
+        public DataTable getkiemkhonl(string manl, DateTime ngaykiem, DateTime ngaykiemto)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_NL @manl , @NGAY_KIEM", new object[] { manl, ngaykiem });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KIEM_KHO_NL @manl , @NGAY_KIEM , @ngay_to", new object[] { manl, ngaykiem, ngaykiemto });
         }
         public DataTable getnhatkyxuatSP(string msql, string masp, DateTime from, DateTime to, string invoice, String kh)
         {
@@ -181,9 +181,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_LIST_TIME @MSQL", new object[] { msql });
         }
-        public DataTable GetKhvamasp(string makh)
+        public DataTable GetKhvamasp(string makh, string msql)
         {
-            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KH_MASP @MAKH", new object[] { makh });
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_KH_MASP @MAKH , @MSL", new object[] { makh , msql});
         }
         public DataTable GetUser()
         {

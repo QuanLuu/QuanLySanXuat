@@ -30,7 +30,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtptonxtnvl.Value = DateTime.Now;
             dtpfromnxtnvl.Value = DateTime.Now.AddDays(-30);
             reportViewer.Dock = DockStyle.Fill;
-            tbKHInvoice.Text = "NTZC";
+            GetKhachHang();
+            cbKHinvoice.Text = "NTZC";
         }
 
         private void btnReportPO_Click(object sender, EventArgs e)
@@ -42,6 +43,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             
         }
 
+        void getsanphamtheomsql()
+        {
+            DataTable data = Import_Manager.Instance.getmasptheomsql(tbMSQQLCTSX.Text);
+            if(data.Rows.Count > 0) tbMaSPInCTSX.Text = data.Rows[0][1].ToString();
+            
+            DataTable khsx = Import_Manager.Instance.getmasptheomsql(tbMSQLKHSX.Text);
+            if (khsx.Rows.Count > 0) tbMaSPKHSX.Text = khsx.Rows[0][1].ToString();
+        }
         void viewreport(string reportname, string datasetname, DataTable dt)
         {
             reportViewer.ProcessingMode = ProcessingMode.Local;
@@ -51,6 +60,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             reportViewer.RefreshReport();
         }
 
+        void GetKhachHang()
+        {
+        
+            DataTable KH = Import_Manager.Instance.LoadKH("");
+            cbKH.DisplayMember = "MA_KH";
+            cbKH.DataSource = KH;
+
+            cbKHinvoice.DisplayMember = "MA_KH";
+            cbKHinvoice.DataSource = KH;
+        }
         private void btnReportCTSX_Click(object sender, EventArgs e)
         {
             if (tbYearCTSX.Text != "" && tbmonthCTSX.Text != "")
@@ -117,7 +136,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (tbNamInvoice.Text != "" && tbThangInvoice.Text != "")
             {
-                DataTable dt = Import_Manager.Instance.reportInvoice(tbKHInvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
+                DataTable dt = Import_Manager.Instance.reportInvoice(cbKHinvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
                 viewreport("Invoice.rdlc", "Invoice", dt);
             }
         }
@@ -197,6 +216,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error  
                 }
             }
+        }
+
+        private void tbMSQQLCTSX_TextChanged(object sender, EventArgs e)
+        {
+            getsanphamtheomsql();
+        }
+
+        private void tbMSQLKHSX_TextChanged(object sender, EventArgs e)
+        {
+            getsanphamtheomsql();
         }
     }
 }

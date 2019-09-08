@@ -62,7 +62,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void loadsanphmtheokh()
         {
-            DataTable data = Import_Manager.Instance.GetKhvamasp(cbMaKHPO.Text);
+            DataTable data = Import_Manager.Instance.GetKhvamasp(cbMaKHPO.Text,"");
             cbMSQLPO.DisplayMember = "MSQL";
             cbMSQLPO.DataSource = data;
             cbMaSPPO.DisplayMember = "MA_SP";

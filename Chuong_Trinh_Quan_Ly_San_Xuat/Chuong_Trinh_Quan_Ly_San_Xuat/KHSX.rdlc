@@ -6,106 +6,106 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.19001cm</Width>
+              <Width>3.56746cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.60553cm</Width>
+              <Width>3.61014cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.60553cm</Width>
+              <Width>2.96194cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.09304cm</Width>
+              <Width>1.13195cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.14596cm</Width>
+              <Width>1.18487cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1195cm</Width>
+              <Width>1.15841cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.06658cm</Width>
+              <Width>1.10549cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.08762cm</Width>
+              <Width>1.12653cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.95533cm</Width>
+              <Width>0.99424cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.14054cm</Width>
+              <Width>1.17945cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.08763cm</Width>
+              <Width>1.12654cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93564cm</Width>
+              <Width>0.97455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.07095cm</Width>
+              <Width>1.10986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.99157cm</Width>
+              <Width>1.03048cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93866cm</Width>
+              <Width>0.97757cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.07095cm</Width>
+              <Width>1.10986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93866cm</Width>
+              <Width>0.97757cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.93866cm</Width>
+              <Width>0.97757cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.07095cm</Width>
+              <Width>1.10986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.96511cm</Width>
+              <Width>1.00402cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.75345cm</Width>
+              <Width>0.79236cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.96511cm</Width>
+              <Width>1.00402cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.96511cm</Width>
+              <Width>1.00402cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.88574cm</Width>
+              <Width>0.92465cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.99157cm</Width>
+              <Width>1.03048cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -175,6 +175,19 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nội Dung</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>内容</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -1926,7 +1939,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Kế hoạch LK</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1975,7 +1988,19 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>計画</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>Blue</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve">
+</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3597,7 +3622,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Số lượng thự tế ca 1</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3646,8 +3671,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>生産実績予測</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>Blue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4038,7 +4070,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4087,7 +4119,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4136,7 +4168,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4185,7 +4217,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4234,7 +4266,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4283,7 +4315,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4332,7 +4364,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4381,7 +4413,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4430,7 +4462,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4479,7 +4511,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4528,7 +4560,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4577,7 +4609,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4626,7 +4658,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4675,7 +4707,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4724,7 +4756,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4773,7 +4805,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4822,7 +4854,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4871,7 +4903,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4920,7 +4952,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4969,7 +5001,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5018,7 +5050,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5067,7 +5099,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5116,7 +5148,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5165,7 +5197,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value  + Fields!ID31.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5268,7 +5300,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Số lượng thự tế ca 2</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -5317,8 +5349,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>①直加工実績</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6939,8 +6977,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>Lũy kế thực tế</Value>
+                              <Style>
+                                <Color>Blue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6951,26 +6991,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -6988,8 +7008,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>②直加工実績</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8610,8 +8636,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>Tiến độ sản xuất</Value>
+                              <Style>
+                                <Color>Blue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8622,26 +8650,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -8659,8 +8667,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>加工実績累計</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10330,8 +10344,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>計画に対する進度</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>Blue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11927,12 +11947,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -11976,12 +11996,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12025,12 +12045,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12074,12 +12094,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12123,12 +12143,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12172,12 +12192,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12221,12 +12241,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12270,12 +12290,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12319,12 +12339,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12368,12 +12388,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12417,12 +12437,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12466,12 +12486,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12515,12 +12535,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12564,12 +12584,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12613,12 +12633,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12662,12 +12682,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12711,12 +12731,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12760,12 +12780,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12809,12 +12829,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12858,12 +12878,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12907,12 +12927,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -12956,12 +12976,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13005,12 +13025,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13054,12 +13074,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13103,12 +13123,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13152,12 +13172,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13201,12 +13221,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13250,12 +13270,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13299,12 +13319,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13348,12 +13368,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13397,12 +13417,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13446,12 +13466,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13495,12 +13515,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13544,12 +13564,12 @@
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -13627,7 +13647,7 @@
         <Top>0.05292cm</Top>
         <Left>0.05518cm</Left>
         <Height>5.17042cm</Height>
-        <Width>40cm</Width>
+        <Width>41.94482cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

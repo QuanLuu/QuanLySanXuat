@@ -43,7 +43,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getthanhpham()
         {
-            DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value);
+            DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value, dtpngaykiemtpfilto.Value);
             dtgKKTP.DataSource = data;
         }
         string bophankiemke(string username)
@@ -59,27 +59,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (bophan == "Sản Xuất")
             {
                 congdoan = "BAN CONG DOAN";
-                DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
+                DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value,dtpngaykiembtpfilto.Value);
                 dtgbanTP.DataSource = data;
             }
             
             else if(bophan == "Chất Lượng")
             {
                 congdoan = "TRUOC KIEM";
-                DataTable data = Import_Manager.Instance.getkiemkhotp("TRUOC KIEM", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
+                DataTable data = Import_Manager.Instance.getkiemkhotp("TRUOC KIEM", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
                 dtgbanTP.DataSource = data;
             }
             else
             {
                 congdoan = "";
-                DataTable data = Import_Manager.Instance.getkiemkhotp("", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value);
+                DataTable data = Import_Manager.Instance.getkiemkhotp("", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiemtpfilto.Value);
                 dtgbanTP.DataSource = data;
             }
         }
        
         void getkiemkhonl()
         {
-            DataTable data = Import_Manager.Instance.getkiemkhonl(tbFilterNL.Text, dtpngaykiemNLFilter.Value);
+            DataTable data = Import_Manager.Instance.getkiemkhonl(tbFilterNL.Text, dtpngaykiemNLFilter.Value, dtpngaykiemnlfilto.Value);
             dtgNL.DataSource = data;
         }
         void xuatexceldtg(DataGridView dtg)
@@ -266,7 +266,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (actionKKTP != 1) id = (int)dtgKKTP.CurrentRow.Cells[11].Value;
             try
             {               
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, id, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, float.Parse(numTonTP.Value.ToString()), dtpKiemTP.Value, cbnguoikiemtp.Text, tbghichuTP.Text, "THANH PHAM");
+                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKTP, id, tbMSQLTP.Text, tbsolotTP.Text, tbsothungTP.Text, dtpGiacongTP.Value, float.Parse(numTonTP.Value.ToString()), dtpKiemTP.Value, cbnguoikiemtp.Text, tbghichuTP.Text, cbMaTP.Text);
                 getthanhpham();
                 dtgKKTP.CurrentCell = dtgKKTP.Rows[currow].Cells[0];
                 actionKKTP = 0;
@@ -457,7 +457,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;
             try
             {
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, congdoan);
+                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, cbmaspbantp.Text);
                 getbanthanhpham();
                 dtgbanTP.CurrentCell = dtgbanTP.Rows[currow].Cells[0];
                 actionKKBanTP = 0;

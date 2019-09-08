@@ -5316,7 +5316,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString;
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QLSX;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5575,7 +5575,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString;
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QLSX;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5790,7 +5790,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString1;
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QLSX;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6028,7 +6028,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString1;
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QLSX;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6227,7 +6227,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QUAN_LY_SAN_XUATConnectionString1;
+            this._connection.ConnectionString = global::Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.Default.QLSX;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

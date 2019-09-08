@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 {
@@ -29,14 +30,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 
         private DataProvider() { }
 
-        //private string connectstring = "Data Source=10.0.0.64,1433;" +
-        //                                "Initial Catalog = QUAN_LY_SAN_XUAT;" +
-        //                                "Integrated Security=True";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //SANYO_SERVER
+        string connectstring = Properties.Settings.Default.QLSX;//ConfigurationManager.ConnectionStrings["QLSX"].ToString();
+        
 
-        private string connectstring = "Data Source=DESKTOP-9F5APHK\\QUANLUU;" +
-                                        "Initial Catalog = QUAN_LY_SAN_XUAT;" +
-                                        "User id=QuanLySanXuat;" +
-                                        "Password=123456;";//TRAN_TUAN\\SQLEXPRESS;LAPTOP318 //10.0.0.64,1433; //DESKTOP-9F5APHK\\QUANLUU
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 
