@@ -19,6 +19,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         string congdoan = "BAN CONG DOAN";
         string bophan = "";
         string usernhap = "";
+        string phanquyen;
         public FrmKiemKho()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgbanTP.Dock = DockStyle.Fill;
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
+            phanquyen = ((FrmMain)f).quyensudung;
             bophan = bophankiemke(usernhap);
             getthanhpham();
             getkiemkhonl();
@@ -40,6 +42,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpngaykiembantp.Value = DateTime.Now;
             dtpngaykiembantpfil.Value = DateTime.Now;
             loadnhanvien();
+            phanquyennhaplieu();
+        }
+
+        void phanquyennhaplieu()
+        {
+            if (!phanquyen.Contains("Full") )
+            {
+                if (bophan == "Sản Xuất")
+                    tabControlDanhMuc.TabPages.Remove(tabPSP);
+                if (bophan == "Chất Lượng")
+                    tabControlDanhMuc.TabPages.Remove(tabPNL);
+            }
         }
         void getthanhpham()
         {
@@ -452,9 +466,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveDM_Click(object sender, EventArgs e)
         {
-            int currow = current_row(actionKKBanTP, dtgKKTP);
+            int currow = current_row(actionKKBanTP, dtgbanTP);
             int id = 0;
-            if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;
+            if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;          
             try
             {
                 int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, cbmaspbantp.Text);

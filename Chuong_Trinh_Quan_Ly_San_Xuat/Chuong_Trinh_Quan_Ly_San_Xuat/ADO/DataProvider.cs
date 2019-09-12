@@ -46,7 +46,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
                
                     connection.Open();
                 
-                SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.CommandTimeout = 0;
                     if (parameter != null)
                     {
                         string[] listParam = query.Split(' ');
@@ -82,7 +83,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                command.CommandTimeout = 0;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -114,7 +115,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                command.CommandTimeout = 0;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');

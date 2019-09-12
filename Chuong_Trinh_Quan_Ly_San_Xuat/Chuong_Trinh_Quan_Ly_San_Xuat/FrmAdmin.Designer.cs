@@ -729,7 +729,7 @@
             "Nhân Sự",
             "Báo Cáo",
             "PO",
-            "Kiểm Kê"});
+            "Kiểm Kho"});
             this.chListCapquyen.Location = new System.Drawing.Point(285, 24);
             this.chListCapquyen.MultiColumn = true;
             this.chListCapquyen.Name = "chListCapquyen";

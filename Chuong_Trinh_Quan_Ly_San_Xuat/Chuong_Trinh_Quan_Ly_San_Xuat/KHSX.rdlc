@@ -6,111 +6,114 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.56746cm</Width>
+              <Width>3.47412cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.61014cm</Width>
+              <Width>3.5168cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.96194cm</Width>
+              <Width>2.52464cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13195cm</Width>
+              <Width>1.03861cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.18487cm</Width>
+              <Width>1.09153cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.15841cm</Width>
+              <Width>1.06507cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.10549cm</Width>
+              <Width>1.01215cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.12653cm</Width>
+              <Width>1.03319cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.99424cm</Width>
+              <Width>0.9009cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.17945cm</Width>
+              <Width>1.08611cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.12654cm</Width>
+              <Width>1.0332cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97455cm</Width>
+              <Width>0.88121cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.10986cm</Width>
+              <Width>1.01652cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.03048cm</Width>
+              <Width>0.93714cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97757cm</Width>
+              <Width>0.88423cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.10986cm</Width>
+              <Width>1.01652cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97757cm</Width>
+              <Width>0.88423cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.97757cm</Width>
+              <Width>0.88423cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.10986cm</Width>
+              <Width>1.01652cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.00402cm</Width>
+              <Width>0.91068cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.79236cm</Width>
+              <Width>1.01652cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.00402cm</Width>
+              <Width>0.91068cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.00402cm</Width>
+              <Width>0.91068cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.92465cm</Width>
+              <Width>0.91068cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.03048cm</Width>
+              <Width>0.93714cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.67577cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.97042cm</Height>
+              <Height>0.7874cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -123,7 +126,7 @@
                             <TextRun>
                               <Value>=Fields!MSQL.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -176,7 +179,7 @@
                             <TextRun>
                               <Value>Nội Dung</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -189,7 +192,7 @@
                             <TextRun>
                               <Value>内容</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -244,7 +247,7 @@
                             <TextRun>
                               <Value>=format(Fields!MONTH.Value,"00") &amp; "/01"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -297,7 +300,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/02"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -350,7 +353,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/03"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -403,7 +406,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/04"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -456,7 +459,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/05"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -509,7 +512,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/06"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -562,7 +565,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/07"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -615,7 +618,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/08"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -668,7 +671,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/09"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -721,7 +724,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/10"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -774,7 +777,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/11"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -827,7 +830,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/12"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -880,7 +883,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/13"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -933,7 +936,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/14"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -986,7 +989,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/15"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1039,7 +1042,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/16"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1092,7 +1095,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/17"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1145,7 +1148,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/18"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1198,7 +1201,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/19"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1251,7 +1254,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/20"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1304,7 +1307,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/21"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1357,7 +1360,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/22"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1410,7 +1413,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/23"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1463,7 +1466,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/24"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1516,7 +1519,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/25"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1569,7 +1572,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/26"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1622,7 +1625,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/27"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1675,7 +1678,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/28"</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1728,7 +1731,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) &gt;= 29, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/29", "")</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1781,7 +1784,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) &gt;= 30, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/30", "")</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1834,7 +1837,7 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) = 31, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/31", "")</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1876,10 +1879,86 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>合計</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Tổng cộng</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1891,7 +1970,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TEN_MAY.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1932,15 +2013,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox487">
+                    <Textbox Name="Textbox488">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Kế hoạch LK</Value>
-                              <Style />
+                              <Value>Kế hoạch</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1992,7 +2075,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>Blue</Color>
@@ -2001,7 +2084,9 @@
                             <TextRun>
                               <Value xml:space="preserve">
 </Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2050,7 +2135,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2099,7 +2186,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID2.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2148,7 +2237,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID3.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2197,7 +2288,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID4.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2246,7 +2339,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID5.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2295,7 +2390,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID6.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2344,7 +2441,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID7.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2393,7 +2492,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID8.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2442,7 +2543,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID9.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2491,7 +2594,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID10.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2540,7 +2645,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID11.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2589,7 +2696,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID12.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2638,7 +2747,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID13.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2687,7 +2798,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID14.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2736,7 +2849,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID15.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2785,7 +2900,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID16.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2834,7 +2951,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID17.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2883,7 +3002,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID18.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2932,7 +3053,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID19.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2981,7 +3104,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID20.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3030,7 +3155,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID21.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3079,7 +3206,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID22.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3128,7 +3257,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID23.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3177,7 +3308,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID24.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3226,7 +3359,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID25.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3275,7 +3410,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID26.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3324,7 +3461,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID27.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3373,7 +3512,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID28.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3422,7 +3563,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID29.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3471,7 +3614,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID30.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3520,7 +3665,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID31.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3559,10 +3706,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -3574,7 +3772,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!SO_MAY.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3615,21 +3815,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox488">
+                    <Textbox Name="Textbox487">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số lượng thự tế ca 1</Value>
-                              <Style />
+                              <Value>Kế hoạch LK</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox488</rd:DefaultName>
+                      <rd:DefaultName>Textbox487</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -3675,7 +3877,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>Blue</Color>
@@ -3728,7 +3930,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3777,7 +3981,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3826,7 +4032,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3875,7 +4083,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3924,7 +4134,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -3973,7 +4185,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4022,7 +4236,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value+Fields!ID7.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4071,7 +4287,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4120,7 +4338,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4169,7 +4389,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4218,7 +4440,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4267,7 +4491,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4316,7 +4542,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4365,7 +4593,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4414,7 +4644,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4463,7 +4695,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4512,7 +4746,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4561,7 +4797,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4610,7 +4848,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4659,7 +4899,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4708,7 +4950,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4757,7 +5001,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4806,7 +5052,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4855,7 +5103,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4904,7 +5154,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -4953,7 +5205,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5002,7 +5256,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5051,7 +5307,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5100,7 +5358,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5149,7 +5409,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5198,7 +5460,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value  + Fields!ID31.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>7pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5237,10 +5501,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -5252,7 +5567,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MA_CONG_DOAN.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5293,21 +5610,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox489">
+                    <Textbox Name="Textbox491">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số lượng thự tế ca 2</Value>
-                              <Style />
+                              <Value>Số lượng thự tế ca 1</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox489</rd:DefaultName>
+                      <rd:DefaultName>Textbox488</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -5353,6 +5672,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -5405,7 +5725,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5454,7 +5776,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5503,7 +5827,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5552,7 +5878,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5601,7 +5929,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5650,7 +5980,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5699,7 +6031,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5748,7 +6082,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5797,7 +6133,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5846,7 +6184,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5895,7 +6235,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5944,7 +6286,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -5993,7 +6337,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6042,7 +6388,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6091,7 +6439,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6140,7 +6490,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6189,7 +6541,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6238,7 +6592,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6287,7 +6643,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6336,7 +6694,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6385,7 +6745,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6434,7 +6796,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6483,7 +6847,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6532,7 +6898,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6581,7 +6949,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6630,7 +7000,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6679,7 +7051,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6728,7 +7102,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6777,7 +7153,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6826,7 +7204,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6875,7 +7255,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6914,10 +7296,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -6929,7 +7362,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TEN_SP.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -6970,27 +7405,47 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox490">
+                    <Textbox Name="Textbox522">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Lũy kế thực tế</Value>
+                              <Value>Số lượng thự tế ca 2</Value>
                               <Style>
-                                <Color>Blue</Color>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox490</rd:DefaultName>
+                      <rd:DefaultName>Textbox489</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -7012,6 +7467,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -7064,7 +7520,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7113,7 +7571,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7162,7 +7622,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7211,7 +7673,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7260,7 +7724,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7309,7 +7775,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7358,7 +7826,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7407,7 +7877,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7456,7 +7928,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7505,7 +7979,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7554,7 +8030,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7603,7 +8081,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7652,7 +8132,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7701,7 +8183,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7750,7 +8234,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7799,7 +8285,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7848,7 +8336,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7897,7 +8387,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7946,7 +8438,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -7995,7 +8489,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8044,7 +8540,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8093,7 +8591,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8142,7 +8642,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8191,7 +8693,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8240,7 +8744,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8289,7 +8795,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8338,7 +8846,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8387,7 +8897,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8436,7 +8948,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8485,7 +8999,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8534,7 +9050,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8573,10 +9091,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -8588,7 +9157,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8629,15 +9200,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox491">
+                    <Textbox Name="Textbox615">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tiến độ sản xuất</Value>
+                              <Value>Lũy kế thực tế</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <Color>Blue</Color>
                               </Style>
                             </TextRun>
@@ -8645,7 +9217,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox491</rd:DefaultName>
+                      <rd:DefaultName>Textbox490</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -8671,6 +9243,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -8723,7 +9296,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8772,7 +9347,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8821,7 +9398,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8870,7 +9449,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8919,7 +9500,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -8968,7 +9551,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9017,7 +9602,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9066,7 +9653,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9115,7 +9704,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9164,7 +9755,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9213,7 +9806,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9262,7 +9857,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9311,7 +9908,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9360,7 +9959,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9409,7 +10010,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9458,7 +10061,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9507,7 +10112,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9556,7 +10163,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9605,7 +10214,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9654,7 +10265,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9703,7 +10316,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9752,7 +10367,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9801,7 +10418,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9850,7 +10469,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9899,7 +10520,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9948,7 +10571,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -9997,7 +10622,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10046,7 +10673,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10095,7 +10724,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10144,7 +10775,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10193,7 +10826,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10232,10 +10867,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox6">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.54927cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -10247,7 +10933,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10288,45 +10976,28 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox492">
+                    <Textbox Name="Textbox648">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>Tiến độ sản xuất</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>Blue</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox492</rd:DefaultName>
+                      <rd:DefaultName>Textbox491</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -10348,6 +11019,7 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>ＭＳ Ｐゴシック</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>Blue</Color>
@@ -10400,7 +11072,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10449,7 +11123,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10498,7 +11174,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10547,7 +11225,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10596,7 +11276,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10645,7 +11327,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10694,7 +11378,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10743,7 +11429,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10792,7 +11480,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10841,7 +11531,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10890,7 +11582,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10939,7 +11633,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -10988,7 +11684,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11037,7 +11735,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11086,7 +11786,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11135,7 +11837,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11184,7 +11888,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11233,7 +11939,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11282,7 +11990,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11331,7 +12041,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11380,7 +12092,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11429,7 +12143,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11478,7 +12194,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11527,7 +12245,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11576,7 +12296,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11625,7 +12347,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11674,7 +12398,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11723,7 +12449,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11772,7 +12500,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11821,7 +12551,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11870,7 +12602,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -11909,10 +12643,61 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.41698cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -11942,7 +12727,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -11991,7 +12776,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12040,7 +12825,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12089,7 +12874,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12138,7 +12923,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12187,7 +12972,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12236,7 +13021,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12285,7 +13070,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12334,7 +13119,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12383,7 +13168,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12432,7 +13217,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12481,7 +13266,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12530,7 +13315,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12579,7 +13364,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12628,7 +13413,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12677,7 +13462,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12726,7 +13511,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12775,7 +13560,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12824,7 +13609,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12873,7 +13658,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12922,7 +13707,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -12971,7 +13756,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13020,7 +13805,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13069,7 +13854,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13118,7 +13903,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13167,7 +13952,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13216,7 +14001,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13265,7 +14050,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13314,7 +14099,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13363,7 +14148,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13412,7 +14197,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13461,7 +14246,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13510,7 +14295,7 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13559,7 +14344,56 @@
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <Style>
+                        <Border>
                           <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>None</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
@@ -13620,6 +14454,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -13630,6 +14465,14 @@
                   <GroupExpression>=Fields!MA_CONG_DOAN.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!MSQL.Value</Value>
+                </SortExpression>
+                <SortExpression>
+                  <Value>=Fields!MA_CONG_DOAN.Value</Value>
+                </SortExpression>
+              </SortExpressions>
               <TablixMembers>
                 <TablixMember />
                 <TablixMember />
@@ -13644,10 +14487,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>KHSX</DataSetName>
-        <Top>0.05292cm</Top>
-        <Left>0.05518cm</Left>
-        <Height>5.17042cm</Height>
-        <Width>41.94482cm</Width>
+        <Top>0cm</Top>
+        <Left>0cm</Left>
+        <Height>4.5cm</Height>
+        <Width>40.5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -13655,17 +14498,19 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.41125in</Height>
+    <Height>5.2098cm</Height>
     <Style />
   </Body>
-  <Width>420mm</Width>
+  <Width>41cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>42cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <InteractiveHeight>29.7cm</InteractiveHeight>
+    <InteractiveWidth>42cm</InteractiveWidth>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
+    <TopMargin>0.5cm</TopMargin>
+    <BottomMargin>0.5cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

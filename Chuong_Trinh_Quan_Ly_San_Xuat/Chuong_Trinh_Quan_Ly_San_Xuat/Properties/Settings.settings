@@ -5,10 +5,10 @@
     <Setting Name="QLSX" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=MRDBA;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True;User ID=QuanLySanXuat;Password=123456&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=SANYO_SERVER;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True;User ID=QuanLySanXuat;Password=123456;Connect Timeout=30&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=MRDBA;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True;User ID=QuanLySanXuat;Password=123456</Value>
+      <Value Profile="(Default)">Data Source=SANYO_SERVER;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True;User ID=QuanLySanXuat;Password=123456;Connect Timeout=30</Value>
     </Setting>
   </Settings>
 </SettingsFile>

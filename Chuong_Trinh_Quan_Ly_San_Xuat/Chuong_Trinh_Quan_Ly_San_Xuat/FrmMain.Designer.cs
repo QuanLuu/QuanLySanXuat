@@ -140,10 +140,10 @@
             this.label11.ForeColor = System.Drawing.Color.Blue;
             this.label11.Location = new System.Drawing.Point(321, 271);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 17);
+            this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 15;
-            this.label11.Tag = "KiemKho";
-            this.label11.Text = "KiemKho";
+            this.label11.Tag = "Kiểm Kho";
+            this.label11.Text = "Kiểm Kho";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox8
@@ -155,7 +155,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 14;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Tag = "KiemKho";
+            this.pictureBox8.Tag = "Kiểm Kho";
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label10
