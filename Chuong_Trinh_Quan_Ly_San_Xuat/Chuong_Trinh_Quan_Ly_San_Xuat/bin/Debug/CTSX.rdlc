@@ -115,20 +115,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CHỈ THỊ SẢN XUẤT</Value>
+                              <Value>CHỈ THỊ SẢN XUẤT - 作業指示書</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>18pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#000000</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> - 作業指示書</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>18pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
@@ -188,19 +178,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Bộ Phận Sản Xuất</Value>
+                              <Value>Bộ Phận Sản Xuất 製造部署</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#000000</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 製造部署</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -1167,19 +1148,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã Hàng (Mã CĐ)</Value>
+                              <Value>Mã Hàng (Mã CĐ)  品番</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#000000</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>  品番</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -1242,7 +1214,7 @@
                               <Value>=Fields!MA_CONG_DOAN.Value</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -1301,7 +1273,7 @@
                               <Value>MSQL</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -1440,15 +1412,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ngày thay đổi</Value>
+                              <Value>Ngày thay đổi 指示数変更日</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示数変更日</Value>
-                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1503,15 +1469,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value> Ký Tên</Value>
+                              <Value> Ký Tên 指示者</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示者</Value>
-                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1564,15 +1524,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1</Value>
+                              <Value>SL Chỉ Thị 1 指示数 1</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示数 1</Value>
-                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1681,7 +1635,7 @@
                             <TextRun>
                               <Value>Pcs</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1736,19 +1690,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tên Hàng</Value>
+                              <Value>Tên Hàng  品名</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#000000</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>  品名</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -1811,7 +1756,7 @@
                               <Value>=Fields!TEN_SP.Value</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -2006,22 +1951,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1</Value>
+                              <Value>SL Chỉ Thị 1 指示数 2</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示数 </Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>2</Value>
-                              <Style>
-                                <FontFamily>TIMes New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2128,7 +2060,7 @@
                             <TextRun>
                               <Value>Pcs</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2183,19 +2115,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tên, số máy</Value>
+                              <Value>Tên, số máy 機械名、機械番号</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#000000</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 機械名、機械番号</Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -2258,7 +2181,7 @@
                               <Value>=Fields!TEN_MAY.Value</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -2317,7 +2240,7 @@
                               <Value>=Fields!SO_MAY.Value</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>None</TextDecoration>
                                 <Color>#000000</Color>
@@ -2395,7 +2318,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox942">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2409,7 +2332,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox942</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2508,22 +2431,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1</Value>
+                              <Value>SL Chỉ Thị 1 指示数 3</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示数 </Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>3</Value>
-                              <Style>
-                                <FontFamily>TIMes New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2630,7 +2540,7 @@
                             <TextRun>
                               <Value>Pcs</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2685,15 +2595,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nguyên liệu, Công đoạn trước</Value>
+                              <Value>Nguyên liệu, Công đoạn trước 材料使用</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 材料使用</Value>
-                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2753,7 +2657,7 @@
                             <TextRun>
                               <Value>=Fields!CONG_DOAN_TRUOC.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2946,22 +2850,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1</Value>
+                              <Value>SL Chỉ Thị 1 指示数 4</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value> 指示数 </Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>4</Value>
-                              <Style>
-                                <FontFamily>TIMes New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -3068,7 +2959,7 @@
                             <TextRun>
                               <Value>Pcs</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -4060,26 +3951,30 @@
                             <TextRun>
                               <Value> Dat</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
                               <Value>月日</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox476</rd:DefaultName>
@@ -4126,13 +4021,15 @@
                             <TextRun>
                               <Value>=format(Fields!MONTH.Value,"00") &amp; "/01"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox477</rd:DefaultName>
@@ -4179,13 +4076,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/02"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox79</rd:DefaultName>
@@ -4232,13 +4131,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/03"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox80</rd:DefaultName>
@@ -4285,13 +4186,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/04"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox81</rd:DefaultName>
@@ -4338,13 +4241,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/05"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox82</rd:DefaultName>
@@ -4391,13 +4296,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/06"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox83</rd:DefaultName>
@@ -4444,13 +4351,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/07"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox84</rd:DefaultName>
@@ -4497,13 +4406,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/08"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox85</rd:DefaultName>
@@ -4550,13 +4461,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/09"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox86</rd:DefaultName>
@@ -4603,13 +4516,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/10"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox87</rd:DefaultName>
@@ -4656,13 +4571,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/11"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox88</rd:DefaultName>
@@ -4709,13 +4626,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/12"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox89</rd:DefaultName>
@@ -4762,13 +4681,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/13"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox90</rd:DefaultName>
@@ -4815,13 +4736,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/14"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox91</rd:DefaultName>
@@ -4868,13 +4791,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/15"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox92</rd:DefaultName>
@@ -4921,13 +4846,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/16"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox93</rd:DefaultName>
@@ -4974,13 +4901,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/17"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox94</rd:DefaultName>
@@ -5027,13 +4956,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/18"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox95</rd:DefaultName>
@@ -5080,13 +5011,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/19"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox159</rd:DefaultName>
@@ -5133,13 +5066,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/20"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox175</rd:DefaultName>
@@ -5186,13 +5121,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/21"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox191</rd:DefaultName>
@@ -5239,13 +5176,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/22"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox183</rd:DefaultName>
@@ -5292,13 +5231,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/23"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox167</rd:DefaultName>
@@ -5345,13 +5286,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/24"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox199</rd:DefaultName>
@@ -5398,13 +5341,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/25"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox207</rd:DefaultName>
@@ -5451,13 +5396,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/26"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox215</rd:DefaultName>
@@ -5504,13 +5451,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/27"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox223</rd:DefaultName>
@@ -5557,13 +5506,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/28"</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox231</rd:DefaultName>
@@ -5610,13 +5561,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) &gt;= 29, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/29", "")</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox239</rd:DefaultName>
@@ -5663,13 +5616,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) &gt;= 30, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/30", "")</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox247</rd:DefaultName>
@@ -5716,13 +5671,15 @@
                             <TextRun>
                               <Value>=Microsoft.VisualBasic.Interaction.Iif(Microsoft.VisualBasic.DateAndTime.day(Microsoft.VisualBasic.DateAndTime.DateSerial(Fields!YEAR.Value, Fields!MONTH.Value, "1").AddMonths(1).AddDays(- 1)) = 31, Microsoft.VisualBasic.Strings.format(Fields!MONTH.Value, "00") &amp; "/31", "")</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox255</rd:DefaultName>
@@ -5774,26 +5731,30 @@
                             <TextRun>
                               <Value>  KH</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
                               <Value>計画</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -5840,12 +5801,14 @@
                             <TextRun>
                               <Value>=Fields!ID1.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID1</rd:DefaultName>
@@ -5892,12 +5855,14 @@
                             <TextRun>
                               <Value>=Fields!ID2.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID2</rd:DefaultName>
@@ -5944,12 +5909,14 @@
                             <TextRun>
                               <Value>=Fields!ID3.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID3</rd:DefaultName>
@@ -5996,12 +5963,14 @@
                             <TextRun>
                               <Value>=Fields!ID4.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID4</rd:DefaultName>
@@ -6048,12 +6017,14 @@
                             <TextRun>
                               <Value>=Fields!ID5.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID5</rd:DefaultName>
@@ -6100,12 +6071,14 @@
                             <TextRun>
                               <Value>=Fields!ID6.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID6</rd:DefaultName>
@@ -6152,12 +6125,14 @@
                             <TextRun>
                               <Value>=Fields!ID7.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID7</rd:DefaultName>
@@ -6204,12 +6179,14 @@
                             <TextRun>
                               <Value>=Fields!ID8.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID8</rd:DefaultName>
@@ -6256,12 +6233,14 @@
                             <TextRun>
                               <Value>=Fields!ID9.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID9</rd:DefaultName>
@@ -6308,12 +6287,14 @@
                             <TextRun>
                               <Value>=Fields!ID10.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID10</rd:DefaultName>
@@ -6360,12 +6341,14 @@
                             <TextRun>
                               <Value>=Fields!ID11.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID11</rd:DefaultName>
@@ -6412,12 +6395,14 @@
                             <TextRun>
                               <Value>=Fields!ID12.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID12</rd:DefaultName>
@@ -6464,12 +6449,14 @@
                             <TextRun>
                               <Value>=Fields!ID13.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID13</rd:DefaultName>
@@ -6516,12 +6503,14 @@
                             <TextRun>
                               <Value>=Fields!ID14.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID14</rd:DefaultName>
@@ -6568,12 +6557,14 @@
                             <TextRun>
                               <Value>=Fields!ID15.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID15</rd:DefaultName>
@@ -6620,12 +6611,14 @@
                             <TextRun>
                               <Value>=Fields!ID16.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID16</rd:DefaultName>
@@ -6672,12 +6665,14 @@
                             <TextRun>
                               <Value>=Fields!ID17.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID17</rd:DefaultName>
@@ -6724,12 +6719,14 @@
                             <TextRun>
                               <Value>=Fields!ID18.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID18</rd:DefaultName>
@@ -6776,12 +6773,14 @@
                             <TextRun>
                               <Value>=Fields!ID19.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID19</rd:DefaultName>
@@ -6828,12 +6827,14 @@
                             <TextRun>
                               <Value>=Fields!ID20.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID20</rd:DefaultName>
@@ -6880,12 +6881,14 @@
                             <TextRun>
                               <Value>=Fields!ID21.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID21</rd:DefaultName>
@@ -6932,12 +6935,14 @@
                             <TextRun>
                               <Value>=Fields!ID22.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID22</rd:DefaultName>
@@ -6984,12 +6989,14 @@
                             <TextRun>
                               <Value>=Fields!ID23.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID23</rd:DefaultName>
@@ -7036,12 +7043,14 @@
                             <TextRun>
                               <Value>=Fields!ID24.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID24</rd:DefaultName>
@@ -7088,12 +7097,14 @@
                             <TextRun>
                               <Value>=Fields!ID25.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID25</rd:DefaultName>
@@ -7140,12 +7151,14 @@
                             <TextRun>
                               <Value>=Fields!ID26.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID26</rd:DefaultName>
@@ -7192,12 +7205,14 @@
                             <TextRun>
                               <Value>=Fields!ID27.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID27</rd:DefaultName>
@@ -7244,12 +7259,14 @@
                             <TextRun>
                               <Value>=Fields!ID28.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID28</rd:DefaultName>
@@ -7296,12 +7313,14 @@
                             <TextRun>
                               <Value>=Fields!ID29.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID29</rd:DefaultName>
@@ -7348,12 +7367,14 @@
                             <TextRun>
                               <Value>=Fields!ID30.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID30</rd:DefaultName>
@@ -7400,12 +7421,14 @@
                             <TextRun>
                               <Value>=Fields!ID31.Value</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID31</rd:DefaultName>
@@ -9169,8 +9192,8 @@
                             <TextRun>
                               <Value> STT</Value>
                               <Style>
-                                <FontFamily>TIMes New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -9224,8 +9247,8 @@
                             <TextRun>
                               <Value>Ngày SX</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9238,7 +9261,8 @@
                             <TextRun>
                               <Value>作業日</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9293,8 +9317,8 @@
                             <TextRun>
                               <Value>Ca SX</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9307,8 +9331,8 @@
                             <TextRun>
                               <Value>直目</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9359,10 +9383,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>S.Lượng SX</Value>
+                              <Value>S.Lượng GC/ S.Lượng Ktra</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9373,10 +9397,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>加工数</Value>
+                              <Value>加工/ 検査数</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9429,24 +9453,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số Lot</Value>
+                              <Value>Số Lượng OK
+OK数</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>ロットNo</Value>
-                              <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9501,8 +9512,8 @@
                             <TextRun>
                               <Value>Lũy Kế SX</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9515,8 +9526,8 @@
                             <TextRun>
                               <Value>加工実績累計</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9562,17 +9573,31 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1643">
+                    <Textbox Name="Textbox390">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Số Lot</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ロットNo</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9581,7 +9606,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox1643</rd:DefaultName>
+                      <rd:DefaultName>Textbox386</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -9627,8 +9652,8 @@
                             <TextRun>
                               <Value>Ghi Chú</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9641,8 +9666,8 @@
                             <TextRun>
                               <Value>裏書有</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9695,8 +9720,8 @@
                             <TextRun>
                               <Value>TGSX</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9709,8 +9734,8 @@
                             <TextRun>
                               <Value>作業時間</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9761,17 +9786,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TGCB 段取時</Value>
+                              <Value>TGCB 段取時間</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>7.5pt</FontSize>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>間</Value>
-                              <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9824,8 +9842,8 @@
                             <TextRun>
                               <Value>TGSC 修理時間</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9878,8 +9896,8 @@
                             <TextRun>
                               <Value>Chào Lễ</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9892,8 +9910,8 @@
                             <TextRun>
                               <Value>朝礼</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9944,10 +9962,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Đào Tạo教育</Value>
+                              <Value>Đào Tạo
+教育</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10000,8 +10023,8 @@
                             <TextRun>
                               <Value>6S</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10014,8 +10037,8 @@
                             <TextRun>
                               <Value>掃除</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10068,8 +10091,8 @@
                             <TextRun>
                               <Value>Chờ SC</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10082,8 +10105,8 @@
                             <TextRun>
                               <Value>型修理待ち</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10136,8 +10159,8 @@
                             <TextRun>
                               <Value>Sước</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10150,8 +10173,8 @@
                             <TextRun>
                               <Value>キズ</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10206,8 +10229,8 @@
                             <TextRun>
                               <Value>Móp ダコン</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10258,10 +10281,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Biến Dạng</Value>
+                              <Value>Biến  Dạng</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10274,8 +10297,8 @@
                             <TextRun>
                               <Value>変形</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10328,8 +10351,8 @@
                             <TextRun>
                               <Value>Rỉ Sét</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10340,10 +10363,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>サビ   </Value>
+                              <Value>サビ</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10398,8 +10421,8 @@
                             <TextRun>
                               <Value>NG</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10412,8 +10435,8 @@
                             <TextRun>
                               <Value>KiểmTra</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10426,8 +10449,8 @@
                             <TextRun>
                               <Value>測定 </Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10482,8 +10505,8 @@
                             <TextRun>
                               <Value>NG Khác</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10496,8 +10519,8 @@
                             <TextRun>
                               <Value>その他</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10550,8 +10573,8 @@
                             <TextRun>
                               <Value>Người  SX</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10564,8 +10587,8 @@
                             <TextRun>
                               <Value>作業者</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10616,10 +10639,24 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Xác   Nhận 確認者</Value>
+                              <Value>Xác Nhận</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>確認者</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10672,8 +10709,8 @@
                             <TextRun>
                               <Value>Ghi Chú</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -10684,10 +10721,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>裏書有</Value>
+                              <Value>備考</Value>
                               <Style>
-                                <FontFamily>times New Roman</FontFamily>
-                                <FontSize>8pt</FontSize>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>

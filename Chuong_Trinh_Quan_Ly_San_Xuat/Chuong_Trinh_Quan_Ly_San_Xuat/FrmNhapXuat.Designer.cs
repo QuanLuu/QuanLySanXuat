@@ -1460,8 +1460,8 @@
             // 
             this.numsoluong.Location = new System.Drawing.Point(688, 37);
             this.numsoluong.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            1215752192,
+            23,
             0,
             0});
             this.numsoluong.Name = "numsoluong";
@@ -1838,8 +1838,8 @@
             // 
             this.numslxuatgiacong.Location = new System.Drawing.Point(294, 12);
             this.numslxuatgiacong.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            1215752192,
+            23,
             0,
             0});
             this.numslxuatgiacong.Name = "numslxuatgiacong";
@@ -2224,8 +2224,8 @@
             // 
             this.numslnhapgc.Location = new System.Drawing.Point(294, 12);
             this.numslnhapgc.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            1215752192,
+            23,
             0,
             0});
             this.numslnhapgc.Name = "numslnhapgc";

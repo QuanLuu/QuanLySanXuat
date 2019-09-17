@@ -95,6 +95,8 @@
             this.btnNXTNVL = new System.Windows.Forms.Button();
             this.dtgexcel = new System.Windows.Forms.DataGridView();
             this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -308,7 +310,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reportsToolStripMenuItem,
             this.inẤnToolStripMenuItem,
-            this.cậpNhậtDữLiệuToolStripMenuItem});
+            this.cậpNhậtDữLiệuToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 5, 0, 5);
@@ -717,6 +720,21 @@
             this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
             this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importFileToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 25);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // importFileToolStripMenuItem
+            // 
+            this.importFileToolStripMenuItem.Name = "importFileToolStripMenuItem";
+            this.importFileToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.importFileToolStripMenuItem.Text = "Import File";
+            this.importFileToolStripMenuItem.Click += new System.EventHandler(this.importFileToolStripMenuItem_Click);
+            // 
             // FrmReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -821,5 +839,7 @@
         private System.Windows.Forms.TextBox tbquery;
         private System.Windows.Forms.ComboBox cbKHinvoice;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importFileToolStripMenuItem;
     }
 }

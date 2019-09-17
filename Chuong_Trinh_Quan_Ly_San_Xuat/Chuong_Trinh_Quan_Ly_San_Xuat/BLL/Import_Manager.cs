@@ -211,6 +211,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_USER_INFOR @USER ", new object[] { username});
         }
+
+        public DataTable gettencongdoanbantp(string bophan)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_TEN_CONG_DOAN_BAN_TP @BP", new object[] {bophan });
+        }
         public DataTable GetNVL_NCC(string nvl, string ncc)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NGUYEN_LIEU_NCC @NVL , @NCC", new object[] { nvl, ncc});

@@ -46,11 +46,34 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             Action = 2;
             Disablecontrol();
+            if (dtgDataType.CurrentRow.Cells[0].Value.ToString() != ""  && Action != 1)
+            {
+                int rowselectd = dtgDataType.CurrentRow.Index;
+                //LoadDataTypeSheetTable(dtgDataType[2, rowselectd].Value.ToString());
+                tbeditDataType.Text = dtgDataType[2, rowselectd].Value.ToString();
+                tbdelimeter.Text = dtgDataType[5, rowselectd].Value.ToString();
+                tbSourcepath.Text = dtgDataType[8, rowselectd].Value.ToString();
+                tbDespath.Text = dtgDataType[9, rowselectd].Value.ToString();
+                tbFilter.Text = dtgDataType[10, rowselectd].Value.ToString();
+                tbEditSchedule.Text = dtgDataType[3, rowselectd].Value.ToString();
+                if (Convert.ToInt32(dtgDataType[1, rowselectd].Value.ToString()) == 1)
+                { chbignoreedit.Checked = true; }
+                else
+                { chbignoreedit.Checked = false; }
+                if (dtgDataType[4, rowselectd].Value.ToString() == "TEXT")
+                { chbtextfile.Checked = true; }
+                else
+                { chbtextfile.Checked = false; }
+            }
             //dtgDataType_SelectionChanged(sender, e);
         }
         private void dtgDataType_SelectionChanged(object sender, EventArgs e)
         {
-           
+            if (dtgDataType.CurrentRow.Cells[0].Value.ToString() != "" && Action != 1)
+            {
+                int rowselectd = dtgDataType.CurrentRow.Index;
+                LoadDataTypeSheetTable(dtgDataType[2, rowselectd].Value.ToString());
+            }
         }
 
         private void btnCancelDataType_Click(object sender, EventArgs e)
@@ -180,6 +203,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             Action = 2;
             Disablecontroldatatypesheet();
+            if (dtgDataTypeSheet.CurrentRow.Cells[0].Value.ToString() != "" && Action != 1)
+            {
+                int rowselectd = dtgDataTypeSheet.CurrentRow.Index;
+                tbEditDataSheet.Text = dtgDataTypeSheet[6, rowselectd].Value.ToString();
+                tbBuffer.Text = dtgDataTypeSheet[7, rowselectd].Value.ToString();
+                tbSheetName.Text = dtgDataTypeSheet[5, rowselectd].Value.ToString();
+                if (dtgDataTypeSheet[3, rowselectd].Value.ToString() != "") numColumnPivot.Value = (int)dtgDataTypeSheet[4, rowselectd].Value;
+                if (Convert.ToInt32(dtgDataTypeSheet[2, rowselectd].Value.ToString()) == 1)
+                { chbDataSheetIgnore.Checked = true; }
+                else
+                { chbDataSheetIgnore.Checked = false; }
+                if ((int)dtgDataTypeSheet[3, rowselectd].Value == 1)
+                { chbpivot.Checked = true; }
+                else
+                { chbpivot.Checked = false; }
+            }
         }
 
         private void btnCancelDataSheet_Click(object sender, EventArgs e)
@@ -226,45 +265,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtgDataTypeSheet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dtgDataTypeSheet.CurrentRow.Cells[0].Value.ToString() != "" && Action !=1)
-            {
-                int rowselectd = dtgDataTypeSheet.CurrentRow.Index;
-                tbEditDataSheet.Text = dtgDataTypeSheet[6, rowselectd].Value.ToString();
-                tbBuffer.Text = dtgDataTypeSheet[7, rowselectd].Value.ToString();
-                tbSheetName.Text = dtgDataTypeSheet[5, rowselectd].Value.ToString();
-                if (dtgDataTypeSheet[3, rowselectd].Value.ToString() != "") numColumnPivot.Value = (int)dtgDataTypeSheet[4, rowselectd].Value;
-                if (Convert.ToInt32(dtgDataTypeSheet[2, rowselectd].Value.ToString()) == 1)
-                { chbDataSheetIgnore.Checked = true; }
-                else
-                { chbDataSheetIgnore.Checked = false; }
-                if ((int)dtgDataTypeSheet[3, rowselectd].Value == 1)
-                { chbpivot.Checked = true; }
-                else
-                { chbpivot.Checked = false; }
-            }
+            
         }
 
         private void dtgDataType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dtgDataType.CurrentRow.Cells[0].Value.ToString() != "" && Action != 1)
-            {
-                int rowselectd = dtgDataType.CurrentRow.Index;
-                LoadDataTypeSheetTable(dtgDataType[2, rowselectd].Value.ToString());
-                tbeditDataType.Text = dtgDataType[2, rowselectd].Value.ToString();
-                tbdelimeter.Text = dtgDataType[5, rowselectd].Value.ToString();
-                tbSourcepath.Text = dtgDataType[8, rowselectd].Value.ToString();
-                tbDespath.Text = dtgDataType[9, rowselectd].Value.ToString();
-                tbFilter.Text = dtgDataType[10, rowselectd].Value.ToString();
-                tbEditSchedule.Text = dtgDataType[3, rowselectd].Value.ToString();
-                if (Convert.ToInt32(dtgDataType[1, rowselectd].Value.ToString()) == 1)
-                { chbignoreedit.Checked = true; }
-                else
-                { chbignoreedit.Checked = false; }
-                if (dtgDataType[4, rowselectd].Value.ToString() == "TEXT")
-                { chbtextfile.Checked = true; }
-                else
-                { chbtextfile.Checked = false; }
-            }
+            
         }
 
         private void btnSaveUser_Click(object sender, EventArgs e)

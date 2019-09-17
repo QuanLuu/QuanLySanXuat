@@ -227,5 +227,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             getsanphamtheomsql();
         }
+
+        private void importFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string apppath = Application.StartupPath;
+                System.Diagnostics.Process.Start(apppath + "\\" + "Import help.docx");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
     }
 }

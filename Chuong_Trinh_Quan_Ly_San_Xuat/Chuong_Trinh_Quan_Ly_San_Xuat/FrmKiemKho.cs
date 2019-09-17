@@ -16,7 +16,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionKKTP = 0;
         int actionKKNL = 0;
         int actionKKBanTP = 0;
-        string congdoan = "BAN CONG DOAN";
+        //string congdoan = "BAN CONG DOAN";
         string bophan = "";
         string usernhap = "";
         string phanquyen;
@@ -26,6 +26,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgKKTP.Dock = DockStyle.Fill;
             dtgNL.Dock = DockStyle.Fill;
             dtgbanTP.Dock = DockStyle.Fill;
+            dtgbaoluu.Dock = DockStyle.Fill;
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
             phanquyen = ((FrmMain)f).quyensudung;
@@ -43,8 +44,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpngaykiembantpfil.Value = DateTime.Now;
             loadnhanvien();
             phanquyennhaplieu();
+            gettencongdoan();
         }
-
+        void gettencongdoan()
+        {
+            DataTable data = Import_Manager.Instance.gettencongdoanbantp(bophan);
+            cbtencongdoanbantpfil.DisplayMember = "TEN_CONG_DOAN";
+            cbtencongdoanbantpfil.DataSource = data;
+        }
         void phanquyennhaplieu()
         {
             if (!phanquyen.Contains("Full") )
@@ -70,25 +77,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getbanthanhpham()
         {
-            if (bophan == "Sản Xuất")
-            {
-                congdoan = "BAN CONG DOAN";
-                DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value,dtpngaykiembtpfilto.Value);
-                dtgbanTP.DataSource = data;
-            }
+            DataTable data = Import_Manager.Instance.getkiemkhotp(cbtencongdoanbantpfil.Text, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
+            dtgbanTP.DataSource = data;
+            //if (bophan == "Sản Xuất")
+            //{
+            //    congdoan = "BAN CONG DOAN";
+            //    DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value,dtpngaykiembtpfilto.Value);
+            //    dtgbanTP.DataSource = data;
+            //}
             
-            else if(bophan == "Chất Lượng")
-            {
-                congdoan = "TRUOC KIEM";
-                DataTable data = Import_Manager.Instance.getkiemkhotp("TRUOC KIEM", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
-                dtgbanTP.DataSource = data;
-            }
-            else
-            {
-                congdoan = "";
-                DataTable data = Import_Manager.Instance.getkiemkhotp("", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiemtpfilto.Value);
-                dtgbanTP.DataSource = data;
-            }
+            //else if(bophan == "Chất Lượng")
+            //{
+            //    congdoan = "TRUOC KIEM";
+            //    DataTable data = Import_Manager.Instance.getkiemkhotp("TRUOC KIEM", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
+            //    dtgbanTP.DataSource = data;
+            //}
+            //else
+            //{
+            //    congdoan = "";
+            //    DataTable data = Import_Manager.Instance.getkiemkhotp("", tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiemtpfilto.Value);
+            //    dtgbanTP.DataSource = data;
+            //}
         }
        
         void getkiemkhonl()
@@ -164,9 +173,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbMaTP.DisplayMember = "MA_CONG_DOAN";
             cbMaTP.DataSource = data;
 
-            DataTable bantp = Import_Manager.Instance.getcongdoantheomsqlvatencd(tbmsqlbantp.Text, congdoan);
+            DataTable bantp = Import_Manager.Instance.getcongdoantheomsqlvatencd(tbmsqlbantp.Text, cbtencongdoanbantpfil.Text);
             cbmaspbantp.DisplayMember = "MA_CONG_DOAN";
             cbmaspbantp.DataSource = bantp;
+            cbtencdbantp.DisplayMember = "TEN_CONG_DOAN";
+            cbtencdbantp.DataSource = bantp;
         }
         //getcongdoantheomsqlvatencd
         void getsanphamtheomsql()
@@ -471,11 +482,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;          
             try
             {
-                int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, cbmaspbantp.Text);
-                getbanthanhpham();
-                dtgbanTP.CurrentCell = dtgbanTP.Rows[currow].Cells[0];
-                actionKKBanTP = 0;
-                enablecontrol(actionKKBanTP, panbanTP, panelBanTP);
+                if (cbmaspbantp.Text != "")
+                {
+                    int results = Import_Manager.Instance.UpdateKiemKhoTP(actionKKBanTP, id, tbmsqlbantp.Text, tbsolotbantp.Text, tbsothungbantp.Text, dtpngaygiacongbantp.Value, float.Parse(numtonbantp.Value.ToString()), dtpngaykiembantp.Value, cbnguoikiembantp.Text, tbghichubantp.Text, cbmaspbantp.Text);
+                    getbanthanhpham();
+                    dtgbanTP.CurrentCell = dtgbanTP.Rows[currow].Cells[0];
+                    actionKKBanTP = 0;
+                    enablecontrol(actionKKBanTP, panbanTP, panelBanTP);
+                }
+                else
+                {
+                    MessageBox.Show("Mã Công Đoạn trống!");
+                }
             }
             catch (Exception ex)
             {
@@ -517,6 +535,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void button3_Click(object sender, EventArgs e)
         {
             xuatexceldtg(dtgbanTP);
+        }
+
+        private void cbtencongdoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getbanthanhpham();
         }
     }
 }
