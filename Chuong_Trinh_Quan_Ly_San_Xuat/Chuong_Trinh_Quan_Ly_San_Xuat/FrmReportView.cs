@@ -8,18 +8,24 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
     public partial class FrmReportView : Form
     {
         string nxt = "";
+        int khsx_idx = 0;
         public FrmReportView()
         {
             InitializeComponent();
             hidepannelfilter();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgbaocao, new object[] { true });
             tbYearCTSX.Text = DateTime.Now.Year.ToString();
             tbmonthCTSX.Text = DateTime.Now.Month.ToString();
             tbNamKHSX.Text = DateTime.Now.Year.ToString();
@@ -30,10 +36,56 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtptonxtnvl.Value = DateTime.Now;
             dtpfromnxtnvl.Value = DateTime.Now.AddDays(-30);
             reportViewer.Dock = DockStyle.Fill;
+            dtpbaocaosxfrom.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(-1);
+            dtpbaocaosxto.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddDays(-1);
+            dtgbaocao.Dock = DockStyle.Fill;
             GetKhachHang();
             cbKHinvoice.Text = "NTZC";
         }
+        void xuatexceldtg(DataGridView dtg)
+        {
+            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Excel._Worksheet worksheet = null;
 
+            try
+            {
+                worksheet = (Excel._Worksheet)workbook.ActiveSheet;
+                object[,] arr = new object[dtg.Rows.Count + 1, dtg.Columns.Count + 1];
+                for (int c = 0; c < dtg.Columns.Count; c++)
+                {
+                    arr[0, c] = dtg.Columns[c].HeaderText;
+                }
+                int rowindex = 1;
+                int colindex = 0;
+                for (int r = 0; r < dtg.Rows.Count; r++)
+                {
+                    for (int c = 0; c < dtg.Columns.Count; c++)
+                    {
+                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        colindex++;
+                    }
+                    colindex = 0;
+                    rowindex++;
+                }
+
+                Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)worksheet.Cells[1, 1];
+                Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];
+                Excel.Range range = worksheet.get_Range(c1, c2);
+                range.Value = arr;
+                excel.Visible = true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                workbook = null;
+                excel = null;
+                worksheet = null;
+            }
+        }
         private void btnReportPO_Click(object sender, EventArgs e)
         {
             int ngaygiao = 0;
@@ -70,6 +122,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbKHinvoice.DisplayMember = "MA_KH";
             cbKHinvoice.DataSource = KH;
         }
+        void getBaocaosx()
+        {
+
+            DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
+            dtgbaocao.DataSource = baocao;
+        }
         private void btnReportCTSX_Click(object sender, EventArgs e)
         {
             if (tbYearCTSX.Text != "" && tbmonthCTSX.Text != "")
@@ -90,6 +148,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 if (c.GetType().Name == "Panel") c.Visible = false;
             }
+            dtgbaocao.Visible = false;
         }
 
         private void cTSXToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,8 +178,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void kếHoạchSXToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hidepannelfilter();
-            panelKHSX.Visible = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -128,7 +186,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (tbNamKHSX.Text != "" && tbThangKHSX.Text != "")
             {
                 DataTable dt = Import_Manager.Instance.inCTSX(tbMSQLKHSX.Text, tbMaSPKHSX.Text, Int32.Parse(tbNamKHSX.Text), Int32.Parse(tbThangKHSX.Text));
-                viewreport("KHSX.rdlc", "KHSX", dt);
+                if(khsx_idx ==0)
+                    viewreport("KHSX_SX.rdlc", "KHSX", dt);
+                else if(khsx_idx ==1)
+                    viewreport("KHSX_BURRYTAK.rdlc", "KHSX", dt);
+                else
+                    viewreport("KHSX_KIEM_NQ.rdlc", "KHSX", dt);
             }
         }
 
@@ -203,8 +266,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     {
                         DataTable dtExcel = new DataTable();
                         dtExcel = ReadExcel(filePath, fileExt, tbquery.Text); //read excel file  
-                        dtgexcel.Visible = true;
-                        dtgexcel.DataSource = dtExcel;
+                        dtgbaocao.Visible = true;
+                        dtgbaocao.DataSource = dtExcel;
                     }
                     catch (Exception ex)
                     {
@@ -220,12 +283,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbMSQQLCTSX_TextChanged(object sender, EventArgs e)
         {
-            getsanphamtheomsql();
+            //getsanphamtheomsql();
         }
 
         private void tbMSQLKHSX_TextChanged(object sender, EventArgs e)
         {
-            getsanphamtheomsql();
+            //getsanphamtheomsql();
         }
 
         private void importFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -239,6 +302,45 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void sảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            dtgbaocao.Visible = true;
+            panelbaocaosx.Visible = true;
+            getBaocaosx();
+        }
+
+        private void btnbaocaosx_Click(object sender, EventArgs e)
+        { 
+            getBaocaosx();
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            xuatexceldtg(dtgbaocao);
+        }
+
+        private void sảnXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            khsx_idx = 0;
+            panelKHSX.Visible = true;
+        }
+
+        private void burrytakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            khsx_idx = 1;
+            panelKHSX.Visible = true;
+        }
+
+        private void kiểmNgoạiQuangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            khsx_idx = 2;
+            panelKHSX.Visible = true;
         }
     }
 }

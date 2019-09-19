@@ -212,6 +212,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_USER_INFOR @USER ", new object[] { username});
         }
 
+        public DataTable getbaocaosx(DateTime datefrom, DateTime dateto)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_BAO_CAO_SAN_XUAT @FROM , @TO ", new object[] { datefrom, dateto});
+        }
+
         public DataTable gettencongdoanbantp(string bophan)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_TEN_CONG_DOAN_BAN_TP @BP", new object[] {bophan });

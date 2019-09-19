@@ -181,7 +181,9 @@
     <EmbeddedResource Include="Invoice.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="KHSX.rdlc" />
+    <EmbeddedResource Include="KHSX_SX.rdlc" />
+    <EmbeddedResource Include="KHSX_KIEM_NQ.rdlc" />
+    <EmbeddedResource Include="KHSX_BURRYTAK.rdlc" />
     <EmbeddedResource Include="NXT.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
