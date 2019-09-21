@@ -156,12 +156,42 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             hidepannelfilter();
             panelCTSX.Visible = true;
         }
-
+        int getmaxidimport()
+        {
+            try
+            {
+                DataTable data = Import_Manager.Instance.GetMAxIDImport();
+                return Int32.Parse(data.Rows[0][0].ToString());
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+        void importfile()
+        {
+            try
+            {
+                int data = Import_Manager.Instance.ImportFile();
+                DataTable err = Import_Manager.Instance.GetErrormport();
+                if(err.Rows.Count > 0)
+                {
+                    MessageBox.Show("Error: " + err.Rows[0][0].ToString());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("error while importing files");
+            }
+        }
         private void cậpNhậtDữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                int result = Import_Manager.Instance.UpdateDuLieu();
+                int max_id = getmaxidimport();
+                if (max_id == -1) return;
+                importfile();
+                int result = Import_Manager.Instance.UpdateDuLieu(max_id);
                 MessageBox.Show("Cập nhật dữ liệu xong");
             }
             catch (Exception ex)

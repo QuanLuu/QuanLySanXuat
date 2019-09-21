@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panelPO = new System.Windows.Forms.Panel();
@@ -61,6 +61,9 @@
             this.pOPassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếHoạchSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sảnXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.burrytakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kiểmNgoạiQuangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,9 +109,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.dtpbaocaosxfrom = new System.Windows.Forms.DateTimePicker();
             this.dtgbaocao = new System.Windows.Forms.DataGridView();
-            this.sảnXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.burrytakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kiểmNgoạiQuangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -122,9 +122,9 @@
             // 
             // reportViewer
             // 
-            reportDataSource5.Name = "IN_PO";
-            reportDataSource5.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "IN_PO";
+            reportDataSource1.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 393);
             this.reportViewer.Name = "reportViewer";
@@ -392,14 +392,14 @@
             // pOPassToolStripMenuItem
             // 
             this.pOPassToolStripMenuItem.Name = "pOPassToolStripMenuItem";
-            this.pOPassToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.pOPassToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.pOPassToolStripMenuItem.Text = "PO-Pass";
             this.pOPassToolStripMenuItem.Click += new System.EventHandler(this.pOPassToolStripMenuItem_Click);
             // 
             // cTSXToolStripMenuItem
             // 
             this.cTSXToolStripMenuItem.Name = "cTSXToolStripMenuItem";
-            this.cTSXToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.cTSXToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.cTSXToolStripMenuItem.Text = "CTSX";
             this.cTSXToolStripMenuItem.Click += new System.EventHandler(this.cTSXToolStripMenuItem_Click);
             // 
@@ -410,9 +410,30 @@
             this.burrytakToolStripMenuItem,
             this.kiểmNgoạiQuangToolStripMenuItem});
             this.kếHoạchSXToolStripMenuItem.Name = "kếHoạchSXToolStripMenuItem";
-            this.kếHoạchSXToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.kếHoạchSXToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.kếHoạchSXToolStripMenuItem.Text = "Kế hoạch";
             this.kếHoạchSXToolStripMenuItem.Click += new System.EventHandler(this.kếHoạchSXToolStripMenuItem_Click);
+            // 
+            // sảnXuấtToolStripMenuItem1
+            // 
+            this.sảnXuấtToolStripMenuItem1.Name = "sảnXuấtToolStripMenuItem1";
+            this.sảnXuấtToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.sảnXuấtToolStripMenuItem1.Text = "Sản Xuất";
+            this.sảnXuấtToolStripMenuItem1.Click += new System.EventHandler(this.sảnXuấtToolStripMenuItem1_Click);
+            // 
+            // burrytakToolStripMenuItem
+            // 
+            this.burrytakToolStripMenuItem.Name = "burrytakToolStripMenuItem";
+            this.burrytakToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.burrytakToolStripMenuItem.Text = "Burrytak";
+            this.burrytakToolStripMenuItem.Click += new System.EventHandler(this.burrytakToolStripMenuItem_Click);
+            // 
+            // kiểmNgoạiQuangToolStripMenuItem
+            // 
+            this.kiểmNgoạiQuangToolStripMenuItem.Name = "kiểmNgoạiQuangToolStripMenuItem";
+            this.kiểmNgoạiQuangToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.kiểmNgoạiQuangToolStripMenuItem.Text = "Kiểm Ngoại Quan";
+            this.kiểmNgoạiQuangToolStripMenuItem.Click += new System.EventHandler(this.kiểmNgoạiQuangToolStripMenuItem_Click);
             // 
             // cậpNhậtDữLiệuToolStripMenuItem
             // 
@@ -848,27 +869,6 @@
             this.dtgbaocao.Size = new System.Drawing.Size(872, 129);
             this.dtgbaocao.TabIndex = 10;
             this.dtgbaocao.Visible = false;
-            // 
-            // sảnXuấtToolStripMenuItem1
-            // 
-            this.sảnXuấtToolStripMenuItem1.Name = "sảnXuấtToolStripMenuItem1";
-            this.sảnXuấtToolStripMenuItem1.Size = new System.Drawing.Size(221, 26);
-            this.sảnXuấtToolStripMenuItem1.Text = "Sản Xuất";
-            this.sảnXuấtToolStripMenuItem1.Click += new System.EventHandler(this.sảnXuấtToolStripMenuItem1_Click);
-            // 
-            // burrytakToolStripMenuItem
-            // 
-            this.burrytakToolStripMenuItem.Name = "burrytakToolStripMenuItem";
-            this.burrytakToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
-            this.burrytakToolStripMenuItem.Text = "Burrytak";
-            this.burrytakToolStripMenuItem.Click += new System.EventHandler(this.burrytakToolStripMenuItem_Click);
-            // 
-            // kiểmNgoạiQuangToolStripMenuItem
-            // 
-            this.kiểmNgoạiQuangToolStripMenuItem.Name = "kiểmNgoạiQuangToolStripMenuItem";
-            this.kiểmNgoạiQuangToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.kiểmNgoạiQuangToolStripMenuItem.Text = "Kiểm Ngoại Quan";
-            this.kiểmNgoạiQuangToolStripMenuItem.Click += new System.EventHandler(this.kiểmNgoạiQuangToolStripMenuItem_Click);
             // 
             // FrmReportView
             // 

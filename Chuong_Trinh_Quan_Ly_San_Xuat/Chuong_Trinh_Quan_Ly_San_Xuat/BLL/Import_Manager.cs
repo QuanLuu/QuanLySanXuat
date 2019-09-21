@@ -54,6 +54,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DINH_MUC @MSQL , @MA_SP", new object[] {msql, masp });
         }
+        public DataTable GetMAxIDImport()
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_GET_MAX_IMPORT_FILE", new object[] { });
+        }
+        public DataTable GetErrormport()
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_IMPORT_ERROR", new object[] { });
+        }
+
         public DataTable LoadDongia(string masp, string msql)
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DON_GIA @MA_SP , @MSQL", new object[] { masp, msql });
@@ -326,7 +335,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_NHAT_KY_XUAT_SP] @ACTION , @ID , @MA_SP , @NGAY_XUAT , @SO_LOT , @SO_PO , @SO_INVOICE , @SO_TO_KHAI , @NGAY_TO_KHAI , @SO_THUNG , @SO_LUONG , @GHI_CHU , @KH", new object[] { ACTION, ID, masp, NGAY_XUAT, SO_LOT, sopo, soinvoice,sotokhai, ngaytokhai, sothung, soluong, GHI_CHU, kh });
         }
-
+        public int ImportFile()
+        {
+            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UI_IMPORT_FILE", new object[] { });
+        }
         public int UpdatePO(int ACTION, int ID,string MaKH, string masp, DateTime ngaypo, string sopo, DateTime etd, DateTime eta, int soluong, decimal dongia, DateTime ngaygiao, string GHI_CHU)
         {
             return DataProvider.Instance.ExecuteNonQuery("exec [PP_UI_UPDATE_PO_ALL] @ACTION , @ID , @MA_KH , @MASP , @NGAY_PO , @SO_PO , @ETA , @ETD , @SO_LUONG , @DON_GIA , @NGAY_GIAO_DU_KIEN , @GHI_CHU", new object[] { ACTION, ID, MaKH, masp, ngaypo, sopo, etd, eta, soluong, dongia, ngaygiao, GHI_CHU });
@@ -357,9 +369,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteNonQuery("exec PP_UI_UPDATE_IMPORT_DATATYPE_SHEET @ACTION , @ID_DATATYPE , @IGNORE , @PIVOT_TABLE , @MAX_COLUMN , @NAME , @DATATYPE_NAME , @BUFFER_TABLE , @ID", new object[] { ACTION, ID_DATATYPE, IGNORE, PIVOT_TABLE, MAX_COLUMN, NAME, DATATYPE_NAME, BUFFER_TABLE, ID });
         }
-        public int UpdateDuLieu()
+        public int UpdateDuLieu(int maxidimport)
         {
-            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UPDATE_DU_LIEU", new object[] { });
+            return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UPDATE_DU_LIEU @ID", new object[] { maxidimport });
         }
         public int UpdateUsers(int action, int id, string ten, string pas, string capquyen, string casx, string bophan)
         {
