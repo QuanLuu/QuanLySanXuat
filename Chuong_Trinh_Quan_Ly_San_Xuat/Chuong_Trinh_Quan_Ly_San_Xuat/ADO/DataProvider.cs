@@ -30,10 +30,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.ADO
 
         private DataProvider() { }
 
-        string connectstring = ConfigurationManager.ConnectionStrings["QLSX"].ToString();
+        string connectstring =Properties.Settings.Default.QLSX;
+
+
 
         //Properties.Settings.Default.QLSX;//ConfigurationManager.ConnectionStrings["QLSX"].ToString();
-     
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 

@@ -230,6 +230,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_TEN_CONG_DOAN_BAN_TP @BP", new object[] {bophan });
         }
+
+        public DataTable baocaotiendo(int tunam, int tuthang, int dennam, int denthang, string msql, string macd)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_BAO_CAO_TIEN_DO @TU_NAM , @TU_THANG , @DEN_NAM , @DEN_THANG , @MSQL , @MA_CD", new object[] { tunam, tuthang, dennam, denthang, msql, macd });
+        }
+        public DataTable baocaotiendongay(string msql, string macd, int nam, int thang)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG @MSQL , @MA_CD , @NAM , @THANG", new object[] {  msql, macd, nam, thang });
+        }
         public DataTable GetNVL_NCC(string nvl, string ncc)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_NGUYEN_LIEU_NCC @NVL , @NCC", new object[] { nvl, ncc});

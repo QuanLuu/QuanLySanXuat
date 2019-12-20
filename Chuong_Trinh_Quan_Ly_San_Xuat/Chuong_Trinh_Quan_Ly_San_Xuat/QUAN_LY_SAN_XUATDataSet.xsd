@@ -2,15 +2,16 @@
 <xs:schema id="QUAN_LY_SAN_XUATDataSet" targetNamespace="http://tempuri.org/QUAN_LY_SAN_XUATDataSet.xsd" xmlns:mstns="http://tempuri.org/QUAN_LY_SAN_XUATDataSet.xsd" xmlns="http://tempuri.org/QUAN_LY_SAN_XUATDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="PP_BAO_CAO_TIEN_DO" GeneratorFunctionsComponentClassName="PP_BAO_CAO_TIEN_DO" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="PP_BAO_CAO_TIEN_DO" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QUAN_LY_SAN_XUATConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QUAN_LY_SAN_XUATConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.GlobalReference.Default.QUAN_LY_SAN_XUATConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QUAN_LY_SAN_XUATConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QUAN_LY_SAN_XUATConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.GlobalReference.Default.QUAN_LY_SAN_XUATConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QUAN_LY_SAN_XUATConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="QUAN_LY_SAN_XUATConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.GlobalReference.Default.QUAN_LY_SAN_XUATConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QUAN_LY_SAN_XUATConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="QUAN_LY_SAN_XUATConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.GlobalReference.Default.QUAN_LY_SAN_XUATConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLSX" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLSX (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Chuong_Trinh_Quan_Ly_San_Xuat.Properties.Settings.GlobalReference.Default.QLSX" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_DS_PRINT_PO_MSQLTableAdapter" GeneratorDataComponentClassName="PP_DS_PRINT_PO_MSQLTableAdapter" Name="PP_DS_PRINT_PO_MSQL" UserDataComponentName="PP_DS_PRINT_PO_MSQLTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QUAN_LY_SAN_XUATConnectionString (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_PRINT_PO_MSQL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_PRINT_PO_MSQL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.PP_DS_PRINT_PO_MSQL</CommandText>
@@ -47,7 +48,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_DS_IN_CHI_THI_SAN_XUATTableAdapter" GeneratorDataComponentClassName="PP_DS_IN_CHI_THI_SAN_XUATTableAdapter" Name="PP_DS_IN_CHI_THI_SAN_XUAT" UserDataComponentName="PP_DS_IN_CHI_THI_SAN_XUATTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QUAN_LY_SAN_XUATConnectionString (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_IN_CHI_THI_SAN_XUAT" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_IN_CHI_THI_SAN_XUAT" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.PP_DS_IN_CHI_THI_SAN_XUAT</CommandText>
@@ -107,7 +108,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_DS_INVOICETableAdapter" GeneratorDataComponentClassName="PP_DS_INVOICETableAdapter" Name="PP_DS_INVOICE" UserDataComponentName="PP_DS_INVOICETableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QUAN_LY_SAN_XUATConnectionString1 (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_INVOICE" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_DS_INVOICE" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.PP_DS_INVOICE</CommandText>
@@ -138,7 +139,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_BAO_CAO_NXT_NVLTableAdapter" GeneratorDataComponentClassName="PP_BAO_CAO_NXT_NVLTableAdapter" Name="PP_BAO_CAO_NXT_NVL" UserDataComponentName="PP_BAO_CAO_NXT_NVLTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QUAN_LY_SAN_XUATConnectionString1 (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_NXT_NVL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_NXT_NVL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.PP_BAO_CAO_NXT_NVL</CommandText>
@@ -163,7 +164,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_BAO_CAO_NXT_SPTableAdapter" GeneratorDataComponentClassName="PP_BAO_CAO_NXT_SPTableAdapter" Name="PP_BAO_CAO_NXT_SP" UserDataComponentName="PP_BAO_CAO_NXT_SPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QUAN_LY_SAN_XUATConnectionString1 (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_NXT_SP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_NXT_SP" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.PP_BAO_CAO_NXT_SP</CommandText>
@@ -183,6 +184,71 @@
               <Mapping SourceColumn="NHAP_TRONG_KY" DataSetColumn="NHAP_TRONG_KY" />
               <Mapping SourceColumn="XUAT_TRONG_KY" DataSetColumn="XUAT_TRONG_KY" />
               <Mapping SourceColumn="TON_CUOI_KY" DataSetColumn="TON_CUOI_KY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_BAO_CAO_TIEN_DOTableAdapter" GeneratorDataComponentClassName="PP_BAO_CAO_TIEN_DOTableAdapter" Name="PP_BAO_CAO_TIEN_DO" UserDataComponentName="PP_BAO_CAO_TIEN_DOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_TIEN_DO" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.PP_BAO_CAO_TIEN_DO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TU_NAM" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TU_THANG" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DEN_NAM" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DEN_THANG" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@MSQL" Precision="0" ProviderType="VarChar" Scale="0" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@MACD" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NAM_KH" DataSetColumn="NAM_KH" />
+              <Mapping SourceColumn="THANG_KH" DataSetColumn="THANG_KH" />
+              <Mapping SourceColumn="MSQL" DataSetColumn="MSQL" />
+              <Mapping SourceColumn="MA_SP" DataSetColumn="MA_SP" />
+              <Mapping SourceColumn="TEN_SP" DataSetColumn="TEN_SP" />
+              <Mapping SourceColumn="MA_CONG_DOAN" DataSetColumn="MA_CONG_DOAN" />
+              <Mapping SourceColumn="TEN_CONG_DOAN" DataSetColumn="TEN_CONG_DOAN" />
+              <Mapping SourceColumn="SO_LUONG_KE_HOACH" DataSetColumn="SO_LUONG_KE_HOACH" />
+              <Mapping SourceColumn="TON_BAN_TP" DataSetColumn="TON_BAN_TP" />
+              <Mapping SourceColumn="TON_TP" DataSetColumn="TON_TP" />
+              <Mapping SourceColumn="SO_LUONG_CAN_LAM" DataSetColumn="SO_LUONG_CAN_LAM" />
+              <Mapping SourceColumn="SO_LUONG_THUC_TE" DataSetColumn="SO_LUONG_THUC_TE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGTableAdapter" GeneratorDataComponentClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGTableAdapter" Name="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" UserDataComponentName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLSX (Settings)" DbObjectName="QUAN_LY_SAN_XUAT.dbo.PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MSQL" Precision="0" ProviderType="NVarChar" Scale="0" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MACD" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@YEAR" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MONTH" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DATE" DataSetColumn="DATE" />
+              <Mapping SourceColumn="MSQL" DataSetColumn="MSQL" />
+              <Mapping SourceColumn="TEN_SP" DataSetColumn="TEN_SP" />
+              <Mapping SourceColumn="MA_CONG_DOAN" DataSetColumn="MA_CONG_DOAN" />
+              <Mapping SourceColumn="KE_HOACH" DataSetColumn="KE_HOACH" />
+              <Mapping SourceColumn="THUC_TE" DataSetColumn="THUC_TE" />
+              <Mapping SourceColumn="KE_HOACH_TICH_LUY" DataSetColumn="KE_HOACH_TICH_LUY" />
+              <Mapping SourceColumn="THUC_TE_TICH_LUY" DataSetColumn="THUC_TE_TICH_LUY" />
+              <Mapping SourceColumn="TEN_CONG_DOAN" DataSetColumn="TEN_CONG_DOAN" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -430,6 +496,93 @@
               <xs:element name="NHAP_TRONG_KY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNHAP_TRONG_KY" msprop:Generator_ColumnPropNameInRow="NHAP_TRONG_KY" msprop:Generator_ColumnPropNameInTable="NHAP_TRONG_KYColumn" msprop:Generator_UserColumnName="NHAP_TRONG_KY" type="xs:int" minOccurs="0" />
               <xs:element name="XUAT_TRONG_KY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnXUAT_TRONG_KY" msprop:Generator_ColumnPropNameInRow="XUAT_TRONG_KY" msprop:Generator_ColumnPropNameInTable="XUAT_TRONG_KYColumn" msprop:Generator_UserColumnName="XUAT_TRONG_KY" type="xs:int" minOccurs="0" />
               <xs:element name="TON_CUOI_KY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTON_CUOI_KY" msprop:Generator_ColumnPropNameInRow="TON_CUOI_KY" msprop:Generator_ColumnPropNameInTable="TON_CUOI_KYColumn" msprop:Generator_UserColumnName="TON_CUOI_KY" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PP_BAO_CAO_TIEN_DO" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DODataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DORowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DORowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DORowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DORowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DORowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DORowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAM_KH" msprop:Generator_ColumnVarNameInTable="columnNAM_KH" msprop:Generator_ColumnPropNameInRow="NAM_KH" msprop:Generator_ColumnPropNameInTable="NAM_KHColumn" msprop:Generator_UserColumnName="NAM_KH" type="xs:int" minOccurs="0" />
+              <xs:element name="THANG_KH" msprop:Generator_ColumnVarNameInTable="columnTHANG_KH" msprop:Generator_ColumnPropNameInRow="THANG_KH" msprop:Generator_ColumnPropNameInTable="THANG_KHColumn" msprop:Generator_UserColumnName="THANG_KH" type="xs:int" minOccurs="0" />
+              <xs:element name="MSQL" msprop:Generator_ColumnVarNameInTable="columnMSQL" msprop:Generator_ColumnPropNameInRow="MSQL" msprop:Generator_ColumnPropNameInTable="MSQLColumn" msprop:Generator_UserColumnName="MSQL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_SP" msprop:Generator_ColumnVarNameInTable="columnMA_SP" msprop:Generator_ColumnPropNameInRow="MA_SP" msprop:Generator_ColumnPropNameInTable="MA_SPColumn" msprop:Generator_UserColumnName="MA_SP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_SP" msprop:Generator_ColumnVarNameInTable="columnTEN_SP" msprop:Generator_ColumnPropNameInRow="TEN_SP" msprop:Generator_ColumnPropNameInTable="TEN_SPColumn" msprop:Generator_UserColumnName="TEN_SP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnMA_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="MA_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="MA_CONG_DOANColumn" msprop:Generator_UserColumnName="MA_CONG_DOAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnTEN_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="TEN_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="TEN_CONG_DOANColumn" msprop:Generator_UserColumnName="TEN_CONG_DOAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SO_LUONG_KE_HOACH" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG_KE_HOACH" msprop:Generator_ColumnPropNameInRow="SO_LUONG_KE_HOACH" msprop:Generator_ColumnPropNameInTable="SO_LUONG_KE_HOACHColumn" msprop:Generator_UserColumnName="SO_LUONG_KE_HOACH" type="xs:double" minOccurs="0" />
+              <xs:element name="TON_BAN_TP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTON_BAN_TP" msprop:Generator_ColumnPropNameInRow="TON_BAN_TP" msprop:Generator_ColumnPropNameInTable="TON_BAN_TPColumn" msprop:Generator_UserColumnName="TON_BAN_TP" type="xs:double" minOccurs="0" />
+              <xs:element name="TON_TP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTON_TP" msprop:Generator_ColumnPropNameInRow="TON_TP" msprop:Generator_ColumnPropNameInTable="TON_TPColumn" msprop:Generator_UserColumnName="TON_TP" type="xs:double" minOccurs="0" />
+              <xs:element name="SO_LUONG_CAN_LAM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG_CAN_LAM" msprop:Generator_ColumnPropNameInRow="SO_LUONG_CAN_LAM" msprop:Generator_ColumnPropNameInTable="SO_LUONG_CAN_LAMColumn" msprop:Generator_UserColumnName="SO_LUONG_CAN_LAM" type="xs:double" minOccurs="0" />
+              <xs:element name="SO_LUONG_THUC_TE" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG_THUC_TE" msprop:Generator_ColumnPropNameInRow="SO_LUONG_THUC_TE" msprop:Generator_ColumnPropNameInTable="SO_LUONG_THUC_TEColumn" msprop:Generator_UserColumnName="SO_LUONG_THUC_TE" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATE" msprop:Generator_ColumnVarNameInTable="columnDATE" msprop:Generator_ColumnPropNameInRow="DATE" msprop:Generator_ColumnPropNameInTable="DATEColumn" msprop:Generator_UserColumnName="DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MSQL" msprop:Generator_ColumnVarNameInTable="columnMSQL" msprop:Generator_ColumnPropNameInRow="MSQL" msprop:Generator_ColumnPropNameInTable="MSQLColumn" msprop:Generator_UserColumnName="MSQL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_SP" msprop:Generator_ColumnVarNameInTable="columnTEN_SP" msprop:Generator_ColumnPropNameInRow="TEN_SP" msprop:Generator_ColumnPropNameInTable="TEN_SPColumn" msprop:Generator_UserColumnName="TEN_SP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MA_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnMA_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="MA_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="MA_CONG_DOANColumn" msprop:Generator_UserColumnName="MA_CONG_DOAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KE_HOACH" msprop:Generator_ColumnVarNameInTable="columnKE_HOACH" msprop:Generator_ColumnPropNameInRow="KE_HOACH" msprop:Generator_ColumnPropNameInTable="KE_HOACHColumn" msprop:Generator_UserColumnName="KE_HOACH" type="xs:double" minOccurs="0" />
+              <xs:element name="THUC_TE" msprop:Generator_ColumnVarNameInTable="columnTHUC_TE" msprop:Generator_ColumnPropNameInRow="THUC_TE" msprop:Generator_ColumnPropNameInTable="THUC_TEColumn" msprop:Generator_UserColumnName="THUC_TE" type="xs:double" minOccurs="0" />
+              <xs:element name="KE_HOACH_TICH_LUY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnKE_HOACH_TICH_LUY" msprop:Generator_ColumnPropNameInRow="KE_HOACH_TICH_LUY" msprop:Generator_ColumnPropNameInTable="KE_HOACH_TICH_LUYColumn" msprop:Generator_UserColumnName="KE_HOACH_TICH_LUY" type="xs:double" minOccurs="0" />
+              <xs:element name="THUC_TE_TICH_LUY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTHUC_TE_TICH_LUY" msprop:Generator_ColumnPropNameInRow="THUC_TE_TICH_LUY" msprop:Generator_ColumnPropNameInTable="THUC_TE_TICH_LUYColumn" msprop:Generator_UserColumnName="THUC_TE_TICH_LUY" type="xs:double" minOccurs="0" />
+              <xs:element name="TEN_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnTEN_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="TEN_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="TEN_CONG_DOANColumn" msprop:Generator_UserColumnName="TEN_CONG_DOAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

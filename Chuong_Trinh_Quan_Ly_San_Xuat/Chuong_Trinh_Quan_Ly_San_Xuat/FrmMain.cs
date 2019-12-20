@@ -65,13 +65,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             foreach (Control c in col.Controls)
             {
-                if (c.Tag == null) { c.Enabled = false; }
+                if (c.Tag == null) { c.Visible = false; }
                 else
                 {
                     if (capquyen.Contains(c.Tag.ToString()))
-                    { c.Enabled = true; }
-                    else { c.Enabled = false; }
+                    { c.Visible = true; }
+                    else { c.Visible = false; }
                 }
+            }
+        }
+        void fullview()
+        {
+            foreach (Control c in panelMain.Controls)
+            {
+                c.Visible = true;             
             }
         }
         void getusername()
@@ -211,7 +218,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     string quyencap = data.Rows[0][2].ToString();
                     quyensudung = data.Rows[0][3].ToString();
                     casx = data.Rows[0][5].ToString();
-                    if (quyencap != "Full") enablecontrol(quyencap, this.panelMain);
+                    if (quyencap != "Full")
+                        enablecontrol(quyencap, this.panelMain);
+                    else
+                        fullview();
                     panelLogin.Visible = false;
                 }
                 else

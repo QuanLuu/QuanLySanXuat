@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panelPO = new System.Windows.Forms.Panel();
@@ -99,7 +99,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.dtpfromnxtnvl = new System.Windows.Forms.DateTimePicker();
             this.btnNXTNVL = new System.Windows.Forms.Button();
-            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
             this.panelbaocaosx = new System.Windows.Forms.Panel();
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnbaocaosx = new System.Windows.Forms.Button();
@@ -109,24 +108,56 @@
             this.label22 = new System.Windows.Forms.Label();
             this.dtpbaocaosxfrom = new System.Windows.Forms.DateTimePicker();
             this.dtgbaocao = new System.Windows.Forms.DataGridView();
+            this.paneltiendo = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btreporttiendo = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbtuthangtiendo = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tbtunamtiendo = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tbmsqltiendo = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tbdenthangtiendo = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tbdennamtiendo = new System.Windows.Forms.TextBox();
+            this.cbmacdtiendo = new System.Windows.Forms.ComboBox();
+            this.tiếnĐộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
+            this.theoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paneltiendongay = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.tbngaytiendo = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.tbthangngaytiendo = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tbnamngaytiendo = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.tbmsqlngaytiendo = new System.Windows.Forms.TextBox();
+            this.cbmacdngaytiendo = new System.Windows.Forms.ComboBox();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelKHSX.SuspendLayout();
             this.panelInvoice.SuspendLayout();
             this.panelNXTNVL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
             this.panelbaocaosx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgbaocao)).BeginInit();
+            this.paneltiendo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).BeginInit();
+            this.paneltiendongay.SuspendLayout();
             this.SuspendLayout();
             // 
             // reportViewer
             // 
-            reportDataSource1.Name = "IN_PO";
-            reportDataSource1.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource5.Name = "IN_PO";
+            reportDataSource5.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(0, 393);
+            this.reportViewer.Location = new System.Drawing.Point(0, 469);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.Size = new System.Drawing.Size(757, 168);
             this.reportViewer.TabIndex = 0;
@@ -144,7 +175,7 @@
             this.panelPO.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPO.Location = new System.Drawing.Point(0, 35);
             this.panelPO.Name = "panelPO";
-            this.panelPO.Size = new System.Drawing.Size(872, 38);
+            this.panelPO.Size = new System.Drawing.Size(1003, 38);
             this.panelPO.TabIndex = 2;
             // 
             // label2
@@ -224,7 +255,7 @@
             this.panelCTSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCTSX.Location = new System.Drawing.Point(0, 73);
             this.panelCTSX.Name = "panelCTSX";
-            this.panelCTSX.Size = new System.Drawing.Size(872, 32);
+            this.panelCTSX.Size = new System.Drawing.Size(1003, 32);
             this.panelCTSX.TabIndex = 3;
             // 
             // label15
@@ -232,7 +263,7 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(833, 0);
+            this.label15.Location = new System.Drawing.Point(964, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 13);
             this.label15.TabIndex = 18;
@@ -328,7 +359,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(872, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1003, 35);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -337,7 +368,8 @@
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhậpXuấtTồnToolStripMenuItem,
             this.invoiceToolStripMenuItem,
-            this.sảnXuấtToolStripMenuItem});
+            this.sảnXuấtToolStripMenuItem,
+            this.tiếnĐộToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
             this.reportsToolStripMenuItem.Text = "Báo Cáo";
@@ -345,7 +377,7 @@
             // nhậpXuấtTồnToolStripMenuItem
             // 
             this.nhậpXuấtTồnToolStripMenuItem.Name = "nhậpXuấtTồnToolStripMenuItem";
-            this.nhậpXuấtTồnToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.nhậpXuấtTồnToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.nhậpXuấtTồnToolStripMenuItem.Text = "Invoice";
             this.nhậpXuấtTồnToolStripMenuItem.Click += new System.EventHandler(this.nhậpXuấtTồnToolStripMenuItem_Click);
             // 
@@ -355,7 +387,7 @@
             this.nVLToolStripMenuItem,
             this.sảnPhẩmToolStripMenuItem});
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.invoiceToolStripMenuItem.Text = "NXT";
             // 
             // nVLToolStripMenuItem
@@ -375,7 +407,7 @@
             // sảnXuấtToolStripMenuItem
             // 
             this.sảnXuấtToolStripMenuItem.Name = "sảnXuấtToolStripMenuItem";
-            this.sảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.sảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.sảnXuấtToolStripMenuItem.Text = "Sản Xuất";
             this.sảnXuấtToolStripMenuItem.Click += new System.EventHandler(this.sảnXuấtToolStripMenuItem_Click);
             // 
@@ -474,7 +506,7 @@
             this.panelKHSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelKHSX.Location = new System.Drawing.Point(0, 105);
             this.panelKHSX.Name = "panelKHSX";
-            this.panelKHSX.Size = new System.Drawing.Size(872, 32);
+            this.panelKHSX.Size = new System.Drawing.Size(1003, 32);
             this.panelKHSX.TabIndex = 5;
             // 
             // label16
@@ -482,7 +514,7 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Right;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(832, 0);
+            this.label16.Location = new System.Drawing.Point(963, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 19;
@@ -581,7 +613,7 @@
             this.panelInvoice.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInvoice.Location = new System.Drawing.Point(0, 137);
             this.panelInvoice.Name = "panelInvoice";
-            this.panelInvoice.Size = new System.Drawing.Size(872, 32);
+            this.panelInvoice.Size = new System.Drawing.Size(1003, 32);
             this.panelInvoice.TabIndex = 6;
             // 
             // label20
@@ -589,7 +621,7 @@
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Right;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(823, 0);
+            this.label20.Location = new System.Drawing.Point(954, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 21;
@@ -699,7 +731,7 @@
             this.panelNXTNVL.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNXTNVL.Location = new System.Drawing.Point(0, 169);
             this.panelNXTNVL.Name = "panelNXTNVL";
-            this.panelNXTNVL.Size = new System.Drawing.Size(872, 33);
+            this.panelNXTNVL.Size = new System.Drawing.Size(1003, 33);
             this.panelNXTNVL.TabIndex = 7;
             this.panelNXTNVL.Visible = false;
             // 
@@ -767,11 +799,6 @@
             this.btnNXTNVL.UseVisualStyleBackColor = true;
             this.btnNXTNVL.Click += new System.EventHandler(this.btnNXTNVL_Click);
             // 
-            // QUAN_LY_SAN_XUATDataSet
-            // 
-            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
-            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panelbaocaosx
             // 
             this.panelbaocaosx.Controls.Add(this.btnXuatExcel);
@@ -784,7 +811,7 @@
             this.panelbaocaosx.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelbaocaosx.Location = new System.Drawing.Point(0, 202);
             this.panelbaocaosx.Name = "panelbaocaosx";
-            this.panelbaocaosx.Size = new System.Drawing.Size(872, 33);
+            this.panelbaocaosx.Size = new System.Drawing.Size(1003, 33);
             this.panelbaocaosx.TabIndex = 9;
             this.panelbaocaosx.Visible = false;
             // 
@@ -793,7 +820,7 @@
             this.btnXuatExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnXuatExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.Location = new System.Drawing.Point(719, 0);
+            this.btnXuatExcel.Location = new System.Drawing.Point(850, 0);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(78, 33);
             this.btnXuatExcel.TabIndex = 28;
@@ -816,7 +843,7 @@
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Right;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(797, 0);
+            this.label23.Location = new System.Drawing.Point(928, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(75, 13);
             this.label23.TabIndex = 25;
@@ -866,15 +893,296 @@
             this.dtgbaocao.ReadOnly = true;
             this.dtgbaocao.RowHeadersVisible = false;
             this.dtgbaocao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgbaocao.Size = new System.Drawing.Size(872, 129);
+            this.dtgbaocao.Size = new System.Drawing.Size(1003, 129);
             this.dtgbaocao.TabIndex = 10;
             this.dtgbaocao.Visible = false;
+            // 
+            // paneltiendo
+            // 
+            this.paneltiendo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.paneltiendo.Controls.Add(this.cbmacdtiendo);
+            this.paneltiendo.Controls.Add(this.label29);
+            this.paneltiendo.Controls.Add(this.tbdenthangtiendo);
+            this.paneltiendo.Controls.Add(this.label30);
+            this.paneltiendo.Controls.Add(this.tbdennamtiendo);
+            this.paneltiendo.Controls.Add(this.label24);
+            this.paneltiendo.Controls.Add(this.label25);
+            this.paneltiendo.Controls.Add(this.btreporttiendo);
+            this.paneltiendo.Controls.Add(this.label26);
+            this.paneltiendo.Controls.Add(this.tbtuthangtiendo);
+            this.paneltiendo.Controls.Add(this.label27);
+            this.paneltiendo.Controls.Add(this.tbtunamtiendo);
+            this.paneltiendo.Controls.Add(this.label28);
+            this.paneltiendo.Controls.Add(this.tbmsqltiendo);
+            this.paneltiendo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltiendo.Location = new System.Drawing.Point(0, 364);
+            this.paneltiendo.Name = "paneltiendo";
+            this.paneltiendo.Size = new System.Drawing.Size(1003, 32);
+            this.paneltiendo.TabIndex = 11;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(951, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(52, 13);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Tiến Độ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(543, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(40, 13);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "Mã CĐ";
+            // 
+            // btreporttiendo
+            // 
+            this.btreporttiendo.Location = new System.Drawing.Point(788, 5);
+            this.btreporttiendo.Name = "btreporttiendo";
+            this.btreporttiendo.Size = new System.Drawing.Size(75, 23);
+            this.btreporttiendo.TabIndex = 15;
+            this.btreporttiendo.Text = "View Report";
+            this.btreporttiendo.UseVisualStyleBackColor = true;
+            this.btreporttiendo.Click += new System.EventHandler(this.btreporttiendo_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(11, 8);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(54, 13);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "Từ Tháng";
+            // 
+            // tbtuthangtiendo
+            // 
+            this.tbtuthangtiendo.Location = new System.Drawing.Point(65, 4);
+            this.tbtuthangtiendo.Name = "tbtuthangtiendo";
+            this.tbtuthangtiendo.Size = new System.Drawing.Size(35, 20);
+            this.tbtuthangtiendo.TabIndex = 13;
+            this.tbtuthangtiendo.Text = "01";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(100, 8);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 13);
+            this.label27.TabIndex = 12;
+            this.label27.Text = "Năm";
+            // 
+            // tbtunamtiendo
+            // 
+            this.tbtunamtiendo.Location = new System.Drawing.Point(129, 4);
+            this.tbtunamtiendo.Name = "tbtunamtiendo";
+            this.tbtunamtiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbtunamtiendo.TabIndex = 11;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(425, 9);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(37, 13);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "MSQL";
+            // 
+            // tbmsqltiendo
+            // 
+            this.tbmsqltiendo.Location = new System.Drawing.Point(462, 5);
+            this.tbmsqltiendo.Name = "tbmsqltiendo";
+            this.tbmsqltiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbmsqltiendo.TabIndex = 9;
+            this.tbmsqltiendo.TextChanged += new System.EventHandler(this.tbmsqltiendo_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(195, 8);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(61, 13);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Đến Tháng";
+            // 
+            // tbdenthangtiendo
+            // 
+            this.tbdenthangtiendo.Location = new System.Drawing.Point(256, 4);
+            this.tbdenthangtiendo.Name = "tbdenthangtiendo";
+            this.tbdenthangtiendo.Size = new System.Drawing.Size(35, 20);
+            this.tbdenthangtiendo.TabIndex = 21;
+            this.tbdenthangtiendo.Text = "12";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(291, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Năm";
+            // 
+            // tbdennamtiendo
+            // 
+            this.tbdennamtiendo.Location = new System.Drawing.Point(320, 4);
+            this.tbdennamtiendo.Name = "tbdennamtiendo";
+            this.tbdennamtiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbdennamtiendo.TabIndex = 19;
+            // 
+            // cbmacdtiendo
+            // 
+            this.cbmacdtiendo.FormattingEnabled = true;
+            this.cbmacdtiendo.Location = new System.Drawing.Point(583, 5);
+            this.cbmacdtiendo.Name = "cbmacdtiendo";
+            this.cbmacdtiendo.Size = new System.Drawing.Size(181, 21);
+            this.cbmacdtiendo.TabIndex = 23;
+            // 
+            // tiếnĐộToolStripMenuItem
+            // 
+            this.tiếnĐộToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.theoThángToolStripMenuItem,
+            this.theoNgàyToolStripMenuItem});
+            this.tiếnĐộToolStripMenuItem.Name = "tiếnĐộToolStripMenuItem";
+            this.tiếnĐộToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.tiếnĐộToolStripMenuItem.Text = "Tiến Độ";
+            this.tiếnĐộToolStripMenuItem.Click += new System.EventHandler(this.tiếnĐộToolStripMenuItem_Click);
+            // 
+            // QUAN_LY_SAN_XUATDataSet
+            // 
+            this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
+            this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // theoThángToolStripMenuItem
+            // 
+            this.theoThángToolStripMenuItem.Name = "theoThángToolStripMenuItem";
+            this.theoThángToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.theoThángToolStripMenuItem.Text = "Theo Ngày";
+            this.theoThángToolStripMenuItem.Click += new System.EventHandler(this.theoThángToolStripMenuItem_Click);
+            // 
+            // theoNgàyToolStripMenuItem
+            // 
+            this.theoNgàyToolStripMenuItem.Name = "theoNgàyToolStripMenuItem";
+            this.theoNgàyToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.theoNgàyToolStripMenuItem.Text = "Theo Tháng";
+            this.theoNgàyToolStripMenuItem.Click += new System.EventHandler(this.theoNgàyToolStripMenuItem_Click);
+            // 
+            // paneltiendongay
+            // 
+            this.paneltiendongay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.paneltiendongay.Controls.Add(this.cbmacdngaytiendo);
+            this.paneltiendongay.Controls.Add(this.label31);
+            this.paneltiendongay.Controls.Add(this.label32);
+            this.paneltiendongay.Controls.Add(this.tbngaytiendo);
+            this.paneltiendongay.Controls.Add(this.label33);
+            this.paneltiendongay.Controls.Add(this.tbthangngaytiendo);
+            this.paneltiendongay.Controls.Add(this.label34);
+            this.paneltiendongay.Controls.Add(this.tbnamngaytiendo);
+            this.paneltiendongay.Controls.Add(this.label35);
+            this.paneltiendongay.Controls.Add(this.tbmsqlngaytiendo);
+            this.paneltiendongay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltiendongay.Location = new System.Drawing.Point(0, 396);
+            this.paneltiendongay.Name = "paneltiendongay";
+            this.paneltiendongay.Size = new System.Drawing.Size(1003, 32);
+            this.paneltiendongay.TabIndex = 12;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(918, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(85, 13);
+            this.label31.TabIndex = 18;
+            this.label31.Text = "Tiến Độ Ngày";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(121, 9);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(40, 13);
+            this.label32.TabIndex = 17;
+            this.label32.Text = "Mã CD";
+            // 
+            // tbngaytiendo
+            // 
+            this.tbngaytiendo.Location = new System.Drawing.Point(650, 5);
+            this.tbngaytiendo.Name = "tbngaytiendo";
+            this.tbngaytiendo.Size = new System.Drawing.Size(75, 23);
+            this.tbngaytiendo.TabIndex = 15;
+            this.tbngaytiendo.Text = "View Report";
+            this.tbngaytiendo.UseVisualStyleBackColor = true;
+            this.tbngaytiendo.Click += new System.EventHandler(this.tbngaytiendo_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(513, 10);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(38, 13);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "Tháng";
+            // 
+            // tbthangngaytiendo
+            // 
+            this.tbthangngaytiendo.Location = new System.Drawing.Point(551, 6);
+            this.tbthangngaytiendo.Name = "tbthangngaytiendo";
+            this.tbthangngaytiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbthangngaytiendo.TabIndex = 13;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(389, 10);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(29, 13);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "Năm";
+            // 
+            // tbnamngaytiendo
+            // 
+            this.tbnamngaytiendo.Location = new System.Drawing.Point(418, 6);
+            this.tbnamngaytiendo.Name = "tbnamngaytiendo";
+            this.tbnamngaytiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbnamngaytiendo.TabIndex = 11;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(3, 10);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(37, 13);
+            this.label35.TabIndex = 10;
+            this.label35.Text = "MSQL";
+            // 
+            // tbmsqlngaytiendo
+            // 
+            this.tbmsqlngaytiendo.Location = new System.Drawing.Point(40, 6);
+            this.tbmsqlngaytiendo.Name = "tbmsqlngaytiendo";
+            this.tbmsqlngaytiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbmsqlngaytiendo.TabIndex = 9;
+            this.tbmsqlngaytiendo.TextChanged += new System.EventHandler(this.tbmsqlngaytiendo_TextChanged);
+            // 
+            // cbmacdngaytiendo
+            // 
+            this.cbmacdngaytiendo.FormattingEnabled = true;
+            this.cbmacdngaytiendo.Location = new System.Drawing.Point(160, 5);
+            this.cbmacdngaytiendo.Name = "cbmacdngaytiendo";
+            this.cbmacdngaytiendo.Size = new System.Drawing.Size(181, 21);
+            this.cbmacdngaytiendo.TabIndex = 25;
             // 
             // FrmReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 675);
+            this.ClientSize = new System.Drawing.Size(1003, 675);
+            this.Controls.Add(this.paneltiendongay);
+            this.Controls.Add(this.paneltiendo);
             this.Controls.Add(this.dtgbaocao);
             this.Controls.Add(this.panelbaocaosx);
             this.Controls.Add(this.reportViewer);
@@ -901,10 +1209,14 @@
             this.panelInvoice.PerformLayout();
             this.panelNXTNVL.ResumeLayout(false);
             this.panelNXTNVL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
             this.panelbaocaosx.ResumeLayout(false);
             this.panelbaocaosx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgbaocao)).EndInit();
+            this.paneltiendo.ResumeLayout(false);
+            this.paneltiendo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QUAN_LY_SAN_XUATDataSet)).EndInit();
+            this.paneltiendongay.ResumeLayout(false);
+            this.paneltiendongay.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -991,5 +1303,34 @@
         private System.Windows.Forms.ToolStripMenuItem sảnXuấtToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem burrytakToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kiểmNgoạiQuangToolStripMenuItem;
+        private System.Windows.Forms.Panel paneltiendo;
+        private System.Windows.Forms.ComboBox cbmacdtiendo;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox tbdenthangtiendo;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox tbdennamtiendo;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btreporttiendo;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tbtuthangtiendo;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox tbtunamtiendo;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox tbmsqltiendo;
+        private System.Windows.Forms.ToolStripMenuItem tiếnĐộToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoThángToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoNgàyToolStripMenuItem;
+        private System.Windows.Forms.Panel paneltiendongay;
+        private System.Windows.Forms.ComboBox cbmacdngaytiendo;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button tbngaytiendo;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox tbthangngaytiendo;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox tbnamngaytiendo;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox tbmsqlngaytiendo;
     }
 }

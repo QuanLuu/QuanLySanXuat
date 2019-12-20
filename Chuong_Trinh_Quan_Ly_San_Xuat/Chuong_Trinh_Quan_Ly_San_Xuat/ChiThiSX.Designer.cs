@@ -926,7 +926,7 @@
             // 
             this.numSoLuong.Location = new System.Drawing.Point(64, 200);
             this.numSoLuong.Maximum = new decimal(new int[] {
-            100000,
+            100000000,
             0,
             0,
             0});

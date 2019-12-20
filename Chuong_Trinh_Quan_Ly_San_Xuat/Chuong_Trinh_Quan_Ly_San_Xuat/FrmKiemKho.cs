@@ -167,7 +167,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable data = Import_Manager.Instance.LoadDM_NL(tbFilterNL.Text);
             dtgNL.DataSource = data;
             cbMaNL.DataSource = data;
-            cbMaNL.DisplayMember = "TEN_NL"; 
+            cbMaNL.DisplayMember = "SHORT_NL";
+            cbMaNL.ValueMember = "TEN_NL";
         }
         void getmacongdoantheomsql()
         {
@@ -299,6 +300,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveSP_Click(object sender, EventArgs e)
         {
+            if (dtpGiacongTP.Value > dtpKiemTP.Value)
+            {
+                MessageBox.Show("Vui lòng kiểm tra ngày gia công và ngày kiểm!");
+                return;
+            }
             int currow = current_row(actionKKTP, dtgKKTP);
             int id = 0;
             if (actionKKTP != 1) id = (int)dtgKKTP.CurrentRow.Cells[11].Value;
@@ -371,7 +377,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             actionKKNL = 2;
             if(dtgNL.CurrentRow != null)
             {
-                cbMaNL.Text = dtgNL.CurrentRow.Cells[1].Value.ToString();
+                cbMaNL.Text = dtgNL.CurrentRow.Cells[10].Value.ToString();
                 tbsolotNL.Text = dtgNL.CurrentRow.Cells[3].Value.ToString();
                 tbsocuon.Text = dtgNL.CurrentRow.Cells[4].Value.ToString();
                 tbcuonme.Text = dtgNL.CurrentRow.Cells[5].Value.ToString();
@@ -391,10 +397,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (actionKKNL != 1) id = (int)dtgNL.CurrentRow.Cells[0].Value;
             try
             {
-                int checkmnl = checkmanl(cbMaNL.Text);
+                int checkmnl = checkmanl(cbMaNL.SelectedValue.ToString());
                 if (checkmnl > 0)
                 {
-                    int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, id, cbMaNL.Text, tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, cbnguoikiemnl.Text, tbghichuNL.Text);
+                    int results = Import_Manager.Instance.UpdateKiemKhoNL(actionKKNL, id, cbMaNL.SelectedValue.ToString(), tbsolotNL.Text, tbsocuon.Text, tbcuonme.Text, numtonNL.Value, dtpngaykiemNL.Value, cbnguoikiemnl.Text, tbghichuNL.Text);
                     getkiemkhonl();
                     dtgNL.CurrentCell = dtgNL.Rows[currow].Cells[0];
                     actionKKNL = 0;
@@ -490,6 +496,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void btnSaveDM_Click(object sender, EventArgs e)
         {
+            if (dtpngaygiacongbantp.Value > dtpngaykiembantp.Value)
+            {
+                MessageBox.Show("Vui lòng kiểm tra ngày gia công và ngày kiểm!");
+                return;
+            }
             int currow = current_row(actionKKBanTP, dtgbanTP);
             int id = 0;
             if (actionKKBanTP != 1) id = (int)dtgbanTP.CurrentRow.Cells[11].Value;          

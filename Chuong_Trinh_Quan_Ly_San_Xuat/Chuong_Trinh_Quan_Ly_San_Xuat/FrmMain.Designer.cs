@@ -144,6 +144,7 @@
             this.label11.TabIndex = 15;
             this.label11.Tag = "Kiểm Kho";
             this.label11.Text = "Kiểm Kho";
+            this.label11.Visible = false;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox8
@@ -156,6 +157,7 @@
             this.pictureBox8.TabIndex = 14;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "Kiểm Kho";
+            this.pictureBox8.Visible = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label10
@@ -169,6 +171,7 @@
             this.label10.TabIndex = 13;
             this.label10.Tag = "Admin";
             this.label10.Text = "Admin";
+            this.label10.Visible = false;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox7
@@ -181,6 +184,7 @@
             this.pictureBox7.TabIndex = 12;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "Admin";
+            this.pictureBox7.Visible = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label9
@@ -194,6 +198,7 @@
             this.label9.TabIndex = 11;
             this.label9.Tag = "PO";
             this.label9.Text = "PO";
+            this.label9.Visible = false;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox6
@@ -206,6 +211,7 @@
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "PO";
+            this.pictureBox6.Visible = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label6
@@ -219,6 +225,7 @@
             this.label6.TabIndex = 9;
             this.label6.Tag = "Báo Cáo";
             this.label6.Text = "Báo Cáo & In Ấn";
+            this.label6.Visible = false;
             // 
             // pictureBox5
             // 
@@ -230,6 +237,7 @@
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "Báo Cáo";
+            this.pictureBox5.Visible = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label3
@@ -243,6 +251,7 @@
             this.label3.TabIndex = 7;
             this.label3.Tag = "Nhân Sự";
             this.label3.Text = "Nhân Sự";
+            this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox3
@@ -255,6 +264,7 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "Nhân Sự";
+            this.pictureBox3.Visible = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label4
@@ -268,6 +278,7 @@
             this.label4.TabIndex = 5;
             this.label4.Tag = "Chỉ Thị SX";
             this.label4.Text = "Chỉ Thị SX";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox4
@@ -280,6 +291,7 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "Chỉ Thị SX";
+            this.pictureBox4.Visible = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
@@ -293,6 +305,7 @@
             this.label2.TabIndex = 3;
             this.label2.Tag = "Nhập - Xuất";
             this.label2.Text = "Nhập - Xuất";
+            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
@@ -305,6 +318,7 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "Nhập - Xuất";
+            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lbDanhMuc
@@ -318,6 +332,7 @@
             this.lbDanhMuc.TabIndex = 1;
             this.lbDanhMuc.Tag = "Danh Mục";
             this.lbDanhMuc.Text = "Danh Mục";
+            this.lbDanhMuc.Visible = false;
             this.lbDanhMuc.Click += new System.EventHandler(this.lbDanhMuc_Click);
             // 
             // pictureBox1
@@ -330,6 +345,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "Danh Mục";
+            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelLogin

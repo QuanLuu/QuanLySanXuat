@@ -227,6 +227,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             if (tbNamInvoice.Text != "" && tbThangInvoice.Text != "")
             {
                 DataTable dt = Import_Manager.Instance.reportInvoice(cbKHinvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
@@ -371,6 +372,71 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             hidepannelfilter();
             khsx_idx = 2;
             panelKHSX.Visible = true;
+        }
+
+        private void btreporttiendo_Click(object sender, EventArgs e)
+        {
+            if (tbtunamtiendo.Text != "" && tbtuthangtiendo.Text != "" && tbdennamtiendo.Text != "" && tbdenthangtiendo.Text != "" && tbmsqltiendo.Text != "")
+            {
+                DataTable dt = Import_Manager.Instance.baocaotiendo(Int32.Parse(tbtunamtiendo.Text), Int32.Parse(tbtuthangtiendo.Text), Int32.Parse(tbdennamtiendo.Text), Int32.Parse(tbdenthangtiendo.Text), tbmsqltiendo.Text, cbmacdtiendo.Text);
+                viewreport("BaoCaoTienDo.rdlc", "BaoCaoTienDo", dt);
+            }
+        }
+
+        private void tiếnĐộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+        }
+        void getmacongdoantheomsql()
+        {
+            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqltiendo.Text);
+            cbmacdtiendo.DisplayMember = "MA_CONG_DOAN";
+            cbmacdtiendo.DataSource = data;
+
+            DataTable data1 = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqlngaytiendo.Text);
+            cbmacdngaytiendo.DisplayMember = "MA_CONG_DOAN";
+            cbmacdngaytiendo.DataSource = data1;
+
+        }
+
+
+        private void theoThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            tbnamngaytiendo.Text = DateTime.Now.Year.ToString();
+            tbthangngaytiendo.Text = DateTime.Now.Month.ToString();
+            
+            paneltiendongay.Visible = true;
+
+        }
+
+        private void theoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            hidepannelfilter();
+            tbtunamtiendo.Text = DateTime.Now.Year.ToString();
+            tbdennamtiendo.Text = DateTime.Now.Year.ToString();
+            
+            paneltiendo.Visible = true;
+        }
+
+        private void tbngaytiendo_Click(object sender, EventArgs e)
+        {
+            if (tbmsqlngaytiendo.Text != "" && tbnamngaytiendo.Text != "" && tbthangngaytiendo.Text != "" )
+            {
+                DataTable dt = Import_Manager.Instance.baocaotiendongay(tbmsqlngaytiendo.Text, cbmacdngaytiendo.Text, Int32.Parse(tbnamngaytiendo.Text), Int32.Parse(tbthangngaytiendo.Text));
+                viewreport("TienDoNgay.rdlc", "TienDoNgay", dt);
+            }
+        }
+
+        private void tbmsqlngaytiendo_TextChanged(object sender, EventArgs e)
+        {
+            getmacongdoantheomsql();
+        }
+
+        private void tbmsqltiendo_TextChanged(object sender, EventArgs e)
+        {
+            getmacongdoantheomsql();
         }
     }
 }

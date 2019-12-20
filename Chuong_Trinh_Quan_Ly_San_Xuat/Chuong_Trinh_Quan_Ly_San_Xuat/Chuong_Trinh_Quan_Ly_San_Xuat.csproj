@@ -144,11 +144,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUAN_LY_SAN_XUATDataSet.cs">
+      <DependentUpon>QUAN_LY_SAN_XUATDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QUAN_LY_SAN_XUATDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QUAN_LY_SAN_XUATDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCaoTienDo.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiThiSX.resx">
       <DependentUpon>ChiThiSX.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +215,9 @@
     </Compile>
     <EmbeddedResource Include="PO.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TienDoNgay.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
