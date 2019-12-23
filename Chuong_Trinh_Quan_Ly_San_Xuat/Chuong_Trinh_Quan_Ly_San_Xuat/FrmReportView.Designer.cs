@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportView));
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panelPO = new System.Windows.Forms.Panel();
@@ -57,6 +57,9 @@
             this.nVLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sảnXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiếnĐộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inẤnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOPassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,6 +112,11 @@
             this.dtpbaocaosxfrom = new System.Windows.Forms.DateTimePicker();
             this.dtgbaocao = new System.Windows.Forms.DataGridView();
             this.paneltiendo = new System.Windows.Forms.Panel();
+            this.cbmacdtiendo = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tbdenthangtiendo = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tbdennamtiendo = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.btreporttiendo = new System.Windows.Forms.Button();
@@ -118,16 +126,9 @@
             this.tbtunamtiendo = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.tbmsqltiendo = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.tbdenthangtiendo = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tbdennamtiendo = new System.Windows.Forms.TextBox();
-            this.cbmacdtiendo = new System.Windows.Forms.ComboBox();
-            this.tiếnĐộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QUAN_LY_SAN_XUATDataSet = new Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSet();
-            this.theoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paneltiendongay = new System.Windows.Forms.Panel();
+            this.cbmacdngaytiendo = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.tbngaytiendo = new System.Windows.Forms.Button();
@@ -137,7 +138,11 @@
             this.tbnamngaytiendo = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.tbmsqlngaytiendo = new System.Windows.Forms.TextBox();
-            this.cbmacdngaytiendo = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.tbthangbaocaosx = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.tbnambaocaosx = new System.Windows.Forms.TextBox();
+            this.thépNXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelPO.SuspendLayout();
             this.panelCTSX.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -153,9 +158,9 @@
             // 
             // reportViewer
             // 
-            reportDataSource5.Name = "IN_PO";
-            reportDataSource5.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource4.Name = "IN_PO";
+            reportDataSource4.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 469);
             this.reportViewer.Name = "reportViewer";
@@ -368,6 +373,7 @@
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhậpXuấtTồnToolStripMenuItem,
             this.invoiceToolStripMenuItem,
+            this.thépNXTToolStripMenuItem,
             this.sảnXuấtToolStripMenuItem,
             this.tiếnĐộToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
@@ -389,6 +395,7 @@
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
             this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.invoiceToolStripMenuItem.Text = "NXT";
+            this.invoiceToolStripMenuItem.Visible = false;
             // 
             // nVLToolStripMenuItem
             // 
@@ -410,6 +417,30 @@
             this.sảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.sảnXuấtToolStripMenuItem.Text = "Sản Xuất";
             this.sảnXuấtToolStripMenuItem.Click += new System.EventHandler(this.sảnXuấtToolStripMenuItem_Click);
+            // 
+            // tiếnĐộToolStripMenuItem
+            // 
+            this.tiếnĐộToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.theoThángToolStripMenuItem,
+            this.theoNgàyToolStripMenuItem});
+            this.tiếnĐộToolStripMenuItem.Name = "tiếnĐộToolStripMenuItem";
+            this.tiếnĐộToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.tiếnĐộToolStripMenuItem.Text = "Tiến Độ";
+            this.tiếnĐộToolStripMenuItem.Click += new System.EventHandler(this.tiếnĐộToolStripMenuItem_Click);
+            // 
+            // theoThángToolStripMenuItem
+            // 
+            this.theoThángToolStripMenuItem.Name = "theoThángToolStripMenuItem";
+            this.theoThángToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.theoThángToolStripMenuItem.Text = "Theo Ngày";
+            this.theoThángToolStripMenuItem.Click += new System.EventHandler(this.theoThángToolStripMenuItem_Click);
+            // 
+            // theoNgàyToolStripMenuItem
+            // 
+            this.theoNgàyToolStripMenuItem.Name = "theoNgàyToolStripMenuItem";
+            this.theoNgàyToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.theoNgàyToolStripMenuItem.Text = "Theo Tháng";
+            this.theoNgàyToolStripMenuItem.Click += new System.EventHandler(this.theoNgàyToolStripMenuItem_Click);
             // 
             // inẤnToolStripMenuItem
             // 
@@ -801,6 +832,10 @@
             // 
             // panelbaocaosx
             // 
+            this.panelbaocaosx.Controls.Add(this.label36);
+            this.panelbaocaosx.Controls.Add(this.tbthangbaocaosx);
+            this.panelbaocaosx.Controls.Add(this.label37);
+            this.panelbaocaosx.Controls.Add(this.tbnambaocaosx);
             this.panelbaocaosx.Controls.Add(this.btnXuatExcel);
             this.panelbaocaosx.Controls.Add(this.btnbaocaosx);
             this.panelbaocaosx.Controls.Add(this.label23);
@@ -852,40 +887,45 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(166, 10);
+            this.label21.Location = new System.Drawing.Point(597, 10);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(53, 13);
             this.label21.TabIndex = 24;
             this.label21.Text = "Đến ngày";
+            this.label21.Visible = false;
             // 
             // dtpbaocaosxto
             // 
             this.dtpbaocaosxto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpbaocaosxto.Location = new System.Drawing.Point(219, 6);
+            this.dtpbaocaosxto.Location = new System.Drawing.Point(650, 6);
             this.dtpbaocaosxto.Name = "dtpbaocaosxto";
             this.dtpbaocaosxto.Size = new System.Drawing.Size(104, 20);
             this.dtpbaocaosxto.TabIndex = 23;
+            this.dtpbaocaosxto.Visible = false;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 11);
+            this.label22.Location = new System.Drawing.Point(434, 11);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(46, 13);
             this.label22.TabIndex = 22;
             this.label22.Text = "Từ ngày";
+            this.label22.Visible = false;
             // 
             // dtpbaocaosxfrom
             // 
             this.dtpbaocaosxfrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpbaocaosxfrom.Location = new System.Drawing.Point(49, 7);
+            this.dtpbaocaosxfrom.Location = new System.Drawing.Point(480, 7);
             this.dtpbaocaosxfrom.Name = "dtpbaocaosxfrom";
             this.dtpbaocaosxfrom.Size = new System.Drawing.Size(104, 20);
             this.dtpbaocaosxfrom.TabIndex = 21;
+            this.dtpbaocaosxfrom.Visible = false;
             // 
             // dtgbaocao
             // 
             this.dtgbaocao.AllowUserToResizeRows = false;
+            this.dtgbaocao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgbaocao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgbaocao.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtgbaocao.Location = new System.Drawing.Point(0, 235);
@@ -919,6 +959,47 @@
             this.paneltiendo.Name = "paneltiendo";
             this.paneltiendo.Size = new System.Drawing.Size(1003, 32);
             this.paneltiendo.TabIndex = 11;
+            // 
+            // cbmacdtiendo
+            // 
+            this.cbmacdtiendo.FormattingEnabled = true;
+            this.cbmacdtiendo.Location = new System.Drawing.Point(583, 5);
+            this.cbmacdtiendo.Name = "cbmacdtiendo";
+            this.cbmacdtiendo.Size = new System.Drawing.Size(181, 21);
+            this.cbmacdtiendo.TabIndex = 23;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(195, 8);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(61, 13);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Đến Tháng";
+            // 
+            // tbdenthangtiendo
+            // 
+            this.tbdenthangtiendo.Location = new System.Drawing.Point(256, 4);
+            this.tbdenthangtiendo.Name = "tbdenthangtiendo";
+            this.tbdenthangtiendo.Size = new System.Drawing.Size(35, 20);
+            this.tbdenthangtiendo.TabIndex = 21;
+            this.tbdenthangtiendo.Text = "12";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(291, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Năm";
+            // 
+            // tbdennamtiendo
+            // 
+            this.tbdennamtiendo.Location = new System.Drawing.Point(320, 4);
+            this.tbdennamtiendo.Name = "tbdennamtiendo";
+            this.tbdennamtiendo.Size = new System.Drawing.Size(66, 20);
+            this.tbdennamtiendo.TabIndex = 19;
             // 
             // label24
             // 
@@ -1000,75 +1081,10 @@
             this.tbmsqltiendo.TabIndex = 9;
             this.tbmsqltiendo.TextChanged += new System.EventHandler(this.tbmsqltiendo_TextChanged);
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(195, 8);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(61, 13);
-            this.label29.TabIndex = 22;
-            this.label29.Text = "Đến Tháng";
-            // 
-            // tbdenthangtiendo
-            // 
-            this.tbdenthangtiendo.Location = new System.Drawing.Point(256, 4);
-            this.tbdenthangtiendo.Name = "tbdenthangtiendo";
-            this.tbdenthangtiendo.Size = new System.Drawing.Size(35, 20);
-            this.tbdenthangtiendo.TabIndex = 21;
-            this.tbdenthangtiendo.Text = "12";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(291, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 13);
-            this.label30.TabIndex = 20;
-            this.label30.Text = "Năm";
-            // 
-            // tbdennamtiendo
-            // 
-            this.tbdennamtiendo.Location = new System.Drawing.Point(320, 4);
-            this.tbdennamtiendo.Name = "tbdennamtiendo";
-            this.tbdennamtiendo.Size = new System.Drawing.Size(66, 20);
-            this.tbdennamtiendo.TabIndex = 19;
-            // 
-            // cbmacdtiendo
-            // 
-            this.cbmacdtiendo.FormattingEnabled = true;
-            this.cbmacdtiendo.Location = new System.Drawing.Point(583, 5);
-            this.cbmacdtiendo.Name = "cbmacdtiendo";
-            this.cbmacdtiendo.Size = new System.Drawing.Size(181, 21);
-            this.cbmacdtiendo.TabIndex = 23;
-            // 
-            // tiếnĐộToolStripMenuItem
-            // 
-            this.tiếnĐộToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.theoThángToolStripMenuItem,
-            this.theoNgàyToolStripMenuItem});
-            this.tiếnĐộToolStripMenuItem.Name = "tiếnĐộToolStripMenuItem";
-            this.tiếnĐộToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.tiếnĐộToolStripMenuItem.Text = "Tiến Độ";
-            this.tiếnĐộToolStripMenuItem.Click += new System.EventHandler(this.tiếnĐộToolStripMenuItem_Click);
-            // 
             // QUAN_LY_SAN_XUATDataSet
             // 
             this.QUAN_LY_SAN_XUATDataSet.DataSetName = "QUAN_LY_SAN_XUATDataSet";
             this.QUAN_LY_SAN_XUATDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // theoThángToolStripMenuItem
-            // 
-            this.theoThángToolStripMenuItem.Name = "theoThángToolStripMenuItem";
-            this.theoThángToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
-            this.theoThángToolStripMenuItem.Text = "Theo Ngày";
-            this.theoThángToolStripMenuItem.Click += new System.EventHandler(this.theoThángToolStripMenuItem_Click);
-            // 
-            // theoNgàyToolStripMenuItem
-            // 
-            this.theoNgàyToolStripMenuItem.Name = "theoNgàyToolStripMenuItem";
-            this.theoNgàyToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
-            this.theoNgàyToolStripMenuItem.Text = "Theo Tháng";
-            this.theoNgàyToolStripMenuItem.Click += new System.EventHandler(this.theoNgàyToolStripMenuItem_Click);
             // 
             // paneltiendongay
             // 
@@ -1088,6 +1104,14 @@
             this.paneltiendongay.Name = "paneltiendongay";
             this.paneltiendongay.Size = new System.Drawing.Size(1003, 32);
             this.paneltiendongay.TabIndex = 12;
+            // 
+            // cbmacdngaytiendo
+            // 
+            this.cbmacdngaytiendo.FormattingEnabled = true;
+            this.cbmacdngaytiendo.Location = new System.Drawing.Point(160, 5);
+            this.cbmacdngaytiendo.Name = "cbmacdngaytiendo";
+            this.cbmacdngaytiendo.Size = new System.Drawing.Size(181, 21);
+            this.cbmacdngaytiendo.TabIndex = 25;
             // 
             // label31
             // 
@@ -1168,13 +1192,44 @@
             this.tbmsqlngaytiendo.TabIndex = 9;
             this.tbmsqlngaytiendo.TextChanged += new System.EventHandler(this.tbmsqlngaytiendo_TextChanged);
             // 
-            // cbmacdngaytiendo
+            // label36
             // 
-            this.cbmacdngaytiendo.FormattingEnabled = true;
-            this.cbmacdngaytiendo.Location = new System.Drawing.Point(160, 5);
-            this.cbmacdngaytiendo.Name = "cbmacdngaytiendo";
-            this.cbmacdngaytiendo.Size = new System.Drawing.Size(181, 21);
-            this.cbmacdngaytiendo.TabIndex = 25;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(144, 10);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(38, 13);
+            this.label36.TabIndex = 32;
+            this.label36.Text = "Tháng";
+            // 
+            // tbthangbaocaosx
+            // 
+            this.tbthangbaocaosx.Location = new System.Drawing.Point(182, 6);
+            this.tbthangbaocaosx.Name = "tbthangbaocaosx";
+            this.tbthangbaocaosx.Size = new System.Drawing.Size(66, 20);
+            this.tbthangbaocaosx.TabIndex = 31;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(20, 10);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(29, 13);
+            this.label37.TabIndex = 30;
+            this.label37.Text = "Năm";
+            // 
+            // tbnambaocaosx
+            // 
+            this.tbnambaocaosx.Location = new System.Drawing.Point(49, 6);
+            this.tbnambaocaosx.Name = "tbnambaocaosx";
+            this.tbnambaocaosx.Size = new System.Drawing.Size(66, 20);
+            this.tbnambaocaosx.TabIndex = 29;
+            // 
+            // thépNXTToolStripMenuItem
+            // 
+            this.thépNXTToolStripMenuItem.Name = "thépNXTToolStripMenuItem";
+            this.thépNXTToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.thépNXTToolStripMenuItem.Text = "Thép NXT";
+            this.thépNXTToolStripMenuItem.Click += new System.EventHandler(this.thépNXTToolStripMenuItem_Click);
             // 
             // FrmReportView
             // 
@@ -1332,5 +1387,10 @@
         private System.Windows.Forms.TextBox tbnamngaytiendo;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox tbmsqlngaytiendo;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox tbthangbaocaosx;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox tbnambaocaosx;
+        private System.Windows.Forms.ToolStripMenuItem thépNXTToolStripMenuItem;
     }
 }

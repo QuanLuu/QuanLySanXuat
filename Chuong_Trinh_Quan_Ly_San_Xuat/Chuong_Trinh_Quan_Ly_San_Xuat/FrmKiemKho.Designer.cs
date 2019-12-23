@@ -106,6 +106,8 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.dtgbanTP = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.cbtencongdoanbantpfil = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.dtpngaykiembtpfilto = new System.Windows.Forms.DateTimePicker();
             this.dtpngaykiembantpfil = new System.Windows.Forms.DateTimePicker();
@@ -120,6 +122,8 @@
             this.btnEditDM = new System.Windows.Forms.Button();
             this.btnNewDM = new System.Windows.Forms.Button();
             this.panelBanTP = new System.Windows.Forms.Panel();
+            this.cbtencdbantp = new System.Windows.Forms.ComboBox();
+            this.label48 = new System.Windows.Forms.Label();
             this.cbnguoikiembantp = new System.Windows.Forms.ComboBox();
             this.tbghichubantp = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -174,10 +178,6 @@
             this.label45 = new System.Windows.Forms.Label();
             this.tbsothungbaoluu = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.cbtencongdoanbantpfil = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.cbtencdbantp = new System.Windows.Forms.ComboBox();
             this.tabControlDanhMuc.SuspendLayout();
             this.tabPNL.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1036,6 +1036,24 @@
             this.panel13.Size = new System.Drawing.Size(1068, 29);
             this.panel13.TabIndex = 7;
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(449, 7);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(83, 13);
+            this.label47.TabIndex = 12;
+            this.label47.Text = "Tên Công Đoạn";
+            // 
+            // cbtencongdoanbantpfil
+            // 
+            this.cbtencongdoanbantpfil.FormattingEnabled = true;
+            this.cbtencongdoanbantpfil.Location = new System.Drawing.Point(538, 3);
+            this.cbtencongdoanbantpfil.Name = "cbtencongdoanbantpfil";
+            this.cbtencongdoanbantpfil.Size = new System.Drawing.Size(237, 21);
+            this.cbtencongdoanbantpfil.TabIndex = 11;
+            this.cbtencongdoanbantpfil.SelectedIndexChanged += new System.EventHandler(this.cbtencongdoan_SelectedIndexChanged);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -1211,6 +1229,26 @@
             this.panelBanTP.Size = new System.Drawing.Size(1068, 67);
             this.panelBanTP.TabIndex = 6;
             this.panelBanTP.Visible = false;
+            // 
+            // cbtencdbantp
+            // 
+            this.cbtencdbantp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbtencdbantp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbtencdbantp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtencdbantp.FormattingEnabled = true;
+            this.cbtencdbantp.Location = new System.Drawing.Point(402, 4);
+            this.cbtencdbantp.Name = "cbtencdbantp";
+            this.cbtencdbantp.Size = new System.Drawing.Size(143, 21);
+            this.cbtencdbantp.TabIndex = 45;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(352, 9);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(44, 13);
+            this.label48.TabIndex = 44;
+            this.label48.Text = "Tên CĐ";
             // 
             // cbnguoikiembantp
             // 
@@ -1773,44 +1811,6 @@
             this.label46.Size = new System.Drawing.Size(54, 13);
             this.label46.TabIndex = 2;
             this.label46.Text = "Số Thùng";
-            // 
-            // cbtencongdoanbantpfil
-            // 
-            this.cbtencongdoanbantpfil.FormattingEnabled = true;
-            this.cbtencongdoanbantpfil.Location = new System.Drawing.Point(538, 3);
-            this.cbtencongdoanbantpfil.Name = "cbtencongdoanbantpfil";
-            this.cbtencongdoanbantpfil.Size = new System.Drawing.Size(237, 21);
-            this.cbtencongdoanbantpfil.TabIndex = 11;
-            this.cbtencongdoanbantpfil.SelectedIndexChanged += new System.EventHandler(this.cbtencongdoan_SelectedIndexChanged);
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(449, 7);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(83, 13);
-            this.label47.TabIndex = 12;
-            this.label47.Text = "Tên Công Đoạn";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(352, 9);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(44, 13);
-            this.label48.TabIndex = 44;
-            this.label48.Text = "Tên CĐ";
-            // 
-            // cbtencdbantp
-            // 
-            this.cbtencdbantp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbtencdbantp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbtencdbantp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtencdbantp.FormattingEnabled = true;
-            this.cbtencdbantp.Location = new System.Drawing.Point(402, 4);
-            this.cbtencdbantp.Name = "cbtencdbantp";
-            this.cbtencdbantp.Size = new System.Drawing.Size(143, 21);
-            this.cbtencdbantp.TabIndex = 45;
             // 
             // FrmKiemKho
             // 

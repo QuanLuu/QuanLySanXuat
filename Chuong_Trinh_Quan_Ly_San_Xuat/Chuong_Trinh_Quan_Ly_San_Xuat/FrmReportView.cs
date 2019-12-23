@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -19,6 +20,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     {
         string nxt = "";
         int khsx_idx = 0;
+        string langue_ge;
+        ResourceManager res_man;
+        string loaibc;
+
         public FrmReportView()
         {
             InitializeComponent();
@@ -41,6 +46,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgbaocao.Dock = DockStyle.Fill;
             GetKhachHang();
             cbKHinvoice.Text = "NTZC";
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
+            tbnambaocaosx.Text = DateTime.Now.Year.ToString();
+            tbthangbaocaosx.Text = DateTime.Now.Month.ToString();
         }
         void xuatexceldtg(DataGridView dtg)
         {
@@ -122,11 +132,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbKHinvoice.DisplayMember = "MA_KH";
             cbKHinvoice.DataSource = KH;
         }
-        void getBaocaosx()
+        void getBaocaosx(string loaibc)
         {
-
-            DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
-            dtgbaocao.DataSource = baocao;
+            if (loaibc == "SX")
+            {
+                //DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
+                DataTable baocao = Import_Manager.Instance.GetBaoCaoSXThang(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
+                dtgbaocao.DataSource = baocao;
+            }
+            if (loaibc == "NVL")
+            {
+                //DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
+                DataTable baocao = Import_Manager.Instance.Getthepnxt(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
+                dtgbaocao.DataSource = baocao;
+            }
         }
         private void btnReportCTSX_Click(object sender, EventArgs e)
         {
@@ -337,15 +356,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void sảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            loaibc = "SX";
             hidepannelfilter();
             dtgbaocao.Visible = true;
             panelbaocaosx.Visible = true;
-            getBaocaosx();
+            if(tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
         }
 
         private void btnbaocaosx_Click(object sender, EventArgs e)
-        { 
-            getBaocaosx();
+        {
+
+            if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
@@ -437,6 +458,34 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbmsqltiendo_TextChanged(object sender, EventArgs e)
         {
             getmacongdoantheomsql();
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                if (c.GetType().Name == "Label")
+                {
+                    if (res_man.GetString(c.Text) != null)
+                        c.Text = res_man.GetString(c.Text);
+                }
+                setlangforlabel(c);
+            }
+        }
+
+        private void thépNXTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loaibc = "NVL";
+            hidepannelfilter();
+            dtgbaocao.Visible = true;
+            panelbaocaosx.Visible = true;
+            if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
         }
     }
 }

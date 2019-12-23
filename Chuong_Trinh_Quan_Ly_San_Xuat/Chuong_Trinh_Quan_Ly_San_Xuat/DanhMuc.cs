@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
 using System.Reflection;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Resources;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -26,6 +27,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionBoxSP = 0;
         int actionKHSP = 0;
         int actionNVLNCC = 0;
+        string langue_ge;
+        ResourceManager res_man;
         public FrmDanhMuc()
         {
             InitializeComponent();
@@ -76,6 +79,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgMayMoc, new object[] { true });
 
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+
             GetNguyenLieu();
             enablecontrolNL();
             enablecontrolSP();
@@ -99,6 +105,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             getsanphamSNP();
             getKHSP();
             loadnvl_ncc();
+            setlangue();
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach(Control c in par.Controls)
+            {
+                if(c.GetType().Name =="Label")
+                {
+                    if(res_man.GetString(c.Text) != null)
+                        c.Text = res_man.GetString(c.Text);
+                }
+                setlangforlabel(c);
+            }
         }
         void GetNguyenLieu()
         {
@@ -1455,5 +1481,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             GetDinhMuc();
         }
+
+ 
     }
 }

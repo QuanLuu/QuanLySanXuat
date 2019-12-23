@@ -33,23 +33,25 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbkiemkho = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbpo = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbbaocao = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbnhansu = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbctsx = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbnhapxuat = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbDanhMuc = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.cblanguege = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tbTenDN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -110,19 +112,19 @@
             this.panelMain.AutoSize = true;
             this.panelMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMain.BackColor = System.Drawing.Color.LightBlue;
-            this.panelMain.Controls.Add(this.label11);
+            this.panelMain.Controls.Add(this.lbkiemkho);
             this.panelMain.Controls.Add(this.pictureBox8);
             this.panelMain.Controls.Add(this.label10);
             this.panelMain.Controls.Add(this.pictureBox7);
-            this.panelMain.Controls.Add(this.label9);
+            this.panelMain.Controls.Add(this.lbpo);
             this.panelMain.Controls.Add(this.pictureBox6);
-            this.panelMain.Controls.Add(this.label6);
+            this.panelMain.Controls.Add(this.lbbaocao);
             this.panelMain.Controls.Add(this.pictureBox5);
-            this.panelMain.Controls.Add(this.label3);
+            this.panelMain.Controls.Add(this.lbnhansu);
             this.panelMain.Controls.Add(this.pictureBox3);
-            this.panelMain.Controls.Add(this.label4);
+            this.panelMain.Controls.Add(this.lbctsx);
             this.panelMain.Controls.Add(this.pictureBox4);
-            this.panelMain.Controls.Add(this.label2);
+            this.panelMain.Controls.Add(this.lbnhapxuat);
             this.panelMain.Controls.Add(this.pictureBox2);
             this.panelMain.Controls.Add(this.lbDanhMuc);
             this.panelMain.Controls.Add(this.pictureBox1);
@@ -130,22 +132,22 @@
             this.panelMain.Enabled = false;
             this.panelMain.Location = new System.Drawing.Point(0, 59);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(568, 291);
+            this.panelMain.Size = new System.Drawing.Size(568, 289);
             this.panelMain.TabIndex = 2;
             // 
-            // label11
+            // lbkiemkho
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(321, 271);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 17);
-            this.label11.TabIndex = 15;
-            this.label11.Tag = "Kiểm Kho";
-            this.label11.Text = "Kiểm Kho";
-            this.label11.Visible = false;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.lbkiemkho.AutoSize = true;
+            this.lbkiemkho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbkiemkho.ForeColor = System.Drawing.Color.Blue;
+            this.lbkiemkho.Location = new System.Drawing.Point(321, 271);
+            this.lbkiemkho.Name = "lbkiemkho";
+            this.lbkiemkho.Size = new System.Drawing.Size(76, 17);
+            this.lbkiemkho.TabIndex = 15;
+            this.lbkiemkho.Tag = "Kiểm Kho";
+            this.lbkiemkho.Text = "Kiểm Kho";
+            this.lbkiemkho.Visible = false;
+            this.lbkiemkho.Click += new System.EventHandler(this.label11_Click);
             // 
             // pictureBox8
             // 
@@ -187,19 +189,19 @@
             this.pictureBox7.Visible = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // label9
+            // lbpo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(204, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 17);
-            this.label9.TabIndex = 11;
-            this.label9.Tag = "PO";
-            this.label9.Text = "PO";
-            this.label9.Visible = false;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.lbpo.AutoSize = true;
+            this.lbpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpo.ForeColor = System.Drawing.Color.Blue;
+            this.lbpo.Location = new System.Drawing.Point(204, 271);
+            this.lbpo.Name = "lbpo";
+            this.lbpo.Size = new System.Drawing.Size(30, 17);
+            this.lbpo.TabIndex = 11;
+            this.lbpo.Tag = "PO";
+            this.lbpo.Text = "PO";
+            this.lbpo.Visible = false;
+            this.lbpo.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox6
             // 
@@ -214,18 +216,18 @@
             this.pictureBox6.Visible = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // label6
+            // lbbaocao
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(26, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Tag = "Báo Cáo";
-            this.label6.Text = "Báo Cáo & In Ấn";
-            this.label6.Visible = false;
+            this.lbbaocao.AutoSize = true;
+            this.lbbaocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbbaocao.ForeColor = System.Drawing.Color.Blue;
+            this.lbbaocao.Location = new System.Drawing.Point(26, 271);
+            this.lbbaocao.Name = "lbbaocao";
+            this.lbbaocao.Size = new System.Drawing.Size(116, 17);
+            this.lbbaocao.TabIndex = 9;
+            this.lbbaocao.Tag = "Báo Cáo";
+            this.lbbaocao.Text = "Báo Cáo & In Ấn";
+            this.lbbaocao.Visible = false;
             // 
             // pictureBox5
             // 
@@ -240,19 +242,19 @@
             this.pictureBox5.Visible = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // label3
+            // lbnhansu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(449, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Tag = "Nhân Sự";
-            this.label3.Text = "Nhân Sự";
-            this.label3.Visible = false;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lbnhansu.AutoSize = true;
+            this.lbnhansu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnhansu.ForeColor = System.Drawing.Color.Blue;
+            this.lbnhansu.Location = new System.Drawing.Point(449, 128);
+            this.lbnhansu.Name = "lbnhansu";
+            this.lbnhansu.Size = new System.Drawing.Size(70, 17);
+            this.lbnhansu.TabIndex = 7;
+            this.lbnhansu.Tag = "Nhân Sự";
+            this.lbnhansu.Text = "Nhân Sự";
+            this.lbnhansu.Visible = false;
+            this.lbnhansu.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox3
             // 
@@ -267,19 +269,19 @@
             this.pictureBox3.Visible = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label4
+            // lbctsx
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(314, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Tag = "Chỉ Thị SX";
-            this.label4.Text = "Chỉ Thị SX";
-            this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lbctsx.AutoSize = true;
+            this.lbctsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbctsx.ForeColor = System.Drawing.Color.Blue;
+            this.lbctsx.Location = new System.Drawing.Point(314, 128);
+            this.lbctsx.Name = "lbctsx";
+            this.lbctsx.Size = new System.Drawing.Size(84, 17);
+            this.lbctsx.TabIndex = 5;
+            this.lbctsx.Tag = "Chỉ Thị SX";
+            this.lbctsx.Text = "Chỉ Thị SX";
+            this.lbctsx.Visible = false;
+            this.lbctsx.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox4
             // 
@@ -294,19 +296,19 @@
             this.pictureBox4.Visible = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // label2
+            // lbnhapxuat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(172, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Tag = "Nhập - Xuất";
-            this.label2.Text = "Nhập - Xuất";
-            this.label2.Visible = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbnhapxuat.AutoSize = true;
+            this.lbnhapxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnhapxuat.ForeColor = System.Drawing.Color.Blue;
+            this.lbnhapxuat.Location = new System.Drawing.Point(172, 128);
+            this.lbnhapxuat.Name = "lbnhapxuat";
+            this.lbnhapxuat.Size = new System.Drawing.Size(95, 17);
+            this.lbnhapxuat.TabIndex = 3;
+            this.lbnhapxuat.Tag = "Nhập - Xuất";
+            this.lbnhapxuat.Text = "Nhập - Xuất";
+            this.lbnhapxuat.Visible = false;
+            this.lbnhapxuat.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
             // 
@@ -352,16 +354,40 @@
             // 
             this.panelLogin.AutoSize = true;
             this.panelLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelLogin.Controls.Add(this.cblanguege);
+            this.panelLogin.Controls.Add(this.label12);
             this.panelLogin.Controls.Add(this.tbTenDN);
             this.panelLogin.Controls.Add(this.label8);
             this.panelLogin.Controls.Add(this.label7);
             this.panelLogin.Controls.Add(this.btnDN);
             this.panelLogin.Controls.Add(this.tbPass);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLogin.Location = new System.Drawing.Point(0, 350);
+            this.panelLogin.Location = new System.Drawing.Point(0, 348);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(568, 31);
+            this.panelLogin.Size = new System.Drawing.Size(568, 33);
             this.panelLogin.TabIndex = 3;
+            // 
+            // cblanguege
+            // 
+            this.cblanguege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cblanguege.FormattingEnabled = true;
+            this.cblanguege.Items.AddRange(new object[] {
+            "VietNamese",
+            "Japan"});
+            this.cblanguege.Location = new System.Drawing.Point(54, 9);
+            this.cblanguege.Name = "cblanguege";
+            this.cblanguege.Size = new System.Drawing.Size(88, 21);
+            this.cblanguege.TabIndex = 6;
+            this.cblanguege.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(2, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Languege";
             // 
             // tbTenDN
             // 
@@ -452,13 +478,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbDanhMuc;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbnhapxuat;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbnhansu;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbctsx;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbbaocao;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label label8;
@@ -466,11 +492,13 @@
         private System.Windows.Forms.Button btnDN;
         private System.Windows.Forms.TextBox tbPass;
         public System.Windows.Forms.TextBox tbTenDN;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbpo;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbkiemkho;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.ComboBox cblanguege;
+        private System.Windows.Forms.Label label12;
     }
 }

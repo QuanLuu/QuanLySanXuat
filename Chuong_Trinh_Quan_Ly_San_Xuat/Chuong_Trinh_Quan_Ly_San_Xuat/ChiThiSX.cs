@@ -10,7 +10,7 @@ using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.Resources;
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
     public partial class FrmChiThiSX : Form
@@ -20,6 +20,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         bool selectByMouse = false;
         string usernhap;
         string casanxuat;
+        string langue_ge;
+        ResourceManager res_man;
         public FrmChiThiSX()
         {
             InitializeComponent();
@@ -45,7 +47,28 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             NewChiThiSX(this.panelFilterCTSX);
             loadmaymoc();
             loadnhanvien();
-
+            
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                if (c.GetType().Name == "Label")
+                {
+                    if (res_man.GetString(c.Text) != null)
+                        c.Text = res_man.GetString(c.Text);
+                }
+                setlangforlabel(c);
+            }
         }
         void xuatexceldtg(DataGridView dtg)
         {
@@ -498,5 +521,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             xuatexceldtg(dtgChiThiSX);
         }
+
+      
     }
 }

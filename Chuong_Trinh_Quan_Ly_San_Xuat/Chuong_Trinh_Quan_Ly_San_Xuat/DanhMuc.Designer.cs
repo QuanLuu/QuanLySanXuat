@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPageSPCD = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dtgSPCD = new System.Windows.Forms.DataGridView();
@@ -78,6 +78,8 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.dtgDM = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.tbmsqldinhmucfil = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
             this.tbfilterMaSPDM = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -252,6 +254,8 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.dtgKHSP = new System.Windows.Forms.DataGridView();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.tbmsqlkhspfil = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
             this.tbMaKHKHSPFilter = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -287,10 +291,6 @@
             this.cbTenNLNVLNCC = new System.Windows.Forms.ComboBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.tbmsqldinhmucfil = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.tbmsqlkhspfil = new System.Windows.Forms.TextBox();
-            this.label65 = new System.Windows.Forms.Label();
             this.tabPageSPCD.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSPCD)).BeginInit();
@@ -898,6 +898,23 @@
             this.panel13.Size = new System.Drawing.Size(1004, 34);
             this.panel13.TabIndex = 7;
             // 
+            // tbmsqldinhmucfil
+            // 
+            this.tbmsqldinhmucfil.Location = new System.Drawing.Point(51, 9);
+            this.tbmsqldinhmucfil.Name = "tbmsqldinhmucfil";
+            this.tbmsqldinhmucfil.Size = new System.Drawing.Size(58, 20);
+            this.tbmsqldinhmucfil.TabIndex = 3;
+            this.tbmsqldinhmucfil.TextChanged += new System.EventHandler(this.tbmsqldinhmucfil_TextChanged);
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(8, 12);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(37, 13);
+            this.label64.TabIndex = 2;
+            this.label64.Text = "MSQL";
+            // 
             // tbfilterMaSPDM
             // 
             this.tbfilterMaSPDM.Location = new System.Drawing.Point(204, 9);
@@ -1132,34 +1149,34 @@
             // dtgSP
             // 
             this.dtgSP.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgSP.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgSP.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgSP.Location = new System.Drawing.Point(112, 45);
             this.dtgSP.Name = "dtgSP";
             this.dtgSP.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgSP.RowHeadersVisible = false;
             this.dtgSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgSP.Size = new System.Drawing.Size(629, 275);
@@ -2903,6 +2920,23 @@
             this.panel27.Size = new System.Drawing.Size(998, 34);
             this.panel27.TabIndex = 15;
             // 
+            // tbmsqlkhspfil
+            // 
+            this.tbmsqlkhspfil.Location = new System.Drawing.Point(197, 8);
+            this.tbmsqlkhspfil.Name = "tbmsqlkhspfil";
+            this.tbmsqlkhspfil.Size = new System.Drawing.Size(58, 20);
+            this.tbmsqlkhspfil.TabIndex = 3;
+            this.tbmsqlkhspfil.TextChanged += new System.EventHandler(this.tbmsqlkhspfil_TextChanged);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(154, 11);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(37, 13);
+            this.label65.TabIndex = 2;
+            this.label65.Text = "MSQL";
+            // 
             // tbMaKHKHSPFilter
             // 
             this.tbMaKHKHSPFilter.Location = new System.Drawing.Point(46, 9);
@@ -3308,40 +3342,6 @@
             this.label59.Size = new System.Drawing.Size(47, 13);
             this.label59.TabIndex = 2;
             this.label59.Text = "Mã NCC";
-            // 
-            // tbmsqldinhmucfil
-            // 
-            this.tbmsqldinhmucfil.Location = new System.Drawing.Point(51, 9);
-            this.tbmsqldinhmucfil.Name = "tbmsqldinhmucfil";
-            this.tbmsqldinhmucfil.Size = new System.Drawing.Size(58, 20);
-            this.tbmsqldinhmucfil.TabIndex = 3;
-            this.tbmsqldinhmucfil.TextChanged += new System.EventHandler(this.tbmsqldinhmucfil_TextChanged);
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(8, 12);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(37, 13);
-            this.label64.TabIndex = 2;
-            this.label64.Text = "MSQL";
-            // 
-            // tbmsqlkhspfil
-            // 
-            this.tbmsqlkhspfil.Location = new System.Drawing.Point(197, 8);
-            this.tbmsqlkhspfil.Name = "tbmsqlkhspfil";
-            this.tbmsqlkhspfil.Size = new System.Drawing.Size(58, 20);
-            this.tbmsqlkhspfil.TabIndex = 3;
-            this.tbmsqlkhspfil.TextChanged += new System.EventHandler(this.tbmsqlkhspfil_TextChanged);
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(154, 11);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(37, 13);
-            this.label65.TabIndex = 2;
-            this.label65.Text = "MSQL";
             // 
             // FrmDanhMuc
             // 

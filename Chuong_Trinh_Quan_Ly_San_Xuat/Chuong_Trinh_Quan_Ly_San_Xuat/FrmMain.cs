@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,10 +17,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     {
         public string quyensudung;
         public string casx;
-        double app_ver = 1.0;
+        double app_ver = 1.0; 
+        public string languege_set;      
         public FrmMain()
         {
             InitializeComponent();
+            cblanguege.Text = "VietNamese";
             EventKhiLoadForm(this.panelMain);
             getusername();
             panelMain.Enabled = false;
@@ -200,6 +204,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             shownhansu();
         }
+        void changelaguege(string lang)
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (languege_set == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            ResourceManager res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            lbDanhMuc.Text = res_man.GetString("danhmuc");
+            lbnhapxuat.Text = res_man.GetString("nhapxuat");
+            lbbaocao.Text = res_man.GetString("baocao");
+            lbnhansu.Text = res_man.GetString("nhansu");
+            lbkiemkho.Text = res_man.GetString("kiemkho");
+            lbpo.Text = res_man.GetString("PO");
+            lbctsx.Text = res_man.GetString("ctsx");
+        }
 
         private void tbPass_Enter(object sender, EventArgs e)
         {
@@ -283,6 +300,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void label11_Click(object sender, EventArgs e)
         {
             showKiemKho();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            languege_set = cblanguege.Text;
+            changelaguege(languege_set);
         }
     }
 }

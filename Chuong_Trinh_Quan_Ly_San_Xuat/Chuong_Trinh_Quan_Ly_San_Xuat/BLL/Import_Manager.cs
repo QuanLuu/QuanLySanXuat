@@ -67,6 +67,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DON_GIA @MA_SP , @MSQL", new object[] { masp, msql });
         }
+        public DataTable GetBaoCaoSXThang(int year, int month)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC [PP_BAO_CAO_SAN_XUAT_THANG] @year , @month", new object[] { year, month });
+        }
+        public DataTable Getthepnxt(int year, int month)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC [PP_BAO_CAO_NXT_NVL_THANG] @year , @month", new object[] { year, month });
+        }
 
         public DataTable LoadMaSP()
         {

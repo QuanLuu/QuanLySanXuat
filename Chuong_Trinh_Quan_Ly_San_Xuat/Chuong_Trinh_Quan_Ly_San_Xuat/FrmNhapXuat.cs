@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -17,6 +18,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     {
         int action = 0;
         bool refreshflag = false;
+        string langue_ge;
+        ResourceManager res_man;
         public FrmNhapXuat()
         {
             InitializeComponent();
@@ -74,7 +77,29 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpXuatGiacongfrom.Value = DateTime.Now.AddDays(-7);
             dtpnhapgcfrom.Value = DateTime.Now.AddDays(-7);
             cbNCC.Text = "SSJP";
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
 
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                if (c.GetType().Name == "Label")
+                {
+                    if (res_man.GetString(c.Text) != null)
+                        c.Text = res_man.GetString(c.Text);
+                }
+                setlangforlabel(c);
+            }
         }
         void GetNguyenLieu()
         {
@@ -681,5 +706,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (refreshflag) getxuatgiacong();
         }
+
+      
     }
 }

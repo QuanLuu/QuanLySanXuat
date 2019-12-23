@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -21,6 +22,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         string bophan = "";
         string usernhap = "";
         string phanquyen;
+        string langue_ge;
+        ResourceManager res_man;
         public FrmKiemKho()
         {
             InitializeComponent();
@@ -58,6 +61,28 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             loadnhanvien();
             phanquyennhaplieu();
             gettencongdoan();
+            
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                if (c.GetType().Name == "Label")
+                {
+                    if (res_man.GetString(c.Text) != null)
+                        c.Text = res_man.GetString(c.Text);
+                }
+                setlangforlabel(c);
+            }
         }
         void gettencongdoan()
         {
@@ -565,5 +590,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             getbanthanhpham();
         }
+     
     }
 }
