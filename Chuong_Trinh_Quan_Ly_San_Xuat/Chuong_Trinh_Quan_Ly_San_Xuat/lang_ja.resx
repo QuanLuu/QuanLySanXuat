@@ -141,7 +141,349 @@
   <data name="PO" xml:space="preserve">
     <value>注文書</value>
   </data>
-  <data name="string1" xml:space="preserve">
-    <value />
+  <data name="Tên Nguyên Liệu" xml:space="preserve">
+    <value>材料</value>
+  </data>
+  <data name="Biến Dạng" xml:space="preserve">
+    <value>変形</value>
+  </data>
+  <data name="Báo Cáo SX" xml:space="preserve">
+    <value>生産報告書</value>
+  </data>
+  <data name="Bảo Lưu" xml:space="preserve">
+    <value>保留数</value>
+  </data>
+  <data name="Bộ Phận" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="Ca" xml:space="preserve">
+    <value>直</value>
+  </data>
+  <data name="Case" xml:space="preserve">
+    <value>ケース</value>
+  </data>
+  <data name="Chuẩn Bị" xml:space="preserve">
+    <value>準備</value>
+  </data>
+  <data name="Chào Lễ" xml:space="preserve">
+    <value>朝礼</value>
+  </data>
+  <data name="Chỉ Thị Sản Xuất" xml:space="preserve">
+    <value>作業指示書</value>
+  </data>
+  <data name="Chờ Sửa Khuôn" xml:space="preserve">
+    <value>修理時間</value>
+  </data>
+  <data name="Cty Gia Công" xml:space="preserve">
+    <value>外注者名</value>
+  </data>
+  <data name="CĐ Số" xml:space="preserve">
+    <value>工程番号</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>メール</value>
+  </data>
+  <data name="ETA" xml:space="preserve">
+    <value>ＥＴＡ</value>
+  </data>
+  <data name="ETD" xml:space="preserve">
+    <value>ETD</value>
+  </data>
+  <data name="Ghi Chú" xml:space="preserve">
+    <value>備考</value>
+  </data>
+  <data name="Gia Công" xml:space="preserve">
+    <value>外注支給数</value>
+  </data>
+  <data name="Hỏng Khác" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>インボイス</value>
+  </data>
+  <data name="KH" xml:space="preserve">
+    <value>計画</value>
+  </data>
+  <data name="KHSX" xml:space="preserve">
+    <value>生産計画</value>
+  </data>
+  <data name="Khối Lượng" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Kích Thước" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="List Time" xml:space="preserve">
+    <value>リードタイム</value>
+  </data>
+  <data name="Loading..." xml:space="preserve">
+    <value>検討</value>
+  </data>
+  <data name="Lot" xml:space="preserve">
+    <value>ロット</value>
+  </data>
+  <data name="Loại thùng" xml:space="preserve">
+    <value>容器類</value>
+  </data>
+  <data name="MSQL" xml:space="preserve">
+    <value>製品管理番号</value>
+  </data>
+  <data name="Máy" xml:space="preserve">
+    <value>機械</value>
+  </data>
+  <data name="Mã CD" xml:space="preserve">
+    <value>工程番号</value>
+  </data>
+  <data name="Mã CĐ" xml:space="preserve">
+    <value>工程番号</value>
+  </data>
+  <data name="Mã KH" xml:space="preserve">
+    <value>顧客管理番号</value>
+  </data>
+  <data name="Mã Máy" xml:space="preserve">
+    <value>機械名</value>
+  </data>
+  <data name="Mã NCC" xml:space="preserve">
+    <value>サプライヤー番号</value>
+  </data>
+  <data name="Mã Nguyên Liệu" xml:space="preserve">
+    <value>材品番</value>
+  </data>
+  <data name="Mã NVL" xml:space="preserve">
+    <value>材品番</value>
+  </data>
+  <data name="Mã SP" xml:space="preserve">
+    <value>品番</value>
+  </data>
+  <data name="Mã Sản Phẩm" xml:space="preserve">
+    <value>品番</value>
+  </data>
+  <data name="MãSP" xml:space="preserve">
+    <value>品番</value>
+  </data>
+  <data name="Móp" xml:space="preserve">
+    <value>ダコン</value>
+  </data>
+  <data name="Móp Bảo Lưu" xml:space="preserve">
+    <value>ダコン保留数</value>
+  </data>
+  <data name="NG Kiểm Tra" xml:space="preserve">
+    <value>検査後不良数</value>
+  </data>
+  <data name="NG Nhiệt" xml:space="preserve">
+    <value>熱処理不良数</value>
+  </data>
+  <data name="NG Xi Mạ" xml:space="preserve">
+    <value>メッキ不良数</value>
+  </data>
+  <data name="Ngày" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Ngày bắt đầu có hiệu lực" xml:space="preserve">
+    <value>使用初日</value>
+  </data>
+  <data name="Ngày Gia Công" xml:space="preserve">
+    <value>加工日</value>
+  </data>
+  <data name="Ngày giao" xml:space="preserve">
+    <value>納入日</value>
+  </data>
+  <data name="Ngày hiệu lực" xml:space="preserve">
+    <value>使用初日</value>
+  </data>
+  <data name="Ngày Invoice" xml:space="preserve">
+    <value>インボイ日</value>
+  </data>
+  <data name="Ngày khai HQ" xml:space="preserve">
+    <value>通関申請日</value>
+  </data>
+  <data name="Ngày khai hải quan" xml:space="preserve">
+    <value>通関申請日</value>
+  </data>
+  <data name="Ngày Kiểm" xml:space="preserve">
+    <value>検査日</value>
+  </data>
+  <data name="Ngày Nhâp" xml:space="preserve">
+    <value>入庫日</value>
+  </data>
+  <data name="Ngày nhận Forecast" xml:space="preserve">
+    <value>内示受日</value>
+  </data>
+  <data name="Ngày Nhập" xml:space="preserve">
+    <value>入庫日</value>
+  </data>
+  <data name="Ngày PO" xml:space="preserve">
+    <value>注文日</value>
+  </data>
+  <data name="Ngày SX" xml:space="preserve">
+    <value>加工日</value>
+  </data>
+  <data name="Ngày Xuất" xml:space="preserve">
+    <value>出庫日</value>
+  </data>
+  <data name="Người Kiểm" xml:space="preserve">
+    <value>担当者</value>
+  </data>
+  <data name="Người liên hệ" xml:space="preserve">
+    <value>連絡者</value>
+  </data>
+  <data name="Năm" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="SNP" xml:space="preserve">
+    <value>入数</value>
+  </data>
+  <data name="Sét" xml:space="preserve">
+    <value>サビ</value>
+  </data>
+  <data name="Sước" xml:space="preserve">
+    <value>キズ</value>
+  </data>
+  <data name="Sản Xuất" xml:space="preserve">
+    <value>製造</value>
+  </data>
+  <data name="Số Cuộn" xml:space="preserve">
+    <value>材コイル数</value>
+  </data>
+  <data name="Số Cuộn Mẹ" xml:space="preserve">
+    <value>棒材Ｎｏ</value>
+  </data>
+  <data name="Số giao dự kiến" xml:space="preserve">
+    <value>納入予定数</value>
+  </data>
+  <data name="Số Hợp Đồng" xml:space="preserve">
+    <value>契約Ｎｏ</value>
+  </data>
+  <data name="Số Inv" xml:space="preserve">
+    <value>インボイスＮｏ</value>
+  </data>
+  <data name="Số Invoice" xml:space="preserve">
+    <value>インボイスＮｏ</value>
+  </data>
+  <data name="Số Lot" xml:space="preserve">
+    <value>ロットＮｏ</value>
+  </data>
+  <data name="Số Lượng" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Số Máy" xml:space="preserve">
+    <value>機械番号</value>
+  </data>
+  <data name="Số NG" xml:space="preserve">
+    <value>不良数</value>
+  </data>
+  <data name="Số NG KT" xml:space="preserve">
+    <value>検査後不良数</value>
+  </data>
+  <data name="Số Pallet" xml:space="preserve">
+    <value>パレット数</value>
+  </data>
+  <data name="Số PO" xml:space="preserve">
+    <value>注文Ｎｏ</value>
+  </data>
+  <data name="Số thùng" xml:space="preserve">
+    <value>箱数</value>
+  </data>
+  <data name="Số Tờ Khai" xml:space="preserve">
+    <value>通関申請Ｎｏ</value>
+  </data>
+  <data name="Số tờ khai HQ" xml:space="preserve">
+    <value>通関Ｎｏ</value>
+  </data>
+  <data name="Số tờ khai hải quan" xml:space="preserve">
+    <value>通関Ｎｏ</value>
+  </data>
+  <data name="Số điện thoại" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="Sửa" xml:space="preserve">
+    <value>手修理</value>
+  </data>
+  <data name="Tháng" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Tiến Độ" xml:space="preserve">
+    <value>進度</value>
+  </data>
+  <data name="Tiến Độ Ngày" xml:space="preserve">
+    <value>日進度</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Ｔｏ</value>
+  </data>
+  <data name="Tên Công Đoạn" xml:space="preserve">
+    <value>工程名</value>
+  </data>
+  <data name="Tên CĐ" xml:space="preserve">
+    <value>工程名</value>
+  </data>
+  <data name="Tên hàng" xml:space="preserve">
+    <value>品名</value>
+  </data>
+  <data name="Tên KH" xml:space="preserve">
+    <value>ご客先</value>
+  </data>
+  <data name="Tên Khách Hàng" xml:space="preserve">
+    <value>顧客</value>
+  </data>
+  <data name="Tên Máy" xml:space="preserve">
+    <value>工程名</value>
+  </data>
+  <data name="Tên NL" xml:space="preserve">
+    <value>材質</value>
+  </data>
+  <data name="Tên SP" xml:space="preserve">
+    <value>品名</value>
+  </data>
+  <data name="Tồn an toàn" xml:space="preserve">
+    <value>基準在庫</value>
+  </data>
+  <data name="Tồn Kho" xml:space="preserve">
+    <value>在庫数</value>
+  </data>
+  <data name="Tồn kho an toàn" xml:space="preserve">
+    <value>基準在庫</value>
+  </data>
+  <data name="Tổng thời gian SX:" xml:space="preserve">
+    <value>加工合計時間</value>
+  </data>
+  <data name="tới" xml:space="preserve">
+    <value>着</value>
+  </data>
+  <data name="Từ Ngày" xml:space="preserve">
+    <value>日から</value>
+  </data>
+  <data name="Từ Tháng" xml:space="preserve">
+    <value>月から</value>
+  </data>
+  <data name="Vệ Sinh 6S" xml:space="preserve">
+    <value>６S</value>
+  </data>
+  <data name="Xuất cho SP" xml:space="preserve">
+    <value>使用品番</value>
+  </data>
+  <data name="Đào tạo" xml:space="preserve">
+    <value>教育</value>
+  </data>
+  <data name="Đơn giá" xml:space="preserve">
+    <value>単価</value>
+  </data>
+  <data name="Đầu kỳ" xml:space="preserve">
+    <value>初期</value>
+  </data>
+  <data name="Đến Ngày" xml:space="preserve">
+    <value>日迄</value>
+  </data>
+  <data name="Đến Tháng" xml:space="preserve">
+    <value>月迄</value>
+  </data>
+  <data name="Địa Chỉ" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="Định Mức" xml:space="preserve">
+    <value>仕込重量</value>
   </data>
 </root>

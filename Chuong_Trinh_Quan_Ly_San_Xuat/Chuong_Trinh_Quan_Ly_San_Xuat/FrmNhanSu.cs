@@ -37,8 +37,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             danhsachnhanvien();
             gethopdong();
             DataTable data = Import_Manager.Instance.getbophan();
-            cbbophan.DataSource = data;
-            cbbophan.DisplayMember = "TEN";
+            cbbophanhd.DataSource = data;
+            cbbophanhd.DisplayMember = "TEN";
+            loadtennhanvienhd();
+            cbnghilam.Checked = false;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -49,8 +51,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void LoadDSNhanVien()
         {
             DataTable nhanvien = Import_Manager.Instance.LoadNhanVien();
-            cbMaNV.DataSource = nhanvien;
-            cbMaNV.DisplayMember = "NV";
+            cbtennvnghiphep.DataSource = nhanvien;
+            cbtennvnghiphep.DisplayMember = "NV";
 
 
         }
@@ -59,7 +61,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable data = Import_Manager.Instance.danhsachnv(tbDSNVFilter.Text);
             dtgDSNV.DataSource = data;
         }
-
+        void loadtennhanvienhd()
+        {
+            DataTable data = Import_Manager.Instance.getnhanvienhd();
+            cbtennvhopdong.DisplayMember = "NHAN_VIEN";
+            cbtennvhopdong.ValueMember = "ID";
+            cbtennvhopdong.DataSource = data;
+        }
+        void loadtennhanvienfromanv(string manv)
+        {
+            DataTable data = Import_Manager.Instance.gettennvfrommanv(manv);
+            cbtennvnghiphep.DisplayMember = "TEN_NHAN_VIEN";
+            cbtennvnghiphep.DataSource = data;
+        }
         private void tbDSNVFilter_TextChanged(object sender, EventArgs e)
         {
             danhsachnhanvien();
@@ -95,6 +109,36 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             action = 2;
             enablecontrol();
+            if (tabNhanVien.SelectedIndex == 0)
+            {
+                tbTenNV.Text = dtgDSNV.CurrentRow.Cells[1].Value.ToString();
+                cbGioiTinh.Text = dtgDSNV.CurrentRow.Cells[2].Value.ToString();
+                dtpNgaySinh.Value = DateTime.Parse(dtgDSNV.CurrentRow.Cells[3].Value.ToString());
+                tbCMTND.Text = dtgDSNV.CurrentRow.Cells[4].Value.ToString();
+                dtpNgayCapCMT.Value = DateTime.Parse(dtgDSNV.CurrentRow.Cells[5].Value.ToString());
+                tbSoBHXH.Text = dtgDSNV.CurrentRow.Cells[6].Value.ToString();
+                tbTrinhDoVH.Text = dtgDSNV.CurrentRow.Cells[7].Value.ToString();
+                tbDiaChi.Text = dtgDSNV.CurrentRow.Cells[8].Value.ToString();
+            }
+            if (tabNhanVien.SelectedIndex == 1)
+            {
+                tbmanvhopdong.Text = dtgHopDong.CurrentRow.Cells[1].Value.ToString();
+                cbtennvhopdong.Text = dtgHopDong.CurrentRow.Cells[2].Value.ToString();
+                cbbophanhd.Text = dtgHopDong.CurrentRow.Cells[3].Value.ToString();
+                tbchucvuhd.Text = dtgHopDong.CurrentRow.Cells[4].Value.ToString();
+                if (dtgHopDong.CurrentRow.Cells[5].Value.ToString() != "" && dtgHopDong.CurrentRow.Cells[5].Value.ToString() != null) dtpngaylamviechopdong.Value = DateTime.Parse(dtgHopDong.CurrentRow.Cells[5].Value.ToString());
+                if (dtgHopDong.CurrentRow.Cells[6].Value.ToString() != "" && dtgHopDong.CurrentRow.Cells[6].Value.ToString() != null) dtpngaykyhd.Value = DateTime.Parse(dtgHopDong.CurrentRow.Cells[6].Value.ToString());
+                if (dtgHopDong.CurrentRow.Cells[7].Value.ToString() != "" && dtgHopDong.CurrentRow.Cells[7].Value.ToString() != null)
+                {
+                    cbnghilam.Checked = true;
+                    dtpngaynghihd.Value = DateTime.Parse(dtgHopDong.CurrentRow.Cells[7].Value.ToString());
+                }
+                else
+                {
+                    cbnghilam.Checked = false;
+                }
+
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -108,6 +152,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 {
                     int results = Import_Manager.Instance.UpdateDSNV(action, (int)dtgDSNV.CurrentRow.Cells[0].Value, tbTenNV.Text, cbGioiTinh.Text, dtpNgaySinh.Value, tbCMTND.Text, dtpNgayCapCMT.Value, tbSoBHXH.Text, tbTrinhDoVH.Text, tbDiaChi.Text);
                     danhsachnhanvien();
+                }
+                else if (tabNhanVien.SelectedIndex == 1)
+                {
+                   
+                    int results = Import_Manager.Instance.updatehopdong(action, (int)dtgHopDong.CurrentRow.Cells[0].Value, tbmanvhopdong.Text, Int32.Parse(cbtennvhopdong.SelectedValue.ToString()), cbbophanhd.Text, tbchucvuhd.Text, dtpngaylamviechopdong.Value, dtpngaykyhd.Value, 1, dtpngaynghihd.Value);
+                    gethopdong();
                 }
                 else
                 {
@@ -141,10 +191,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             int currow = 0;
             int id = 0;
+            int isnghi = 0;
             try
             {
                 if (tabNhanVien.SelectedIndex == 0)
-            {
+                {
                     if (dtgDSNV.Rows.Count > 1 && dtgDSNV.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgDSNV.CurrentRow.Cells[0].Value;
                     if (action == 2)
                     { currow = dtgDSNV.CurrentRow.Index; }
@@ -156,9 +207,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     danhsachnhanvien();
                     dtgDSNV.CurrentCell = dtgDSNV.Rows[currow].Cells[0];
                 }
+                else if (tabNhanVien.SelectedIndex == 1)
+                {
+                    if (dtgHopDong.Rows.Count > 1 && dtgHopDong.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgHopDong.CurrentRow.Cells[0].Value;
+                    if (action == 2)
+                    { currow = dtgHopDong.CurrentRow.Index; }
+                    else if (action == 1)
+                    { currow = dtgHopDong.Rows.Count - 1; }
+                    else
+                    { currow = 0; }
+                    if (cbnghilam.Checked) isnghi = 1;
+                    int results = Import_Manager.Instance.updatehopdong(action, id, tbmanvhopdong.Text, Int32.Parse(cbtennvhopdong.SelectedValue.ToString()), cbbophanhd.Text, tbchucvuhd.Text, dtpngaylamviechopdong.Value, dtpngaykyhd.Value,isnghi, dtpngaynghihd.Value);
+                    gethopdong();
+                    dtgHopDong.CurrentCell = dtgHopDong.Rows[currow].Cells[0];
+                }
                 else
                 {
-                    
+
                 }
             }
             catch (Exception ex)
@@ -170,13 +235,47 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void gethopdong()
         {
-            DataTable data = Import_Manager.Instance.getHopDong(tbHDFilter.Text);
+            DataTable data = Import_Manager.Instance.getHopDong(tbmanvhdfil.Text, tbHDFilter.Text);
             dtgHopDong.DataSource = data;
         }
 
         private void tbHDFilter_TextChanged(object sender, EventArgs e)
         {
             gethopdong();
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbLyDo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbmanvnghiphep_TextChanged(object sender, EventArgs e)
+        {
+            loadtennhanvienfromanv(tbmanvnghiphep.Text);
+        }
+
+        private void tbmanvhdfil_TextChanged(object sender, EventArgs e)
+        {
+            gethopdong();
+        }
+
+        private void cbnghilam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbnghilam.Checked)
+            {
+                dtpngaynghihd.Visible = true;
+                lbnghilam.Visible = true;
+            }
+            else
+            {
+                dtpngaynghihd.Visible = false;
+                lbnghilam.Visible = false;
+            }
         }
     }
 }
