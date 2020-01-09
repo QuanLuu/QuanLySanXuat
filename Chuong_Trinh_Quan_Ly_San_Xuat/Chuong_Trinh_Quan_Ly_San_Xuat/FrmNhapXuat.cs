@@ -28,9 +28,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgXuatSP.Dock = DockStyle.Fill;
             dtgXuatgiacong.Dock = DockStyle.Fill;
             dtgNhapgiacong.Dock = DockStyle.Fill;
+            dtgkhnxgc.Dock = DockStyle.Fill;
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgNhapNVL, new object[] { true });
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgkhnxgc, new object[] { true });
 
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
@@ -81,8 +86,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             langue_ge = ((FrmMain)f).languege_set;
             setlangue();
             loadnhanvien();
-
+            getkhnxgc();
+           
         }
+      
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -94,11 +101,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             foreach (Control c in par.Controls)
             {
-                if (c.GetType().Name == "Label")
-                {
+                //if (c.GetType().Name == "Label")
+                //{
                     if (res_man.GetString(c.Text) != null)
                         c.Text = res_man.GetString(c.Text);
-                }
+                //}
                 setlangforlabel(c);
             }
         }
@@ -124,6 +131,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbctynhapgc.DataSource = data;
             cbNCCXuatSP.DataSource = data;
             cbNCCXuatSP.DisplayMember = "MA_KH";
+        }
+        void getkhnxgc()
+        {
+            string nhapxuat = "N";
+            if (rabxuatkhnxgcfil.Checked) nhapxuat = "X";
+
+            DataTable data = Import_Manager.Instance.GetKehoachnxgiacong(tbmsqlkhnxgcfil.Text, nhapxuat);
+            dtgkhnxgc.DataSource = data;
         }
 
         void getnvlfromncc()
@@ -152,6 +167,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             cbmaspnhapgc.DisplayMember = "MA_SP";
             cbmaspnhapgc.DataSource = data;
+
+            cbmaspkhnxgc.DisplayMember = "MA_SP";
+            cbmaspkhnxgc.ValueMember = "ID";
+            cbmaspkhnxgc.DataSource = data;
         }
         void getmasptheonl()
         {
@@ -194,6 +213,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if (tabNhapXuat.SelectedIndex == 1) panelXuatNL.Visible = false;
                 if (tabNhapXuat.SelectedIndex == 3) panelXuatGiaCong.Visible = false;
                 if (tabNhapXuat.SelectedIndex == 4) panelNhapGC.Visible = false;
+                if (tabNhapXuat.SelectedIndex == 5) panelkhnxgc.Visible = false;
 
             }
             else
@@ -208,6 +228,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 if (tabNhapXuat.SelectedIndex == 1) panelXuatNL.Visible = true;
                 if (tabNhapXuat.SelectedIndex == 3) panelXuatGiaCong.Visible = true;
                 if (tabNhapXuat.SelectedIndex == 4) panelNhapGC.Visible = true;
+                if (tabNhapXuat.SelectedIndex == 5) panelkhnxgc.Visible = true;
             }
         }
 
@@ -231,6 +252,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (tabNhapXuat.SelectedIndex == 4)
             {
                 nhapmoi(this.panelNhapGC);
+                //dtpnhapgc.Value = DateTime.Now;
+
+            }
+            if (tabNhapXuat.SelectedIndex == 5)
+            {
+                tbmsqlkhnxgc.Text = "";
                 //dtpnhapgc.Value = DateTime.Now;
 
             }
@@ -277,6 +304,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     tbghichunhapgc.Text = dtgNhapgiacong.CurrentRow.Cells[12].Value.ToString(); ;
                 }
             }
+            if (tabNhapXuat.SelectedIndex == 5)
+            {
+                if (dtgkhnxgc.CurrentRow != null)
+                {
+                    tbmsqlkhnxgc.Text = dtgkhnxgc.CurrentRow.Cells[1].Value.ToString();
+                    cbmaspkhnxgc.Text = dtgkhnxgc.CurrentRow.Cells[2].Value.ToString();
+                    dtpkhnxgc.Value = DateTime.Parse(dtgkhnxgc.CurrentRow.Cells[3].Value.ToString());
+                    numkhnxgc.Text = dtgkhnxgc.CurrentRow.Cells[4].Value.ToString();
+                    if (dtgkhnxgc.CurrentRow.Cells[5].Value.ToString() == "N")
+                        rabnhapkhnxgc.Checked = true;
+                    else
+                        rabxuatkhnxgc.Checked = true;                     
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -300,6 +341,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             int currow = 0;
             int id = 0;
             int actioncur = action;
+            string nhapxuat = "N";
             try
             {
                 if (tabNhapXuat.SelectedIndex == 0)
@@ -361,7 +403,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     getxuatgiacong();
                     dtgXuatgiacong.CurrentCell = dtgXuatgiacong.Rows[currow].Cells[0];
                 }
+                else if (tabNhapXuat.SelectedIndex == 5)
+                {
 
+                    id = 0;
+                    if (rabxuatkhnxgc.Checked) nhapxuat = "X";
+                    if (dtgkhnxgc.Rows.Count > 1 && dtgkhnxgc.CurrentRow.Cells[0].Value.ToString() != "") id = (int)dtgkhnxgc.CurrentRow.Cells[0].Value;
+                    if (action == 2)
+                    { currow = dtgkhnxgc.CurrentRow.Index; }
+                    else if (action == 1)
+                    { currow = dtgkhnxgc.Rows.Count - 1; }
+                    else
+                    { currow = 0; }
+                    int results = Import_Manager.Instance.Updatekehoachnxgiacong(action, id, Int32.Parse(cbmaspkhnxgc.SelectedValue.ToString()), dtpkhnxgc.Value, float.Parse(numkhnxgc.Value.ToString()), nhapxuat);
+                    getkhnxgc();
+                    dtgkhnxgc.CurrentCell = dtgkhnxgc.Rows[currow].Cells[0];
+                }
                 else
                 {
                     
@@ -421,7 +478,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     int results = Import_Manager.Instance.UpdateNHAPGIACONG(action, (int)dtgNhapgiacong.CurrentRow.Cells[0].Value, cbmaspnhapgc.Text, dtpnhapgc.Value, Int32.Parse(numslnhapgc.Value.ToString()), Int32.Parse(numslNGnhapgc.Value.ToString()), Int32.Parse(numslNGkiemtranhapgc.Value.ToString()), tbsotokhainhapgc.Text, tbsohopdongnhapgc.Text, cbctynhapgc.Text, tbghichunhapgc.Text,1);
                     getnhapgiacong();
                 }
-                
+                if (tabNhapXuat.SelectedIndex == 5)
+                {
+                    int results = Import_Manager.Instance.Updatekehoachnxgiacong(action, (int)dtgkhnxgc.CurrentRow.Cells[0].Value, 1, dtpkhnxgc.Value,1,"N");
+                    getkhnxgc();
+                }
+
             }
             catch (Exception ex)
             {
@@ -758,6 +820,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbsolotxuatspfilter_TextChanged(object sender, EventArgs e)
         {
             if (refreshflag) getnhatkyxuatSP();
+        }
+
+        private void tbmsqlkhnxgc_TextChanged(object sender, EventArgs e)
+        {
+            loadmasptheomsql(tbmsqlkhnxgc.Text);
+        }
+
+        private void tbmsqlkhnxgcfil_TextChanged(object sender, EventArgs e)
+        {
+            getkhnxgc();
+        }
+
+        private void rabnhapkhnxgcfil_CheckedChanged(object sender, EventArgs e)
+        {
+            getkhnxgc();
         }
     }
 }

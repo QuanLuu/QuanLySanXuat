@@ -23,6 +23,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         string langue_ge;
         ResourceManager res_man;
         string loaibc;
+        string nhapxuatgc = "";
 
         public FrmReportView()
         {
@@ -399,8 +400,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (tbtunamtiendo.Text != "" && tbtuthangtiendo.Text != "" && tbdennamtiendo.Text != "" && tbdenthangtiendo.Text != "" && tbmsqltiendo.Text != "")
             {
-                DataTable dt = Import_Manager.Instance.baocaotiendo(Int32.Parse(tbtunamtiendo.Text), Int32.Parse(tbtuthangtiendo.Text), Int32.Parse(tbdennamtiendo.Text), Int32.Parse(tbdenthangtiendo.Text), tbmsqltiendo.Text, cbmacdtiendo.Text);
-                viewreport("BaoCaoTienDo.rdlc", "BaoCaoTienDo", dt);
+                if (nhapxuatgc == "")
+                {
+                    DataTable dt = Import_Manager.Instance.baocaotiendo(Int32.Parse(tbtunamtiendo.Text), Int32.Parse(tbtuthangtiendo.Text), Int32.Parse(tbdennamtiendo.Text), Int32.Parse(tbdenthangtiendo.Text), tbmsqltiendo.Text, cbmacdtiendo.Text);
+                    viewreport("BaoCaoTienDo.rdlc", "BaoCaoTienDo", dt);
+                }
+                if (nhapxuatgc != "")
+                {
+                    DataTable dt = Import_Manager.Instance.GetTienDoGiaCongThang(tbmsqltiendo.Text, Int32.Parse(tbtunamtiendo.Text), Int32.Parse(tbtuthangtiendo.Text), Int32.Parse(tbdennamtiendo.Text), Int32.Parse(tbdenthangtiendo.Text), nhapxuatgc);
+                    viewreport("TienDoGCThang.rdlc", "TienDoGCThang", dt);
+                }
             }
         }
 
@@ -423,6 +432,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void theoThángToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            nhapxuatgc = "N";
             hidepannelfilter();
             tbnamngaytiendo.Text = DateTime.Now.Year.ToString();
             tbthangngaytiendo.Text = DateTime.Now.Month.ToString();
@@ -433,11 +443,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void theoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            nhapxuatgc = "";
             hidepannelfilter();
             tbtunamtiendo.Text = DateTime.Now.Year.ToString();
-            tbdennamtiendo.Text = DateTime.Now.Year.ToString();
-            
+            tbdennamtiendo.Text = DateTime.Now.Year.ToString();          
             paneltiendo.Visible = true;
         }
 
@@ -445,8 +454,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (tbmsqlngaytiendo.Text != "" && tbnamngaytiendo.Text != "" && tbthangngaytiendo.Text != "" )
             {
-                DataTable dt = Import_Manager.Instance.baocaotiendongay(tbmsqlngaytiendo.Text, cbmacdngaytiendo.Text, Int32.Parse(tbnamngaytiendo.Text), Int32.Parse(tbthangngaytiendo.Text));
-                viewreport("TienDoNgay.rdlc", "TienDoNgay", dt);
+                if (nhapxuatgc == "")
+                {
+                    DataTable dt = Import_Manager.Instance.baocaotiendongay(tbmsqlngaytiendo.Text, cbmacdngaytiendo.Text, Int32.Parse(tbnamngaytiendo.Text), Int32.Parse(tbthangngaytiendo.Text));
+                    viewreport("TienDoNgay.rdlc", "TienDoNgay", dt);
+                }
+                if (nhapxuatgc != "")
+                {
+                    DataTable dt = Import_Manager.Instance.GetTienDoGiaCong(tbmsqlngaytiendo.Text, Int32.Parse(tbnamngaytiendo.Text), Int32.Parse(tbthangngaytiendo.Text), nhapxuatgc);
+                    viewreport("TienDoGCNgay.rdlc", "TienDoGCNgay", dt);
+                }
             }
         }
 
@@ -470,11 +487,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             foreach (Control c in par.Controls)
             {
-                if (c.GetType().Name == "Label")
-                {
+                //if (c.GetType().Name == "Label")
+                //{
                     if (res_man.GetString(c.Text) != null)
                         c.Text = res_man.GetString(c.Text);
-                }
+                //}
                 setlangforlabel(c);
             }
         }
@@ -486,6 +503,42 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgbaocao.Visible = true;
             panelbaocaosx.Visible = true;
             if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
+        }
+
+        private void ngàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nhapxuatgc = "N";
+            hidepannelfilter();
+            tbnamngaytiendo.Text = DateTime.Now.Year.ToString();
+            tbthangngaytiendo.Text = DateTime.Now.Month.ToString();
+            paneltiendongay.Visible = true;
+        }
+
+        private void theoNgàyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            nhapxuatgc = "X";
+            hidepannelfilter();
+            tbnamngaytiendo.Text = DateTime.Now.Year.ToString();
+            tbthangngaytiendo.Text = DateTime.Now.Month.ToString();
+            paneltiendongay.Visible = true;
+        }
+
+        private void theoThángToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            nhapxuatgc = "N";
+            hidepannelfilter();
+            tbtunamtiendo.Text = DateTime.Now.Year.ToString();
+            tbdennamtiendo.Text = DateTime.Now.Year.ToString();
+            paneltiendo.Visible = true;
+        }
+
+        private void theoThángToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            nhapxuatgc = "X";
+            hidepannelfilter();
+            tbtunamtiendo.Text = DateTime.Now.Year.ToString();
+            tbdennamtiendo.Text = DateTime.Now.Year.ToString();
+            paneltiendo.Visible = true;
         }
     }
 }

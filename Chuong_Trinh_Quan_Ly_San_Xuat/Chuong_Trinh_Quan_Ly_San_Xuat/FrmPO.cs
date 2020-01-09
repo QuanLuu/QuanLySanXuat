@@ -48,8 +48,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             langue_ge = ((FrmMain)f).languege_set;
             setlangue();
-
+           
         }
+       
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -61,13 +62,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             foreach (Control c in par.Controls)
             {
-                if (c.GetType().Name == "Label")
-                {
-                    if (res_man.GetString(c.Text) != null)
+                //    if (c.GetType().Name == "Label")
+                //    {
+                if (res_man.GetString(c.Text) != null)
                         c.Text = res_man.GetString(c.Text);
-                }
+                //}
+                
                 setlangforlabel(c);
             }
+            
         }
         void loadallPO()
         {

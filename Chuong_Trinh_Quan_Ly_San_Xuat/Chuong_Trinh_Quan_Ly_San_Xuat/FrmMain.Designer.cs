@@ -373,7 +373,7 @@
             this.cblanguege.FormattingEnabled = true;
             this.cblanguege.Items.AddRange(new object[] {
             "VietNamese",
-            "Japan"});
+            "Japanese"});
             this.cblanguege.Location = new System.Drawing.Point(54, 9);
             this.cblanguege.Name = "cblanguege";
             this.cblanguege.Size = new System.Drawing.Size(88, 21);

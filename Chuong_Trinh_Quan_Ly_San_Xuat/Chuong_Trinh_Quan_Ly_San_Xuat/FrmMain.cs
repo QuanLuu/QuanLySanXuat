@@ -304,7 +304,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            languege_set = cblanguege.Text;
+            languege_set = cblanguege.Text.Replace("Japanese","Japan");
             changelaguege(languege_set);
         }
     }

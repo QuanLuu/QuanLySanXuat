@@ -102,3 +102,5 @@ H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi.resources
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\Microsoft.ReportViewer.Common.dll
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\TienDoGCNgay.rdlc
+H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\TienDoGCThang.rdlc
