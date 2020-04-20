@@ -65,6 +65,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbmasppofil = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.dtpDateToPOFilter = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
@@ -77,6 +79,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.dtgForecast = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tbmaspforecastfil = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dtptoforecastfilter = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -120,6 +124,12 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.dtpetdforecast = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dtpetaforecast = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tbforecastno = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.tabPO.SuspendLayout();
             this.tabpPO.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -466,6 +476,8 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Controls.Add(this.tbmasppofil);
             this.panel4.Controls.Add(this.label37);
             this.panel4.Controls.Add(this.dtpDateToPOFilter);
             this.panel4.Controls.Add(this.label35);
@@ -480,10 +492,27 @@
             this.panel4.Size = new System.Drawing.Size(868, 42);
             this.panel4.TabIndex = 0;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(284, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(39, 13);
+            this.label26.TabIndex = 29;
+            this.label26.Text = "Mã SP";
+            // 
+            // tbmasppofil
+            // 
+            this.tbmasppofil.Location = new System.Drawing.Point(327, 12);
+            this.tbmasppofil.Name = "tbmasppofil";
+            this.tbmasppofil.Size = new System.Drawing.Size(163, 20);
+            this.tbmasppofil.TabIndex = 28;
+            this.tbmasppofil.TextChanged += new System.EventHandler(this.tbmasppofil_TextChanged);
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(533, 16);
+            this.label37.Location = new System.Drawing.Point(661, 16);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(53, 13);
             this.label37.TabIndex = 13;
@@ -492,7 +521,7 @@
             // dtpDateToPOFilter
             // 
             this.dtpDateToPOFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateToPOFilter.Location = new System.Drawing.Point(586, 12);
+            this.dtpDateToPOFilter.Location = new System.Drawing.Point(714, 12);
             this.dtpDateToPOFilter.Name = "dtpDateToPOFilter";
             this.dtpDateToPOFilter.Size = new System.Drawing.Size(86, 20);
             this.dtpDateToPOFilter.TabIndex = 12;
@@ -501,7 +530,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(355, 16);
+            this.label35.Location = new System.Drawing.Point(523, 16);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(46, 13);
             this.label35.TabIndex = 10;
@@ -509,16 +538,16 @@
             // 
             // tbMSQLPOFilter
             // 
-            this.tbMSQLPOFilter.Location = new System.Drawing.Point(215, 12);
+            this.tbMSQLPOFilter.Location = new System.Drawing.Point(199, 12);
             this.tbMSQLPOFilter.Name = "tbMSQLPOFilter";
-            this.tbMSQLPOFilter.Size = new System.Drawing.Size(95, 20);
+            this.tbMSQLPOFilter.Size = new System.Drawing.Size(70, 20);
             this.tbMSQLPOFilter.TabIndex = 9;
             this.tbMSQLPOFilter.TextChanged += new System.EventHandler(this.tbMSQLPOFilter_TextChanged);
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(175, 16);
+            this.label34.Location = new System.Drawing.Point(159, 16);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(37, 13);
             this.label34.TabIndex = 8;
@@ -527,7 +556,7 @@
             // dtpDateFromPOFilter
             // 
             this.dtpDateFromPOFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateFromPOFilter.Location = new System.Drawing.Point(401, 12);
+            this.dtpDateFromPOFilter.Location = new System.Drawing.Point(569, 12);
             this.dtpDateFromPOFilter.Name = "dtpDateFromPOFilter";
             this.dtpDateFromPOFilter.Size = new System.Drawing.Size(86, 20);
             this.dtpDateFromPOFilter.TabIndex = 7;
@@ -614,6 +643,8 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label28);
+            this.panel8.Controls.Add(this.tbmaspforecastfil);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.dtptoforecastfilter);
             this.panel8.Controls.Add(this.label12);
@@ -628,10 +659,27 @@
             this.panel8.Size = new System.Drawing.Size(868, 36);
             this.panel8.TabIndex = 3;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(330, 13);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(39, 13);
+            this.label28.TabIndex = 31;
+            this.label28.Text = "Mã SP";
+            // 
+            // tbmaspforecastfil
+            // 
+            this.tbmaspforecastfil.Location = new System.Drawing.Point(373, 9);
+            this.tbmaspforecastfil.Name = "tbmaspforecastfil";
+            this.tbmaspforecastfil.Size = new System.Drawing.Size(163, 20);
+            this.tbmaspforecastfil.TabIndex = 30;
+            this.tbmaspforecastfil.TextChanged += new System.EventHandler(this.tbmaspforecastfil_TextChanged);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(530, 13);
+            this.label7.Location = new System.Drawing.Point(712, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 21;
@@ -640,7 +688,7 @@
             // dtptoforecastfilter
             // 
             this.dtptoforecastfilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtptoforecastfilter.Location = new System.Drawing.Point(583, 9);
+            this.dtptoforecastfilter.Location = new System.Drawing.Point(765, 9);
             this.dtptoforecastfilter.Name = "dtptoforecastfilter";
             this.dtptoforecastfilter.Size = new System.Drawing.Size(86, 20);
             this.dtptoforecastfilter.TabIndex = 20;
@@ -649,7 +697,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(352, 13);
+            this.label12.Location = new System.Drawing.Point(572, 13);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 19;
@@ -675,7 +723,7 @@
             // dtpfromforecastfilter
             // 
             this.dtpfromforecastfilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfromforecastfilter.Location = new System.Drawing.Point(398, 9);
+            this.dtpfromforecastfilter.Location = new System.Drawing.Point(618, 9);
             this.dtpfromforecastfilter.Name = "dtpfromforecastfilter";
             this.dtpfromforecastfilter.Size = new System.Drawing.Size(86, 20);
             this.dtpfromforecastfilter.TabIndex = 16;
@@ -702,6 +750,12 @@
             // 
             this.panelForecast.AutoSize = true;
             this.panelForecast.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelForecast.Controls.Add(this.label32);
+            this.panelForecast.Controls.Add(this.tbforecastno);
+            this.panelForecast.Controls.Add(this.dtpetdforecast);
+            this.panelForecast.Controls.Add(this.label30);
+            this.panelForecast.Controls.Add(this.dtpetaforecast);
+            this.panelForecast.Controls.Add(this.label31);
             this.panelForecast.Controls.Add(this.dtpngaydukien);
             this.panelForecast.Controls.Add(this.cbmsqlforecast);
             this.panelForecast.Controls.Add(this.cbmaspforecast);
@@ -726,7 +780,7 @@
             // dtpngaydukien
             // 
             this.dtpngaydukien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpngaydukien.Location = new System.Drawing.Point(412, 37);
+            this.dtpngaydukien.Location = new System.Drawing.Point(469, 37);
             this.dtpngaydukien.Name = "dtpngaydukien";
             this.dtpngaydukien.Size = new System.Drawing.Size(91, 20);
             this.dtpngaydukien.TabIndex = 55;
@@ -801,7 +855,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(303, 41);
+            this.label21.Location = new System.Drawing.Point(360, 41);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 13);
             this.label21.TabIndex = 48;
@@ -809,7 +863,7 @@
             // 
             // tbghichuforecast
             // 
-            this.tbghichuforecast.Location = new System.Drawing.Point(627, 37);
+            this.tbghichuforecast.Location = new System.Drawing.Point(751, 37);
             this.tbghichuforecast.Multiline = true;
             this.tbghichuforecast.Name = "tbghichuforecast";
             this.tbghichuforecast.Size = new System.Drawing.Size(112, 21);
@@ -818,7 +872,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(573, 41);
+            this.label20.Location = new System.Drawing.Point(697, 41);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(44, 13);
             this.label20.TabIndex = 45;
@@ -826,7 +880,7 @@
             // 
             // numsoluongforecast
             // 
-            this.numsoluongforecast.Location = new System.Drawing.Point(627, 8);
+            this.numsoluongforecast.Location = new System.Drawing.Point(751, 8);
             this.numsoluongforecast.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -839,7 +893,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(573, 12);
+            this.label18.Location = new System.Drawing.Point(697, 12);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(49, 13);
             this.label18.TabIndex = 43;
@@ -848,7 +902,7 @@
             // dtpNgayforecast
             // 
             this.dtpNgayforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayforecast.Location = new System.Drawing.Point(412, 8);
+            this.dtpNgayforecast.Location = new System.Drawing.Point(469, 6);
             this.dtpNgayforecast.Name = "dtpNgayforecast";
             this.dtpNgayforecast.Size = new System.Drawing.Size(91, 20);
             this.dtpNgayforecast.TabIndex = 3;
@@ -856,7 +910,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(303, 12);
+            this.label15.Location = new System.Drawing.Point(360, 10);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(103, 13);
             this.label15.TabIndex = 32;
@@ -1114,6 +1168,57 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // dtpetdforecast
+            // 
+            this.dtpetdforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpetdforecast.Location = new System.Drawing.Point(600, 37);
+            this.dtpetdforecast.Name = "dtpetdforecast";
+            this.dtpetdforecast.Size = new System.Drawing.Size(91, 20);
+            this.dtpetdforecast.TabIndex = 59;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(565, 41);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 58;
+            this.label30.Text = "ETD";
+            // 
+            // dtpetaforecast
+            // 
+            this.dtpetaforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpetaforecast.Location = new System.Drawing.Point(600, 6);
+            this.dtpetaforecast.Name = "dtpetaforecast";
+            this.dtpetaforecast.Size = new System.Drawing.Size(91, 20);
+            this.dtpetaforecast.TabIndex = 56;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(566, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(28, 13);
+            this.label31.TabIndex = 57;
+            this.label31.Text = "ETA";
+            // 
+            // tbforecastno
+            // 
+            this.tbforecastno.Location = new System.Drawing.Point(245, 37);
+            this.tbforecastno.Multiline = true;
+            this.tbforecastno.Name = "tbforecastno";
+            this.tbforecastno.Size = new System.Drawing.Size(112, 21);
+            this.tbforecastno.TabIndex = 60;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(269, 12);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(65, 13);
+            this.label32.TabIndex = 61;
+            this.label32.Text = "Forecast No";
+            // 
             // FrmPO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1122,6 +1227,7 @@
             this.Controls.Add(this.tabPO);
             this.Controls.Add(this.panel2);
             this.Name = "FrmPO";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PO - Forecast";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1244,5 +1350,15 @@
         private System.Windows.Forms.DateTimePicker dtpNgayGiao;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnXuatExcel;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tbmasppofil;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox tbmaspforecastfil;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox tbforecastno;
+        private System.Windows.Forms.DateTimePicker dtpetdforecast;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DateTimePicker dtpetaforecast;
+        private System.Windows.Forms.Label label31;
     }
 }

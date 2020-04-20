@@ -22,9 +22,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         string casanxuat;
         string langue_ge;
         ResourceManager res_man;
+        string temp = "";
         public FrmChiThiSX()
         {
             InitializeComponent();
+            
             dtgChiThiSX.Dock = DockStyle.Fill;
             dtpTuNgay.CustomFormat = "yyyy-MM-dd";
             dtpDenNgay.CustomFormat = "yyyy-MM-dd";
@@ -36,6 +38,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             phanquyen = ((FrmMain)f).quyensudung;
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
             casanxuat = ((FrmMain)f).casx;
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
             cbCaSX.SelectedIndex = 0;
             if (casanxuat != "") cbCaSX.Text = casanxuat;
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -47,10 +51,35 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             NewChiThiSX(this.panelFilterCTSX);
             loadmaymoc();
             loadnhanvien();
-            
-            langue_ge = ((FrmMain)f).languege_set;
-            setlangue();
+
+            setlangforallgrid();
+            dtgChiThiSX.Columns[0].Width = 0;
+            //getallcomponettext(this);
+            //tbMSQLFilter.Text = temp;
         }
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+        void setlangforallgrid()
+        {
+            if (langue_ge == "Japan") setlangforheader(dtgChiThiSX);
+        }
+
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -360,8 +389,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         
         void GetChiThiSX()
         {
-            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, tbMSQLFilter.Text);
+            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, tbMSQLFilter.Text, tbmaspctsxfil.Text);
             dtgChiThiSX.DataSource = chithi;
+            
         }
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
@@ -522,6 +552,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             xuatexceldtg(dtgChiThiSX);
         }
 
-      
+        private void tbmaspctsxfil_TextChanged(object sender, EventArgs e)
+        {
+            GetChiThiSX();
+        }
     }
 }

@@ -116,7 +116,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.85407cm</Height>
+              <Height>0.81994cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2098,28 +2098,30 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TEN_MAY">
+                    <Textbox Name="SO_MAY1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TEN_MAY.Value</Value>
+                              <Value>=Fields!SO_MAY.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TEN_MAY</rd:DefaultName>
+                      <rd:DefaultName>SO_MAY1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -4024,28 +4026,30 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="SO_MAY">
+                    <Textbox Name="TEN_MAY">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!SO_MAY.Value</Value>
+                              <Value>=Fields!TEN_MAY.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>SO_MAY</rd:DefaultName>
+                      <rd:DefaultName>TEN_MAY</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -4077,6 +4081,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -5944,7 +5949,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -5962,7 +5967,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MA_CONG_DOAN</rd:DefaultName>
@@ -7833,7 +7840,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -7851,7 +7858,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>TEN_SP1</rd:DefaultName>
@@ -9722,7 +9731,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -11591,7 +11600,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61594cm</Height>
+              <Height>0.58181cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -13460,7 +13469,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.66667cm</Height>
+              <Height>0.63076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -15327,7 +15336,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.29844cm</Height>
+              <Height>0.15847cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -17149,7 +17158,7 @@
                     <FilterExpression>=Fields!TEN_MAY.Value</FilterExpression>
                     <Operator>NotEqual</Operator>
                     <FilterValues>
-                      <FilterValue>CHUYEN_BURRYTAK</FilterValue>
+                      <FilterValue>DAY CHUYEN</FilterValue>
                     </FilterValues>
                   </Filter>
                   <Filter>
@@ -17186,8 +17195,8 @@
         <DataSetName>KHSX</DataSetName>
         <Top>0cm</Top>
         <Left>0cm</Left>
-        <Height>5.51479cm</Height>
-        <Width>41cm</Width>
+        <Height>5.1cm</Height>
+        <Width>40.99999cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -17200,6 +17209,327 @@
   </Body>
   <Width>41cm</Width>
   <Page>
+    <PageHeader>
+      <Height>1.87854cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox53">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Thừa Nhận
+承認</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0cm</Top>
+          <Left>34.09264cm</Left>
+          <Height>0.90276cm</Height>
+          <Width>2.12958cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox54">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Xác Nhận
+確認</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0cm</Top>
+          <Left>36.22222cm</Left>
+          <Height>0.90276cm</Height>
+          <Width>2.12958cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox55">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tác Thành
+作成</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0cm</Top>
+          <Left>38.3518cm</Left>
+          <Height>0.90276cm</Height>
+          <Width>2.12958cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox56">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0.93804cm</Top>
+          <Left>34.09264cm</Left>
+          <Height>0.77928cm</Height>
+          <Width>2.12958cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox57">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0.93803cm</Top>
+          <Left>36.22223cm</Left>
+          <Height>0.77929cm</Height>
+          <Width>2.12958cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox58">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox53</rd:DefaultName>
+          <Top>0.93803cm</Top>
+          <Left>38.35181cm</Left>
+          <Height>0.77929cm</Height>
+          <Width>2.12958cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox59">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PRODUCTION PLAN </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>-</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=first(Fields!YEAR.Value, "KHSX")</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>　生産計画 </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>月</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=first(Fields!YEAR.Value, "KHSX")</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>年 </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox59</rd:DefaultName>
+          <Top>0cm</Top>
+          <Left>0.54197cm</Left>
+          <Height>1.71732cm</Height>
+          <Width>33.48012cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>42cm</PageWidth>
     <InteractiveHeight>29.7cm</InteractiveHeight>

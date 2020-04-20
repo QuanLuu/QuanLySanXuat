@@ -1,4 +1,5 @@
 ﻿using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
+using Pabo.Calendar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,8 +26,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cblanguege.Text = "VietNamese";
             EventKhiLoadForm(this.panelMain);
             getusername();
-            panelMain.Enabled = false;
+            panelMain.Enabled = true;
             this.Text = "Quản Lý Sản Xuất - Version " + app_ver.ToString();
+            
         }
         void HieuUngChon(Control col)
         {
@@ -156,6 +158,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             frm.FormClosing += main_close;
 
         }
+        void showcalendar()
+        {
+            CalendarHolidays frm = new CalendarHolidays();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
+
+        }
         void showformAdmin()
         {
             FrmAdmin frm = new FrmAdmin();
@@ -207,7 +217,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void changelaguege(string lang)
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
-            if (languege_set == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            if (languege_set == "Japan")
+            {
+                res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+                label1.Text = "SANYO SEISAKUSHO VIETNAM CO., LTD";
+                label5.Text = "SSVNの生産管理システム";
+            }
             ResourceManager res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
             lbDanhMuc.Text = res_man.GetString("danhmuc");
             lbnhapxuat.Text = res_man.GetString("nhapxuat");
@@ -306,6 +321,24 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             languege_set = cblanguege.Text.Replace("Japanese","Japan");
             changelaguege(languege_set);
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            showcalendar();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            showcalendar();
+        }
+
+        private void btndoimk_Click(object sender, EventArgs e)
+        {
+            frmDoiMK frm = new Chuong_Trinh_Quan_Ly_San_Xuat.frmDoiMK();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
         }
     }
 }

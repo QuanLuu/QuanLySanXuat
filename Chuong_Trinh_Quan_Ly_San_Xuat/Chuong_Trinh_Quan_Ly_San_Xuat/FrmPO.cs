@@ -18,6 +18,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int action = 0;
         string langue_ge;
         ResourceManager res_man;
+        string temp = "";
         public FrmPO()
         {
             InitializeComponent();
@@ -37,6 +38,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgListTime, new object[] { true });
 
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
+
             dtpDateFromPOFilter.Value = DateTime.Now.AddDays(-30);
             dtpDateToPOFilter.Value = DateTime.Now;
             dtpfromforecastfilter.Value = DateTime.Now.AddDays(-30);
@@ -45,12 +50,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             LoadForecast();
             loadlistitme();
             loadkhachhang();
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
-            langue_ge = ((FrmMain)f).languege_set;
-            setlangue();
-           
+
+            setlangforallgridview();
+            dtgForecast.Columns[0].Width = 0;
+            dtgListTime.Columns[0].Width = 0;
+            dtgPO.Columns[0].Width = 0;
+            //getallcomponettext(this);
+            //tbMaKHForecastFil.Text = temp;
         }
-       
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -72,21 +88,44 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             }
             
         }
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+        void setlangforallgridview()
+        {
+            if (langue_ge == "Japan")
+            {
+                setlangforheader(dtgForecast);
+                setlangforheader(dtgListTime);
+                setlangforheader(dtgPO);
+      
+
+            }
+        }
         void loadallPO()
         {
-            DataTable data = Import_Manager.Instance.getpoall(tbMaKHPOFilter.Text, tbMSQLPOFilter.Text, dtpDateFromPOFilter.Value, dtpDateToPOFilter.Value);
+            DataTable data = Import_Manager.Instance.getpoall(tbMaKHPOFilter.Text, tbMSQLPOFilter.Text, dtpDateFromPOFilter.Value, dtpDateToPOFilter.Value, tbmasppofil.Text);
             dtgPO.DataSource = data;
+            
         }
         void LoadForecast()
         {
-            DataTable data = Import_Manager.Instance.getForecast(tbMaKHForecastFil.Text, tbmsqlforecastfilter.Text, dtpfromforecastfilter.Value, dtptoforecastfilter.Value);
+            DataTable data = Import_Manager.Instance.getForecast(tbMaKHForecastFil.Text, tbmsqlforecastfilter.Text, dtpfromforecastfilter.Value, dtptoforecastfilter.Value, tbmaspforecastfil.Text);
             dtgForecast.DataSource = data;
+            
         }
 
         void loadlistitme()
         {
             DataTable data = Import_Manager.Instance.getlisttime(tbMSQLListtimeFilter.Text);
             dtgListTime.DataSource = data;
+            
         }
         void loadsanphmtheokh()
         {
@@ -235,7 +274,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 }
                 if (tabPO.SelectedIndex == 1)
                 {
-                    int results = Import_Manager.Instance.Updateforecast(action, (int)dtgForecast.CurrentRow.Cells[0].Value, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text);
+                    int results = Import_Manager.Instance.Updateforecast(action, (int)dtgForecast.CurrentRow.Cells[0].Value, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text, tbforecastno.Text, dtpetaforecast.Value, dtpetdforecast.Value);
                     LoadForecast();
                 }
                 if (tabPO.SelectedIndex == 2)
@@ -301,7 +340,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     { currow = dtgForecast.Rows.Count - 1; }
                     else
                     { currow = 0; }
-                    int results = Import_Manager.Instance.Updateforecast(action, id, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text);
+                    int results = Import_Manager.Instance.Updateforecast(action, id, cbmaspforecast.Text, dtpNgayforecast.Value, dtpngaydukien.Value, (int)numsoluongforecast.Value, tbghichuforecast.Text, cbmakhforecast.Text, tbforecastno.Text, dtpetaforecast.Value, dtpetdforecast.Value);
                     LoadForecast(); 
                     dtgForecast.CurrentCell = dtgForecast.Rows[currow].Cells[0];
                 }
@@ -395,9 +434,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 cbmsqlforecast.Text = dtgForecast.CurrentRow.Cells[2].Value.ToString();
                 cbmaspforecast.Text = dtgForecast.CurrentRow.Cells[3].Value.ToString();
                 dtpNgayforecast.Value = Convert.ToDateTime(dtgForecast.CurrentRow.Cells[4].Value.ToString());
-                dtpngaydukien.Value = Convert.ToDateTime(dtgForecast.CurrentRow.Cells[5].Value.ToString());       
-                numsoluongforecast.Text = dtgForecast.CurrentRow.Cells[6].Value.ToString();
-                tbghichuforecast.Text = dtgForecast.CurrentRow.Cells[7].Value.ToString();
+                tbforecastno.Text = dtgForecast.CurrentRow.Cells[5].Value.ToString();
+                if (dtgForecast.CurrentRow.Cells[6].Value.ToString() != "") dtpetaforecast.Value = DateTime.Parse(dtgForecast.CurrentRow.Cells[6].Value.ToString());
+                if (dtgForecast.CurrentRow.Cells[7].Value.ToString() != "") dtpetdforecast.Value = DateTime.Parse(dtgForecast.CurrentRow.Cells[7].Value.ToString());
+                dtpngaydukien.Value = Convert.ToDateTime(dtgForecast.CurrentRow.Cells[8].Value.ToString());       
+                numsoluongforecast.Text = dtgForecast.CurrentRow.Cells[9].Value.ToString();
+                tbghichuforecast.Text = dtgForecast.CurrentRow.Cells[10].Value.ToString();
             }
         }
 
@@ -425,6 +467,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 xuatexceldtg(dtgListTime);
         }
 
-       
+        private void tbmaspforecastfil_TextChanged(object sender, EventArgs e)
+        {
+            LoadForecast();
+        }
+
+        private void tbmasppofil_TextChanged(object sender, EventArgs e)
+        {
+            loadallPO();
+        }
     }
 }

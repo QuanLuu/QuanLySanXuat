@@ -24,6 +24,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         string phanquyen;
         string langue_ge;
         ResourceManager res_man;
+        string temp = "";
         public FrmKiemKho()
         {
             InitializeComponent();
@@ -47,6 +48,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
             phanquyen = ((FrmMain)f).quyensudung;
             bophan = bophankiemke(usernhap);
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
             getthanhpham();
             getkiemkhonl();
             GetNguyenLieu();
@@ -61,18 +64,48 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             loadnhanvien();
             phanquyennhaplieu();
             gettencongdoan();
-            
-            langue_ge = ((FrmMain)f).languege_set;
-            setlangue();
-            
+
+            setlangforallgridview();
+            dtgNL.Columns[0].Width = 0;
+            //getallcomponettext(this);
+            //tbFilterNL.Text = temp;
         }
-      
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+
+
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
             if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
             res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
             setlangforlabel(this);
+        }
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+        void setlangforallgridview()
+        {
+            if (langue_ge == "Japan")
+            {
+                setlangforheader(dtgbanTP);
+                setlangforheader(dtgbaoluu);
+                setlangforheader(dtgKKTP);
+                setlangforheader(dtgNL);
+  
+            }
         }
         void setlangforlabel(Control par)
         {
@@ -106,6 +139,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value, dtpngaykiemtpfilto.Value);
             dtgKKTP.DataSource = data;
+            //setlangforheader(dtgKKTP);
         }
         string bophankiemke(string username)
         {
@@ -119,13 +153,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.getkiemkhotp(cbtencongdoanbantpfil.Text, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
             dtgbanTP.DataSource = data;
+            
             //if (bophan == "Sản Xuất")
             //{
             //    congdoan = "BAN CONG DOAN";
             //    DataTable data = Import_Manager.Instance.getkiemkhotp(congdoan, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value,dtpngaykiembtpfilto.Value);
             //    dtgbanTP.DataSource = data;
             //}
-            
+
             //else if(bophan == "Chất Lượng")
             //{
             //    congdoan = "TRUOC KIEM";
@@ -144,6 +179,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.getkiemkhonl(tbFilterNL.Text, dtpngaykiemNLFilter.Value, dtpngaykiemnlfilto.Value);
             dtgNL.DataSource = data;
+            //setlangforheader(dtgNL);
         }
         void xuatexceldtg(DataGridView dtg)
         {
@@ -193,6 +229,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.LoadDM_NL(tbFilterNL.Text);
             dtgNL.DataSource = data;
+            //setlangforheader(dtgNL);
             cbMaNL.DataSource = data;
             cbMaNL.DisplayMember = "SHORT_NL";
             cbMaNL.ValueMember = "TEN_NL";
@@ -592,6 +629,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             getbanthanhpham();
         }
-     
+
+        private void tbmsqlbaoluufil_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

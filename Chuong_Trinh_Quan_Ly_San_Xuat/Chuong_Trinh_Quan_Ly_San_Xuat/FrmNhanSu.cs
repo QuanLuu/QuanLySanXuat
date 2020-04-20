@@ -18,6 +18,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int action = 0;
         string langue_ge;
         ResourceManager res_man;
+        string temp = "";
         public FrmNhanSu()
         {
             InitializeComponent();
@@ -41,7 +42,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
            BindingFlags.Instance | BindingFlags.SetProperty, null,
            dtgCalv, new object[] { true });
-
+            
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
             danhsachnhanvien();
             gethopdong();
             DataTable data = Import_Manager.Instance.getbophan();
@@ -53,9 +57,25 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpNghiDenNgay.Value = DateTime.Now;
             getnghiphep();
             getcalamviec();
-            setlangue();
-           
+
+            setlangforallgridview();
+            //getallcomponettext(this);
+            //tbcalvfil.Text = temp;
+            dtgCalv.Columns[0].Width = 0;
+            dtgDSNV.Columns[0].Width = 0;
+            dtgHopDong.Columns[0].Width = 0;
+            dtgNghiPhep.Columns[0].Width = 0;
         }
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+
+
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -76,6 +96,27 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 setlangforlabel(c);
             }
 
+        }
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+        void setlangforallgridview()
+        {
+            if (langue_ge == "Japan")
+            {
+                setlangforheader(dtgCalv);
+                setlangforheader(dtgDSNV);
+                setlangforheader(dtgHopDong);
+                setlangforheader(dtgNghiPhep);
+         
+
+            }
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -114,16 +155,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.danhsachnv(tbmanvfilter.Text , tbDSNVFilter.Text);
             dtgDSNV.DataSource = data;
+            
         }
         void getcalamviec()
         {
             DataTable data = Import_Manager.Instance.getnhanviencalv(tbmanvcalvfil.Text, tbtennvcalvfil.Text, tbcalvfil.Text);
             dtgCalv.DataSource = data;
+           
         }
         void getnghiphep()
         {
             DataTable data = Import_Manager.Instance.GetNhatKyNghiPhep(tbmanvnghifil.Text, tbtennvnghifil.Text);
             dtgNghiPhep.DataSource = data;
+            
         }
         void loadtennhanvienhd()
         {
@@ -396,6 +440,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.getHopDong(tbmanvhdfil.Text, tbHDFilter.Text);
             dtgHopDong.DataSource = data;
+            
         }
 
         private void tbHDFilter_TextChanged(object sender, EventArgs e)

@@ -29,9 +29,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         int actionNVLNCC = 0;
         string langue_ge;
         ResourceManager res_man;
+        string temp = "";
         public FrmDanhMuc()
         {
             InitializeComponent();
+            
             dtgNL.Dock = DockStyle.Fill;
             dtgSP.Dock = DockStyle.Fill;
             dtgSPCD.Dock = DockStyle.Fill;
@@ -81,6 +83,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
 
             GetNguyenLieu();
             enablecontrolNL();
@@ -105,10 +108,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             getsanphamSNP();
             getKHSP();
             loadnvl_ncc();
-            setlangue();
-            
+
+            setlangforallgridview();
+            hiddenidcol();
         }
-        
+
         void setlangue()
         {
             string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
@@ -128,6 +132,51 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 setlangforlabel(c);
             }
         }
+        void setlangforheader(DataGridView dtg)
+        {
+                string headername = "";
+                for (int i = 0; i < dtg.Columns.Count; i++)
+                {
+                    headername = dtg.Columns[i].HeaderText;
+                    dtg.Columns[i].HeaderText = res_man.GetString(headername);
+                }
+        }
+       
+        void setlangforallgridview()
+        {
+            if (langue_ge == "Japan")
+            {
+                setlangforheader(dtgBox);
+                setlangforheader(dtgBoxSP);
+                setlangforheader(dtgDM);
+                setlangforheader(dtgDongia);
+                setlangforheader(dtgKH);
+                setlangforheader(dtgKHSP);
+                setlangforheader(dtgMayMoc);
+                setlangforheader(dtgNL);
+                setlangforheader(dtgNVLNCC);
+                setlangforheader(dtgSP);
+                setlangforheader(dtgNL);
+                setlangforheader(dtgSPCD);
+
+            }
+        }
+        void hiddenidcol()
+        {
+            dtgBox.Columns[0].Width = 0;
+            dtgBoxSP.Columns[0].Width = 0;
+            dtgDM.Columns[0].Width = 0;
+            dtgDongia.Columns[0].Width = 0;
+            dtgKH.Columns[0].Width = 0;
+            dtgKHSP.Columns[0].Width = 0;
+            dtgMayMoc.Columns[0].Width = 0;
+
+            dtgNL.Columns[0].Width = 0;
+            dtgNVLNCC.Columns[0].Width = 0;
+            dtgSP.Columns[0].Width = 0;
+            dtgNL.Columns[0].Width = 0;
+            dtgSPCD.Columns[0].Width = 0;
+        }
         void GetNguyenLieu()
         {
             DataTable data = Import_Manager.Instance.LoadDM_NL(tbFilterNL.Text);
@@ -137,11 +186,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             cbTenNLNVLNCC.DataSource = data;
             cbTenNLNVLNCC.DisplayMember = "TEN_NL";
+            
         }
         void getKHSP()
         {
             DataTable data = Import_Manager.Instance.GetKhvamasp(tbMaKHKHSPFilter.Text, tbmsqlkhspfil.Text);
             dtgKHSP.DataSource = data;
+            
         }
         void xuatexceldtg(DataGridView dtg)
         {
@@ -191,11 +242,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.GetBox("");
             dtgBox.DataSource = data;
+            
         }
         void getsanphamSNP()
         {
             DataTable data = Import_Manager.Instance.GetSPSNP(tbMSQLBoxSPFilter.Text, tbMaSPBoxFilter.Text);
             dtgBoxSP.DataSource = data;
+            
         }
         void getboxbyboxtype()
         {
@@ -215,7 +268,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         void GetSanPham()
         {
             DataTable data = Import_Manager.Instance.LoadDM_SP(tbFilterSP.Text, tbMaSPDMSP.Text, tbNVLSP.Text);
-            dtgSP.DataSource = data;  
+            dtgSP.DataSource = data;
+            
         }
         void getsanphamtheomsql()
         {
@@ -238,6 +292,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.LoadKH(tbFilterKH.Text);
             dtgKH.DataSource = data;
+            
 
             DataTable KH = Import_Manager.Instance.LoadKH("");
             cbMaKHKHSP.DisplayMember = "MA_KH";
@@ -256,17 +311,20 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.LoadDM(tbmsqldinhmucfil.Text, tbfilterMaSPDM.Text);
             dtgDM.DataSource = data;
+            
         }
         void GetDongia()
         {
             DataTable data = Import_Manager.Instance.LoadDongia(tbMaSPDongiaFilter.Text, tbMSQLDonGiaFilter.Text);
             dtgDongia.DataSource = data;
+            
         }
 
         void getSPCD()
         {
             DataTable spcd = Import_Manager.Instance.getSPCongDoan(tbSPCD.Text, tbMaSPSPCDFilter.Text);
             dtgSPCD.DataSource = spcd;
+            
         }
 
 
@@ -274,6 +332,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable maymoc = Import_Manager.Instance.GetMayMoc();
             dtgMayMoc.DataSource = maymoc;
+            
         }
         void getmaymoccd()
         {
@@ -1380,6 +1439,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.GetNVL_NCC(tbNVLNVLNCC.Text, tbNCCNVLNCC.Text);
             dtgNVLNCC.DataSource = data;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1484,6 +1544,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetDinhMuc();
         }
 
- 
+    
     }
 }

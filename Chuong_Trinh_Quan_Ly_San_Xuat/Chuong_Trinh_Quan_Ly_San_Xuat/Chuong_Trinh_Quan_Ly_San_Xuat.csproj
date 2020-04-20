@@ -55,6 +55,9 @@
     <ApplicationIcon>rss.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calendar.NET">
+      <HintPath>..\..\..\DLL\Calendar.NET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel1">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -79,9 +82,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="MonthCalendar">
+      <HintPath>C:\Users\QuanLuu\Downloads\MonthCalendar_demo_vs2005\MonthCalendar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,6 +102,12 @@
   <ItemGroup>
     <Compile Include="ADO\DataProvider.cs" />
     <Compile Include="BLL\Import_Manager.cs" />
+    <Compile Include="CalendarHolidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarHolidays.Designer.cs">
+      <DependentUpon>CalendarHolidays.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiThiSX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +125,12 @@
     </Compile>
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMK.Designer.cs">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKiemKho.cs">
       <SubType>Form</SubType>
@@ -172,6 +191,9 @@
     <EmbeddedResource Include="BaoCaoTienDo.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalendarHolidays.resx">
+      <DependentUpon>CalendarHolidays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiThiSX.resx">
       <DependentUpon>ChiThiSX.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMK.resx">
+      <DependentUpon>frmDoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKiemKho.resx">
       <DependentUpon>FrmKiemKho.cs</DependentUpon>
@@ -209,10 +234,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="KHSX_KIEM_NQ.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="KHSX_BURRYTAK.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="lang_vi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -222,6 +247,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NXT_SP.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuKiemTraNL.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

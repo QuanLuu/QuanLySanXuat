@@ -729,7 +729,8 @@
             "Nhân Sự",
             "Báo Cáo",
             "PO",
-            "Kiểm Kho"});
+            "Kiểm Kho",
+            "Calendar"});
             this.chListCapquyen.Location = new System.Drawing.Point(285, 24);
             this.chListCapquyen.MultiColumn = true;
             this.chListCapquyen.Name = "chListCapquyen";
@@ -805,8 +806,9 @@
             this.Controls.Add(this.tabControlAdmin);
             this.MaximizeBox = false;
             this.Name = "FrmAdmin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAdmin";
+            this.Text = "Admin";
             this.tabControlAdmin.ResumeLayout(false);
             this.tabPageImportExcel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

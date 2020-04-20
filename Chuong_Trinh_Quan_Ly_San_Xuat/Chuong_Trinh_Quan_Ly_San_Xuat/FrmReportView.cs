@@ -24,7 +24,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         ResourceManager res_man;
         string loaibc;
         string nhapxuatgc = "";
-
+        string temp = "";
         public FrmReportView()
         {
             InitializeComponent();
@@ -32,6 +32,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgbaocao, new object[] { true });
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
             tbYearCTSX.Text = DateTime.Now.Year.ToString();
             tbmonthCTSX.Text = DateTime.Now.Month.ToString();
             tbNamKHSX.Text = DateTime.Now.Year.ToString();
@@ -47,12 +50,32 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgbaocao.Dock = DockStyle.Fill;
             GetKhachHang();
             cbKHinvoice.Text = "NTZC";
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
-            langue_ge = ((FrmMain)f).languege_set;
-            setlangue();
+
             tbnambaocaosx.Text = DateTime.Now.Year.ToString();
             tbthangbaocaosx.Text = DateTime.Now.Month.ToString();
+            loadnhanvien();
+
+            //getallcomponettext(this);
+            //tbMSQQLCTSX.Text = temp;
         }
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+
         void xuatexceldtg(DataGridView dtg)
         {
             Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
@@ -147,6 +170,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 DataTable baocao = Import_Manager.Instance.Getthepnxt(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
                 dtgbaocao.DataSource = baocao;
             }
+            
         }
         private void btnReportCTSX_Click(object sender, EventArgs e)
         {
@@ -368,6 +392,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
 
             if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
+            
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
@@ -539,6 +564,26 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             tbtunamtiendo.Text = DateTime.Now.Year.ToString();
             tbdennamtiendo.Text = DateTime.Now.Year.ToString();
             paneltiendo.Visible = true;
+        }
+
+        private void phiếuKiểmTraNLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            dtpdengayphieuktnl.Value = DateTime.Now;
+            dtptungayphieuktnl.Value = DateTime.Now.AddDays(-7);
+            panelPhieuktnl.Visible = true;
+        }
+
+        private void btphieuktnl_Click(object sender, EventArgs e)
+        {
+            DataTable dt = Import_Manager.Instance.phieuktnl(dtptungayphieuktnl.Value, dtpdengayphieuktnl.Value, tbspecphieuktnl.Text, tbsizephieuktnl.Text, cbnhanvienphieuktnl.Text);
+            viewreport("PhieuKiemTraNL.rdlc", "PhieuKTNL", dt);
+        }
+        void loadnhanvien()
+        {
+            DataTable data = Import_Manager.Instance.LoadNhanVien();
+            cbnhanvienphieuktnl.DisplayMember = "NV";
+            cbnhanvienphieuktnl.DataSource = data;
         }
     }
 }

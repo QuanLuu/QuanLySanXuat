@@ -131,6 +131,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.dtgCalv = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbcalvfil = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tbmanvcalvfil = new System.Windows.Forms.TextBox();
             this.tbtennvcalvfil = new System.Windows.Forms.TextBox();
@@ -144,8 +146,6 @@
             this.tbmanvcalv = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.tbcalvfil = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabNhanVien.SuspendLayout();
@@ -1220,6 +1220,23 @@
             this.panel10.Size = new System.Drawing.Size(946, 39);
             this.panel10.TabIndex = 6;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(518, 16);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 13);
+            this.label25.TabIndex = 5;
+            this.label25.Text = "Ca Làm";
+            // 
+            // tbcalvfil
+            // 
+            this.tbcalvfil.Location = new System.Drawing.Point(567, 12);
+            this.tbcalvfil.Name = "tbcalvfil";
+            this.tbcalvfil.Size = new System.Drawing.Size(86, 20);
+            this.tbcalvfil.TabIndex = 4;
+            this.tbcalvfil.TextChanged += new System.EventHandler(this.tbcalvfil_TextChanged);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1349,23 +1366,6 @@
             this.label34.TabIndex = 2;
             this.label34.Text = "Tên Nhân Viên";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(518, 16);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(43, 13);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "Ca Làm";
-            // 
-            // tbcalvfil
-            // 
-            this.tbcalvfil.Location = new System.Drawing.Point(567, 12);
-            this.tbcalvfil.Name = "tbcalvfil";
-            this.tbcalvfil.Size = new System.Drawing.Size(86, 20);
-            this.tbcalvfil.TabIndex = 4;
-            this.tbcalvfil.TextChanged += new System.EventHandler(this.tbcalvfil_TextChanged);
-            // 
             // FrmNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1374,6 +1374,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "FrmNhanSu";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân Sự";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

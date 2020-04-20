@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 
@@ -13,19 +15,77 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
     public partial class FrmAdmin : Form
     {
         int Action = 0;
+        string langue_ge;
+        ResourceManager res_man;
+        string temp = "";
         public FrmAdmin()
         {
             InitializeComponent();
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
+            langue_ge = ((FrmMain)f).languege_set;
+            setlangue();
             LoadDataTypeTable();
             loaduser();
             loadbophan();
             dtgDataType.Dock = DockStyle.Fill;
             dtgDataTypeSheet.Dock = DockStyle.Fill;
+            setlangforallgridview();
+            //getallcomponettext(this);
+            //tbFilter.Text = temp;
         }
+        void getallcomponettext(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                temp += "," + c.Text;
+                getallcomponettext(c);
+            }
+        }
+        void setlangforheader(DataGridView dtg)
+        {
+            string headername = "";
+            for (int i = 0; i < dtg.Columns.Count; i++)
+            {
+                headername = dtg.Columns[i].HeaderText;
+                dtg.Columns[i].HeaderText = res_man.GetString(headername);
+            }
+        }
+        void setlangforallgridview()
+        {
+            if (langue_ge == "Japan")
+            {
+                setlangforheader(dtgDataType);
+                setlangforheader(dtgDataTypeSheet);
+                setlangforheader(dtgUsers);
+            
+
+            }
+        }
+        void setlangue()
+        {
+            string res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_vi";
+            if (langue_ge == "Japan") res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
+            res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+            setlangforlabel(this);
+        }
+        void setlangforlabel(Control par)
+        {
+            foreach (Control c in par.Controls)
+            {
+                //if (c.GetType().Name == "Label")
+                //{
+                if (res_man.GetString(c.Text) != null)
+                    c.Text = res_man.GetString(c.Text);
+                //}
+                setlangforlabel(c);
+            }
+        }
+       
         void loaduser()
         {
             DataTable data = Import_Manager.Instance.GetUser();
             dtgUsers.DataSource = data;
+            
         }
 
         private void btnNewDataType_Click(object sender, EventArgs e)
@@ -181,11 +241,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             DataTable data = Import_Manager.Instance.LoadDataTypeSheetTable(data_type);
             dtgDataTypeSheet.DataSource = data;
+            
         }
         void LoadDataTypeTable()
         {
             DataTable data = Import_Manager.Instance.LoadDataTypeTable();
             dtgDataType.DataSource = data;
+            
         }
         private void btnNewDataSheet_Click(object sender, EventArgs e)
         {
@@ -325,7 +387,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             Action = 1;
             tbTenUser.Text = "";
             tbmatkhau.Text = "";
-            tbcaSX.Text = "";
+            //tbcaSX.Text = "";
             DisableUser();
         }
 
