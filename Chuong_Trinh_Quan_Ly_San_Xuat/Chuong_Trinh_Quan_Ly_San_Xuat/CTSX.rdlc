@@ -178,7 +178,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Bộ Phận Sản Xuất 製造部署</Value>
+                              <Value>Số Chỉ Thị 指示No: </Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>=Fields!YEAR.Value &amp; Fields!MONTH.Value &amp; "-" &amp; Fields!MSQL.Value &amp; FORMAT(Fields!CONG_DOAN_SO.Value,"00")</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
@@ -817,7 +827,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1042">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -831,7 +841,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox1042</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1966,7 +1976,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1 指示数 2</Value>
+                              <Value>SL Chỉ Thị 2 指示数 2</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -2455,7 +2465,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1 指示数 3</Value>
+                              <Value>SL Chỉ Thị 3 指示数 3</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -2882,7 +2892,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SL Chỉ Thị 1 指示数 4</Value>
+                              <Value>SL Chỉ Thị 4 指示数 4</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -9876,7 +9886,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10350,7 +10360,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -11407,7 +11417,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -11771,7 +11781,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -12660,7 +12670,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -13024,7 +13034,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -13913,7 +13923,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -14277,7 +14287,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -15166,7 +15176,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -15530,7 +15540,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -16419,7 +16429,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -16783,7 +16793,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -17672,7 +17682,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -18036,7 +18046,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -18925,7 +18935,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -19289,7 +19299,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -20178,7 +20188,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -20542,7 +20552,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -21431,7 +21441,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -21795,7 +21805,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -22684,7 +22694,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -23048,7 +23058,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -23937,7 +23947,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -24301,7 +24311,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -25190,7 +25200,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -25554,7 +25564,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26419,7 +26429,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26762,7 +26772,7 @@ OK数</Value>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27543,134 +27553,142 @@ OK数</Value>
           <DataField>YEAR</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="MA_MAY">
+          <DataField>MA_MAY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ID1">
           <DataField>ID1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID2">
           <DataField>ID2</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID3">
           <DataField>ID3</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID4">
           <DataField>ID4</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID5">
           <DataField>ID5</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID6">
           <DataField>ID6</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID7">
           <DataField>ID7</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID8">
           <DataField>ID8</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID9">
           <DataField>ID9</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID10">
           <DataField>ID10</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID11">
           <DataField>ID11</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID12">
           <DataField>ID12</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID13">
           <DataField>ID13</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID14">
           <DataField>ID14</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID15">
           <DataField>ID15</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID16">
           <DataField>ID16</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID17">
           <DataField>ID17</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID18">
           <DataField>ID18</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID19">
           <DataField>ID19</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID20">
           <DataField>ID20</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID21">
           <DataField>ID21</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID22">
           <DataField>ID22</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID23">
           <DataField>ID23</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID24">
           <DataField>ID24</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID25">
           <DataField>ID25</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID26">
           <DataField>ID26</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID27">
           <DataField>ID27</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID28">
           <DataField>ID28</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID29">
           <DataField>ID29</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID30">
           <DataField>ID30</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID31">
           <DataField>ID31</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="CONG_DOAN_SO">
+          <DataField>CONG_DOAN_SO</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>QUAN_LY_SAN_XUATDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\QUAN_LY_SAN_XUATDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\QUAN_LY_SAN_XUATDataSet.xsd</rd:SchemaPath>
         <rd:TableName>PP_DS_IN_CHI_THI_SAN_XUAT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

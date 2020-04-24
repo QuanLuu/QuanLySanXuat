@@ -132,6 +132,12 @@
     <Compile Include="frmDoiMK.Designer.cs">
       <DependentUpon>frmDoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKeHoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKeHoach.Designer.cs">
+      <DependentUpon>FrmKeHoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmKiemKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMK.resx">
       <DependentUpon>frmDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKeHoach.resx">
+      <DependentUpon>FrmKeHoach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKiemKho.resx">
       <DependentUpon>FrmKiemKho.cs</DependentUpon>

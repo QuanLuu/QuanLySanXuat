@@ -1158,6 +1158,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             
             private global::System.Data.DataColumn columnID31;
             
+            private global::System.Data.DataColumn columnCONG_DOAN_SO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PP_DS_IN_CHI_THI_SAN_XUATDataTable() {
@@ -1521,6 +1523,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CONG_DOAN_SOColumn {
+                get {
+                    return this.columnCONG_DOAN_SO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1597,7 +1607,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                         double ID28, 
                         double ID29, 
                         double ID30, 
-                        double ID31) {
+                        double ID31, 
+                        int CONG_DOAN_SO) {
                 PP_DS_IN_CHI_THI_SAN_XUATRow rowPP_DS_IN_CHI_THI_SAN_XUATRow = ((PP_DS_IN_CHI_THI_SAN_XUATRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MA_CONG_DOAN,
@@ -1640,7 +1651,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                         ID28,
                         ID29,
                         ID30,
-                        ID31};
+                        ID31,
+                        CONG_DOAN_SO};
                 rowPP_DS_IN_CHI_THI_SAN_XUATRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPP_DS_IN_CHI_THI_SAN_XUATRow);
                 return rowPP_DS_IN_CHI_THI_SAN_XUATRow;
@@ -1704,6 +1716,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                 this.columnID29 = base.Columns["ID29"];
                 this.columnID30 = base.Columns["ID30"];
                 this.columnID31 = base.Columns["ID31"];
+                this.columnCONG_DOAN_SO = base.Columns["CONG_DOAN_SO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1791,6 +1804,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
                 base.Columns.Add(this.columnID30);
                 this.columnID31 = new global::System.Data.DataColumn("ID31", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID31);
+                this.columnCONG_DOAN_SO = new global::System.Data.DataColumn("CONG_DOAN_SO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONG_DOAN_SO);
                 this.columnMA_CONG_DOAN.MaxLength = 50;
                 this.columnMSQL.MaxLength = 10;
                 this.columnTEN_SP.MaxLength = 100;
@@ -5920,6 +5935,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int CONG_DOAN_SO {
+                get {
+                    try {
+                        return ((int)(this[this.tablePP_DS_IN_CHI_THI_SAN_XUAT.CONG_DOAN_SOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONG_DOAN_SO\' in table \'PP_DS_IN_CHI_THI_SAN_XUAT\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablePP_DS_IN_CHI_THI_SAN_XUAT.CONG_DOAN_SOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMA_CONG_DOANNull() {
                 return this.IsNull(this.tablePP_DS_IN_CHI_THI_SAN_XUAT.MA_CONG_DOANColumn);
             }
@@ -6408,6 +6440,18 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetID31Null() {
                 this[this.tablePP_DS_IN_CHI_THI_SAN_XUAT.ID31Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCONG_DOAN_SONull() {
+                return this.IsNull(this.tablePP_DS_IN_CHI_THI_SAN_XUAT.CONG_DOAN_SOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCONG_DOAN_SONull() {
+                this[this.tablePP_DS_IN_CHI_THI_SAN_XUAT.CONG_DOAN_SOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9044,6 +9088,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID29", "ID29");
             tableMapping.ColumnMappings.Add("ID30", "ID30");
             tableMapping.ColumnMappings.Add("ID31", "ID31");
+            tableMapping.ColumnMappings.Add("CONG_DOAN_SO", "CONG_DOAN_SO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

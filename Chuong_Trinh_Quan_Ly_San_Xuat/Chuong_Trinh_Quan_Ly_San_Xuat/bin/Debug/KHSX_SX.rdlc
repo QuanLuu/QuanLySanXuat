@@ -4081,7 +4081,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -13610,6 +13609,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -17195,7 +17195,7 @@
         <DataSetName>KHSX</DataSetName>
         <Top>0cm</Top>
         <Left>0cm</Left>
-        <Height>5.1cm</Height>
+        <Height>5.10003cm</Height>
         <Width>40.99999cm</Width>
         <Style>
           <Border>

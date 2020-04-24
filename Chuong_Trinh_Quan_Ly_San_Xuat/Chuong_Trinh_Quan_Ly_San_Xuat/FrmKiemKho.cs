@@ -137,7 +137,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getthanhpham()
         {
-            DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value, dtpngaykiemtpfilto.Value);
+            DataTable data = Import_Manager.Instance.getkiemkhotp("THANH PHAM", tbMSQLTPFilter.Text, dtpNgayKiemFilter.Value, dtpngaykiemtpfilto.Value, tbmasptpfil.Text);
             dtgKKTP.DataSource = data;
             //setlangforheader(dtgKKTP);
         }
@@ -151,7 +151,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getbanthanhpham()
         {
-            DataTable data = Import_Manager.Instance.getkiemkhotp(cbtencongdoanbantpfil.Text, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value);
+            DataTable data = Import_Manager.Instance.getkiemkhotp(cbtencongdoanbantpfil.Text, tbmsqlbantpfil.Text, dtpngaykiembantpfil.Value, dtpngaykiembtpfilto.Value, tbmaspbtpfil.Text);
             dtgbanTP.DataSource = data;
             
             //if (bophan == "Sản Xuất")
@@ -236,11 +236,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getmacongdoantheomsql()
         {
-            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQLTP.Text);
+            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQLTP.Text,"");
             cbMaTP.DisplayMember = "MA_CONG_DOAN";
             cbMaTP.DataSource = data;
 
-            DataTable bantp = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqlbantp.Text);
+            DataTable bantp = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqlbantp.Text,"");
             cbmaspbantp.DisplayMember = "MA_CONG_DOAN";
             cbmaspbantp.DataSource = bantp;
         }
@@ -633,6 +633,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbmsqlbaoluufil_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbmaspbtpfil_TextChanged(object sender, EventArgs e)
+        {
+            getbanthanhpham(); 
+        }
+
+        private void tbmasptpfil_TextChanged(object sender, EventArgs e)
+        {
+            getthanhpham();
         }
     }
 }

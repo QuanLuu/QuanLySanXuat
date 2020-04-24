@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tabPO = new System.Windows.Forms.TabControl();
             this.tabpPO = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -90,6 +91,12 @@
             this.tbMaKHForecastFil = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panelForecast = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.tbforecastno = new System.Windows.Forms.TextBox();
+            this.dtpetdforecast = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dtpetaforecast = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
             this.dtpngaydukien = new System.Windows.Forms.DateTimePicker();
             this.cbmsqlforecast = new System.Windows.Forms.ComboBox();
             this.cbmaspforecast = new System.Windows.Forms.ComboBox();
@@ -117,19 +124,24 @@
             this.label23 = new System.Windows.Forms.Label();
             this.cbMaCDListTime = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.paledit = new System.Windows.Forms.Panel();
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.dtpetdforecast = new System.Windows.Forms.DateTimePicker();
-            this.label30 = new System.Windows.Forms.Label();
-            this.dtpetaforecast = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tbforecastno = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.tabpInpass = new System.Windows.Forms.TabPage();
+            this.btnUpdateDL = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.tbMSQLPO = new System.Windows.Forms.TextBox();
+            this.dtpDatePO = new System.Windows.Forms.DateTimePicker();
+            this.chbngaygiaoorPO = new System.Windows.Forms.CheckBox();
+            this.cbKH = new System.Windows.Forms.ComboBox();
+            this.btnReportPO = new System.Windows.Forms.Button();
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPO.SuspendLayout();
             this.tabpPO.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -150,7 +162,9 @@
             this.panel5.SuspendLayout();
             this.panelListtime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numlisttime)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.paledit.SuspendLayout();
+            this.tabpInpass.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPO
@@ -158,6 +172,7 @@
             this.tabPO.Controls.Add(this.tabpPO);
             this.tabPO.Controls.Add(this.tabPForecast);
             this.tabPO.Controls.Add(this.tabPListtime);
+            this.tabPO.Controls.Add(this.tabpInpass);
             this.tabPO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPO.Location = new System.Drawing.Point(0, 0);
             this.tabPO.Name = "tabPO";
@@ -777,6 +792,57 @@
             this.panelForecast.TabIndex = 4;
             this.panelForecast.Visible = false;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(269, 12);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(65, 13);
+            this.label32.TabIndex = 61;
+            this.label32.Text = "Forecast No";
+            // 
+            // tbforecastno
+            // 
+            this.tbforecastno.Location = new System.Drawing.Point(245, 37);
+            this.tbforecastno.Multiline = true;
+            this.tbforecastno.Name = "tbforecastno";
+            this.tbforecastno.Size = new System.Drawing.Size(112, 21);
+            this.tbforecastno.TabIndex = 60;
+            // 
+            // dtpetdforecast
+            // 
+            this.dtpetdforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpetdforecast.Location = new System.Drawing.Point(600, 37);
+            this.dtpetdforecast.Name = "dtpetdforecast";
+            this.dtpetdforecast.Size = new System.Drawing.Size(91, 20);
+            this.dtpetdforecast.TabIndex = 59;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(565, 41);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 58;
+            this.label30.Text = "ETD";
+            // 
+            // dtpetaforecast
+            // 
+            this.dtpetaforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpetaforecast.Location = new System.Drawing.Point(600, 6);
+            this.dtpetaforecast.Name = "dtpetaforecast";
+            this.dtpetaforecast.Size = new System.Drawing.Size(91, 20);
+            this.dtpetaforecast.TabIndex = 56;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(566, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(28, 13);
+            this.label31.TabIndex = 57;
+            this.label31.Text = "ETA";
+            // 
             // dtpngaydukien
             // 
             this.dtpngaydukien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -1078,19 +1144,20 @@
             this.label27.TabIndex = 49;
             this.label27.Text = "Mã CD";
             // 
-            // panel2
+            // paledit
             // 
-            this.panel2.Controls.Add(this.btnXuatExcel);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.BtnEdit);
-            this.panel2.Controls.Add(this.btnNew);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 524);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(882, 35);
-            this.panel2.TabIndex = 5;
+            this.paledit.Controls.Add(this.btnUpdateDL);
+            this.paledit.Controls.Add(this.btnXuatExcel);
+            this.paledit.Controls.Add(this.btnCancel);
+            this.paledit.Controls.Add(this.btnSave);
+            this.paledit.Controls.Add(this.btnDelete);
+            this.paledit.Controls.Add(this.BtnEdit);
+            this.paledit.Controls.Add(this.btnNew);
+            this.paledit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paledit.Location = new System.Drawing.Point(0, 524);
+            this.paledit.Name = "paledit";
+            this.paledit.Size = new System.Drawing.Size(882, 35);
+            this.paledit.TabIndex = 5;
             // 
             // btnXuatExcel
             // 
@@ -1168,56 +1235,118 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // dtpetdforecast
+            // tabpInpass
             // 
-            this.dtpetdforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpetdforecast.Location = new System.Drawing.Point(600, 37);
-            this.dtpetdforecast.Name = "dtpetdforecast";
-            this.dtpetdforecast.Size = new System.Drawing.Size(91, 20);
-            this.dtpetdforecast.TabIndex = 59;
+            this.tabpInpass.Controls.Add(this.reportViewer);
+            this.tabpInpass.Controls.Add(this.panel3);
+            this.tabpInpass.Location = new System.Drawing.Point(4, 22);
+            this.tabpInpass.Name = "tabpInpass";
+            this.tabpInpass.Padding = new System.Windows.Forms.Padding(3);
+            this.tabpInpass.Size = new System.Drawing.Size(874, 498);
+            this.tabpInpass.TabIndex = 3;
+            this.tabpInpass.Text = "In Pass";
+            this.tabpInpass.UseVisualStyleBackColor = true;
             // 
-            // label30
+            // btnUpdateDL
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(565, 41);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 13);
-            this.label30.TabIndex = 58;
-            this.label30.Text = "ETD";
+            this.btnUpdateDL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdateDL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUpdateDL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDL.Location = new System.Drawing.Point(719, 0);
+            this.btnUpdateDL.Name = "btnUpdateDL";
+            this.btnUpdateDL.Size = new System.Drawing.Size(85, 35);
+            this.btnUpdateDL.TabIndex = 16;
+            this.btnUpdateDL.Text = "Cập Nhật Dữ Liệu";
+            this.btnUpdateDL.UseVisualStyleBackColor = false;
+            this.btnUpdateDL.Click += new System.EventHandler(this.btnUpdateDL_Click);
             // 
-            // dtpetaforecast
+            // panel3
             // 
-            this.dtpetaforecast.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpetaforecast.Location = new System.Drawing.Point(600, 6);
-            this.dtpetaforecast.Name = "dtpetaforecast";
-            this.dtpetaforecast.Size = new System.Drawing.Size(91, 20);
-            this.dtpetaforecast.TabIndex = 56;
+            this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel3.Controls.Add(this.label33);
+            this.panel3.Controls.Add(this.label36);
+            this.panel3.Controls.Add(this.tbMSQLPO);
+            this.panel3.Controls.Add(this.dtpDatePO);
+            this.panel3.Controls.Add(this.chbngaygiaoorPO);
+            this.panel3.Controls.Add(this.cbKH);
+            this.panel3.Controls.Add(this.btnReportPO);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(868, 38);
+            this.panel3.TabIndex = 3;
             // 
-            // label31
+            // label33
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(566, 10);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(28, 13);
-            this.label31.TabIndex = 57;
-            this.label31.Text = "ETA";
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(405, 12);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(37, 13);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "MSQL";
             // 
-            // tbforecastno
+            // label36
             // 
-            this.tbforecastno.Location = new System.Drawing.Point(245, 37);
-            this.tbforecastno.Multiline = true;
-            this.tbforecastno.Name = "tbforecastno";
-            this.tbforecastno.Size = new System.Drawing.Size(112, 21);
-            this.tbforecastno.TabIndex = 60;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(12, 12);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(22, 13);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "KH";
             // 
-            // label32
+            // tbMSQLPO
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(269, 12);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(65, 13);
-            this.label32.TabIndex = 61;
-            this.label32.Text = "Forecast No";
+            this.tbMSQLPO.Location = new System.Drawing.Point(442, 8);
+            this.tbMSQLPO.Name = "tbMSQLPO";
+            this.tbMSQLPO.Size = new System.Drawing.Size(66, 20);
+            this.tbMSQLPO.TabIndex = 6;
+            // 
+            // dtpDatePO
+            // 
+            this.dtpDatePO.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDatePO.Location = new System.Drawing.Point(281, 8);
+            this.dtpDatePO.Name = "dtpDatePO";
+            this.dtpDatePO.Size = new System.Drawing.Size(104, 20);
+            this.dtpDatePO.TabIndex = 5;
+            // 
+            // chbngaygiaoorPO
+            // 
+            this.chbngaygiaoorPO.AutoSize = true;
+            this.chbngaygiaoorPO.Location = new System.Drawing.Point(166, 10);
+            this.chbngaygiaoorPO.Name = "chbngaygiaoorPO";
+            this.chbngaygiaoorPO.Size = new System.Drawing.Size(118, 17);
+            this.chbngaygiaoorPO.TabIndex = 4;
+            this.chbngaygiaoorPO.Text = "Ngày giao dự kiến?";
+            this.chbngaygiaoorPO.UseVisualStyleBackColor = true;
+            // 
+            // cbKH
+            // 
+            this.cbKH.FormattingEnabled = true;
+            this.cbKH.Location = new System.Drawing.Point(40, 8);
+            this.cbKH.Name = "cbKH";
+            this.cbKH.Size = new System.Drawing.Size(100, 21);
+            this.cbKH.TabIndex = 3;
+            // 
+            // btnReportPO
+            // 
+            this.btnReportPO.Location = new System.Drawing.Point(541, 7);
+            this.btnReportPO.Name = "btnReportPO";
+            this.btnReportPO.Size = new System.Drawing.Size(75, 23);
+            this.btnReportPO.TabIndex = 2;
+            this.btnReportPO.Text = "View Report";
+            this.btnReportPO.UseVisualStyleBackColor = true;
+            this.btnReportPO.Click += new System.EventHandler(this.btnReportPO_Click);
+            // 
+            // reportViewer
+            // 
+            reportDataSource1.Name = "IN_PO";
+            reportDataSource1.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(59, 165);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Size = new System.Drawing.Size(757, 168);
+            this.reportViewer.TabIndex = 4;
             // 
             // FrmPO
             // 
@@ -1225,7 +1354,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 559);
             this.Controls.Add(this.tabPO);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.paledit);
             this.Name = "FrmPO";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1260,7 +1389,10 @@
             this.panelListtime.ResumeLayout(false);
             this.panelListtime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numlisttime)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.paledit.ResumeLayout(false);
+            this.tabpInpass.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1314,7 +1446,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox cbMaCDListTime;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel paledit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
@@ -1360,5 +1492,16 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DateTimePicker dtpetaforecast;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TabPage tabpInpass;
+        private System.Windows.Forms.Button btnUpdateDL;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox tbMSQLPO;
+        private System.Windows.Forms.DateTimePicker dtpDatePO;
+        private System.Windows.Forms.CheckBox chbngaygiaoorPO;
+        private System.Windows.Forms.ComboBox cbKH;
+        private System.Windows.Forms.Button btnReportPO;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
     }
 }

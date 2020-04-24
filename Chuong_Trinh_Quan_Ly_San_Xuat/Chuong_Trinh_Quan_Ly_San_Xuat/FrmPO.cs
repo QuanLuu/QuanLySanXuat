@@ -1,4 +1,5 @@
 ﻿using Chuong_Trinh_Quan_Ly_San_Xuat.BLL;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtgPO.Columns[0].Width = 0;
             //getallcomponettext(this);
             //tbMaKHForecastFil.Text = temp;
+            reportViewer.Dock = DockStyle.Fill;
         }
         void getallcomponettext(Control par)
         {
@@ -190,10 +192,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbMaKHPO.DataSource = data;
             cbmakhforecast.DisplayMember = "MA_KH";
             cbmakhforecast.DataSource = data;
+
+            cbKH.DisplayMember = "MA_KH";
+            cbKH.DataSource = data;
         }
         void getmacongdoantheomsql()
         {
-            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqllisttime.Text);
+            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbmsqllisttime.Text,"");
             cbMaCDListTime.DisplayMember = "MA_CONG_DOAN";
             cbMaCDListTime.DataSource = data;
 
@@ -455,6 +460,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 MessageBox.Show("Bạn chưa lưu dữ liệu, vui lòng chọn Save hoặc Cancel");
                 e.Cancel = true;
             }
+            if (tabPO.SelectedIndex == 3)
+                paledit.Visible = false;
+            else
+                paledit.Visible = true;
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
@@ -475,6 +484,65 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbmasppofil_TextChanged(object sender, EventArgs e)
         {
             loadallPO();
+        }
+        int getmaxidimport()
+        {
+            try
+            {
+                DataTable data = Import_Manager.Instance.GetMAxIDImport();
+                return Int32.Parse(data.Rows[0][0].ToString());
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+        void importfile()
+        {
+            try
+            {
+                int data = Import_Manager.Instance.ImportFile();
+                DataTable err = Import_Manager.Instance.GetErrormport();
+                if (err.Rows.Count > 0)
+                {
+                    MessageBox.Show("Error: " + err.Rows[0][0].ToString());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("error while importing files");
+            }
+        }
+        private void btnUpdateDL_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int max_id = getmaxidimport();
+                if (max_id == -1) return;
+                importfile();
+                int result = Import_Manager.Instance.UpdateDuLieu(max_id);
+                MessageBox.Show("Cập nhật dữ liệu xong");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void viewreport(string reportname, string datasetname, DataTable dt)
+        {
+            reportViewer.ProcessingMode = ProcessingMode.Local;
+            reportViewer.LocalReport.ReportPath = reportname;
+            reportViewer.LocalReport.DataSources.Clear();
+            reportViewer.LocalReport.DataSources.Add(new ReportDataSource(datasetname, dt));
+            reportViewer.RefreshReport();
+        }
+
+        private void btnReportPO_Click(object sender, EventArgs e)
+        {
+            int ngaygiao = 0;
+            if (chbngaygiaoorPO.Checked) ngaygiao = 1;
+            DataTable dt = Import_Manager.Instance.printPO(cbKH.Text, dtpDatePO.Value, tbMSQLPO.Text, ngaygiao);
+            viewreport("PO.rdlc", "IN_PO", dt);
         }
     }
 }

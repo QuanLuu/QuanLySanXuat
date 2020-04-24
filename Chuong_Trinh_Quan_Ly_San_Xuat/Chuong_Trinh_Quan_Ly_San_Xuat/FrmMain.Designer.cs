@@ -33,6 +33,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lbkiemkho = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             this.tbPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -116,6 +119,8 @@
             this.panelMain.AutoSize = true;
             this.panelMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMain.BackColor = System.Drawing.Color.LightBlue;
+            this.panelMain.Controls.Add(this.label3);
+            this.panelMain.Controls.Add(this.pictureBox10);
             this.panelMain.Controls.Add(this.label2);
             this.panelMain.Controls.Add(this.pictureBox9);
             this.panelMain.Controls.Add(this.lbkiemkho);
@@ -140,12 +145,39 @@
             this.panelMain.Size = new System.Drawing.Size(567, 432);
             this.panelMain.TabIndex = 2;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(45, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.TabIndex = 19;
+            this.label3.Tag = "Kế Hoạch";
+            this.label3.Text = "Kế Hoạch";
+            this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(29, 307);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(111, 89);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 18;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Tag = "Kế Hoạch";
+            this.pictureBox10.Visible = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(48, 412);
+            this.label2.Location = new System.Drawing.Point(183, 408);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 17;
@@ -157,7 +189,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(29, 311);
+            this.pictureBox9.Location = new System.Drawing.Point(164, 307);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(111, 89);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,12 +258,12 @@
             this.lbpo.AutoSize = true;
             this.lbpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpo.ForeColor = System.Drawing.Color.Blue;
-            this.lbpo.Location = new System.Drawing.Point(204, 271);
+            this.lbpo.Location = new System.Drawing.Point(168, 271);
             this.lbpo.Name = "lbpo";
-            this.lbpo.Size = new System.Drawing.Size(30, 17);
+            this.lbpo.Size = new System.Drawing.Size(103, 17);
             this.lbpo.TabIndex = 11;
-            this.lbpo.Tag = "PO";
-            this.lbpo.Text = "PO";
+            this.lbpo.Tag = "PO-Forecast";
+            this.lbpo.Text = "PO&&Forecast";
             this.lbpo.Visible = false;
             this.lbpo.Click += new System.EventHandler(this.label9_Click);
             // 
@@ -244,7 +276,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "PO";
+            this.pictureBox6.Tag = "PO-Forecast";
             this.pictureBox6.Visible = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
@@ -253,12 +285,12 @@
             this.lbbaocao.AutoSize = true;
             this.lbbaocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbbaocao.ForeColor = System.Drawing.Color.Blue;
-            this.lbbaocao.Location = new System.Drawing.Point(26, 271);
+            this.lbbaocao.Location = new System.Drawing.Point(50, 271);
             this.lbbaocao.Name = "lbbaocao";
-            this.lbbaocao.Size = new System.Drawing.Size(116, 17);
+            this.lbbaocao.Size = new System.Drawing.Size(69, 17);
             this.lbbaocao.TabIndex = 9;
             this.lbbaocao.Tag = "Báo Cáo";
-            this.lbbaocao.Text = "Báo Cáo & In Ấn";
+            this.lbbaocao.Text = "Báo Cáo";
             this.lbbaocao.Visible = false;
             // 
             // pictureBox5
@@ -491,7 +523,6 @@
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -499,6 +530,7 @@
             this.panel1.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -548,5 +580,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button btndoimk;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

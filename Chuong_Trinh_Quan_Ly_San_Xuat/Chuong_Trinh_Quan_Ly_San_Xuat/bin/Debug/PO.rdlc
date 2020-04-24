@@ -33,6 +33,7 @@
                             <TextRun>
                               <Value>="DELIVERY DETAILS CARD           MSQL :  " &amp; Fields!MSQL.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1127,7 +1128,7 @@
         </Filters>
         <Top>0.2cm</Top>
         <Left>0.2cm</Left>
-        <Height>5.7cm</Height>
+        <Height>5.69998cm</Height>
         <Width>9.99999cm</Width>
         <Style>
           <Border>
@@ -1166,6 +1167,7 @@
                             <TextRun>
                               <Value>="DELIVERY DETAILS CARD           MSQL :  " &amp; Fields!MSQL.Value</Value>
                               <Style>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2173,7 +2175,6 @@
                       </Style>
                     </Textbox>
                     <ColSpan>4</ColSpan>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -2261,7 +2262,7 @@
         </Filters>
         <Top>0.2cm</Top>
         <Left>10.5cm</Left>
-        <Height>5.7cm</Height>
+        <Height>5.69998cm</Height>
         <Width>9.99999cm</Width>
         <ZIndex>1</ZIndex>
         <Style>

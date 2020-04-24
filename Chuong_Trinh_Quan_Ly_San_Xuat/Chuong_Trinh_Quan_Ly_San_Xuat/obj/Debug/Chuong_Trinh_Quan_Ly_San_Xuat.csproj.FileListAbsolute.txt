@@ -109,3 +109,4 @@ H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\bin\Debug\MonthCalendar.dll
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.CalendarHolidays.resources
 H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.frmDoiMK.resources
+H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\obj\Debug\Chuong_Trinh_Quan_Ly_San_Xuat.FrmKeHoach.resources

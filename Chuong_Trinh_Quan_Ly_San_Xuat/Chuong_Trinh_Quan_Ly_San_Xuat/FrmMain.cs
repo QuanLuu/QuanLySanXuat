@@ -158,6 +158,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             frm.FormClosing += main_close;
 
         }
+        void showformkehoach()
+        {
+            FrmKeHoach frm = new FrmKeHoach();
+            this.Hide();
+            frm.Show();
+            frm.FormClosing += main_close;
+
+        }
         void showcalendar()
         {
             CalendarHolidays frm = new CalendarHolidays();
@@ -222,15 +230,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 res_file = "Chuong_Trinh_Quan_Ly_San_Xuat.lang_ja";
                 label1.Text = "SANYO SEISAKUSHO VIETNAM CO., LTD";
                 label5.Text = "SSVNの生産管理システム";
+                ResourceManager res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
+                lbDanhMuc.Text = res_man.GetString("danhmuc");
+                lbnhapxuat.Text = res_man.GetString("nhapxuat");
+                lbbaocao.Text = res_man.GetString("baocao");
+                lbnhansu.Text = res_man.GetString("nhansu");
+                lbkiemkho.Text = res_man.GetString("kiemkho");
+                lbpo.Text = res_man.GetString("PO");
+                lbctsx.Text = res_man.GetString("ctsx");
             }
-            ResourceManager res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
-            lbDanhMuc.Text = res_man.GetString("danhmuc");
-            lbnhapxuat.Text = res_man.GetString("nhapxuat");
-            lbbaocao.Text = res_man.GetString("baocao");
-            lbnhansu.Text = res_man.GetString("nhansu");
-            lbkiemkho.Text = res_man.GetString("kiemkho");
-            lbpo.Text = res_man.GetString("PO");
-            lbctsx.Text = res_man.GetString("ctsx");
+
         }
 
         private void tbPass_Enter(object sender, EventArgs e)
@@ -339,6 +348,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             this.Hide();
             frm.Show();
             frm.FormClosing += main_close;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            showformkehoach();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            showformkehoach();
         }
     }
 }

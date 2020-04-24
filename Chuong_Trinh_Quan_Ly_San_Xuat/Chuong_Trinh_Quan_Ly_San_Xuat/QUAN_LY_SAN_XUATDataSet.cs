@@ -13,3 +13,10 @@
         }
     }
 }
+
+namespace Chuong_Trinh_Quan_Ly_San_Xuat.QUAN_LY_SAN_XUATDataSetTableAdapters {
+    
+    
+    public partial class PP_DS_IN_CHI_THI_SAN_XUATTableAdapter {
+    }
+}

@@ -728,8 +728,9 @@
             "Chỉ Thị SX",
             "Nhân Sự",
             "Báo Cáo",
-            "PO",
+            "PO-Forecast",
             "Kiểm Kho",
+            "Kế Hoạch",
             "Calendar"});
             this.chListCapquyen.Location = new System.Drawing.Point(285, 24);
             this.chListCapquyen.MultiColumn = true;

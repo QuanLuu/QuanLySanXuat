@@ -81,6 +81,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgMayMoc, new object[] { true });
 
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgDMAll, new object[] { true });
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             langue_ge = ((FrmMain)f).languege_set;
             setlangue();
@@ -108,7 +111,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             getsanphamSNP();
             getKHSP();
             loadnvl_ncc();
-
+            getalldm();
             setlangforallgridview();
             hiddenidcol();
         }
@@ -695,6 +698,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             else
                 return 0;
         }
+        void getalldm()
+        {
+            DataTable data = Import_Manager.Instance.getDMAll(tbmsqlall.Text, tbmaspall.Text, tbtennlall.Text, tbmakhall.Text, tbmacdall.Text, tbmaymocall.Text, tbthungall.Text);
+            dtgDMAll.DataSource = data;
+        }
         private void btnEditSP_Click(object sender, EventArgs e)
         {
 
@@ -989,6 +997,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 //cbMayMocCD.Text = "";
                 cbMayMocCD.Text = "Tên:" + dtgSPCD.CurrentRow.Cells[5].Value.ToString() + " - Số:" + dtgSPCD.CurrentRow.Cells[6].Value.ToString() + " - Mã:" + dtgSPCD.CurrentRow.Cells[7].Value.ToString();
                 numCDso.Text = dtgSPCD.CurrentRow.Cells[8].Value.ToString();
+                numSPM.Text = dtgSPCD.CurrentRow.Cells[9].Value.ToString();
+                numtgchuanbitc.Text = dtgSPCD.CurrentRow.Cells[10].Value.ToString();
             }
             enablecontrolSPCD();
         }
@@ -1011,7 +1021,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 if (cbMayMocCD.Text != "") id_may = Int32.Parse(cbMayMocCD.SelectedValue.ToString());
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()), (int)numCDso.Value);
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value,tbMaCD.Text, tbTenCD.Text, id_may,Int32.Parse(cbMSQL.SelectedValue.ToString()), (int)numCDso.Value, (float)numSPM.Value, (float)numtgchuanbitc.Value);
                 getSPCD();
                 dtgSPCD.CurrentCell = dtgSPCD.Rows[currow].Cells[0];
                 actionSPCD = 0;
@@ -1030,7 +1040,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (MessageBox.Show("Are you sure to delete?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
             try
             {
-                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, 0, 0,0);
+                int results = Import_Manager.Instance.UpdateSPCongDoan(actionSPCD, (int)dtgSPCD.CurrentRow.Cells[0].Value, tbMaCD.Text, tbTenCD.Text, 0, 0,0,1,1);
                 actionSPCD = 0;
                 enablecontrolSPCD();
                 getSPCD();
@@ -1544,6 +1554,39 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             GetDinhMuc();
         }
 
-    
+        private void tbmsqlall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbmaspall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbmacdall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbthungall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbmakhall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbtennlall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
+
+        private void tbmaymocall_TextChanged(object sender, EventArgs e)
+        {
+            getalldm();
+        }
     }
 }
