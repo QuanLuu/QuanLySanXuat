@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.báoCáoSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kHTổngVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thépNXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tiếnĐộToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.giaCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelKHSX = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,7 +87,6 @@
             this.dtpbaocaosxfrom = new System.Windows.Forms.DateTimePicker();
             this.dtgbaocao = new System.Windows.Forms.DataGridView();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelInvoice = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.cbKHinvoice = new System.Windows.Forms.ComboBox();
@@ -99,6 +100,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tbNamInvoice = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.dựToánNLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelKHSX.SuspendLayout();
             this.panelCTSX.SuspendLayout();
@@ -119,14 +121,16 @@
             this.báoCáoSXToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.invoiceToolStripMenuItem1,
+            this.kHTổngVụToolStripMenuItem,
             this.thépNXTToolStripMenuItem1,
             this.tiếnĐộToolStripMenuItem1,
             this.giaCôngToolStripMenuItem1,
-            this.invoiceToolStripMenuItem});
+            this.invoiceToolStripMenuItem,
+            this.dựToánNLToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(1003, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1021, 35);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -151,6 +155,13 @@
             this.invoiceToolStripMenuItem1.Text = "KH Sản Xuất";
             this.invoiceToolStripMenuItem1.Click += new System.EventHandler(this.invoiceToolStripMenuItem1_Click);
             // 
+            // kHTổngVụToolStripMenuItem
+            // 
+            this.kHTổngVụToolStripMenuItem.Name = "kHTổngVụToolStripMenuItem";
+            this.kHTổngVụToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
+            this.kHTổngVụToolStripMenuItem.Text = "KH Tổng Vụ";
+            this.kHTổngVụToolStripMenuItem.Click += new System.EventHandler(this.kHTổngVụToolStripMenuItem_Click);
+            // 
             // thépNXTToolStripMenuItem1
             // 
             this.thépNXTToolStripMenuItem1.Name = "thépNXTToolStripMenuItem1";
@@ -172,6 +183,13 @@
             this.giaCôngToolStripMenuItem1.Text = "Phiếu Kiểm Tra NL";
             this.giaCôngToolStripMenuItem1.Click += new System.EventHandler(this.giaCôngToolStripMenuItem1_Click);
             // 
+            // invoiceToolStripMenuItem
+            // 
+            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
+            this.invoiceToolStripMenuItem.Text = "Invoice";
+            this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.invoiceToolStripMenuItem_Click);
+            // 
             // panelKHSX
             // 
             this.panelKHSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -188,7 +206,7 @@
             this.panelKHSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelKHSX.Location = new System.Drawing.Point(0, 67);
             this.panelKHSX.Name = "panelKHSX";
-            this.panelKHSX.Size = new System.Drawing.Size(1003, 32);
+            this.panelKHSX.Size = new System.Drawing.Size(1021, 32);
             this.panelKHSX.TabIndex = 7;
             // 
             // label16
@@ -196,7 +214,7 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Right;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(963, 0);
+            this.label16.Location = new System.Drawing.Point(981, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 19;
@@ -292,7 +310,7 @@
             this.panelCTSX.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCTSX.Location = new System.Drawing.Point(0, 35);
             this.panelCTSX.Name = "panelCTSX";
-            this.panelCTSX.Size = new System.Drawing.Size(1003, 32);
+            this.panelCTSX.Size = new System.Drawing.Size(1021, 32);
             this.panelCTSX.TabIndex = 6;
             // 
             // label15
@@ -300,7 +318,7 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(964, 0);
+            this.label15.Location = new System.Drawing.Point(982, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 13);
             this.label15.TabIndex = 18;
@@ -397,7 +415,7 @@
             this.panelPhieuktnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPhieuktnl.Location = new System.Drawing.Point(0, 99);
             this.panelPhieuktnl.Name = "panelPhieuktnl";
-            this.panelPhieuktnl.Size = new System.Drawing.Size(1003, 33);
+            this.panelPhieuktnl.Size = new System.Drawing.Size(1021, 33);
             this.panelPhieuktnl.TabIndex = 14;
             this.panelPhieuktnl.Visible = false;
             // 
@@ -457,7 +475,7 @@
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(914, 0);
+            this.label40.Location = new System.Drawing.Point(932, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(89, 13);
             this.label40.TabIndex = 25;
@@ -523,7 +541,7 @@
             this.panelbaocaosx.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelbaocaosx.Location = new System.Drawing.Point(0, 132);
             this.panelbaocaosx.Name = "panelbaocaosx";
-            this.panelbaocaosx.Size = new System.Drawing.Size(1003, 33);
+            this.panelbaocaosx.Size = new System.Drawing.Size(1021, 33);
             this.panelbaocaosx.TabIndex = 15;
             this.panelbaocaosx.Visible = false;
             // 
@@ -564,7 +582,7 @@
             this.btnXuatExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnXuatExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnXuatExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.Location = new System.Drawing.Point(850, 0);
+            this.btnXuatExcel.Location = new System.Drawing.Point(888, 0);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Size = new System.Drawing.Size(78, 33);
             this.btnXuatExcel.TabIndex = 28;
@@ -587,11 +605,11 @@
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Right;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(928, 0);
+            this.label23.Location = new System.Drawing.Point(966, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 13);
+            this.label23.Size = new System.Drawing.Size(55, 13);
             this.label23.TabIndex = 25;
-            this.label23.Text = "Báo Cáo SX";
+            this.label23.Text = "Báo Cáo";
             // 
             // label21
             // 
@@ -634,7 +652,6 @@
             // dtgbaocao
             // 
             this.dtgbaocao.AllowUserToResizeRows = false;
-            this.dtgbaocao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgbaocao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgbaocao.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtgbaocao.Location = new System.Drawing.Point(0, 165);
@@ -642,27 +659,20 @@
             this.dtgbaocao.ReadOnly = true;
             this.dtgbaocao.RowHeadersVisible = false;
             this.dtgbaocao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgbaocao.Size = new System.Drawing.Size(1003, 129);
+            this.dtgbaocao.Size = new System.Drawing.Size(1021, 129);
             this.dtgbaocao.TabIndex = 16;
             this.dtgbaocao.Visible = false;
             // 
             // reportViewer
             // 
-            reportDataSource4.Name = "IN_PO";
-            reportDataSource4.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource5.Name = "IN_PO";
+            reportDataSource5.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(124, 333);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.Size = new System.Drawing.Size(757, 168);
             this.reportViewer.TabIndex = 17;
-            // 
-            // invoiceToolStripMenuItem
-            // 
-            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
-            this.invoiceToolStripMenuItem.Text = "Invoice";
-            this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.invoiceToolStripMenuItem_Click);
             // 
             // panelInvoice
             // 
@@ -682,7 +692,7 @@
             this.panelInvoice.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInvoice.Location = new System.Drawing.Point(0, 294);
             this.panelInvoice.Name = "panelInvoice";
-            this.panelInvoice.Size = new System.Drawing.Size(1003, 32);
+            this.panelInvoice.Size = new System.Drawing.Size(1021, 32);
             this.panelInvoice.TabIndex = 18;
             // 
             // label20
@@ -690,7 +700,7 @@
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Right;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(954, 0);
+            this.label20.Location = new System.Drawing.Point(972, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 21;
@@ -788,11 +798,18 @@
             this.label14.TabIndex = 10;
             this.label14.Text = "KH";
             // 
+            // dựToánNLToolStripMenuItem
+            // 
+            this.dựToánNLToolStripMenuItem.Name = "dựToánNLToolStripMenuItem";
+            this.dựToánNLToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
+            this.dựToánNLToolStripMenuItem.Text = "Dự Toán NL";
+            this.dựToánNLToolStripMenuItem.Click += new System.EventHandler(this.dựToánNLToolStripMenuItem_Click);
+            // 
             // FrmKeHoach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 589);
+            this.ClientSize = new System.Drawing.Size(1021, 589);
             this.Controls.Add(this.panelInvoice);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.dtgbaocao);
@@ -896,5 +913,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbNamInvoice;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripMenuItem kHTổngVụToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dựToánNLToolStripMenuItem;
     }
 }

@@ -2212,7 +2212,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox479">
+                    <Textbox Name="Textbox60">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2229,18 +2229,11 @@
                                 <Color>Blue</Color>
                               </Style>
                             </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">
-</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox479</rd:DefaultName>
+                      <rd:DefaultName>Textbox60</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -17166,7 +17159,7 @@
                     <FilterExpression>=Fields!LOAI_KH.Value</FilterExpression>
                     <Operator>Equal</Operator>
                     <FilterValues>
-                      <FilterValue>DAY CHUYEN</FilterValue>
+                      <FilterValue>TONG VU</FilterValue>
                     </FilterValues>
                   </Filter>
                 </Filters>
@@ -17440,21 +17433,14 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>PRODUCTION PLAN </Value>
+                  <Value>=first(Fields!YEAR.Value, "KHSX") &amp; "-" &amp; format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>=format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>-</Value>
+                  <Value> PRODUCTION </Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -17468,7 +17454,7 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>　生産計画 </Value>
+                  <Value>年</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -17482,21 +17468,7 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>月</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>=first(Fields!YEAR.Value, "KHSX")</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>年 </Value>
+                  <Value>月生産計画</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>

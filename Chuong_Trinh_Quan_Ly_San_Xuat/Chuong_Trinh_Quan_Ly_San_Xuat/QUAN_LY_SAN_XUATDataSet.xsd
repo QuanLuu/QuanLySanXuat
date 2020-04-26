@@ -106,6 +106,14 @@
               <Mapping SourceColumn="ID30" DataSetColumn="ID30" />
               <Mapping SourceColumn="ID31" DataSetColumn="ID31" />
               <Mapping SourceColumn="CONG_DOAN_SO" DataSetColumn="CONG_DOAN_SO" />
+              <Mapping SourceColumn="MA_SP" DataSetColumn="MA_SP" />
+              <Mapping SourceColumn="TEN_CONG_DOAN" DataSetColumn="TEN_CONG_DOAN" />
+              <Mapping SourceColumn="SL1" DataSetColumn="SL1" />
+              <Mapping SourceColumn="SL2" DataSetColumn="SL2" />
+              <Mapping SourceColumn="SL3" DataSetColumn="SL3" />
+              <Mapping SourceColumn="SL4" DataSetColumn="SL4" />
+              <Mapping SourceColumn="TONG_KH" DataSetColumn="TONG_KH" />
+              <Mapping SourceColumn="LOAI_KH" DataSetColumn="LOAI_KH" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -351,7 +359,7 @@
   <xs:element name="QUAN_LY_SAN_XUATDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QUAN_LY_SAN_XUATDataSet" msprop:Generator_UserDSName="QUAN_LY_SAN_XUATDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PP_DS_PRINT_PO_MSQL" msprop:Generator_TableClassName="PP_DS_PRINT_PO_MSQLDataTable" msprop:Generator_TableVarName="tablePP_DS_PRINT_PO_MSQL" msprop:Generator_TablePropName="PP_DS_PRINT_PO_MSQL" msprop:Generator_RowDeletingName="PP_DS_PRINT_PO_MSQLRowDeleting" msprop:Generator_RowChangingName="PP_DS_PRINT_PO_MSQLRowChanging" msprop:Generator_RowEvHandlerName="PP_DS_PRINT_PO_MSQLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_PRINT_PO_MSQLRowDeleted" msprop:Generator_UserTableName="PP_DS_PRINT_PO_MSQL" msprop:Generator_RowChangedName="PP_DS_PRINT_PO_MSQLRowChanged" msprop:Generator_RowEvArgName="PP_DS_PRINT_PO_MSQLRowChangeEvent" msprop:Generator_RowClassName="PP_DS_PRINT_PO_MSQLRow">
+        <xs:element name="PP_DS_PRINT_PO_MSQL" msprop:Generator_TableClassName="PP_DS_PRINT_PO_MSQLDataTable" msprop:Generator_TableVarName="tablePP_DS_PRINT_PO_MSQL" msprop:Generator_RowChangedName="PP_DS_PRINT_PO_MSQLRowChanged" msprop:Generator_TablePropName="PP_DS_PRINT_PO_MSQL" msprop:Generator_RowDeletingName="PP_DS_PRINT_PO_MSQLRowDeleting" msprop:Generator_RowChangingName="PP_DS_PRINT_PO_MSQLRowChanging" msprop:Generator_RowEvHandlerName="PP_DS_PRINT_PO_MSQLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_PRINT_PO_MSQLRowDeleted" msprop:Generator_RowClassName="PP_DS_PRINT_PO_MSQLRow" msprop:Generator_UserTableName="PP_DS_PRINT_PO_MSQL" msprop:Generator_RowEvArgName="PP_DS_PRINT_PO_MSQLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ROW_NUMBERS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnROW_NUMBERS" msprop:Generator_ColumnPropNameInRow="ROW_NUMBERS" msprop:Generator_ColumnPropNameInTable="ROW_NUMBERSColumn" msprop:Generator_UserColumnName="ROW_NUMBERS" type="xs:long" minOccurs="0" />
@@ -415,7 +423,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_TableClassName="PP_DS_IN_CHI_THI_SAN_XUATDataTable" msprop:Generator_TableVarName="tablePP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_RowChangedName="PP_DS_IN_CHI_THI_SAN_XUATRowChanged" msprop:Generator_TablePropName="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_RowDeletingName="PP_DS_IN_CHI_THI_SAN_XUATRowDeleting" msprop:Generator_RowChangingName="PP_DS_IN_CHI_THI_SAN_XUATRowChanging" msprop:Generator_RowEvHandlerName="PP_DS_IN_CHI_THI_SAN_XUATRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_IN_CHI_THI_SAN_XUATRowDeleted" msprop:Generator_RowClassName="PP_DS_IN_CHI_THI_SAN_XUATRow" msprop:Generator_UserTableName="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_RowEvArgName="PP_DS_IN_CHI_THI_SAN_XUATRowChangeEvent">
+        <xs:element name="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_TableClassName="PP_DS_IN_CHI_THI_SAN_XUATDataTable" msprop:Generator_TableVarName="tablePP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_TablePropName="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_RowDeletingName="PP_DS_IN_CHI_THI_SAN_XUATRowDeleting" msprop:Generator_RowChangingName="PP_DS_IN_CHI_THI_SAN_XUATRowChanging" msprop:Generator_RowEvHandlerName="PP_DS_IN_CHI_THI_SAN_XUATRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_IN_CHI_THI_SAN_XUATRowDeleted" msprop:Generator_UserTableName="PP_DS_IN_CHI_THI_SAN_XUAT" msprop:Generator_RowChangedName="PP_DS_IN_CHI_THI_SAN_XUATRowChanged" msprop:Generator_RowEvArgName="PP_DS_IN_CHI_THI_SAN_XUATRowChangeEvent" msprop:Generator_RowClassName="PP_DS_IN_CHI_THI_SAN_XUATRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MA_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnMA_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="MA_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="MA_CONG_DOANColumn" msprop:Generator_UserColumnName="MA_CONG_DOAN" minOccurs="0">
@@ -508,10 +516,36 @@
               <xs:element name="ID30" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnID30" msprop:Generator_ColumnPropNameInRow="ID30" msprop:Generator_ColumnPropNameInTable="ID30Column" msprop:Generator_UserColumnName="ID30" type="xs:double" minOccurs="0" />
               <xs:element name="ID31" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnID31" msprop:Generator_ColumnPropNameInRow="ID31" msprop:Generator_ColumnPropNameInTable="ID31Column" msprop:Generator_UserColumnName="ID31" type="xs:double" minOccurs="0" />
               <xs:element name="CONG_DOAN_SO" msprop:Generator_ColumnVarNameInTable="columnCONG_DOAN_SO" msprop:Generator_ColumnPropNameInRow="CONG_DOAN_SO" msprop:Generator_ColumnPropNameInTable="CONG_DOAN_SOColumn" msprop:Generator_UserColumnName="CONG_DOAN_SO" type="xs:int" minOccurs="0" />
+              <xs:element name="MA_SP" msprop:Generator_ColumnVarNameInTable="columnMA_SP" msprop:Generator_ColumnPropNameInRow="MA_SP" msprop:Generator_ColumnPropNameInTable="MA_SPColumn" msprop:Generator_UserColumnName="MA_SP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_CONG_DOAN" msprop:Generator_ColumnVarNameInTable="columnTEN_CONG_DOAN" msprop:Generator_ColumnPropNameInRow="TEN_CONG_DOAN" msprop:Generator_ColumnPropNameInTable="TEN_CONG_DOANColumn" msprop:Generator_UserColumnName="TEN_CONG_DOAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SL1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSL1" msprop:Generator_ColumnPropNameInRow="SL1" msprop:Generator_ColumnPropNameInTable="SL1Column" msprop:Generator_UserColumnName="SL1" type="xs:double" minOccurs="0" />
+              <xs:element name="SL2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSL2" msprop:Generator_ColumnPropNameInRow="SL2" msprop:Generator_ColumnPropNameInTable="SL2Column" msprop:Generator_UserColumnName="SL2" type="xs:double" minOccurs="0" />
+              <xs:element name="SL3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSL3" msprop:Generator_ColumnPropNameInRow="SL3" msprop:Generator_ColumnPropNameInTable="SL3Column" msprop:Generator_UserColumnName="SL3" type="xs:double" minOccurs="0" />
+              <xs:element name="SL4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSL4" msprop:Generator_ColumnPropNameInRow="SL4" msprop:Generator_ColumnPropNameInTable="SL4Column" msprop:Generator_UserColumnName="SL4" type="xs:double" minOccurs="0" />
+              <xs:element name="TONG_KH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTONG_KH" msprop:Generator_ColumnPropNameInRow="TONG_KH" msprop:Generator_ColumnPropNameInTable="TONG_KHColumn" msprop:Generator_UserColumnName="TONG_KH" type="xs:double" minOccurs="0" />
+              <xs:element name="LOAI_KH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLOAI_KH" msprop:Generator_ColumnPropNameInRow="LOAI_KH" msprop:Generator_ColumnPropNameInTable="LOAI_KHColumn" msprop:Generator_UserColumnName="LOAI_KH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_DS_INVOICE" msprop:Generator_TableClassName="PP_DS_INVOICEDataTable" msprop:Generator_TableVarName="tablePP_DS_INVOICE" msprop:Generator_RowChangedName="PP_DS_INVOICERowChanged" msprop:Generator_TablePropName="PP_DS_INVOICE" msprop:Generator_RowDeletingName="PP_DS_INVOICERowDeleting" msprop:Generator_RowChangingName="PP_DS_INVOICERowChanging" msprop:Generator_RowEvHandlerName="PP_DS_INVOICERowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_INVOICERowDeleted" msprop:Generator_RowClassName="PP_DS_INVOICERow" msprop:Generator_UserTableName="PP_DS_INVOICE" msprop:Generator_RowEvArgName="PP_DS_INVOICERowChangeEvent">
+        <xs:element name="PP_DS_INVOICE" msprop:Generator_TableClassName="PP_DS_INVOICEDataTable" msprop:Generator_TableVarName="tablePP_DS_INVOICE" msprop:Generator_TablePropName="PP_DS_INVOICE" msprop:Generator_RowDeletingName="PP_DS_INVOICERowDeleting" msprop:Generator_RowChangingName="PP_DS_INVOICERowChanging" msprop:Generator_RowEvHandlerName="PP_DS_INVOICERowChangeEventHandler" msprop:Generator_RowDeletedName="PP_DS_INVOICERowDeleted" msprop:Generator_UserTableName="PP_DS_INVOICE" msprop:Generator_RowChangedName="PP_DS_INVOICERowChanged" msprop:Generator_RowEvArgName="PP_DS_INVOICERowChangeEvent" msprop:Generator_RowClassName="PP_DS_INVOICERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="No" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:long" minOccurs="0" />
@@ -550,7 +584,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_BAO_CAO_NXT_NVL" msprop:Generator_TableClassName="PP_BAO_CAO_NXT_NVLDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_NXT_NVL" msprop:Generator_TablePropName="PP_BAO_CAO_NXT_NVL" msprop:Generator_RowDeletingName="PP_BAO_CAO_NXT_NVLRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_NXT_NVLRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_NXT_NVLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_NXT_NVLRowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_NXT_NVL" msprop:Generator_RowChangedName="PP_BAO_CAO_NXT_NVLRowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_NXT_NVLRowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_NXT_NVLRow">
+        <xs:element name="PP_BAO_CAO_NXT_NVL" msprop:Generator_TableClassName="PP_BAO_CAO_NXT_NVLDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_NXT_NVL" msprop:Generator_RowChangedName="PP_BAO_CAO_NXT_NVLRowChanged" msprop:Generator_TablePropName="PP_BAO_CAO_NXT_NVL" msprop:Generator_RowDeletingName="PP_BAO_CAO_NXT_NVLRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_NXT_NVLRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_NXT_NVLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_NXT_NVLRowDeleted" msprop:Generator_RowClassName="PP_BAO_CAO_NXT_NVLRow" msprop:Generator_UserTableName="PP_BAO_CAO_NXT_NVL" msprop:Generator_RowEvArgName="PP_BAO_CAO_NXT_NVLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TEN_NL" msprop:Generator_ColumnVarNameInTable="columnTEN_NL" msprop:Generator_ColumnPropNameInRow="TEN_NL" msprop:Generator_ColumnPropNameInTable="TEN_NLColumn" msprop:Generator_UserColumnName="TEN_NL" minOccurs="0">
@@ -574,7 +608,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_BAO_CAO_NXT_SP" msprop:Generator_TableClassName="PP_BAO_CAO_NXT_SPDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_NXT_SP" msprop:Generator_TablePropName="PP_BAO_CAO_NXT_SP" msprop:Generator_RowDeletingName="PP_BAO_CAO_NXT_SPRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_NXT_SPRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_NXT_SPRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_NXT_SPRowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_NXT_SP" msprop:Generator_RowChangedName="PP_BAO_CAO_NXT_SPRowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_NXT_SPRowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_NXT_SPRow">
+        <xs:element name="PP_BAO_CAO_NXT_SP" msprop:Generator_TableClassName="PP_BAO_CAO_NXT_SPDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_NXT_SP" msprop:Generator_RowChangedName="PP_BAO_CAO_NXT_SPRowChanged" msprop:Generator_TablePropName="PP_BAO_CAO_NXT_SP" msprop:Generator_RowDeletingName="PP_BAO_CAO_NXT_SPRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_NXT_SPRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_NXT_SPRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_NXT_SPRowDeleted" msprop:Generator_RowClassName="PP_BAO_CAO_NXT_SPRow" msprop:Generator_UserTableName="PP_BAO_CAO_NXT_SP" msprop:Generator_RowEvArgName="PP_BAO_CAO_NXT_SPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MA_SP" msprop:Generator_ColumnVarNameInTable="columnMA_SP" msprop:Generator_ColumnPropNameInRow="MA_SP" msprop:Generator_ColumnPropNameInTable="MA_SPColumn" msprop:Generator_UserColumnName="MA_SP" minOccurs="0">
@@ -598,7 +632,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_BAO_CAO_TIEN_DO" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DODataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DORowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DORowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DORowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DORowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DORowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DORowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DORow">
+        <xs:element name="PP_BAO_CAO_TIEN_DO" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DODataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DORowChanged" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DORowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DORowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DORowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DORowDeleted" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DORow" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NAM_KH" msprop:Generator_ColumnVarNameInTable="columnNAM_KH" msprop:Generator_ColumnPropNameInRow="NAM_KH" msprop:Generator_ColumnPropNameInTable="NAM_KHColumn" msprop:Generator_UserColumnName="NAM_KH" type="xs:int" minOccurs="0" />
@@ -646,7 +680,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleted" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanged" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEvent" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRow">
+        <xs:element name="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_TableClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGDataTable" msprop:Generator_TableVarName="tablePP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowChangedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanged" msprop:Generator_TablePropName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowDeletingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleting" msprop:Generator_RowChangingName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChanging" msprop:Generator_RowEvHandlerName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowDeleted" msprop:Generator_RowClassName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRow" msprop:Generator_UserTableName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANG" msprop:Generator_RowEvArgName="PP_BAO_CAO_TIEN_DO_NGAY_TRONG_THANGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DATE" msprop:Generator_ColumnVarNameInTable="columnDATE" msprop:Generator_ColumnPropNameInRow="DATE" msprop:Generator_ColumnPropNameInTable="DATEColumn" msprop:Generator_UserColumnName="DATE" type="xs:dateTime" minOccurs="0" />
@@ -685,7 +719,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_TableClassName="PP_TIEN_DO_GIA_CONG_NGAYDataTable" msprop:Generator_TableVarName="tablePP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_RowChangedName="PP_TIEN_DO_GIA_CONG_NGAYRowChanged" msprop:Generator_TablePropName="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_RowDeletingName="PP_TIEN_DO_GIA_CONG_NGAYRowDeleting" msprop:Generator_RowChangingName="PP_TIEN_DO_GIA_CONG_NGAYRowChanging" msprop:Generator_RowEvHandlerName="PP_TIEN_DO_GIA_CONG_NGAYRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_TIEN_DO_GIA_CONG_NGAYRowDeleted" msprop:Generator_RowClassName="PP_TIEN_DO_GIA_CONG_NGAYRow" msprop:Generator_UserTableName="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_RowEvArgName="PP_TIEN_DO_GIA_CONG_NGAYRowChangeEvent">
+        <xs:element name="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_TableClassName="PP_TIEN_DO_GIA_CONG_NGAYDataTable" msprop:Generator_TableVarName="tablePP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_TablePropName="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_RowDeletingName="PP_TIEN_DO_GIA_CONG_NGAYRowDeleting" msprop:Generator_RowChangingName="PP_TIEN_DO_GIA_CONG_NGAYRowChanging" msprop:Generator_RowEvHandlerName="PP_TIEN_DO_GIA_CONG_NGAYRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_TIEN_DO_GIA_CONG_NGAYRowDeleted" msprop:Generator_UserTableName="PP_TIEN_DO_GIA_CONG_NGAY" msprop:Generator_RowChangedName="PP_TIEN_DO_GIA_CONG_NGAYRowChanged" msprop:Generator_RowEvArgName="PP_TIEN_DO_GIA_CONG_NGAYRowChangeEvent" msprop:Generator_RowClassName="PP_TIEN_DO_GIA_CONG_NGAYRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MSQL" msprop:Generator_ColumnVarNameInTable="columnMSQL" msprop:Generator_ColumnPropNameInRow="MSQL" msprop:Generator_ColumnPropNameInTable="MSQLColumn" msprop:Generator_UserColumnName="MSQL" minOccurs="0">
@@ -710,7 +744,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_TableClassName="PP_TIEN_DO_GIA_CONG_THANGDataTable" msprop:Generator_TableVarName="tablePP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_RowChangedName="PP_TIEN_DO_GIA_CONG_THANGRowChanged" msprop:Generator_TablePropName="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_RowDeletingName="PP_TIEN_DO_GIA_CONG_THANGRowDeleting" msprop:Generator_RowChangingName="PP_TIEN_DO_GIA_CONG_THANGRowChanging" msprop:Generator_RowEvHandlerName="PP_TIEN_DO_GIA_CONG_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_TIEN_DO_GIA_CONG_THANGRowDeleted" msprop:Generator_RowClassName="PP_TIEN_DO_GIA_CONG_THANGRow" msprop:Generator_UserTableName="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_RowEvArgName="PP_TIEN_DO_GIA_CONG_THANGRowChangeEvent">
+        <xs:element name="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_TableClassName="PP_TIEN_DO_GIA_CONG_THANGDataTable" msprop:Generator_TableVarName="tablePP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_TablePropName="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_RowDeletingName="PP_TIEN_DO_GIA_CONG_THANGRowDeleting" msprop:Generator_RowChangingName="PP_TIEN_DO_GIA_CONG_THANGRowChanging" msprop:Generator_RowEvHandlerName="PP_TIEN_DO_GIA_CONG_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_TIEN_DO_GIA_CONG_THANGRowDeleted" msprop:Generator_UserTableName="PP_TIEN_DO_GIA_CONG_THANG" msprop:Generator_RowChangedName="PP_TIEN_DO_GIA_CONG_THANGRowChanged" msprop:Generator_RowEvArgName="PP_TIEN_DO_GIA_CONG_THANGRowChangeEvent" msprop:Generator_RowClassName="PP_TIEN_DO_GIA_CONG_THANGRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MSQL" msprop:Generator_ColumnVarNameInTable="columnMSQL" msprop:Generator_ColumnPropNameInRow="MSQL" msprop:Generator_ColumnPropNameInTable="MSQLColumn" msprop:Generator_UserColumnName="MSQL" minOccurs="0">
@@ -736,7 +770,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_TableClassName="PP_PHIEU_KIEM_TRA_NLDataTable" msprop:Generator_TableVarName="tablePP_PHIEU_KIEM_TRA_NL" msprop:Generator_TablePropName="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_RowDeletingName="PP_PHIEU_KIEM_TRA_NLRowDeleting" msprop:Generator_RowChangingName="PP_PHIEU_KIEM_TRA_NLRowChanging" msprop:Generator_RowEvHandlerName="PP_PHIEU_KIEM_TRA_NLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_PHIEU_KIEM_TRA_NLRowDeleted" msprop:Generator_UserTableName="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_RowChangedName="PP_PHIEU_KIEM_TRA_NLRowChanged" msprop:Generator_RowEvArgName="PP_PHIEU_KIEM_TRA_NLRowChangeEvent" msprop:Generator_RowClassName="PP_PHIEU_KIEM_TRA_NLRow">
+        <xs:element name="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_TableClassName="PP_PHIEU_KIEM_TRA_NLDataTable" msprop:Generator_TableVarName="tablePP_PHIEU_KIEM_TRA_NL" msprop:Generator_RowChangedName="PP_PHIEU_KIEM_TRA_NLRowChanged" msprop:Generator_TablePropName="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_RowDeletingName="PP_PHIEU_KIEM_TRA_NLRowDeleting" msprop:Generator_RowChangingName="PP_PHIEU_KIEM_TRA_NLRowChanging" msprop:Generator_RowEvHandlerName="PP_PHIEU_KIEM_TRA_NLRowChangeEventHandler" msprop:Generator_RowDeletedName="PP_PHIEU_KIEM_TRA_NLRowDeleted" msprop:Generator_RowClassName="PP_PHIEU_KIEM_TRA_NLRow" msprop:Generator_UserTableName="PP_PHIEU_KIEM_TRA_NL" msprop:Generator_RowEvArgName="PP_PHIEU_KIEM_TRA_NLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SPEC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSPEC" msprop:Generator_ColumnPropNameInRow="SPEC" msprop:Generator_ColumnPropNameInTable="SPECColumn" msprop:Generator_UserColumnName="SPEC" minOccurs="0">

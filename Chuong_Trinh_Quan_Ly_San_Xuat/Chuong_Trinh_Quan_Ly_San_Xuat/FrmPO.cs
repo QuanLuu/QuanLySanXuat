@@ -39,6 +39,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgListTime, new object[] { true });
 
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dtgpopass, new object[] { true });
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             langue_ge = ((FrmMain)f).languege_set;
             setlangue();
@@ -47,6 +50,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpDateToPOFilter.Value = DateTime.Now;
             dtpfromforecastfilter.Value = DateTime.Now.AddDays(-30);
             dtptoforecastfilter.Value = DateTime.Now;
+            dtptungaypass.Value = DateTime.Now.AddDays(-30);
+            dtpdenngaypass.Value = DateTime.Now;
             loadallPO();
             LoadForecast();
             loadlistitme();
@@ -115,6 +120,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             DataTable data = Import_Manager.Instance.getpoall(tbMaKHPOFilter.Text, tbMSQLPOFilter.Text, dtpDateFromPOFilter.Value, dtpDateToPOFilter.Value, tbmasppofil.Text);
             dtgPO.DataSource = data;
             
+        }
+        void getpopass()
+        {
+            DataTable data = Import_Manager.Instance.getpopass(tbmakhpass.Text, tbmakhpass.Text, dtptungaypass.Value, dtpdenngaypass.Value, tbmasppass.Text);
+            dtgpopass.DataSource = data;
+
         }
         void LoadForecast()
         {
@@ -460,7 +471,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 MessageBox.Show("Bạn chưa lưu dữ liệu, vui lòng chọn Save hoặc Cancel");
                 e.Cancel = true;
             }
-            if (tabPO.SelectedIndex == 3)
+            if (tabPO.SelectedIndex == 3 || tabPO.SelectedIndex == 4)
                 paledit.Visible = false;
             else
                 paledit.Visible = true;
@@ -543,6 +554,31 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             if (chbngaygiaoorPO.Checked) ngaygiao = 1;
             DataTable dt = Import_Manager.Instance.printPO(cbKH.Text, dtpDatePO.Value, tbMSQLPO.Text, ngaygiao);
             viewreport("PO.rdlc", "IN_PO", dt);
+        }
+
+        private void tbmakhpass_TextChanged(object sender, EventArgs e)
+        {
+            getpopass();
+        }
+
+        private void tbmsqlpass_TextChanged(object sender, EventArgs e)
+        {
+            getpopass();
+        }
+
+        private void tbmasppass_TextChanged(object sender, EventArgs e)
+        {
+            getpopass();
+        }
+
+        private void dtptungaypass_ValueChanged(object sender, EventArgs e)
+        {
+            getpopass();
+        }
+
+        private void dtpdenngaypass_ValueChanged(object sender, EventArgs e)
+        {
+            getpopass();
         }
     }
 }

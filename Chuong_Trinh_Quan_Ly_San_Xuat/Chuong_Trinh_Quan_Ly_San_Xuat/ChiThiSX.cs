@@ -94,35 +94,48 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getCTSXbysoct(string soct, int ngay_sx)
         {
-            string msql = soct.Substring(7, 3);
-            decimal luyke = 0;
-            bool ishasdata = false;
-            int socd = Int32.Parse(soct.Substring(10, 2));
-            if (dbctsx.Rows.Count > 0)
+            try
             {
-                for(int i=0;i<dbctsx.Rows.Count;i++)
+                string msql = soct.Substring(7, 3);
+                decimal luyke = 0;
+                decimal tongkh = 0;
+                bool ishasdata = false;
+                int socd = Int32.Parse(soct.Substring(10, 2));
+                if (dbctsx.Rows.Count > 0)
                 {
-                    if(dbctsx.Rows[i][1].ToString() == msql)
+                    for (int i = 0; i < dbctsx.Rows.Count; i++)
                     {
-                        if(Int32.Parse(dbctsx.Rows[i][10].ToString()) == socd)
+                        if (dbctsx.Rows[i][1].ToString() == msql)
                         {
-                            tbMSQL.Text = msql;
-                            cbMaCongDoan.Text = dbctsx.Rows[i][0].ToString();
-                            tbmasp.Text = dbctsx.Rows[i][11].ToString();
-                            numslkehoach.Text = dbctsx.Rows[i][ngay_sx + 11].ToString();
-                            for (int j = 12; j <= ngay_sx + 11; j++)
-                                if(dbctsx.Rows[i][j].ToString() !="") luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
-                            numslluyke.Value = luyke;
-                            ishasdata = true;
+                            if (Int32.Parse(dbctsx.Rows[i][10].ToString()) == socd)
+                            {
+                                tbMSQL.Text = msql;
+                                cbMaCongDoan.Text = dbctsx.Rows[i][0].ToString();
+                                tbmasp.Text = dbctsx.Rows[i][11].ToString();
+                                //numslkehoach.Text = dbctsx.Rows[i][ngay_sx + 11].ToString();
+                                for (int j = 12; j <= 42; j++)
+                                    if (dbctsx.Rows[i][j].ToString() != "")
+                                    {
+                                        tongkh += decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                        if(j <= ngay_sx + 11) luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                    }
+                                numslluyke.Value = luyke;
+                                numslkehoach.Value = tongkh;
+                                ishasdata = true;
+                            }
                         }
+
                     }
-                    
+                    if (ishasdata == false) { MessageBox.Show("Số chỉ thị không đúng"); }
+
                 }
-                if (ishasdata == false) { MessageBox.Show("Số chỉ thị không đúng"); }
-                
+                else
+                    MessageBox.Show("Số chỉ thị không đúng");
             }
-            else
-               MessageBox.Show("Số chỉ thị không đúng");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         void getsoctsxall(int year, int month)
         {
@@ -630,7 +643,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbsoct_TextChanged(object sender, EventArgs e)
         {
-            
+            if(tbsoct.Text.Length == 12)
+            {
+                if (dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0, 4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
+                {
+                    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
+                    return;
+                }
+                
+                getCTSXbysoct(tbsoct.Text, dtpNgaySX.Value.Day);
+            }
+            if (tbsoct.Text.Length > 12)
+            {
+                MessageBox.Show("Số chỉ thị không đúng");
+                return;
+            }
         }
 
         private void dtpNgaySX_ValueChanged(object sender, EventArgs e)

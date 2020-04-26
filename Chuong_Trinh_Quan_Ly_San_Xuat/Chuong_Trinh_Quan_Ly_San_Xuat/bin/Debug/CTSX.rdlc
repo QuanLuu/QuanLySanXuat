@@ -188,7 +188,7 @@
                               </Style>
                             </TextRun>
                             <TextRun>
-                              <Value>=Fields!YEAR.Value &amp; Fields!MONTH.Value &amp; "-" &amp; Fields!MSQL.Value &amp; FORMAT(Fields!CONG_DOAN_SO.Value,"00")</Value>
+                              <Value>=Fields!YEAR.Value &amp; format(Fields!MONTH.Value,"00") &amp; "-" &amp; Fields!MSQL.Value &amp; FORMAT(Fields!CONG_DOAN_SO.Value,"00")</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Times New Roman</FontFamily>
@@ -1591,14 +1591,14 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="SL1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!SL1.Value)</Value>
                               <Style>
                                 <FontFamily>times New Roman</FontFamily>
                               </Style>
@@ -1607,7 +1607,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <rd:DefaultName>SL1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2026,21 +2026,21 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox984">
+                    <Textbox Name="SL2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!SL2.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox984</rd:DefaultName>
+                      <rd:DefaultName>SL2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2515,21 +2515,21 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox952">
+                    <Textbox Name="SL3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!SL3.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox952</rd:DefaultName>
+                      <rd:DefaultName>SL3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2942,21 +2942,21 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox34">
+                    <Textbox Name="SL4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!SL4.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox34</rd:DefaultName>
+                      <rd:DefaultName>SL4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2989,6 +2989,7 @@
                       </Style>
                     </Textbox>
                     <ColSpan>2</ColSpan>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -3994,7 +3995,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value> Dat</Value>
+                              <Value> Date</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5877,10 +5878,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value</Value>
+                              <Value>=SUM(Fields!ID1.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5932,10 +5933,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID2.Value</Value>
+                              <Value>=Sum(Fields!ID2.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -5987,10 +5988,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID3.Value</Value>
+                              <Value>=Sum(Fields!ID3.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6042,10 +6043,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID4.Value</Value>
+                              <Value>=Sum(Fields!ID4.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6097,10 +6098,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID5.Value</Value>
+                              <Value>=Sum(Fields!ID5.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6152,10 +6153,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID6.Value</Value>
+                              <Value>=Sum(Fields!ID6.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6207,10 +6208,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID7.Value</Value>
+                              <Value>=Sum(Fields!ID7.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6262,10 +6263,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID8.Value</Value>
+                              <Value>=Sum(Fields!ID8.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6317,10 +6318,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID9.Value</Value>
+                              <Value>=Sum(Fields!ID9.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6372,10 +6373,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID10.Value</Value>
+                              <Value>=Sum(Fields!ID10.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6427,10 +6428,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID11.Value</Value>
+                              <Value>=Sum(Fields!ID11.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6482,10 +6483,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID12.Value</Value>
+                              <Value>=Sum(Fields!ID12.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6537,10 +6538,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID13.Value</Value>
+                              <Value>=Sum(Fields!ID13.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6592,10 +6593,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID14.Value</Value>
+                              <Value>=Sum(Fields!ID14.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6647,10 +6648,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID15.Value</Value>
+                              <Value>=Sum(Fields!ID15.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6702,10 +6703,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID16.Value</Value>
+                              <Value>=Sum(Fields!ID16.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6757,10 +6758,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID17.Value</Value>
+                              <Value>=Sum(Fields!ID17.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6812,10 +6813,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID18.Value</Value>
+                              <Value>=Sum(Fields!ID18.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6867,10 +6868,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID19.Value</Value>
+                              <Value>=Sum(Fields!ID19.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6922,10 +6923,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID20.Value</Value>
+                              <Value>=Sum(Fields!ID20.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -6977,10 +6978,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID21.Value</Value>
+                              <Value>=Sum(Fields!ID21.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7032,10 +7033,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID22.Value</Value>
+                              <Value>=Sum(Fields!ID22.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7087,10 +7088,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID23.Value</Value>
+                              <Value>=Sum(Fields!ID23.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7142,10 +7143,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID24.Value</Value>
+                              <Value>=Sum(Fields!ID24.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7197,10 +7198,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID25.Value</Value>
+                              <Value>=Sum(Fields!ID25.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7252,10 +7253,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID26.Value</Value>
+                              <Value>=Sum(Fields!ID26.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7307,10 +7308,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID27.Value</Value>
+                              <Value>=Sum(Fields!ID27.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7362,10 +7363,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID28.Value</Value>
+                              <Value>=Sum(Fields!ID28.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7417,10 +7418,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID29.Value</Value>
+                              <Value>=Sum(Fields!ID29.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7472,10 +7473,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID30.Value</Value>
+                              <Value>=Sum(Fields!ID30.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -7527,10 +7528,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID31.Value</Value>
+                              <Value>=Sum(Fields!ID31.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>7pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -9401,22 +9402,20 @@
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9470,22 +9469,20 @@
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9539,22 +9536,20 @@
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9608,22 +9603,20 @@
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9664,22 +9657,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9733,22 +9724,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9802,22 +9791,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -9871,17 +9858,16 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
@@ -9931,6 +9917,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(1)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox390</rd:DefaultName>
                                     <Style>
@@ -9940,22 +9940,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10000,6 +9998,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(2)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox6</rd:DefaultName>
                                     <Style>
@@ -10009,22 +10021,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10069,6 +10079,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(3)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox4</rd:DefaultName>
                                     <Style>
@@ -10078,22 +10102,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10138,6 +10160,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(4)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox9</rd:DefaultName>
                                     <Style>
@@ -10147,22 +10183,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10198,6 +10232,24 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(5)</Value>
+                                            <Style>
+                                              <FontStyle>Normal</FontStyle>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                              <FontWeight>Normal</FontWeight>
+                                              <TextDecoration>None</TextDecoration>
+                                              <Color>#000000</Color>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox394</rd:DefaultName>
                                     <Style>
@@ -10207,22 +10259,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10267,6 +10317,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(6)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox395</rd:DefaultName>
                                     <Style>
@@ -10276,22 +10340,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10336,6 +10398,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(7)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox396</rd:DefaultName>
                                     <Style>
@@ -10345,17 +10421,16 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
@@ -10405,6 +10480,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(A)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox397</rd:DefaultName>
                                     <Style>
@@ -10414,22 +10503,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10474,6 +10561,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(B)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox398</rd:DefaultName>
                                     <Style>
@@ -10483,22 +10584,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10543,6 +10642,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(C)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox399</rd:DefaultName>
                                     <Style>
@@ -10552,22 +10665,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10612,6 +10723,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(D)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox400</rd:DefaultName>
                                     <Style>
@@ -10621,22 +10746,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10695,6 +10818,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(E)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox401</rd:DefaultName>
                                     <Style>
@@ -10704,22 +10841,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10764,6 +10899,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(F)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox402</rd:DefaultName>
                                     <Style>
@@ -10773,22 +10922,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10833,6 +10980,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(G)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox408</rd:DefaultName>
                                     <Style>
@@ -10842,22 +11003,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10902,6 +11061,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(H)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox409</rd:DefaultName>
                                     <Style>
@@ -10911,22 +11084,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -10971,6 +11142,20 @@ OK数</Value>
                                           <TextAlign>Center</TextAlign>
                                         </Style>
                                       </Paragraph>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>(I)</Value>
+                                            <Style>
+                                              <FontFamily>Times New Roman</FontFamily>
+                                              <FontSize>7pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Textbox410</rd:DefaultName>
                                     <Style>
@@ -10980,22 +11165,21 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <VerticalAlign>Middle</VerticalAlign>
                                       <PaddingLeft>2pt</PaddingLeft>
@@ -11038,22 +11222,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -12234,22 +12415,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -12291,22 +12469,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -13487,22 +13662,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -13544,22 +13716,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -14740,22 +14909,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -14797,22 +14963,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -15993,22 +16156,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -16050,22 +16210,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -17246,22 +17403,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -17303,22 +17457,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -18499,22 +18650,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -18556,22 +18704,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -19752,22 +19897,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -19809,22 +19951,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -21005,22 +21144,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -21062,22 +21198,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -22258,22 +22391,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -22315,22 +22445,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -23511,22 +23638,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -23568,22 +23692,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -24764,22 +24885,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -24821,22 +24939,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26017,22 +26132,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26071,22 +26183,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26120,22 +26230,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26169,22 +26276,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26218,22 +26322,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26267,22 +26368,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26316,22 +26414,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26365,22 +26460,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26414,17 +26506,15 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
@@ -26463,22 +26553,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26512,22 +26599,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26561,22 +26645,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26610,22 +26691,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26659,22 +26737,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26708,22 +26783,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26757,17 +26829,15 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
@@ -26806,22 +26876,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26855,22 +26922,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26904,22 +26968,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -26953,22 +27014,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27002,22 +27060,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27051,22 +27106,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27100,22 +27152,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27149,22 +27198,19 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27198,22 +27244,20 @@ OK数</Value>
                                       <TopBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </TopBorder>
                                       <BottomBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </BottomBorder>
                                       <LeftBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
                                       </LeftBorder>
                                       <RightBorder>
                                         <Color>Black</Color>
                                         <Style>Solid</Style>
-                                        <Width>1pt</Width>
+                                        <Width>2pt</Width>
                                       </RightBorder>
                                       <PaddingLeft>2pt</PaddingLeft>
                                       <PaddingRight>2pt</PaddingRight>
@@ -27684,6 +27728,34 @@ OK数</Value>
         <Field Name="CONG_DOAN_SO">
           <DataField>CONG_DOAN_SO</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MA_SP">
+          <DataField>MA_SP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TEN_CONG_DOAN">
+          <DataField>TEN_CONG_DOAN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SL1">
+          <DataField>SL1</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL2">
+          <DataField>SL2</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL3">
+          <DataField>SL3</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL4">
+          <DataField>SL4</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TONG_KH">
+          <DataField>TONG_KH</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

@@ -756,6 +756,7 @@
               <ChartAxis Name="Primary">
                 <Style>
                   <FontSize>8pt</FontSize>
+                  <Format>dd/MM/yy</Format>
                 </Style>
                 <ChartAxisTitle>
                   <Caption />

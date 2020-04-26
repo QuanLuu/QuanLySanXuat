@@ -25,14 +25,17 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
                 Import_Manager.instance = value;
             }
         }
-
+        //SANYO_SERVER//MRDBA
         private Import_Manager() { }
 
         public DataTable LoadDM_NL(string TenNL)
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DM_NGUYEN_LIEU @TEN_NL", new object[] { TenNL });
         }
-
+        public DataTable dutoannl(int year, int month)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_DU_TOAN_NGUYEN_LIEU @YEAR , @MONTH", new object[] { year, month });
+        }
         public DataTable getmasptheoNL(string TenNL)
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_MASP_THEO_NL @TEN_NL", new object[] { TenNL });
@@ -201,6 +204,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         public DataTable getpoall(string khachhang, string msql, DateTime datefrom, DateTime dateto, string masp)
         {
             return DataProvider.Instance.ExecuteQuery("PP_UI_GET_PO_ALL @KH , @MSQL , @DATEFROM , @DATETO , @masp", new object[] { khachhang, msql, datefrom, dateto, masp });
+        }
+        public DataTable getpopass(string khachhang, string msql, DateTime datefrom, DateTime dateto, string masp)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_PO_PASS @KH , @MSQL , @DATEFROM , @DATETO , @masp", new object[] { khachhang, msql, datefrom, dateto, masp });
         }
         public DataTable getForecast(string khachhang, string msql, DateTime datefrom, DateTime dateto, string masp)
         {
@@ -482,6 +489,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         public int Updatekehoachnxgiacong(int ACTION, int ID, int idsp, DateTime ngaykh, float soluong, string nhapxuat)
         {
             return DataProvider.Instance.ExecuteNonQuery("EXEC PP_UI_UPDATE_KH_NHAP_XUAT_GIA_CONG @ACTION , @ID , @idsp , @ngaykh , @sl , @nhapxuat", new object[] { ACTION, ID, idsp, ngaykh, soluong, nhapxuat });
+        }
+        public int cleanupkhsx(int month)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("PP_CLEAN_UP_KHSX @MONTH", new object[] {month});
         }
         //PP_UI_UPDATE_HOP_DONG
     }

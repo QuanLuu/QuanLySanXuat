@@ -50,6 +50,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             tbThangInvoice.Text = DateTime.Now.Month.ToString();
             dtpNgayInvoice.Value = DateTime.Now;
             cbKHinvoice.Text = "NTZC";
+            cleankhsx();
         }
         void GetKhachHang()
         {
@@ -169,8 +170,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     viewreport("KHSX_SX.rdlc", "KHSX", dt);
                 else if (khsx_idx == 1)
                     viewreport("KHSX_BURRYTAK.rdlc", "KHSX", dt);
-                else
+                else if(khsx_idx == 2)
                     viewreport("KHSX_KIEM_NQ.rdlc", "KHSX", dt);
+                else
+                    viewreport("KHSX_TONGVU.rdlc", "KHSX", dt);
             }
         }
 
@@ -228,6 +231,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 worksheet = null;
             }
         }
+        void cleankhsx()
+        {
+            int res = Import_Manager.Instance.cleanupkhsx(2);
+        }
         void loadnhanvien()
         {
             DataTable data = Import_Manager.Instance.LoadNhanVien();
@@ -242,17 +249,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if (loaibc == "SX")
             {
-                //DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
                 DataTable baocao = Import_Manager.Instance.GetBaoCaoSXThang(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
                 dtgbaocao.DataSource = baocao;
             }
             if (loaibc == "NVL")
             {
-                //DataTable baocao = Import_Manager.Instance.getbaocaosx(dtpbaocaosxfrom.Value, dtpbaocaosxto.Value);
                 DataTable baocao = Import_Manager.Instance.Getthepnxt(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
                 dtgbaocao.DataSource = baocao;
             }
-
+            if (loaibc == "DuToanNL")
+            {   
+                DataTable data = Import_Manager.Instance.dutoannl(Int32.Parse(tbnambaocaosx.Text), Int32.Parse(tbthangbaocaosx.Text));
+                dtgbaocao.DataSource = data;
+            }
         }
         void baocaosx()
         {
@@ -263,6 +272,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             reportViewer.Visible = false;
             if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
         }
+        
         private void báoCáoSXToolStripMenuItem_Click(object sender, EventArgs e)
         {
             baocaosx();
@@ -282,6 +292,23 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 DataTable dt = Import_Manager.Instance.reportInvoice(cbKHinvoice.Text, Int32.Parse(tbNamInvoice.Text), Int32.Parse(tbThangInvoice.Text), tbSoInvoice.Text, dtpNgayInvoice.Value);
                 viewreport("Invoice.rdlc", "Invoice", dt);
             }
+        }
+
+        private void kHTổngVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hidepannelfilter();
+            khsx_idx = 3;
+            panelKHSX.Visible = true;
+        }
+
+        private void dựToánNLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loaibc = "DuToanNL";
+            hidepannelfilter();
+            dtgbaocao.Visible = true;
+            panelbaocaosx.Visible = true;
+            reportViewer.Visible = false;
+            if (tbnambaocaosx.Text != "" && tbthangbaocaosx.Text != "") getBaocaosx(loaibc);
         }
     }
 }

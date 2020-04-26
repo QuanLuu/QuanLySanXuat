@@ -386,7 +386,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void theoNgàyToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            nhapxuatgc = "N";
+            nhapxuatgc = "";
             hidepannelfilter();
             tbnamngaytiendo.Text = DateTime.Now.Year.ToString();
             tbthangngaytiendo.Text = DateTime.Now.Month.ToString();

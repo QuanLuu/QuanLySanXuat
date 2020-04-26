@@ -2210,7 +2210,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox479">
+                    <Textbox Name="Textbox60">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2227,18 +2227,11 @@
                                 <Color>Blue</Color>
                               </Style>
                             </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">
-</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox479</rd:DefaultName>
+                      <rd:DefaultName>Textbox60</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -4030,14 +4023,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TEN_MAY">
+                    <Textbox Name="MA_MAY">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TEN_MAY.Value</Value>
+                              <Value>=Fields!MA_MAY.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4049,7 +4042,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TEN_MAY</rd:DefaultName>
+                      <rd:DefaultName>MA_MAY</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -13609,7 +13602,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -17155,17 +17147,10 @@
                 </GroupExpressions>
                 <Filters>
                   <Filter>
-                    <FilterExpression>=Fields!TEN_MAY.Value</FilterExpression>
-                    <Operator>NotEqual</Operator>
+                    <FilterExpression>=Fields!LOAI_KH.Value</FilterExpression>
+                    <Operator>Equal</Operator>
                     <FilterValues>
-                      <FilterValue>DAY CHUYEN</FilterValue>
-                    </FilterValues>
-                  </Filter>
-                  <Filter>
-                    <FilterExpression>=Fields!TEN_MAY.Value</FilterExpression>
-                    <Operator>NotEqual</Operator>
-                    <FilterValues>
-                      <FilterValue>KIEM NGOAI QUAN</FilterValue>
+                      <FilterValue>SAN XUAT</FilterValue>
                     </FilterValues>
                   </Filter>
                 </Filters>
@@ -17439,21 +17424,14 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>PRODUCTION PLAN </Value>
+                  <Value>=first(Fields!YEAR.Value, "KHSX") &amp; "-" &amp; format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>=format(First(Fields!MONTH.Value, "KHSX"),"00")</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>-</Value>
+                  <Value> PRODUCTION </Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -17467,7 +17445,7 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>　生産計画 </Value>
+                  <Value>年</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -17481,21 +17459,7 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>月</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>=first(Fields!YEAR.Value, "KHSX")</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>年 </Value>
+                  <Value>月生産計画</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -17594,134 +17558,174 @@
           <DataField>YEAR</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="MA_MAY">
+          <DataField>MA_MAY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ID1">
           <DataField>ID1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID2">
           <DataField>ID2</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID3">
           <DataField>ID3</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID4">
           <DataField>ID4</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID5">
           <DataField>ID5</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID6">
           <DataField>ID6</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID7">
           <DataField>ID7</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID8">
           <DataField>ID8</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID9">
           <DataField>ID9</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID10">
           <DataField>ID10</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID11">
           <DataField>ID11</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID12">
           <DataField>ID12</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID13">
           <DataField>ID13</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID14">
           <DataField>ID14</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID15">
           <DataField>ID15</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID16">
           <DataField>ID16</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID17">
           <DataField>ID17</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID18">
           <DataField>ID18</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID19">
           <DataField>ID19</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID20">
           <DataField>ID20</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID21">
           <DataField>ID21</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID22">
           <DataField>ID22</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID23">
           <DataField>ID23</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID24">
           <DataField>ID24</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID25">
           <DataField>ID25</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID26">
           <DataField>ID26</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID27">
           <DataField>ID27</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID28">
           <DataField>ID28</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID29">
           <DataField>ID29</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID30">
           <DataField>ID30</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="ID31">
           <DataField>ID31</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="CONG_DOAN_SO">
+          <DataField>CONG_DOAN_SO</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MA_SP">
+          <DataField>MA_SP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TEN_CONG_DOAN">
+          <DataField>TEN_CONG_DOAN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SL1">
+          <DataField>SL1</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL2">
+          <DataField>SL2</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL3">
+          <DataField>SL3</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SL4">
+          <DataField>SL4</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TONG_KH">
+          <DataField>TONG_KH</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="LOAI_KH">
+          <DataField>LOAI_KH</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>QUAN_LY_SAN_XUATDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\quan.luu\Documents\GitHub\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\QUAN_LY_SAN_XUATDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>H:\App Projects\QuanLySanXuat\Chuong_Trinh_Quan_Ly_San_Xuat\Chuong_Trinh_Quan_Ly_San_Xuat\QUAN_LY_SAN_XUATDataSet.xsd</rd:SchemaPath>
         <rd:TableName>PP_DS_IN_CHI_THI_SAN_XUAT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

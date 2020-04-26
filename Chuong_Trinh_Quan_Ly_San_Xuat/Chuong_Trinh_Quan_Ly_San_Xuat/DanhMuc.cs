@@ -87,33 +87,40 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             langue_ge = ((FrmMain)f).languege_set;
             setlangue();
-
-            GetNguyenLieu();
+            enableallcontrol();
+            loadcomboMSQL();
+            getalldm();
+            initdata();
+        }
+        void enableallcontrol()
+        {
             enablecontrolNL();
             enablecontrolSP();
             enablecontrolSPCD();
             enablecontrolBox();
             enablecontrolBoxSP();
-            GetSanPham();
-            GetKhachHang();
-            enablecontrolKH();
-            enablecontrolKHSP();
-            GetDinhMuc();
-            GetDongia();
             enablecontrolDM();
             enablecontrolMM();
+            enablecontrolKH();
+            enablecontrolKHSP();
+        }
+        void initdata()
+        {
+            GetNguyenLieu();
+            GetSanPham();
+            GetKhachHang();
+            GetDinhMuc();
+            GetDongia();
             getmaymoc();
             getSPCD();
             getmaymoccd();
-            loadcomboMSQL();
             getbox();
             getloaithung();
             getsanphamSNP();
             getKHSP();
             loadnvl_ncc();
-            getalldm();
-            setlangforallgridview();
             hiddenidcol();
+            setlangforallgridview();
         }
 
         void setlangue()
