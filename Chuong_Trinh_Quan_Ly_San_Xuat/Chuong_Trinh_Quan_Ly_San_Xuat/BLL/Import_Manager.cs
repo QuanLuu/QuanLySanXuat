@@ -32,6 +32,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.BLL
         {
             return DataProvider.Instance.ExecuteQuery("EXEC PP_UI_GET_DM_NGUYEN_LIEU @TEN_NL", new object[] { TenNL });
         }
+        public DataTable getsopofromkhmsql(string kh, string msql)
+        {
+            return DataProvider.Instance.ExecuteQuery("PP_UI_GET_PO_NO_FROM_KH_MSQL @kh , @msql", new object[] { kh, msql });
+        }
         public DataTable dutoannl(int year, int month)
         {
             return DataProvider.Instance.ExecuteQuery("PP_DU_TOAN_NGUYEN_LIEU @YEAR , @MONTH", new object[] { year, month });

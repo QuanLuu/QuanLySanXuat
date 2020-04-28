@@ -105,19 +105,19 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 {
                     for (int i = 0; i < dbctsx.Rows.Count; i++)
                     {
-                        if (dbctsx.Rows[i][1].ToString() == msql)
+                        if (dbctsx.Rows[i][0].ToString() == msql)
                         {
-                            if (Int32.Parse(dbctsx.Rows[i][10].ToString()) == socd)
+                            if (Int32.Parse(dbctsx.Rows[i][6].ToString()) == socd)
                             {
                                 tbMSQL.Text = msql;
-                                cbMaCongDoan.Text = dbctsx.Rows[i][0].ToString();
-                                tbmasp.Text = dbctsx.Rows[i][11].ToString();
+                                cbMaCongDoan.Text = dbctsx.Rows[i][4].ToString();
+                                tbmasp.Text = dbctsx.Rows[i][1].ToString();
                                 //numslkehoach.Text = dbctsx.Rows[i][ngay_sx + 11].ToString();
-                                for (int j = 12; j <= 42; j++)
+                                for (int j = 18; j <= 48; j++)
                                     if (dbctsx.Rows[i][j].ToString() != "")
                                     {
                                         tongkh += decimal.Parse(dbctsx.Rows[i][j].ToString());
-                                        if(j <= ngay_sx + 11) luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                        if(j <= ngay_sx + 17) luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
                                     }
                                 numslluyke.Value = luyke;
                                 numslkehoach.Value = tongkh;
@@ -516,9 +516,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             getmacdtheomsql();
         }
-        void getmacongdoantheomsql()
+        void getmacongdoantheomsql(int ismsql)
         {
-            DataTable data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQL.Text, tbmasp.Text);
+            DataTable data;
+            if (ismsql ==1)
+                data = Import_Manager.Instance.Loadcongdoantheomsql(tbMSQL.Text, "");
+            else
+                data = Import_Manager.Instance.Loadcongdoantheomsql("", tbmasp.Text);
+
             cbMaCongDoan.DisplayMember = "MA_CONG_DOAN";
             cbMaCongDoan.ValueMember = "ID";
             cbMaCongDoan.DataSource = data;
@@ -529,7 +534,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             cbtenhang.DataSource = data;
             if (data.Rows.Count > 0)
             {
-                if (tbMSQL.Text == "")
+                if (ismsql == 0)
                     tbMSQL.Text = data.Rows[0][5].ToString();
                 else
                     tbmasp.Text = data.Rows[0][4].ToString();
@@ -538,7 +543,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbMSQL_TextChanged(object sender, EventArgs e)
         {
-            getmacongdoantheomsql();
+            getmacongdoantheomsql(1);
         }
 
         private void tbMSQLFilter_TextChanged(object sender, EventArgs e)
@@ -673,7 +678,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void tbmasp_TextChanged(object sender, EventArgs e)
         {
-            getmacongdoantheomsql();
+            getmacongdoantheomsql(0);
         }
     }
 }

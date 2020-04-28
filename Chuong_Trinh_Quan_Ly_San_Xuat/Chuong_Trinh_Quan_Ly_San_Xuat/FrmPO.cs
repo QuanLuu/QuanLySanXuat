@@ -123,7 +123,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getpopass()
         {
-            DataTable data = Import_Manager.Instance.getpopass(tbmakhpass.Text, tbmakhpass.Text, dtptungaypass.Value, dtpdenngaypass.Value, tbmasppass.Text);
+            DataTable data = Import_Manager.Instance.getpopass(tbmakhpass.Text, tbmsqlpass.Text, dtptungaypass.Value, dtpdenngaypass.Value, tbmasppass.Text);
             dtgpopass.DataSource = data;
 
         }
