@@ -782,7 +782,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         }
         void getsopofromkhmsql()
         {
-            DataTable data = Import_Manager.Instance.getsopofromkhmsql(cbNCCXuatSP.Text, cbmsqlxuatsp.Text);
+            DataTable data = Import_Manager.Instance.getsopofromkhmsql(cbNCCXuatSP.Text, cbmsqlxuatsp.Text, dtpXuatSP.Value);
             cbsoPOSP.DisplayMember = "PO_NO";
             cbsoPOSP.ValueMember = "SO_LUONG";
             cbsoPOSP.DataSource = data;
@@ -920,6 +920,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void cbsoPOSP_SelectedIndexChanged(object sender, EventArgs e)
         {
             numsoluong.Text = cbsoPOSP.SelectedValue.ToString();
+        }
+
+        private void dtpXuatSP_ValueChanged(object sender, EventArgs e)
+        {
+            cbsoPOSP.Text = "";
+            getsopofromkhmsql();
         }
     }
 }

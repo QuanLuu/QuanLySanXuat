@@ -35,8 +35,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             dtpDenNgay.CustomFormat = "yyyy-MM-dd";
             dtpNgaySX.CustomFormat = "yyyy-MM-dd";
             DateTime now = DateTime.Now;
-            dtpDenNgay.Value = new DateTime(now.Year, now.Month, 1).AddMonths(1).AddDays(-1);
-            dtpTuNgay.Value = new DateTime(now.Year, now.Month, 1);
+            tbsoct.Text = now.Year.ToString() + now.Month.ToString("00") + "-";
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["FrmMain"];
             phanquyen = ((FrmMain)f).quyensudung;
             usernhap = ((FrmMain)f).tbTenDN.Text.ToString();
@@ -49,7 +48,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dtgChiThiSX, new object[] { true });
             enablecontrolCTSX();
-            GetChiThiSX();
+            dtpDenNgay.Value = new DateTime(now.Year, now.Month, 1).AddMonths(1).AddDays(-1);
+            dtpTuNgay.Value = new DateTime(now.Year, now.Month, 1);
+            //GetChiThiSX();
             SetEventForNumerric(this.panelQLSX);
             NewChiThiSX(this.panelFilterCTSX);
             loadmaymoc();
@@ -92,13 +93,16 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
             setlangforlabel(this);
         }
-        void getCTSXbysoct(string soct, int ngay_sx)
+        void getCTSXbysoct(string soct)
         {
             try
             {
                 string msql = soct.Substring(7, 3);
                 decimal luyke = 0;
                 decimal tongkh = 0;
+                
+                int ngay_sx = Int32.Parse(soct.Substring(13, 2));
+                DateTime ngaygc = new DateTime(Int32.Parse(soct.Substring(0, 4)), Int32.Parse(soct.Substring(4, 2)), ngay_sx);
                 bool ishasdata = false;
                 int socd = Int32.Parse(soct.Substring(10, 2));
                 if (dbctsx.Rows.Count > 0)
@@ -113,14 +117,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                                 cbMaCongDoan.Text = dbctsx.Rows[i][4].ToString();
                                 tbmasp.Text = dbctsx.Rows[i][1].ToString();
                                 //numslkehoach.Text = dbctsx.Rows[i][ngay_sx + 11].ToString();
-                                for (int j = 18; j <= 48; j++)
+                                for (int j = 17; j <= 47; j++)
                                     if (dbctsx.Rows[i][j].ToString() != "")
                                     {
                                         tongkh += decimal.Parse(dbctsx.Rows[i][j].ToString());
-                                        if(j <= ngay_sx + 17) luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                        if(j == ngay_sx + 16) luyke = decimal.Parse(dbctsx.Rows[i][j].ToString());
                                     }
                                 numslluyke.Value = luyke;
                                 numslkehoach.Value = tongkh;
+                                dtpNgaySX.Value = ngaygc;
                                 ishasdata = true;
                             }
                         }
@@ -374,6 +379,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 btnSave.Enabled = true;
                 btnCancel.Enabled = true;
                 panelQLSX.Visible = true;
+                if (usernhap == "admin")
+                    chboxacnhanslct.Visible = true;
+                else
+                    chboxacnhanslct.Visible = false;
             }
 
         }
@@ -391,7 +400,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             try
             {
                 int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, (int)dtgChiThiSX.CurrentRow.Cells[0].Value, cbMaCongDoan.Text, 0, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, Int32.Parse(cbGiaCong.SelectedValue.ToString()), tbGhiChu.Text, usernhap, (int)numVesinh6S.Value, (int)numMopbaoluu.Value, (int)numNgKiemTra.Value, "",0,0);
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, Int32.Parse(cbGiaCong.SelectedValue.ToString()), tbGhiChu.Text, usernhap, (int)numVesinh6S.Value, (int)numMopbaoluu.Value, (int)numNgKiemTra.Value, "",0,0,1);
 
             }
             catch (Exception ex)
@@ -414,6 +423,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             CheckChiThiSX(this.panelQLSX);
             int idCTSX = 0;
             int actioncur = actionSX;
+            int xacnhanslct = 0;
             if (dtgChiThiSX.Rows.Count > 1 && dtgChiThiSX.CurrentRow.Cells[0].Value.ToString() != "") idCTSX = (int)dtgChiThiSX.CurrentRow.Cells[0].Value;
             try
             {
@@ -427,8 +437,21 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                         //return;
                      }
                 }
+                DataTable checklock = Import_Manager.Instance.checklocksoct(tbsoct.Text);
+                if(checklock.Rows.Count >0)
+                {
+                    if (Int32.Parse(checklock.Rows[0][0].ToString()) > 0)
+                    {
+                        if (usernhap != "admin")
+                        {
+                            MessageBox.Show("Bạn không thể nhập đc số CT này nữa vì số CT này đã đc nhập và khóa lại. Liên hệ admin nếu bạn cần sửa.");
+                            return;
+                        }
+                    }
+                }
+                if (MessageBox.Show("Xác nhận đã kết thúc SLCT này chưa?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) xacnhanslct = 1;
                 int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, (int)cbTenMay.SelectedValue, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
-                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, (int)cbGiaCong.SelectedValue, tbGhiChu.Text, usernhap, (int)numVesinh6S.Value, (int)numMopbaoluu.Value, (int)numNgKiemTra.Value, tbsoct.Text, numslkehoach.Value, numslluyke.Value);
+                                                                    , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, (int)cbGiaCong.SelectedValue, tbGhiChu.Text, usernhap, (int)numVesinh6S.Value, (int)numMopbaoluu.Value, (int)numNgKiemTra.Value, tbsoct.Text, numslkehoach.Value, numslluyke.Value, xacnhanslct);
 
                 GetChiThiSX();
                 if(dtgChiThiSX.Rows.Count >2) dtgChiThiSX.CurrentCell = dtgChiThiSX.Rows[dtgChiThiSX.Rows.Count - 2].Cells[0];
@@ -445,7 +468,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         
         void GetChiThiSX()
         {
-            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, tbMSQLFilter.Text, tbmaspctsxfil.Text, tbsoctfil.Text);
+            int shownhaplieu = 0;
+            if (chboxshownhaplieu.Checked) shownhaplieu = 1;
+            DataTable chithi = Import_Manager.Instance.GetChiThiSanXuat(dtpTuNgay.Value, dtpDenNgay.Value, tbMSQLFilter.Text, tbmaspctsxfil.Text, tbsoctfil.Text, shownhaplieu, usernhap);
             dtgChiThiSX.DataSource = chithi;
             
         }
@@ -487,6 +512,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 cbGiaCong.Text = dtgChiThiSX.CurrentRow.Cells[33].Value.ToString();
                 tbGhiChu.Text = dtgChiThiSX.CurrentRow.Cells[34].Value.ToString();
                 cbTenMay.SelectedValue = dtgChiThiSX.CurrentRow.Cells[36].Value;
+                if (dtgChiThiSX.CurrentRow.Cells[38].Value.ToString() == "True")
+                    chboxacnhanslct.Checked = true;
+                else
+                    chboxacnhanslct.Checked = false;
             }
         }
 
@@ -632,33 +661,33 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if(e.KeyCode == Keys.Enter)
             {
-                if(dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0,4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
-                {
-                    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
-                    return;
-                }
-                if(tbsoct.Text.Length != 12)
+                //if(dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0,4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
+                //{
+                //    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
+                //    return;
+                //}
+                if(tbsoct.Text.Length != 15)
                 {
                     MessageBox.Show("Số chỉ thị không đúng");
                     return;
                 }
-                getCTSXbysoct(tbsoct.Text, dtpNgaySX.Value.Day);
+                getCTSXbysoct(tbsoct.Text);
             }
         }
 
         private void tbsoct_TextChanged(object sender, EventArgs e)
         {
-            if(tbsoct.Text.Length == 12)
+            if(tbsoct.Text.Length == 15)
             {
-                if (dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0, 4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
-                {
-                    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
-                    return;
-                }
+                //if (dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0, 4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
+                //{
+                //    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
+                //    return;
+                //}
                 
-                getCTSXbysoct(tbsoct.Text, dtpNgaySX.Value.Day);
+                getCTSXbysoct(tbsoct.Text);
             }
-            if (tbsoct.Text.Length > 12)
+            if (tbsoct.Text.Length > 15)
             {
                 MessageBox.Show("Số chỉ thị không đúng");
                 return;
@@ -667,7 +696,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtpNgaySX_ValueChanged(object sender, EventArgs e)
         {
-            tbsoct.Text = dtpNgaySX.Value.Year.ToString() + dtpNgaySX.Value.Month.ToString("00") + "-";
+            //tbsoct.Text = dtpNgaySX.Value.Year.ToString() + dtpNgaySX.Value.Month.ToString("00") + "-";
             if (dtpNgaySX.Value.Year != year_ct || dtpNgaySX.Value.Month != month_ct)
             {
                 getsoctsxall(dtpNgaySX.Value.Year, dtpNgaySX.Value.Month);
@@ -679,6 +708,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         private void tbmasp_TextChanged(object sender, EventArgs e)
         {
             getmacongdoantheomsql(0);
+        }
+
+        private void chboxshownhaplieu_CheckedChanged(object sender, EventArgs e)
+        {
+            GetChiThiSX();
         }
     }
 }

@@ -259,7 +259,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                     string quyencap = data.Rows[0][2].ToString();
                     quyensudung = data.Rows[0][3].ToString();
                     casx = data.Rows[0][5].ToString();
-                    if (quyencap != "Full")
+                    if (quyencap != "Full" && quyencap != "Full;")
                         enablecontrol(quyencap, this.panelMain);
                     else
                         fullview();

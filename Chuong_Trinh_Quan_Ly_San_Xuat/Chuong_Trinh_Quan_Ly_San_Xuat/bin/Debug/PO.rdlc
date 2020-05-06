@@ -6,21 +6,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.55411cm</Width>
+              <Width>1.61661cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.21557cm</Width>
+              <Width>2.27807cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.92453cm</Width>
+              <Width>1.98703cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.30578cm</Width>
+              <Width>4.36828cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -31,7 +31,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>="DELIVERY DETAILS CARD           MSQL :  " &amp; Fields!MSQL.Value</Value>
+                              <Value>DELIVERY DETAILS CARD</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -65,6 +65,64 @@
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="MSQL :  " &amp; Fields!MSQL.Value</Value>
+                              <Style>
+                                <FontSize>16pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
@@ -75,16 +133,12 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>4</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -308,7 +362,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.84818cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -532,7 +586,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -759,7 +813,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -986,7 +1040,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.84818cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1049,7 +1103,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.71632cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1116,6 +1170,8 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>IN_PO</DataSetName>
         <Filters>
           <Filter>
@@ -1126,13 +1182,14 @@
             </FilterValues>
           </Filter>
         </Filters>
-        <Top>0.2cm</Top>
-        <Left>0.2cm</Left>
-        <Height>5.69998cm</Height>
-        <Width>9.99999cm</Width>
+        <Top>0cm</Top>
+        <Left>0cm</Left>
+        <Height>5.69939cm</Height>
+        <Width>10.25cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
+            <Width>0.25pt</Width>
           </Border>
         </Style>
       </Tablix>
@@ -1140,21 +1197,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.55411cm</Width>
+              <Width>1.61661cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.21557cm</Width>
+              <Width>2.27807cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.92453cm</Width>
+              <Width>1.98703cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.30578cm</Width>
+              <Width>4.36828cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1165,7 +1222,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>="DELIVERY DETAILS CARD           MSQL :  " &amp; Fields!MSQL.Value</Value>
+                              <Value>DELIVERY DETAILS CARD</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1199,6 +1256,64 @@
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox26">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="MSQL :  " &amp; Fields!MSQL.Value</Value>
+                              <Style>
+                                <FontSize>16pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox26</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>None</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
@@ -1209,16 +1324,12 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>4</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1442,7 +1553,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.84818cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1666,7 +1777,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1893,7 +2004,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.85076cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2120,7 +2231,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.83061cm</Height>
+              <Height>0.84818cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2183,7 +2294,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.71632cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2217,6 +2328,7 @@
                       </Style>
                     </Textbox>
                     <ColSpan>4</ColSpan>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -2250,6 +2362,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>IN_PO</DataSetName>
         <Filters>
           <Filter>
@@ -2260,31 +2373,36 @@
             </FilterValues>
           </Filter>
         </Filters>
-        <Top>0.2cm</Top>
-        <Left>10.5cm</Left>
-        <Height>5.69998cm</Height>
-        <Width>9.99999cm</Width>
+        <Top>0cm</Top>
+        <Left>10.3436cm</Left>
+        <Height>5.69939cm</Height>
+        <Width>10.25cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
+            <Width>0.25pt</Width>
           </Border>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>6.34604cm</Height>
-    <Style />
+    <Height>29.2936cm</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>20.6cm</Width>
+  <Width>20.5936cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <InteractiveHeight>0cm</InteractiveHeight>
     <InteractiveWidth>0cm</InteractiveWidth>
-    <LeftMargin>0.2cm</LeftMargin>
-    <RightMargin>0.2cm</RightMargin>
-    <TopMargin>0.5cm</TopMargin>
-    <BottomMargin>0.5cm</BottomMargin>
+    <LeftMargin>0.08in</LeftMargin>
+    <RightMargin>0.08in</RightMargin>
+    <TopMargin>0.08in</TopMargin>
+    <BottomMargin>0.08in</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

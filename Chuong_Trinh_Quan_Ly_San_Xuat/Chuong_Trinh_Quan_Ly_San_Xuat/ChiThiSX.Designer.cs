@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelFilterCTSX = new System.Windows.Forms.Panel();
+            this.tbsoctfil = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.tbmaspctsxfil = new System.Windows.Forms.TextBox();
             this.tbMSQLFilter = new System.Windows.Forms.TextBox();
@@ -87,22 +89,30 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbmasp = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cbCaSX = new System.Windows.Forms.ComboBox();
+            this.numslluyke = new System.Windows.Forms.NumericUpDown();
+            this.tbsoct = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.tbSoLot = new System.Windows.Forms.TextBox();
+            this.numslkehoach = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbtenhang = new System.Windows.Forms.ComboBox();
+            this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.cbTenCongDoan = new System.Windows.Forms.ComboBox();
-            this.cbCaSX = new System.Windows.Forms.ComboBox();
             this.tbMSQL = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.cbmamay = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbSoLot = new System.Windows.Forms.TextBox();
             this.CbSomay = new System.Windows.Forms.ComboBox();
             this.cbTenMay = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dtpNgaySX = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -118,16 +128,8 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panelTitleCTSX = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.numslkehoach = new System.Windows.Forms.NumericUpDown();
-            this.label36 = new System.Windows.Forms.Label();
-            this.numslluyke = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
-            this.tbsoct = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.tbmasp = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.tbsoctfil = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
+            this.chboxacnhanslct = new System.Windows.Forms.CheckBox();
+            this.chboxshownhaplieu = new System.Windows.Forms.CheckBox();
             this.panelFilterCTSX.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChiThiSX)).BeginInit();
@@ -153,11 +155,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numtgChuanBi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numtgSX)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numslluyke)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numslkehoach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.panel4.SuspendLayout();
             this.panelTitleCTSX.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numslkehoach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numslluyke)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFilterCTSX
@@ -165,6 +167,7 @@
             this.panelFilterCTSX.AutoSize = true;
             this.panelFilterCTSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelFilterCTSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFilterCTSX.Controls.Add(this.chboxshownhaplieu);
             this.panelFilterCTSX.Controls.Add(this.tbsoctfil);
             this.panelFilterCTSX.Controls.Add(this.label40);
             this.panelFilterCTSX.Controls.Add(this.label35);
@@ -180,6 +183,22 @@
             this.panelFilterCTSX.Name = "panelFilterCTSX";
             this.panelFilterCTSX.Size = new System.Drawing.Size(1156, 30);
             this.panelFilterCTSX.TabIndex = 0;
+            // 
+            // tbsoctfil
+            // 
+            this.tbsoctfil.Location = new System.Drawing.Point(777, 4);
+            this.tbsoctfil.Name = "tbsoctfil";
+            this.tbsoctfil.Size = new System.Drawing.Size(87, 20);
+            this.tbsoctfil.TabIndex = 40;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(740, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(37, 13);
+            this.label40.TabIndex = 41;
+            this.label40.Text = "Số CT";
             // 
             // label35
             // 
@@ -265,7 +284,6 @@
             // dtgChiThiSX
             // 
             this.dtgChiThiSX.AllowUserToResizeRows = false;
-            this.dtgChiThiSX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,6 +331,7 @@
             // 
             this.panelQLSX.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelQLSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelQLSX.Controls.Add(this.chboxacnhanslct);
             this.panelQLSX.Controls.Add(this.groupBox3);
             this.panelQLSX.Controls.Add(this.groupBoxThoiGian);
             this.panelQLSX.Controls.Add(this.groupBox2);
@@ -794,6 +813,8 @@
             this.groupBox2.Controls.Add(this.tbmasp);
             this.groupBox2.Controls.Add(this.label39);
             this.groupBox2.Controls.Add(this.cbCaSX);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.dtpNgaySX);
             this.groupBox2.Controls.Add(this.numslluyke);
             this.groupBox2.Controls.Add(this.tbsoct);
             this.groupBox2.Controls.Add(this.label37);
@@ -815,8 +836,6 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.CbSomay);
             this.groupBox2.Controls.Add(this.cbTenMay);
-            this.groupBox2.Controls.Add(this.dtpNgaySX);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
@@ -827,6 +846,133 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chung";
+            // 
+            // tbmasp
+            // 
+            this.tbmasp.Location = new System.Drawing.Point(190, 113);
+            this.tbmasp.Name = "tbmasp";
+            this.tbmasp.Size = new System.Drawing.Size(112, 20);
+            this.tbmasp.TabIndex = 15;
+            this.tbmasp.TextChanged += new System.EventHandler(this.tbmasp_TextChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(148, 117);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(39, 13);
+            this.label39.TabIndex = 41;
+            this.label39.Text = "Mã SP";
+            // 
+            // cbCaSX
+            // 
+            this.cbCaSX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbCaSX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCaSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCaSX.FormattingEnabled = true;
+            this.cbCaSX.Items.AddRange(new object[] {
+            "Ca A",
+            "Ca B",
+            "HC"});
+            this.cbCaSX.Location = new System.Drawing.Point(206, 67);
+            this.cbCaSX.Name = "cbCaSX";
+            this.cbCaSX.Size = new System.Drawing.Size(96, 21);
+            this.cbCaSX.TabIndex = 12;
+            this.cbCaSX.TabStop = false;
+            // 
+            // numslluyke
+            // 
+            this.numslluyke.Location = new System.Drawing.Point(77, 66);
+            this.numslluyke.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numslluyke.Name = "numslluyke";
+            this.numslluyke.Size = new System.Drawing.Size(97, 20);
+            this.numslluyke.TabIndex = 10;
+            // 
+            // tbsoct
+            // 
+            this.tbsoct.Location = new System.Drawing.Point(77, 19);
+            this.tbsoct.Name = "tbsoct";
+            this.tbsoct.Size = new System.Drawing.Size(97, 20);
+            this.tbsoct.TabIndex = 8;
+            this.tbsoct.TextChanged += new System.EventHandler(this.tbsoct_TextChanged);
+            this.tbsoct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbsoct_KeyDown);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(0, 70);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(70, 13);
+            this.label37.TabIndex = 32;
+            this.label37.Text = "Số Lượng CT";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(180, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Ca";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(40, 22);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(37, 13);
+            this.label38.TabIndex = 39;
+            this.label38.Text = "Số CT";
+            // 
+            // tbSoLot
+            // 
+            this.tbSoLot.Location = new System.Drawing.Point(206, 88);
+            this.tbSoLot.Name = "tbSoLot";
+            this.tbSoLot.Size = new System.Drawing.Size(96, 20);
+            this.tbSoLot.TabIndex = 13;
+            // 
+            // numslkehoach
+            // 
+            this.numslkehoach.Location = new System.Drawing.Point(77, 43);
+            this.numslkehoach.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numslkehoach.Name = "numslkehoach";
+            this.numslkehoach.Size = new System.Drawing.Size(97, 20);
+            this.numslkehoach.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(180, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 13);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Lot";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(0, 47);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(71, 13);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Số Lượng KH";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(0, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "S/Lượng Thực";
             // 
             // cbtenhang
             // 
@@ -839,6 +985,18 @@
             this.cbtenhang.Size = new System.Drawing.Size(225, 21);
             this.cbtenhang.TabIndex = 37;
             this.cbtenhang.TabStop = false;
+            // 
+            // numSoLuong
+            // 
+            this.numSoLuong.Location = new System.Drawing.Point(77, 88);
+            this.numSoLuong.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numSoLuong.Name = "numSoLuong";
+            this.numSoLuong.Size = new System.Drawing.Size(97, 20);
+            this.numSoLuong.TabIndex = 11;
             // 
             // label22
             // 
@@ -869,22 +1027,6 @@
             this.cbTenCongDoan.Name = "cbTenCongDoan";
             this.cbTenCongDoan.Size = new System.Drawing.Size(225, 21);
             this.cbTenCongDoan.TabIndex = 3;
-            // 
-            // cbCaSX
-            // 
-            this.cbCaSX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbCaSX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCaSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCaSX.FormattingEnabled = true;
-            this.cbCaSX.Items.AddRange(new object[] {
-            "Ca A",
-            "Ca B",
-            "HC"});
-            this.cbCaSX.Location = new System.Drawing.Point(215, 67);
-            this.cbCaSX.Name = "cbCaSX";
-            this.cbCaSX.Size = new System.Drawing.Size(87, 21);
-            this.cbCaSX.TabIndex = 12;
-            this.cbCaSX.TabStop = false;
             // 
             // tbMSQL
             // 
@@ -924,13 +1066,6 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Mã Máy";
             // 
-            // tbSoLot
-            // 
-            this.tbSoLot.Location = new System.Drawing.Point(215, 88);
-            this.tbSoLot.Name = "tbSoLot";
-            this.tbSoLot.Size = new System.Drawing.Size(87, 20);
-            this.tbSoLot.TabIndex = 13;
-            // 
             // CbSomay
             // 
             this.CbSomay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
@@ -955,58 +1090,19 @@
             this.cbTenMay.TabIndex = 4;
             this.cbTenMay.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(187, 92);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 13);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Lot";
-            // 
-            // numSoLuong
-            // 
-            this.numSoLuong.Location = new System.Drawing.Point(77, 88);
-            this.numSoLuong.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.numSoLuong.Name = "numSoLuong";
-            this.numSoLuong.Size = new System.Drawing.Size(97, 20);
-            this.numSoLuong.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 13);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "S/Lượng Thực";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(187, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Ca";
-            // 
             // dtpNgaySX
             // 
             this.dtpNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySX.Location = new System.Drawing.Point(77, 19);
+            this.dtpNgaySX.Location = new System.Drawing.Point(206, 43);
             this.dtpNgaySX.Name = "dtpNgaySX";
-            this.dtpNgaySX.Size = new System.Drawing.Size(98, 20);
+            this.dtpNgaySX.Size = new System.Drawing.Size(96, 20);
             this.dtpNgaySX.TabIndex = 7;
             this.dtpNgaySX.ValueChanged += new System.EventHandler(this.dtpNgaySX_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1, 23);
+            this.label5.Location = new System.Drawing.Point(203, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 24;
@@ -1157,98 +1253,26 @@
             this.label29.Text = "Chỉ Thị Sản Xuất";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numslkehoach
+            // chboxacnhanslct
             // 
-            this.numslkehoach.Location = new System.Drawing.Point(77, 43);
-            this.numslkehoach.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.numslkehoach.Name = "numslkehoach";
-            this.numslkehoach.Size = new System.Drawing.Size(97, 20);
-            this.numslkehoach.TabIndex = 9;
+            this.chboxacnhanslct.AutoSize = true;
+            this.chboxacnhanslct.Location = new System.Drawing.Point(326, 236);
+            this.chboxacnhanslct.Name = "chboxacnhanslct";
+            this.chboxacnhanslct.Size = new System.Drawing.Size(102, 17);
+            this.chboxacnhanslct.TabIndex = 4;
+            this.chboxacnhanslct.Text = "Xác nhận SLCT";
+            this.chboxacnhanslct.UseVisualStyleBackColor = true;
             // 
-            // label36
+            // chboxshownhaplieu
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(0, 47);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(71, 13);
-            this.label36.TabIndex = 30;
-            this.label36.Text = "Số Lượng KH";
-            // 
-            // numslluyke
-            // 
-            this.numslluyke.Location = new System.Drawing.Point(77, 66);
-            this.numslluyke.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.numslluyke.Name = "numslluyke";
-            this.numslluyke.Size = new System.Drawing.Size(97, 20);
-            this.numslluyke.TabIndex = 10;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(0, 70);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(69, 13);
-            this.label37.TabIndex = 32;
-            this.label37.Text = "Số Lượng LK";
-            // 
-            // tbsoct
-            // 
-            this.tbsoct.Location = new System.Drawing.Point(215, 19);
-            this.tbsoct.Name = "tbsoct";
-            this.tbsoct.Size = new System.Drawing.Size(87, 20);
-            this.tbsoct.TabIndex = 8;
-            this.tbsoct.TextChanged += new System.EventHandler(this.tbsoct_TextChanged);
-            this.tbsoct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbsoct_KeyDown);
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(178, 22);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(37, 13);
-            this.label38.TabIndex = 39;
-            this.label38.Text = "Số CT";
-            // 
-            // tbmasp
-            // 
-            this.tbmasp.Location = new System.Drawing.Point(190, 113);
-            this.tbmasp.Name = "tbmasp";
-            this.tbmasp.Size = new System.Drawing.Size(112, 20);
-            this.tbmasp.TabIndex = 15;
-            this.tbmasp.TextChanged += new System.EventHandler(this.tbmasp_TextChanged);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(148, 117);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(39, 13);
-            this.label39.TabIndex = 41;
-            this.label39.Text = "Mã SP";
-            // 
-            // tbsoctfil
-            // 
-            this.tbsoctfil.Location = new System.Drawing.Point(777, 4);
-            this.tbsoctfil.Name = "tbsoctfil";
-            this.tbsoctfil.Size = new System.Drawing.Size(87, 20);
-            this.tbsoctfil.TabIndex = 40;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(740, 8);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(37, 13);
-            this.label40.TabIndex = 41;
-            this.label40.Text = "Số CT";
+            this.chboxshownhaplieu.AutoSize = true;
+            this.chboxshownhaplieu.Location = new System.Drawing.Point(890, 7);
+            this.chboxshownhaplieu.Name = "chboxshownhaplieu";
+            this.chboxshownhaplieu.Size = new System.Drawing.Size(124, 17);
+            this.chboxshownhaplieu.TabIndex = 42;
+            this.chboxshownhaplieu.Text = "Chỉ hiển thị nhập liệu";
+            this.chboxshownhaplieu.UseVisualStyleBackColor = true;
+            this.chboxshownhaplieu.CheckedChanged += new System.EventHandler(this.chboxshownhaplieu_CheckedChanged);
             // 
             // FrmChiThiSX
             // 
@@ -1295,11 +1319,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numtgSX)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numslluyke)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numslkehoach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panelTitleCTSX.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numslkehoach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numslluyke)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1404,5 +1428,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox tbsoctfil;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.CheckBox chboxacnhanslct;
+        private System.Windows.Forms.CheckBox chboxshownhaplieu;
     }
 }

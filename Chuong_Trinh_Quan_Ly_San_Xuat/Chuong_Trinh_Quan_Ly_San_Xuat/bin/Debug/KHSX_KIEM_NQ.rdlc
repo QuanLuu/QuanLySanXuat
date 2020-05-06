@@ -9,13 +9,13 @@
               <Width>2.97141cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.82888cm</Width>
+              <Width>2.7936cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.44526cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.77004cm</Width>
+              <Width>1.46182cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.88121cm</Width>
@@ -111,12 +111,12 @@
               <Width>0.93714cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.67577cm</Width>
+              <Width>1.71106cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.81994cm</Height>
+              <Height>0.84821cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2099,7 +2099,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.61008cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2212,7 +2212,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox479">
+                    <Textbox Name="Textbox60">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -2229,18 +2229,11 @@
                                 <Color>Blue</Color>
                               </Style>
                             </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve">
-</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                              </Style>
-                            </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox479</rd:DefaultName>
+                      <rd:DefaultName>Textbox60</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2339,7 +2332,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value</Value>
+                              <Value>=sum(Fields!ID1.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2392,7 +2385,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID2.Value</Value>
+                              <Value>=Sum(Fields!ID2.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2445,7 +2438,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID3.Value</Value>
+                              <Value>=Sum(Fields!ID3.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2498,7 +2491,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID4.Value</Value>
+                              <Value>=Sum(Fields!ID4.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2551,7 +2544,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID5.Value</Value>
+                              <Value>=Sum(Fields!ID5.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2604,7 +2597,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID6.Value</Value>
+                              <Value>=Sum(Fields!ID6.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2657,7 +2650,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID7.Value</Value>
+                              <Value>=Sum(Fields!ID7.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2710,7 +2703,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID8.Value</Value>
+                              <Value>=Sum(Fields!ID8.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2763,7 +2756,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID9.Value</Value>
+                              <Value>=Sum(Fields!ID9.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2816,7 +2809,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID10.Value</Value>
+                              <Value>=Sum(Fields!ID10.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2869,7 +2862,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID11.Value</Value>
+                              <Value>=Sum(Fields!ID11.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2922,7 +2915,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID12.Value</Value>
+                              <Value>=Sum(Fields!ID12.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -2975,7 +2968,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID13.Value</Value>
+                              <Value>=Sum(Fields!ID13.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3028,7 +3021,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID14.Value</Value>
+                              <Value>=Sum(Fields!ID14.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3081,7 +3074,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID15.Value</Value>
+                              <Value>=Sum(Fields!ID15.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3134,7 +3127,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID16.Value</Value>
+                              <Value>=Sum(Fields!ID16.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3187,7 +3180,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID17.Value</Value>
+                              <Value>=Sum(Fields!ID17.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3240,7 +3233,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID18.Value</Value>
+                              <Value>=Sum(Fields!ID18.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3293,7 +3286,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID19.Value</Value>
+                              <Value>=Sum(Fields!ID19.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3346,7 +3339,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID20.Value</Value>
+                              <Value>=Sum(Fields!ID20.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3399,7 +3392,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID21.Value</Value>
+                              <Value>=Sum(Fields!ID21.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3452,7 +3445,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID22.Value</Value>
+                              <Value>=Sum(Fields!ID22.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3505,7 +3498,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID23.Value</Value>
+                              <Value>=Sum(Fields!ID23.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3558,7 +3551,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID24.Value</Value>
+                              <Value>=Sum(Fields!ID24.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3611,7 +3604,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID25.Value</Value>
+                              <Value>=Sum(Fields!ID25.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3664,7 +3657,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID26.Value</Value>
+                              <Value>=Sum(Fields!ID26.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3717,7 +3710,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID27.Value</Value>
+                              <Value>=Sum(Fields!ID27.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3770,7 +3763,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID28.Value</Value>
+                              <Value>=Sum(Fields!ID28.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3823,7 +3816,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID29.Value</Value>
+                              <Value>=Sum(Fields!ID29.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3876,7 +3869,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID30.Value</Value>
+                              <Value>=Sum(Fields!ID30.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -3929,7 +3922,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID31.Value</Value>
+                              <Value>=Sum(Fields!ID31.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4028,7 +4021,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.61008cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -4262,7 +4255,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value</Value>
+                              <Value>=Sum(Fields!ID1.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4315,7 +4308,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4368,7 +4361,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4421,7 +4414,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4474,7 +4467,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4527,7 +4520,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4580,7 +4573,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value+Fields!ID7.Value</Value>
+                              <Value>=sum(Fields!ID1.Value+Fields!ID2.Value+Fields!ID3.Value+Fields!ID4.Value+Fields!ID5.Value+Fields!ID6.Value+Fields!ID7.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4633,7 +4626,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4686,7 +4679,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4739,7 +4732,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4792,7 +4785,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4845,7 +4838,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4898,7 +4891,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -4951,7 +4944,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5004,7 +4997,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5057,7 +5050,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5110,7 +5103,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5163,7 +5156,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5216,7 +5209,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5269,7 +5262,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5322,7 +5315,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5375,7 +5368,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5428,7 +5421,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5481,7 +5474,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5534,7 +5527,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5587,7 +5580,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5640,7 +5633,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5693,7 +5686,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5746,7 +5739,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5799,7 +5792,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5852,7 +5845,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value  + Fields!ID31.Value</Value>
+                              <Value>=sum(Fields!ID1.Value  + Fields!ID2.Value  + Fields!ID3.Value  + Fields!ID4.Value  + Fields!ID5.Value  + Fields!ID6.Value  + Fields!ID7.Value  + Fields!ID8.Value  + Fields!ID9.Value  + Fields!ID10.Value  + Fields!ID11.Value  + Fields!ID12.Value  + Fields!ID13.Value  + Fields!ID14.Value  + Fields!ID15.Value  + Fields!ID16.Value  + Fields!ID17.Value  + Fields!ID18.Value  + Fields!ID19.Value  + Fields!ID20.Value  + Fields!ID21.Value  + Fields!ID22.Value  + Fields!ID23.Value  + Fields!ID24.Value  + Fields!ID25.Value  + Fields!ID26.Value  + Fields!ID27.Value  + Fields!ID28.Value  + Fields!ID29.Value  + Fields!ID30.Value  + Fields!ID31.Value)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -5951,7 +5944,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.60785cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -7843,7 +7836,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.61008cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -9735,7 +9728,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.61008cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -11605,7 +11598,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58181cm</Height>
+              <Height>0.61008cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -13475,7 +13468,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.63076cm</Height>
+              <Height>0.6568cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -15343,7 +15336,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.15847cm</Height>
+              <Height>0.18674cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -17193,11 +17186,12 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>KHSX</DataSetName>
         <Top>0cm</Top>
         <Left>0cm</Left>
-        <Height>5.10003cm</Height>
-        <Width>40.99999cm</Width>
+        <Height>5.35cm</Height>
+        <Width>40.69178cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -17208,10 +17202,10 @@
     <Height>6.0375cm</Height>
     <Style />
   </Body>
-  <Width>41cm</Width>
+  <Width>40.87817cm</Width>
   <Page>
     <PageHeader>
-      <Height>1.89371cm</Height>
+      <Height>1.87854cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -17236,7 +17230,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.01517cm</Top>
+          <Top>0cm</Top>
           <Left>34.09264cm</Left>
           <Height>0.90276cm</Height>
           <Width>2.12958cm</Width>
@@ -17271,7 +17265,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.01517cm</Top>
+          <Top>0cm</Top>
           <Left>36.22222cm</Left>
           <Height>0.90276cm</Height>
           <Width>2.12958cm</Width>
@@ -17307,7 +17301,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.01517cm</Top>
+          <Top>0cm</Top>
           <Left>38.3518cm</Left>
           <Height>0.90276cm</Height>
           <Width>2.12958cm</Width>
@@ -17341,7 +17335,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.95321cm</Top>
+          <Top>0.93804cm</Top>
           <Left>34.09264cm</Left>
           <Height>0.77928cm</Height>
           <Width>2.12958cm</Width>
@@ -17378,7 +17372,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.9532cm</Top>
+          <Top>0.93803cm</Top>
           <Left>36.22223cm</Left>
           <Height>0.77929cm</Height>
           <Width>2.12958cm</Width>
@@ -17415,7 +17409,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox53</rd:DefaultName>
-          <Top>0.9532cm</Top>
+          <Top>0.93803cm</Top>
           <Left>38.35181cm</Left>
           <Height>0.77929cm</Height>
           <Width>2.12958cm</Width>
@@ -17489,7 +17483,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox59</rd:DefaultName>
           <Top>0cm</Top>
-          <Left>0.50669cm</Left>
+          <Left>0.54197cm</Left>
           <Height>1.71732cm</Height>
           <Width>33.48012cm</Width>
           <ZIndex>6</ZIndex>
@@ -17514,10 +17508,10 @@
     <PageWidth>42cm</PageWidth>
     <InteractiveHeight>29.7cm</InteractiveHeight>
     <InteractiveWidth>42cm</InteractiveWidth>
-    <LeftMargin>0.5cm</LeftMargin>
-    <RightMargin>0.5cm</RightMargin>
-    <TopMargin>0.5cm</TopMargin>
-    <BottomMargin>0.5cm</BottomMargin>
+    <LeftMargin>0.2in</LeftMargin>
+    <RightMargin>0.2in</RightMargin>
+    <TopMargin>0.2in</TopMargin>
+    <BottomMargin>0.2in</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

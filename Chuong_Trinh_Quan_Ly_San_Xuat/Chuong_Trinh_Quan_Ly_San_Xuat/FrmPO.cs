@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -545,6 +546,15 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             reportViewer.LocalReport.ReportPath = reportname;
             reportViewer.LocalReport.DataSources.Clear();
             reportViewer.LocalReport.DataSources.Add(new ReportDataSource(datasetname, dt));
+            //System.Drawing.Printing.PageSettings pg = new System.Drawing.Printing.PageSettings();
+            //pg.Margins.Top = 20;
+            //pg.Margins.Bottom = 20;
+            //pg.Margins.Left = 10;
+            //pg.Margins.Right = 10;
+            //System.Drawing.Printing.PaperSize size = new PaperSize();
+            //size.RawKind = (int)PaperKind.A4;
+            //pg.PaperSize = size;
+            //reportViewer.SetPageSettings(pg);
             reportViewer.RefreshReport();
         }
 

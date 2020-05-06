@@ -50,7 +50,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             tbThangInvoice.Text = DateTime.Now.Month.ToString();
             dtpNgayInvoice.Value = DateTime.Now;
             cbKHinvoice.Text = "NTZC";
-            cleankhsx();
+            //cleankhsx();
         }
         void GetKhachHang()
         {

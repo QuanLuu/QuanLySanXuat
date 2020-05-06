@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.báoCáoSXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +38,7 @@
             this.tiếnĐộToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.giaCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dựToánNLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelKHSX = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -100,7 +101,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tbNamInvoice = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dựToánNLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelKHSX.SuspendLayout();
             this.panelCTSX.SuspendLayout();
@@ -189,6 +189,13 @@
             this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.invoiceToolStripMenuItem.Text = "Invoice";
             this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.invoiceToolStripMenuItem_Click);
+            // 
+            // dựToánNLToolStripMenuItem
+            // 
+            this.dựToánNLToolStripMenuItem.Name = "dựToánNLToolStripMenuItem";
+            this.dựToánNLToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
+            this.dựToánNLToolStripMenuItem.Text = "Dự Toán NL";
+            this.dựToánNLToolStripMenuItem.Click += new System.EventHandler(this.dựToánNLToolStripMenuItem_Click);
             // 
             // panelKHSX
             // 
@@ -665,9 +672,9 @@
             // 
             // reportViewer
             // 
-            reportDataSource5.Name = "IN_PO";
-            reportDataSource5.Value = null;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "IN_PO";
+            reportDataSource1.Value = null;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Chuong_Trinh_Quan_Ly_San_Xuat.PO.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(124, 333);
             this.reportViewer.Name = "reportViewer";
@@ -797,13 +804,6 @@
             this.label14.Size = new System.Drawing.Size(22, 13);
             this.label14.TabIndex = 10;
             this.label14.Text = "KH";
-            // 
-            // dựToánNLToolStripMenuItem
-            // 
-            this.dựToánNLToolStripMenuItem.Name = "dựToánNLToolStripMenuItem";
-            this.dựToánNLToolStripMenuItem.Size = new System.Drawing.Size(110, 25);
-            this.dựToánNLToolStripMenuItem.Text = "Dự Toán NL";
-            this.dựToánNLToolStripMenuItem.Click += new System.EventHandler(this.dựToánNLToolStripMenuItem_Click);
             // 
             // FrmKeHoach
             // 
