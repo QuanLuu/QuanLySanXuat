@@ -11,6 +11,8 @@ using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Resources;
+using System.Threading;
+
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
     public partial class FrmChiThiSX : Form
@@ -29,7 +31,8 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         public FrmChiThiSX()
         {
             InitializeComponent();
-            
+            Thread t = new Thread(new ThreadStart(getsoctfirst));
+            t.Start();
             dtgChiThiSX.Dock = DockStyle.Fill;
             dtpTuNgay.CustomFormat = "yyyy-MM-dd";
             dtpDenNgay.CustomFormat = "yyyy-MM-dd";
@@ -58,7 +61,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
             setlangforallgrid();
             dtgChiThiSX.Columns[0].Width = 0;
-            getsoctsxall(year_ct, month_ct);
+            
             //getallcomponettext(this);
             //tbMSQLFilter.Text = temp;
             dtpNgaySX.Value = DateTime.Now;
@@ -117,11 +120,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                                 cbMaCongDoan.Text = dbctsx.Rows[i][4].ToString();
                                 tbmasp.Text = dbctsx.Rows[i][1].ToString();
                                 //numslkehoach.Text = dbctsx.Rows[i][ngay_sx + 11].ToString();
-                                for (int j = 17; j <= 47; j++)
+                                for (int j = 14; j <= 44; j++)
                                     if (dbctsx.Rows[i][j].ToString() != "")
                                     {
                                         tongkh += decimal.Parse(dbctsx.Rows[i][j].ToString());
-                                        if(j == ngay_sx + 16) luyke = decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                        if(j == ngay_sx + 13) luyke = decimal.Parse(dbctsx.Rows[i][j].ToString());
                                     }
                                 numslluyke.Value = luyke;
                                 numslkehoach.Value = tongkh;
@@ -141,6 +144,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        void getsoctfirst()
+        {
+            getsoctsxall(year_ct, month_ct);
         }
         void getsoctsxall(int year, int month)
         {
@@ -437,19 +444,22 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                         //return;
                      }
                 }
-                DataTable checklock = Import_Manager.Instance.checklocksoct(tbsoct.Text);
-                if(checklock.Rows.Count >0)
+                if (tbsoct.Text.Length == 15)
                 {
-                    if (Int32.Parse(checklock.Rows[0][0].ToString()) > 0)
+                    DataTable checklock = Import_Manager.Instance.checklocksoct(tbsoct.Text);
+                    if (checklock.Rows.Count > 0)
                     {
-                        if (usernhap != "admin")
+                        if (Int32.Parse(checklock.Rows[0][0].ToString()) > 0)
                         {
-                            MessageBox.Show("Bạn không thể nhập đc số CT này nữa vì số CT này đã đc nhập và khóa lại. Liên hệ admin nếu bạn cần sửa.");
-                            return;
+                            if (usernhap != "admin")
+                            {
+                                MessageBox.Show("Bạn không thể nhập đc số CT này nữa vì số CT này đã đc nhập và khóa lại. Liên hệ admin nếu bạn cần sửa.");
+                                return;
+                            }
                         }
                     }
+                    if (MessageBox.Show("Xác nhận đã kết thúc SLCT này chưa?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) xacnhanslct = 1;
                 }
-                if (MessageBox.Show("Xác nhận đã kết thúc SLCT này chưa?", "Information", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) xacnhanslct = 1;
                 int results = Import_Manager.Instance.UpdateChiThiSX(actionSX, idCTSX, cbMaCongDoan.Text, (int)cbTenMay.SelectedValue, dtpNgaySX.Value, cbCaSX.Text, (int)numSoLuong.Value, tbSoLot.Text, (int)numtgSX.Value, (int)numtgChuanBi.Value
                                                                     , (int)numtgSua.Value, (int)numtgChaoLe.Value, (int)numtgDaoTao.Value, (int)numtgChoKhuon.Value, (int)numSuoc.Value, (int)numMop.Value, (int)numSet.Value, (int)numBienDang.Value, (int)numhongKhac.Value, (int)numBaoLuu.Value, (int)numXiMa.Value, (int)numNhiet.Value, (int)cbGiaCong.SelectedValue, tbGhiChu.Text, usernhap, (int)numVesinh6S.Value, (int)numMopbaoluu.Value, (int)numNgKiemTra.Value, tbsoct.Text, numslkehoach.Value, numslluyke.Value, xacnhanslct);
 

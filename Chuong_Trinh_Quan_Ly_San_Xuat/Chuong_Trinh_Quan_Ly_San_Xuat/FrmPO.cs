@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -158,7 +159,6 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             Excel._Application excel = new Excel.Application();
             Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
             Excel._Worksheet worksheet = null;
-
             try
             {
                 worksheet = (Excel._Worksheet)workbook.ActiveSheet;
@@ -173,7 +173,10 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 {
                     for (int c = 0; c < dtg.Columns.Count; c++)
                     {
-                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        if (dtg.Rows[r].Cells[c].Value != null)
+                        {
+                           arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        }
                         colindex++;
                     }
                     colindex = 0;
