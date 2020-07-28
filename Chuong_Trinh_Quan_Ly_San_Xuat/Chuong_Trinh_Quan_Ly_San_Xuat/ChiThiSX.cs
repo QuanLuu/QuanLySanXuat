@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Resources;
 using System.Threading;
+using System.Globalization;
 
 namespace Chuong_Trinh_Quan_Ly_San_Xuat
 {
@@ -65,6 +66,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             //getallcomponettext(this);
             //tbMSQLFilter.Text = temp;
             dtpNgaySX.Value = DateTime.Now;
+            
         }
         void getallcomponettext(Control par)
         {
@@ -96,6 +98,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             res_man = new ResourceManager(res_file, Assembly.GetExecutingAssembly());
             setlangforlabel(this);
         }
+        public static DateTime FirstDayOfWeek(DateTime date)
+        {
+            DayOfWeek fdow = CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek;
+            int offset = fdow - date.DayOfWeek;
+            DateTime fdowDate = date.AddDays(offset);
+            return fdowDate;
+        }
         void getCTSXbysoct(string soct)
         {
             try
@@ -105,7 +114,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 decimal tongkh = 0;
                 
                 int ngay_sx = Int32.Parse(soct.Substring(13, 2));
-                DateTime ngaygc = new DateTime(Int32.Parse(soct.Substring(0, 4)), Int32.Parse(soct.Substring(4, 2)), ngay_sx);
+                DateTime ngaygc = new DateTime(Int32.Parse(soct.Substring(0, 4)), Int32.Parse(soct.Substring(4, 2)), ngay_sx);  
+                int lastdayofweek = FirstDayOfWeek(ngaygc).AddDays(6).Day;
+                if (lastdayofweek < ngaygc.Day) lastdayofweek = 31;
                 bool ishasdata = false;
                 int socd = Int32.Parse(soct.Substring(10, 2));
                 if (dbctsx.Rows.Count > 0)
@@ -124,11 +135,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                                     if (dbctsx.Rows[i][j].ToString() != "")
                                     {
                                         tongkh += decimal.Parse(dbctsx.Rows[i][j].ToString());
-                                        if(j == ngay_sx + 13) luyke = decimal.Parse(dbctsx.Rows[i][j].ToString());
+                                        if(j <= lastdayofweek + 13 && j >= 13 + ngaygc.Day) luyke += decimal.Parse(dbctsx.Rows[i][j].ToString());
                                     }
                                 numslluyke.Value = luyke;
                                 numslkehoach.Value = tongkh;
-                                dtpNgaySX.Value = ngaygc;
+                                //dtpNgaySX.Value = ngaygc;
                                 ishasdata = true;
                             }
                         }
@@ -689,12 +700,13 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
         {
             if(tbsoct.Text.Length == 15)
             {
-                //if (dtpNgaySX.Value.Year != Int32.Parse(tbsoct.Text.Substring(0, 4).ToString()) || dtpNgaySX.Value.Month != Int32.Parse(tbsoct.Text.Substring(4, 2).ToString()))
-                //{
-                //    MessageBox.Show("Số chỉ thị và ngày sản xuất không khớp.");
-                //    return;
-                //}
-                
+                int year = Int32.Parse(tbsoct.Text.Substring(0, 4));
+                int month = Int32.Parse(tbsoct.Text.Substring(4, 2));
+                if (year != year_ct || month != month_ct)
+                {
+                    dbctsx = Import_Manager.Instance.inCTSX("", "", year, month);
+                }
+
                 getCTSXbysoct(tbsoct.Text);
             }
             if (tbsoct.Text.Length > 15)
@@ -706,13 +718,12 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
 
         private void dtpNgaySX_ValueChanged(object sender, EventArgs e)
         {
-            //tbsoct.Text = dtpNgaySX.Value.Year.ToString() + dtpNgaySX.Value.Month.ToString("00") + "-";
-            if (dtpNgaySX.Value.Year != year_ct || dtpNgaySX.Value.Month != month_ct)
+            if (tbsoct.Text.Length == 15)
             {
-                getsoctsxall(dtpNgaySX.Value.Year, dtpNgaySX.Value.Month);
-                year_ct = dtpNgaySX.Value.Year;
-                month_ct = dtpNgaySX.Value.Month;
-            }
+                int year = Int32.Parse(tbsoct.Text.Substring(0, 4));
+                int month = Int32.Parse(tbsoct.Text.Substring(4, 2));
+                if (dtpNgaySX.Value.Year != year || dtpNgaySX.Value.Month != month) MessageBox.Show("Kiểm tra lại Số chỉ thị");
+            }          
         }
 
         private void tbmasp_TextChanged(object sender, EventArgs e)
