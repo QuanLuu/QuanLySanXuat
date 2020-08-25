@@ -182,7 +182,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             Excel._Application excel = new Excel.Application();
             Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
             Excel._Worksheet worksheet = null;
-
+            string checkdate;
             try
             {
                 worksheet = (Excel._Worksheet)workbook.ActiveSheet;
@@ -197,7 +197,14 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 {
                     for (int c = 0; c < dtg.Columns.Count; c++)
                     {
-                        if (dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        if (dtg.Rows[r].Cells[c].Value != null)
+                        {
+                            checkdate = dtg.Rows[r].Cells[c].Value.ToString();
+                            if (IsDate(checkdate) == true)
+                                arr[rowindex, colindex] = DateTime.Parse(checkdate).ToString("yyyy-MM-dd");
+                            else
+                                arr[rowindex, colindex] = checkdate;
+                        }
                         colindex++;
                     }
                     colindex = 0;
@@ -220,6 +227,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 excel = null;
                 worksheet = null;
             }
+        }
+        public bool IsDate(string input)
+        {
+            DateTime result;
+            return DateTime.TryParse(input, out result);
         }
         private void btnNew_Click(object sender, EventArgs e)
         {

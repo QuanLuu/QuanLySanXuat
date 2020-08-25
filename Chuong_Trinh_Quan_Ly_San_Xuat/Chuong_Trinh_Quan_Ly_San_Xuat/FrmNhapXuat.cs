@@ -792,7 +792,7 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
             Excel._Application excel = new Excel.Application();
             Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
             Excel._Worksheet worksheet = null;
-
+            string checkdate;
             try
             {
                 worksheet = (Excel._Worksheet)workbook.ActiveSheet;
@@ -807,17 +807,24 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 {
                     for (int c = 0; c < dtg.Columns.Count; c++)
                     {
-                        if(dtg.Rows[r].Cells[c].Value != null) arr[rowindex, colindex] = dtg.Rows[r].Cells[c].Value.ToString();
+                        if (dtg.Rows[r].Cells[c].Value != null)
+                        {
+                            checkdate = dtg.Rows[r].Cells[c].Value.ToString();
+                            if (IsDate(checkdate) == true)
+                                arr[rowindex, colindex] = DateTime.Parse(checkdate).ToString("yyyy-MM-dd");
+                            else
+                                arr[rowindex, colindex] = checkdate;
+                        }
                         colindex++;
                     }
                     colindex = 0;
                     rowindex++;
                 }
-          
-                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];           
-                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];             
+
+                Excel.Range c1 = (Excel.Range)worksheet.Cells[1, 1];
+                Excel.Range c2 = (Excel.Range)worksheet.Cells[1 + dtg.Rows.Count, dtg.Columns.Count + 1];
                 Excel.Range range = worksheet.get_Range(c1, c2);
-                range.Value = arr; 
+                range.Value = arr;
                 excel.Visible = true;
             }
             catch (System.Exception ex)
@@ -830,6 +837,11 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat
                 excel = null;
                 worksheet = null;
             }
+        }
+        public bool IsDate(string input)
+        {
+            DateTime result;
+            return DateTime.TryParse(input, out result);
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)

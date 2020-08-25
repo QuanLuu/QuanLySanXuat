@@ -26,9 +26,9 @@ namespace Chuong_Trinh_Quan_Ly_San_Xuat.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MRDBA;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=True;Use" +
-            "r ID=QuanLySanXuat;Password=123456;Connect Timeout=30;TransparentNetworkIPResolu" +
-            "tion=false")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SANYO_SERVER;Initial Catalog=QUAN_LY_SAN_XUAT;Persist Security Info=T" +
+            "rue;User ID=QuanLySanXuat;Password=123456;Connect Timeout=30;TransparentNetworkI" +
+            "PResolution=false")]
         public string QLSX {
             get {
                 return ((string)(this["QLSX"]));
